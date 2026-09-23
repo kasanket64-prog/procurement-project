@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "sources": [{
+    "id": "",
+    "data_kind": "unverified",
+    "permission_confirmed": false,
+    "reference": "",
+    "reviewed_by": "",
+    "reviewed_at": ""
+  }],
+  "products": [{
+    "id": "", "source_id": "", "source_record_id": "",
+    "name": "", "specification": "", "unit": ""
+  }],
+  "suppliers": [{
+    "id": "", "source_id": "", "source_record_id": "",
+    "name": "", "country": ""
+  }],
+  "request": {
+    "product_id": "", "currency": "INR", "decision_timezone": "Asia/Kolkata", "unit": "", "quantity": "",
+    "total_budget": "", "needed_by": "", "destination_id": "",
+    "supplier_country": null
+  },
+  "quotes": [{
+    "id": "", "source_id": "", "source_record_id": "",
+    "product_id": "", "supplier_id": "", "currency": "INR",
+    "unit": "", "quantity": "", "total_amount": "", "destination_id": "",
+    "issued_at": "", "received_at": "", "valid_until": "",
+    "reviewed_at": "", "reviewed_by": "", "promised_delivery_date": "",
+    "specification_confirmed": false, "all_costs_included": false,
+    "terms_reference": ""
+  }]
+}

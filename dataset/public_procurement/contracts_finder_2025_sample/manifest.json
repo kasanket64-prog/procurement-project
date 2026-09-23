@@ -1,0 +1,11 @@
+{
+  "source": "UK Contracts Finder, Cabinet Office",
+  "request_url": "https://www.contractsfinder.service.gov.uk/Published/Notices/OCDS/Search?publishedFrom=2025-01-01T00%3A00%3A00&publishedTo=2025-12-31T23%3A59%3A59&stages=award&limit=100",
+  "retrieved_at_utc": "2026-09-23T10:01:06.0430365Z",
+  "raw_file": "raw_releases.json",
+  "sha256": "427B15D046104B3FBF37F379672EFAE31024FA4486175596D6988475F903FC63",
+  "declared_license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "releases": 100,
+  "more_pages": true,
+  "sampling": "One bounded API page, not all 2025 notices or a representative market sample"
+}

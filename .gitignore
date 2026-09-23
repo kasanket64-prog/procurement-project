@@ -1,0 +1,21 @@
+
+
+# Local models, generated files and private procurement sessions
+/models/*.pkl
+__pycache__/
+*.pyc
+*.bak
+*.backup.py
+/catboost_info/
+/temp-data/
+/real-pilot/backups/
+/real-pilot/sessions/
+/supplier-request-drafts/
+/supplier-shortlists/
+/ml/catalog-rfq-drafts/
+/ml/demo-reports/
+.env
+.env.*
+!.env.example
+.venv/
+venv/

@@ -1,0 +1,517 @@
+supplier_id,supplier_name,supplier_country,category,item,historical_orders,avg_unit_price,min_unit_price,max_unit_price,avg_quantity,max_historical_quantity,avg_order_value,late_delivery_rate,avg_delivery_delay,rejection_rate,on_time_rate
+SUP-001,Jade Harbor Materials,China,Raw Materials,Aluminium Sheet (per ton),20,2606.92,2162.45,3006.42,7.9,13,20606.34,15.0,0.3,0.0,85.0
+SUP-001,Jade Harbor Materials,China,Raw Materials,Copper Wire Rod (per ton),17,9722.89,8017.59,11195.29,2.88,5,28325.07,11.76,0.12,0.0,88.24
+SUP-001,Jade Harbor Materials,China,Raw Materials,Polypropylene Resin (per ton),21,1274.95,1089.15,1447.44,16.57,26,21303.21,0.0,0.0,0.0,100.0
+SUP-001,Jade Harbor Materials,China,Raw Materials,Rubber Compound (per ton),23,1761.5,1543.87,2064.93,8.96,15,15606.62,8.7,0.22,4.35,91.3
+SUP-001,Jade Harbor Materials,China,Raw Materials,Steel Coil (per ton),26,850.89,735.51,1035.11,21.73,40,18499.21,0.0,0.0,0.0,100.0
+SUP-002,Taegu Alloys,South Korea,Raw Materials,Aluminium Sheet (per ton),807,2574.26,2059.53,3193.77,7.47,16,19258.1,10.16,0.25,1.61,89.84
+SUP-002,Taegu Alloys,South Korea,Raw Materials,Copper Wire Rod (per ton),861,9741.91,7461.78,12234.45,2.56,6,24960.55,12.54,0.29,1.39,87.46
+SUP-002,Taegu Alloys,South Korea,Raw Materials,Polypropylene Resin (per ton),854,1256.99,970.42,1580.29,14.61,32,18376.15,12.3,0.29,1.64,87.7
+SUP-002,Taegu Alloys,South Korea,Raw Materials,Rubber Compound (per ton),821,1776.26,1378.11,2188.41,9.49,21,16881.64,10.35,0.26,1.1,89.65
+SUP-002,Taegu Alloys,South Korea,Raw Materials,Steel Coil (per ton),829,853.62,671.8,1061.88,24.47,60,20901.09,8.81,0.2,1.57,91.19
+SUP-003,Jade Harbor Alloys,China,Raw Materials,Aluminium Sheet (per ton),96,2900.81,2396.75,3547.42,7.54,18,21847.84,14.58,0.42,1.04,85.42
+SUP-003,Jade Harbor Alloys,China,Raw Materials,Copper Wire Rod (per ton),93,10892.44,9029.71,12803.01,2.49,5,27265.86,11.83,0.38,3.23,88.17
+SUP-003,Jade Harbor Alloys,China,Raw Materials,Polypropylene Resin (per ton),97,1429.61,1124.09,1700.1,15.85,28,22601.1,12.37,0.31,2.06,87.63
+SUP-003,Jade Harbor Alloys,China,Raw Materials,Rubber Compound (per ton),85,1975.14,1612.13,2389.39,9.71,19,19276.19,15.29,0.45,1.18,84.71
+SUP-003,Jade Harbor Alloys,China,Raw Materials,Steel Coil (per ton),85,959.7,778.2,1118.93,23.58,48,22647.79,11.76,0.31,1.18,88.24
+SUP-004,Azteca Alloys,Mexico,Raw Materials,Aluminium Sheet (per ton),13,2728.07,2391.43,3184.51,8.08,13,21897.83,0.0,0.0,0.0,100.0
+SUP-004,Azteca Alloys,Mexico,Raw Materials,Copper Wire Rod (per ton),11,11122.89,9657.67,12077.01,2.18,6,24411.34,18.18,0.45,0.0,81.82
+SUP-004,Azteca Alloys,Mexico,Raw Materials,Polypropylene Resin (per ton),15,1322.81,1185.08,1686.59,15.13,26,19949.47,6.67,0.4,0.0,93.33
+SUP-004,Azteca Alloys,Mexico,Raw Materials,Rubber Compound (per ton),14,1915.43,1656.19,2156.71,9.79,16,18816.36,14.29,0.14,0.0,85.71
+SUP-004,Azteca Alloys,Mexico,Raw Materials,Steel Coil (per ton),14,937.24,837.21,1107.45,23.64,34,22161.26,7.14,0.07,0.0,92.86
+SUP-005,Pioneer Resources,USA,Raw Materials,Aluminium Sheet (per ton),28,2951.39,2475.3,3376.33,8.04,14,23708.16,10.71,0.43,0.0,89.29
+SUP-005,Pioneer Resources,USA,Raw Materials,Copper Wire Rod (per ton),26,10778.83,9235.36,12620.01,2.35,4,25192.01,15.38,0.19,0.0,84.62
+SUP-005,Pioneer Resources,USA,Raw Materials,Polypropylene Resin (per ton),30,1438.81,1185.64,1590.79,15.2,23,21790.49,3.33,0.03,0.0,96.67
+SUP-005,Pioneer Resources,USA,Raw Materials,Rubber Compound (per ton),20,1999.85,1795.33,2414.35,9.85,14,19432.82,10.0,0.45,5.0,90.0
+SUP-005,Pioneer Resources,USA,Raw Materials,Steel Coil (per ton),23,971.79,802.76,1215.51,27.39,43,26559.62,26.09,0.65,0.0,73.91
+SUP-006,Adler Metals,Germany,Raw Materials,Aluminium Sheet (per ton),97,2962.14,2494.73,3545.07,7.94,21,23540.41,9.28,0.13,2.06,90.72
+SUP-006,Adler Metals,Germany,Raw Materials,Copper Wire Rod (per ton),126,11279.61,8999.24,13558.06,2.59,5,28956.46,14.29,0.35,3.97,85.71
+SUP-006,Adler Metals,Germany,Raw Materials,Polypropylene Resin (per ton),119,1453.65,1179.06,1711.69,14.18,27,20788.54,11.76,0.31,0.84,88.24
+SUP-006,Adler Metals,Germany,Raw Materials,Rubber Compound (per ton),124,2018.56,1655.1,2523.78,9.77,19,19823.72,15.32,0.32,4.84,84.68
+SUP-006,Adler Metals,Germany,Raw Materials,Steel Coil (per ton),115,984.67,800.72,1205.17,23.81,41,23517.91,12.17,0.29,1.74,87.83
+SUP-007,Cascade Materials,USA,Raw Materials,Aluminium Sheet (per ton),4,2298.38,2151.12,2549.49,8.75,14,20074.36,0.0,0.0,0.0,100.0
+SUP-007,Cascade Materials,USA,Raw Materials,Copper Wire Rod (per ton),10,9738.26,8285.62,11513.43,2.1,4,20028.71,0.0,0.0,0.0,100.0
+SUP-007,Cascade Materials,USA,Raw Materials,Polypropylene Resin (per ton),7,1200.35,1049.4,1391.49,17.57,24,21259.47,0.0,0.0,0.0,100.0
+SUP-007,Cascade Materials,USA,Raw Materials,Rubber Compound (per ton),8,1739.43,1638.38,2038.29,11.38,14,19924.15,12.5,0.38,0.0,87.5
+SUP-007,Cascade Materials,USA,Raw Materials,Steel Coil (per ton),9,921.44,719.62,1082.2,25.56,35,23755.25,22.22,0.56,0.0,77.78
+SUP-008,Fujikawa Resources,Japan,Raw Materials,Aluminium Sheet (per ton),132,2638.2,1689.61,3838.38,7.3,16,18967.39,98.48,10.58,13.64,1.52
+SUP-008,Fujikawa Resources,Japan,Raw Materials,Copper Wire Rod (per ton),137,10128.68,7160.49,14181.7,2.54,5,25755.06,95.62,10.53,5.11,4.38
+SUP-008,Fujikawa Resources,Japan,Raw Materials,Polypropylene Resin (per ton),128,1282.51,831.37,1797.2,13.74,25,17775.8,94.53,11.02,10.94,5.47
+SUP-008,Fujikawa Resources,Japan,Raw Materials,Rubber Compound (per ton),112,1840.31,1252.78,2661.44,9.81,25,18052.22,96.43,10.79,16.07,3.57
+SUP-008,Fujikawa Resources,Japan,Raw Materials,Steel Coil (per ton),128,882.93,497.11,1391.58,23.52,46,20788.22,94.53,10.59,11.72,5.47
+SUP-009,Schwarzwald Metals,Germany,Raw Materials,Aluminium Sheet (per ton),37,2615.36,2146.38,3080.35,7.51,15,19659.35,13.51,0.35,2.7,86.49
+SUP-009,Schwarzwald Metals,Germany,Raw Materials,Copper Wire Rod (per ton),56,9727.42,8104.3,11408.18,2.52,6,24609.94,10.71,0.29,0.0,89.29
+SUP-009,Schwarzwald Metals,Germany,Raw Materials,Polypropylene Resin (per ton),43,1262.36,1098.5,1504.11,13.74,22,17406.55,2.33,0.14,2.33,97.67
+SUP-009,Schwarzwald Metals,Germany,Raw Materials,Rubber Compound (per ton),49,1788.19,1435.11,2030.66,9.45,18,16921.97,12.24,0.14,0.0,87.76
+SUP-009,Schwarzwald Metals,Germany,Raw Materials,Steel Coil (per ton),41,878.11,730.63,1040.63,24.32,45,21101.01,9.76,0.17,0.0,90.24
+SUP-010,Pacific Rim Materials,China,Raw Materials,Aluminium Sheet (per ton),24,2765.21,2398.39,3167.23,7.38,12,20323.21,16.67,0.21,0.0,83.33
+SUP-010,Pacific Rim Materials,China,Raw Materials,Copper Wire Rod (per ton),30,10432.09,8616.92,12320.67,2.77,5,28477.29,16.67,0.27,0.0,83.33
+SUP-010,Pacific Rim Materials,China,Raw Materials,Polypropylene Resin (per ton),19,1395.95,1106.06,1602.12,14.11,25,20042.57,5.26,0.05,0.0,94.74
+SUP-010,Pacific Rim Materials,China,Raw Materials,Rubber Compound (per ton),29,1935.9,1619.28,2241.5,9.86,21,18961.2,6.9,0.1,0.0,93.1
+SUP-010,Pacific Rim Materials,China,Raw Materials,Steel Coil (per ton),26,891.6,695.06,1025.13,22.73,44,20061.96,3.85,0.12,0.0,96.15
+SUP-011,Azteca Pack Solutions,Mexico,Packaging,Bubble Wrap Rolls,3,31.98,29.89,34.62,73.67,95,2330.76,0.0,0.0,0.0,100.0
+SUP-011,Azteca Pack Solutions,Mexico,Packaging,Corrugated Boxes (per 1000),1,784.3,784.3,784.3,9.0,9,7058.7,0.0,0.0,0.0,100.0
+SUP-011,Azteca Pack Solutions,Mexico,Packaging,Wooden Pallets,1,15.55,15.55,15.55,165.0,165,2565.75,100.0,1.0,0.0,0.0
+SUP-012,Del Norte Containers,Mexico,Packaging,Bubble Wrap Rolls,8,30.74,28.64,32.88,85.62,128,2612.1,12.5,0.38,0.0,87.5
+SUP-012,Del Norte Containers,Mexico,Packaging,Corrugated Boxes (per 1000),5,781.71,750.32,828.89,11.6,18,9128.77,20.0,0.2,0.0,80.0
+SUP-012,Del Norte Containers,Mexico,Packaging,Printed Labels (per 1000),5,47.36,45.99,48.71,51.4,72,2440.61,0.0,0.0,20.0,100.0
+SUP-012,Del Norte Containers,Mexico,Packaging,Stretch Film Rolls,3,44.49,39.88,49.9,96.67,135,4246.29,0.0,0.0,0.0,100.0
+SUP-013,Frontier Packaging,USA,Packaging,Corrugated Boxes (per 1000),2,824.12,815.8,832.44,12.5,14,10289.02,50.0,1.0,0.0,50.0
+SUP-013,Frontier Packaging,USA,Packaging,Printed Labels (per 1000),2,51.66,49.15,54.18,48.5,49,2507.01,0.0,0.0,0.0,100.0
+SUP-013,Frontier Packaging,USA,Packaging,Stretch Film Rolls,1,49.53,49.53,49.53,66.0,66,3268.98,0.0,0.0,0.0,100.0
+SUP-013,Frontier Packaging,USA,Packaging,Wooden Pallets,1,15.33,15.33,15.33,322.0,322,4936.26,0.0,0.0,0.0,100.0
+SUP-014,Fujikawa Pack Solutions,Japan,Packaging,Bubble Wrap Rolls,5,27.98,26.48,29.12,69.6,121,1933.18,20.0,2.4,0.0,80.0
+SUP-014,Fujikawa Pack Solutions,Japan,Packaging,Corrugated Boxes (per 1000),2,749.94,742.78,757.1,14.0,17,10477.68,0.0,0.0,0.0,100.0
+SUP-014,Fujikawa Pack Solutions,Japan,Packaging,Printed Labels (per 1000),6,47.6,44.61,50.77,46.17,60,2216.46,16.67,0.17,0.0,83.33
+SUP-014,Fujikawa Pack Solutions,Japan,Packaging,Stretch Film Rolls,10,42.22,38.32,45.59,125.5,185,5312.38,0.0,0.0,0.0,100.0
+SUP-014,Fujikawa Pack Solutions,Japan,Packaging,Wooden Pallets,7,15.62,14.24,17.43,246.43,467,3748.97,14.29,0.43,0.0,85.71
+SUP-015,Bharat Packaging,India,Packaging,Bubble Wrap Rolls,1,27.22,27.22,27.22,78.0,78,2123.16,0.0,0.0,0.0,100.0
+SUP-015,Bharat Packaging,India,Packaging,Corrugated Boxes (per 1000),1,727.27,727.27,727.27,12.0,12,8727.24,0.0,0.0,0.0,100.0
+SUP-015,Bharat Packaging,India,Packaging,Stretch Film Rolls,3,44.21,42.39,45.49,114.0,167,4996.54,66.67,1.0,0.0,33.33
+SUP-015,Bharat Packaging,India,Packaging,Wooden Pallets,3,16.86,14.86,19.58,266.33,367,4460.81,33.33,0.33,0.0,66.67
+SUP-016,Great Wall Containers,China,Packaging,Bubble Wrap Rolls,1116,29.78,25.21,35.28,87.85,191,2614.3,9.59,0.26,1.43,90.41
+SUP-016,Great Wall Containers,China,Packaging,Corrugated Boxes (per 1000),1060,712.55,571.74,854.69,11.57,24,8255.34,9.72,0.26,1.42,90.28
+SUP-016,Great Wall Containers,China,Packaging,Printed Labels (per 1000),1123,48.12,40.5,56.85,59.34,142,2853.53,9.97,0.26,1.87,90.03
+SUP-016,Great Wall Containers,China,Packaging,Stretch Film Rolls,1025,43.5,35.92,52.46,121.31,258,5276.4,10.24,0.27,1.46,89.76
+SUP-016,Great Wall Containers,China,Packaging,Wooden Pallets,1060,16.57,13.66,20.11,249.9,536,4142.59,11.23,0.28,1.13,88.77
+SUP-017,Bharat Containers,India,Packaging,Bubble Wrap Rolls,8,25.96,23.94,28.43,93.25,115,2429.07,25.0,0.38,0.0,75.0
+SUP-017,Bharat Containers,India,Packaging,Corrugated Boxes (per 1000),8,616.06,587.53,646.54,13.75,18,8460.24,0.0,0.0,0.0,100.0
+SUP-017,Bharat Containers,India,Packaging,Printed Labels (per 1000),10,40.7,36.11,45.87,54.1,106,2164.45,30.0,1.0,10.0,70.0
+SUP-017,Bharat Containers,India,Packaging,Stretch Film Rolls,7,38.31,35.59,41.99,134.14,178,5105.18,14.29,0.14,0.0,85.71
+SUP-017,Bharat Containers,India,Packaging,Wooden Pallets,4,14.38,13.55,15.51,255.5,425,3639.71,0.0,0.0,0.0,100.0
+SUP-018,Great Wall Packaging,China,Packaging,Bubble Wrap Rolls,21,31.14,23.61,38.44,86.19,186,2713.59,95.24,10.95,23.81,4.76
+SUP-018,Great Wall Packaging,China,Packaging,Corrugated Boxes (per 1000),33,748.96,576.4,943.6,11.36,23,8461.11,96.97,10.15,9.09,3.03
+SUP-018,Great Wall Packaging,China,Packaging,Printed Labels (per 1000),27,49.28,33.98,61.23,68.15,126,3387.08,92.59,11.04,18.52,7.41
+SUP-018,Great Wall Packaging,China,Packaging,Stretch Film Rolls,18,46.14,33.97,59.13,113.5,177,5232.38,100.0,12.17,16.67,0.0
+SUP-018,Great Wall Packaging,China,Packaging,Wooden Pallets,26,18.17,12.97,23.79,225.65,503,4085.63,96.15,8.58,15.38,3.85
+SUP-019,Adler Packaging,Germany,Packaging,Bubble Wrap Rolls,3,28.0,27.28,28.69,87.33,132,2454.02,33.33,0.33,0.0,66.67
+SUP-019,Adler Packaging,Germany,Packaging,Corrugated Boxes (per 1000),12,694.25,606.56,762.05,11.92,18,8346.62,25.0,1.0,0.0,75.0
+SUP-019,Adler Packaging,Germany,Packaging,Printed Labels (per 1000),12,47.69,42.89,53.57,61.67,103,2940.36,0.0,0.0,0.0,100.0
+SUP-019,Adler Packaging,Germany,Packaging,Stretch Film Rolls,13,43.08,40.15,48.43,136.38,232,5910.25,15.38,0.15,0.0,84.62
+SUP-019,Adler Packaging,Germany,Packaging,Wooden Pallets,7,16.19,14.96,17.13,290.29,417,4660.95,28.57,0.71,0.0,71.43
+SUP-020,Pacific Rim Pack Solutions,China,Packaging,Bubble Wrap Rolls,2,26.16,25.33,26.98,107.5,121,2800.52,0.0,0.0,0.0,100.0
+SUP-020,Pacific Rim Pack Solutions,China,Packaging,Corrugated Boxes (per 1000),2,613.58,596.87,630.29,11.0,13,6715.96,0.0,0.0,0.0,100.0
+SUP-020,Pacific Rim Pack Solutions,China,Packaging,Printed Labels (per 1000),2,44.98,44.56,45.4,28.0,50,1268.68,0.0,0.0,0.0,100.0
+SUP-020,Pacific Rim Pack Solutions,China,Packaging,Stretch Film Rolls,4,36.22,34.41,39.62,130.25,155,4695.28,25.0,0.5,0.0,75.0
+SUP-020,Pacific Rim Pack Solutions,China,Packaging,Wooden Pallets,2,13.62,13.46,13.78,210.5,212,2866.77,50.0,3.0,0.0,50.0
+SUP-021,Frontier Pack Solutions,USA,Packaging,Bubble Wrap Rolls,5,26.81,24.09,31.01,76.0,122,2037.94,0.0,0.0,0.0,100.0
+SUP-021,Frontier Pack Solutions,USA,Packaging,Corrugated Boxes (per 1000),4,617.12,552.26,665.66,10.25,13,6285.52,0.0,0.0,0.0,100.0
+SUP-021,Frontier Pack Solutions,USA,Packaging,Printed Labels (per 1000),8,45.09,41.32,49.85,68.88,94,3130.06,0.0,0.0,0.0,100.0
+SUP-021,Frontier Pack Solutions,USA,Packaging,Stretch Film Rolls,9,39.67,36.08,43.71,123.56,196,4954.24,0.0,0.0,0.0,100.0
+SUP-021,Frontier Pack Solutions,USA,Packaging,Wooden Pallets,5,14.97,13.77,16.79,305.0,380,4588.08,0.0,0.0,0.0,100.0
+SUP-022,Redwood Components,USA,Electronics,Connector Kit CK-8,90,4.89,3.7,6.36,3131.4,6096,15251.9,17.78,0.51,0.0,82.22
+SUP-022,Redwood Components,USA,Electronics,Microcontroller MCU-9,86,8.52,6.14,10.83,2565.19,4397,21678.64,13.95,0.3,2.33,86.05
+SUP-022,Redwood Components,USA,Electronics,PCB Assembly A-11,96,57.03,43.8,75.69,412.79,734,23669.07,5.21,0.12,0.0,94.79
+SUP-022,Redwood Components,USA,Electronics,Power Supply Unit 450W,102,71.48,53.9,92.0,154.14,288,11073.26,9.8,0.21,0.98,90.2
+SUP-022,Redwood Components,USA,Electronics,Sensor Module SM-3,95,27.1,19.18,34.58,563.12,1050,15214.3,12.63,0.25,1.05,87.37
+SUP-023,Schwarzwald Circuits,Germany,Electronics,Connector Kit CK-8,24,4.49,3.45,5.56,2784.83,4443,12568.29,20.83,0.67,0.0,79.17
+SUP-023,Schwarzwald Circuits,Germany,Electronics,Microcontroller MCU-9,11,7.91,6.84,9.26,2608.18,3697,20587.13,0.0,0.0,9.09,100.0
+SUP-023,Schwarzwald Circuits,Germany,Electronics,PCB Assembly A-11,15,53.96,42.97,72.61,396.53,641,21451.71,13.33,0.27,6.67,86.67
+SUP-023,Schwarzwald Circuits,Germany,Electronics,Power Supply Unit 450W,19,73.21,55.71,87.29,170.53,290,12502.88,0.0,0.0,0.0,100.0
+SUP-023,Schwarzwald Circuits,Germany,Electronics,Sensor Module SM-3,16,24.74,20.63,30.55,653.94,1004,16174.81,12.5,0.31,6.25,87.5
+SUP-024,Sterling Components,USA,Electronics,Connector Kit CK-8,67,5.28,4.11,7.09,3094.43,6943,16487.68,17.91,0.55,1.49,82.09
+SUP-024,Sterling Components,USA,Electronics,Microcontroller MCU-9,55,9.37,7.09,11.45,2425.09,4929,22711.82,7.27,0.22,0.0,92.73
+SUP-024,Sterling Components,USA,Electronics,PCB Assembly A-11,55,62.53,47.86,81.17,410.82,847,25882.59,5.45,0.09,0.0,94.55
+SUP-024,Sterling Components,USA,Electronics,Power Supply Unit 450W,85,77.92,57.08,100.1,149.25,278,11570.57,11.76,0.31,1.18,88.24
+SUP-024,Sterling Components,USA,Electronics,Sensor Module SM-3,68,28.77,21.73,37.38,622.19,1038,17786.79,11.76,0.31,1.47,88.24
+SUP-025,Cascade Semitech,USA,Electronics,Connector Kit CK-8,159,5.31,4.0,6.87,2938.18,6405,15601.49,10.69,0.22,1.89,89.31
+SUP-025,Cascade Semitech,USA,Electronics,Microcontroller MCU-9,192,9.12,6.73,11.91,2508.78,4911,22892.88,7.81,0.21,1.04,92.19
+SUP-025,Cascade Semitech,USA,Electronics,PCB Assembly A-11,170,62.12,46.18,80.29,401.38,806,25016.74,11.76,0.29,2.94,88.24
+SUP-025,Cascade Semitech,USA,Electronics,Power Supply Unit 450W,169,79.07,62.94,100.03,154.5,286,12231.6,8.28,0.21,1.18,91.72
+SUP-025,Cascade Semitech,USA,Electronics,Sensor Module SM-3,165,29.29,21.64,37.22,581.67,1098,17058.65,13.94,0.27,0.0,86.06
+SUP-026,Great Wall Circuits,China,Electronics,Connector Kit CK-8,12,5.17,4.37,6.13,2882.5,4732,14811.7,16.67,0.33,0.0,83.33
+SUP-026,Great Wall Circuits,China,Electronics,Microcontroller MCU-9,18,9.44,7.31,11.81,2420.0,4949,22804.39,16.67,0.39,5.56,83.33
+SUP-026,Great Wall Circuits,China,Electronics,PCB Assembly A-11,14,63.56,52.21,78.78,410.07,615,25798.88,14.29,0.29,0.0,85.71
+SUP-026,Great Wall Circuits,China,Electronics,Power Supply Unit 450W,10,80.45,67.18,95.98,133.4,202,10362.45,20.0,0.5,0.0,80.0
+SUP-026,Great Wall Circuits,China,Electronics,Sensor Module SM-3,9,30.18,24.08,36.69,524.78,886,15997.98,33.33,1.22,0.0,66.67
+SUP-027,Golden Dragon Circuits,China,Electronics,Connector Kit CK-8,13,5.46,4.61,6.33,2958.69,4352,16122.7,7.69,0.08,0.0,92.31
+SUP-027,Golden Dragon Circuits,China,Electronics,Microcontroller MCU-9,15,8.36,7.43,10.45,2534.67,4819,21117.14,6.67,0.13,0.0,93.33
+SUP-027,Golden Dragon Circuits,China,Electronics,PCB Assembly A-11,19,59.47,47.81,73.26,387.95,794,23148.61,5.26,0.05,0.0,94.74
+SUP-027,Golden Dragon Circuits,China,Electronics,Power Supply Unit 450W,13,76.69,61.57,90.14,122.0,230,9361.6,0.0,0.0,0.0,100.0
+SUP-027,Golden Dragon Circuits,China,Electronics,Sensor Module SM-3,11,28.3,23.87,34.08,632.27,903,18036.16,9.09,0.27,0.0,90.91
+SUP-028,Summit Components,USA,Electronics,Connector Kit CK-8,216,5.34,4.13,6.97,2929.77,6091,15576.3,14.35,0.25,2.31,85.65
+SUP-028,Summit Components,USA,Electronics,Microcontroller MCU-9,230,9.25,7.34,12.01,2554.5,5276,23645.12,9.13,0.27,0.87,90.87
+SUP-028,Summit Components,USA,Electronics,PCB Assembly A-11,227,63.32,48.17,80.25,391.09,776,24736.6,11.01,0.3,0.88,88.99
+SUP-028,Summit Components,USA,Electronics,Power Supply Unit 450W,252,77.92,59.31,103.01,150.37,320,11699.29,11.11,0.22,1.19,88.89
+SUP-028,Summit Components,USA,Electronics,Sensor Module SM-3,219,29.25,21.69,39.48,596.75,1295,17535.59,10.96,0.24,1.37,89.04
+SUP-029,Great Wall Components,China,Electronics,Connector Kit CK-8,80,5.22,3.66,7.83,2860.14,5757,14835.19,97.5,11.62,10.0,2.5
+SUP-029,Great Wall Components,China,Electronics,Microcontroller MCU-9,71,8.88,5.74,14.57,2488.25,4337,22246.61,94.37,10.06,12.68,5.63
+SUP-029,Great Wall Components,China,Electronics,PCB Assembly A-11,75,60.61,38.98,87.58,395.69,775,24151.39,96.0,10.65,8.0,4.0
+SUP-029,Great Wall Components,China,Electronics,Power Supply Unit 450W,76,77.09,42.65,104.42,143.32,253,11025.07,89.47,9.49,13.16,10.53
+SUP-029,Great Wall Components,China,Electronics,Sensor Module SM-3,82,28.27,17.79,39.97,579.05,1269,16228.51,95.12,12.07,10.98,4.88
+SUP-030,Sterling Semitech,USA,Electronics,Connector Kit CK-8,4,4.33,4.0,4.73,2864.75,4027,12375.02,0.0,0.0,0.0,100.0
+SUP-030,Sterling Semitech,USA,Electronics,Microcontroller MCU-9,6,8.3,6.79,10.48,1987.17,3442,16415.23,0.0,0.0,0.0,100.0
+SUP-030,Sterling Semitech,USA,Electronics,PCB Assembly A-11,4,55.13,49.6,62.71,425.5,594,24003.63,0.0,0.0,0.0,100.0
+SUP-030,Sterling Semitech,USA,Electronics,Power Supply Unit 450W,3,80.85,68.93,88.04,188.0,281,15687.32,33.33,0.33,33.33,66.67
+SUP-030,Sterling Semitech,USA,Electronics,Sensor Module SM-3,4,26.97,22.7,31.57,546.0,723,14803.63,25.0,0.25,0.0,75.0
+SUP-031,Hanseatic Circuits,Germany,Electronics,Microcontroller MCU-9,4,9.52,8.25,10.64,3078.5,4434,28956.41,0.0,0.0,0.0,100.0
+SUP-031,Hanseatic Circuits,Germany,Electronics,PCB Assembly A-11,3,63.51,52.24,73.39,283.0,576,17933.74,0.0,0.0,0.0,100.0
+SUP-031,Hanseatic Circuits,Germany,Electronics,Power Supply Unit 450W,5,78.58,63.85,86.74,161.2,196,12791.86,40.0,1.4,0.0,60.0
+SUP-031,Hanseatic Circuits,Germany,Electronics,Sensor Module SM-3,6,29.26,23.0,32.41,628.17,1057,17858.56,16.67,0.17,0.0,83.33
+SUP-032,Lotus Components,India,Electronics,Connector Kit CK-8,125,4.44,3.26,6.01,2979.13,5667,13271.9,11.2,0.25,2.4,88.8
+SUP-032,Lotus Components,India,Electronics,Microcontroller MCU-9,146,7.99,6.12,10.5,2451.61,4716,19629.7,13.01,0.36,4.11,86.99
+SUP-032,Lotus Components,India,Electronics,PCB Assembly A-11,149,53.75,42.3,71.63,405.92,832,21848.37,5.37,0.17,1.34,94.63
+SUP-032,Lotus Components,India,Electronics,Power Supply Unit 450W,142,66.97,49.14,89.21,147.96,298,9921.03,9.86,0.32,1.41,90.14
+SUP-032,Lotus Components,India,Electronics,Sensor Module SM-3,131,25.01,18.92,33.64,586.36,1099,14625.59,10.69,0.27,3.05,89.31
+SUP-033,Busan Components,South Korea,Electronics,Connector Kit CK-8,104,4.6,3.61,5.78,3175.03,5548,14611.14,7.69,0.26,1.92,92.31
+SUP-033,Busan Components,South Korea,Electronics,Microcontroller MCU-9,83,8.07,5.99,9.97,2425.66,4116,19562.06,12.05,0.23,1.2,87.95
+SUP-033,Busan Components,South Korea,Electronics,PCB Assembly A-11,89,53.79,39.95,71.23,416.33,824,22504.72,8.99,0.29,2.25,91.01
+SUP-033,Busan Components,South Korea,Electronics,Power Supply Unit 450W,99,66.51,49.25,90.17,141.32,252,9444.14,11.11,0.17,1.01,88.89
+SUP-033,Busan Components,South Korea,Electronics,Sensor Module SM-3,104,25.82,19.86,32.47,612.69,1048,15906.47,11.54,0.26,0.0,88.46
+SUP-034,Pacific Rim Circuits,China,Electronics,Connector Kit CK-8,130,5.15,4.0,6.58,3006.29,6043,15504.08,10.77,0.25,0.77,89.23
+SUP-034,Pacific Rim Circuits,China,Electronics,Microcontroller MCU-9,115,8.88,6.49,11.22,2440.32,4486,21741.23,9.57,0.27,0.87,90.43
+SUP-034,Pacific Rim Circuits,China,Electronics,PCB Assembly A-11,147,59.98,45.12,77.12,381.75,826,22979.64,13.61,0.32,2.04,86.39
+SUP-034,Pacific Rim Circuits,China,Electronics,Power Supply Unit 450W,146,78.73,57.62,101.79,152.94,262,11965.68,10.27,0.27,2.05,89.73
+SUP-034,Pacific Rim Circuits,China,Electronics,Sensor Module SM-3,152,27.99,20.8,37.33,594.19,1149,16712.8,9.21,0.27,1.32,90.79
+SUP-035,Pacific Rim Semitech,China,Electronics,Connector Kit CK-8,39,5.04,3.85,6.74,3188.59,5086,16147.6,10.26,0.23,0.0,89.74
+SUP-035,Pacific Rim Semitech,China,Electronics,Microcontroller MCU-9,33,8.74,6.76,10.87,2461.88,4180,21698.64,9.09,0.12,0.0,90.91
+SUP-035,Pacific Rim Semitech,China,Electronics,PCB Assembly A-11,35,60.09,47.75,78.15,360.4,567,21829.42,11.43,0.17,2.86,88.57
+SUP-035,Pacific Rim Semitech,China,Electronics,Power Supply Unit 450W,39,75.54,59.12,96.6,148.77,214,11206.81,12.82,0.26,0.0,87.18
+SUP-035,Pacific Rim Semitech,China,Electronics,Sensor Module SM-3,35,28.18,22.17,35.22,597.54,940,16786.58,11.43,0.2,0.0,88.57
+SUP-036,Golden Dragon Components,China,Electronics,Connector Kit CK-8,131,5.5,4.16,7.21,3000.05,5849,16586.94,12.98,0.37,1.53,87.02
+SUP-036,Golden Dragon Components,China,Electronics,Microcontroller MCU-9,120,9.58,7.42,12.1,2520.8,5069,24052.99,16.67,0.38,0.0,83.33
+SUP-036,Golden Dragon Components,China,Electronics,PCB Assembly A-11,106,63.81,48.54,82.38,390.27,695,24937.47,12.26,0.34,1.89,87.74
+SUP-036,Golden Dragon Components,China,Electronics,Power Supply Unit 450W,159,82.15,60.85,104.23,150.08,275,12336.68,10.69,0.31,1.89,89.31
+SUP-036,Golden Dragon Components,China,Electronics,Sensor Module SM-3,124,30.35,23.07,40.74,607.04,1196,18383.15,10.48,0.19,2.42,89.52
+SUP-037,Liberty MRO Services,USA,MRO,Conveyor Belt Section,7,534.44,508.43,586.7,5.86,9,3161.19,14.29,0.14,0.0,85.71
+SUP-037,Liberty MRO Services,USA,MRO,Hydraulic Fluid (drum),6,241.53,228.84,254.0,11.0,17,2628.71,16.67,0.83,0.0,83.33
+SUP-037,Liberty MRO Services,USA,MRO,Industrial Bearings,10,39.84,35.67,44.47,88.8,147,3531.91,10.0,0.5,0.0,90.0
+SUP-037,Liberty MRO Services,USA,MRO,Machine Lubricant (drum),7,190.85,174.22,212.72,12.71,16,2418.68,28.57,0.43,0.0,71.43
+SUP-037,Liberty MRO Services,USA,MRO,Safety Gloves (per 100),16,108.52,96.01,116.59,26.69,44,2913.8,12.5,0.25,0.0,87.5
+SUP-038,Bergmann MRO Services,Germany,MRO,Conveyor Belt Section,355,555.07,475.87,655.68,5.52,12,3065.56,11.55,0.28,2.25,88.45
+SUP-038,Bergmann MRO Services,Germany,MRO,Hydraulic Fluid (drum),386,242.05,207.54,279.76,11.23,23,2718.01,9.33,0.24,0.52,90.67
+SUP-038,Bergmann MRO Services,Germany,MRO,Industrial Bearings,350,39.04,34.16,44.77,80.13,171,3126.24,10.0,0.24,2.0,90.0
+SUP-038,Bergmann MRO Services,Germany,MRO,Machine Lubricant (drum),340,190.5,164.18,220.24,13.95,31,2659.03,11.76,0.24,1.18,88.24
+SUP-038,Bergmann MRO Services,Germany,MRO,Safety Gloves (per 100),389,109.41,92.94,127.09,29.8,58,3259.96,9.0,0.2,1.03,91.0
+SUP-039,Redwood Maintenance Co,USA,MRO,Conveyor Belt Section,64,475.17,425.69,524.99,4.92,10,2334.6,10.94,0.23,1.56,89.06
+SUP-039,Redwood Maintenance Co,USA,MRO,Hydraulic Fluid (drum),70,207.1,173.99,236.61,11.66,20,2420.32,12.86,0.24,2.86,87.14
+SUP-039,Redwood Maintenance Co,USA,MRO,Industrial Bearings,63,33.46,29.96,38.8,77.43,133,2583.65,3.17,0.11,1.59,96.83
+SUP-039,Redwood Maintenance Co,USA,MRO,Machine Lubricant (drum),76,162.9,142.83,181.18,15.92,28,2586.4,2.63,0.04,1.32,97.37
+SUP-039,Redwood Maintenance Co,USA,MRO,Safety Gloves (per 100),73,94.2,82.95,105.87,28.89,53,2707.9,13.7,0.49,0.0,86.3
+SUP-040,Ganga MRO Services,India,MRO,Conveyor Belt Section,239,559.99,496.63,644.6,5.2,10,2918.78,12.13,0.31,2.93,87.87
+SUP-040,Ganga MRO Services,India,MRO,Hydraulic Fluid (drum),226,244.93,211.69,283.09,11.49,23,2816.82,14.6,0.31,1.33,85.4
+SUP-040,Ganga MRO Services,India,MRO,Industrial Bearings,215,39.69,32.46,45.63,77.61,172,3080.98,10.7,0.28,2.33,89.3
+SUP-040,Ganga MRO Services,India,MRO,Machine Lubricant (drum),211,191.95,165.04,215.44,13.76,28,2639.56,12.32,0.4,1.42,87.68
+SUP-040,Ganga MRO Services,India,MRO,Safety Gloves (per 100),216,110.6,95.38,125.49,29.26,60,3234.7,9.72,0.25,0.93,90.28
+SUP-041,Bergmann Maintenance Co,Germany,MRO,Conveyor Belt Section,19,540.4,485.17,585.06,4.95,8,2672.62,15.79,0.58,0.0,84.21
+SUP-041,Bergmann Maintenance Co,Germany,MRO,Hydraulic Fluid (drum),20,229.26,200.48,252.49,10.85,18,2508.96,10.0,0.25,0.0,90.0
+SUP-041,Bergmann Maintenance Co,Germany,MRO,Industrial Bearings,15,37.37,32.9,41.46,63.73,131,2394.24,20.0,0.6,0.0,80.0
+SUP-041,Bergmann Maintenance Co,Germany,MRO,Machine Lubricant (drum),29,182.9,164.78,215.22,13.59,23,2502.74,13.79,0.28,3.45,86.21
+SUP-041,Bergmann Maintenance Co,Germany,MRO,Safety Gloves (per 100),13,103.96,94.67,116.76,29.08,49,3022.35,0.0,0.0,0.0,100.0
+SUP-042,Cascade Maintenance Co,USA,MRO,Conveyor Belt Section,18,486.47,446.01,549.64,5.06,9,2459.22,11.11,0.61,0.0,88.89
+SUP-042,Cascade Maintenance Co,USA,MRO,Hydraulic Fluid (drum),25,203.81,179.38,234.93,11.64,21,2379.9,16.0,0.6,0.0,84.0
+SUP-042,Cascade Maintenance Co,USA,MRO,Industrial Bearings,20,32.48,28.28,35.44,69.75,110,2254.19,10.0,0.5,5.0,90.0
+SUP-042,Cascade Maintenance Co,USA,MRO,Machine Lubricant (drum),17,163.21,146.55,179.62,14.06,25,2305.06,11.76,0.24,0.0,88.24
+SUP-042,Cascade Maintenance Co,USA,MRO,Safety Gloves (per 100),13,94.98,86.37,102.49,33.46,48,3168.82,15.38,0.38,0.0,84.62
+SUP-043,Great Wall Maintenance Co,China,MRO,Conveyor Belt Section,58,554.65,500.2,609.16,5.48,12,3033.53,17.24,0.47,3.45,82.76
+SUP-043,Great Wall Maintenance Co,China,MRO,Hydraulic Fluid (drum),61,243.08,213.51,273.3,11.49,20,2792.57,11.48,0.3,3.28,88.52
+SUP-043,Great Wall Maintenance Co,China,MRO,Industrial Bearings,64,38.58,34.34,44.02,85.78,144,3319.25,10.94,0.38,1.56,89.06
+SUP-043,Great Wall Maintenance Co,China,MRO,Machine Lubricant (drum),51,190.21,172.06,212.38,13.96,26,2661.05,13.73,0.41,0.0,86.27
+SUP-043,Great Wall Maintenance Co,China,MRO,Safety Gloves (per 100),60,109.74,97.68,123.06,29.07,43,3196.18,3.33,0.1,3.33,96.67
+SUP-044,Mekong Maintenance Co,Vietnam,MRO,Conveyor Belt Section,75,505.96,461.46,562.23,5.48,10,2778.31,8.0,0.29,0.0,92.0
+SUP-044,Mekong Maintenance Co,Vietnam,MRO,Hydraulic Fluid (drum),69,219.55,193.45,251.48,10.64,20,2335.97,13.04,0.26,1.45,86.96
+SUP-044,Mekong Maintenance Co,Vietnam,MRO,Industrial Bearings,75,35.73,31.52,40.82,75.57,131,2702.22,12.0,0.17,1.33,88.0
+SUP-044,Mekong Maintenance Co,Vietnam,MRO,Machine Lubricant (drum),61,174.61,151.02,195.88,14.54,25,2533.83,9.84,0.23,0.0,90.16
+SUP-044,Mekong Maintenance Co,Vietnam,MRO,Safety Gloves (per 100),65,100.02,89.67,112.98,27.94,49,2797.26,7.69,0.18,3.08,92.31
+SUP-045,Thames MRO Services,UK,MRO,Conveyor Belt Section,35,488.96,428.62,555.44,5.89,10,2888.42,17.14,0.26,2.86,82.86
+SUP-045,Thames MRO Services,UK,MRO,Hydraulic Fluid (drum),44,212.25,183.77,235.45,10.98,20,2318.57,6.82,0.2,2.27,93.18
+SUP-045,Thames MRO Services,UK,MRO,Industrial Bearings,39,34.12,31.25,37.66,80.62,129,2743.01,5.13,0.05,2.56,94.87
+SUP-045,Thames MRO Services,UK,MRO,Machine Lubricant (drum),27,165.91,150.23,181.37,16.26,25,2696.61,3.7,0.04,0.0,96.3
+SUP-045,Thames MRO Services,UK,MRO,Safety Gloves (per 100),32,94.43,81.71,104.35,28.47,48,2687.72,18.75,0.66,3.12,81.25
+SUP-046,Thames Industrial Supply,UK,MRO,Conveyor Belt Section,355,498.81,312.95,686.75,5.4,12,2690.78,94.08,10.89,10.14,5.92
+SUP-046,Thames Industrial Supply,UK,MRO,Hydraulic Fluid (drum),377,219.41,138.04,320.76,11.52,24,2510.63,93.1,9.94,13.0,6.9
+SUP-046,Thames Industrial Supply,UK,MRO,Industrial Bearings,380,35.79,20.28,52.04,78.68,178,2812.27,95.26,10.84,11.84,4.74
+SUP-046,Thames Industrial Supply,UK,MRO,Machine Lubricant (drum),372,168.84,104.02,243.29,14.28,28,2406.04,94.35,10.29,10.48,5.65
+SUP-046,Thames Industrial Supply,UK,MRO,Safety Gloves (per 100),364,97.47,59.23,131.52,29.16,72,2833.39,95.6,10.54,12.91,4.4
+SUP-047,Sierra Transport,Mexico,Logistics,Air Freight (per 100kg),9,707.76,649.42,753.1,4.78,7,3384.12,0.0,0.0,0.0,100.0
+SUP-047,Sierra Transport,Mexico,Logistics,FTL Freight (per load),5,2024.56,1851.04,2139.39,3.8,5,7740.92,0.0,0.0,20.0,100.0
+SUP-047,Sierra Transport,Mexico,Logistics,LTL Freight (per shipment),6,480.83,434.67,524.22,9.83,13,4752.3,0.0,0.0,0.0,100.0
+SUP-047,Sierra Transport,Mexico,Logistics,Last-Mile Delivery Batch,11,295.45,266.3,335.13,11.0,18,3234.35,9.09,0.09,0.0,90.91
+SUP-047,Sierra Transport,Mexico,Logistics,Ocean Container (40ft),4,3854.98,3627.03,4084.26,1.25,2,4876.04,0.0,0.0,0.0,100.0
+SUP-048,Mekong Logistics,Vietnam,Logistics,Air Freight (per 100kg),12,728.31,639.61,837.44,4.17,7,3004.54,0.0,0.0,0.0,100.0
+SUP-048,Mekong Logistics,Vietnam,Logistics,FTL Freight (per load),11,2238.66,2010.8,2460.91,4.27,7,9568.75,9.09,0.27,0.0,90.91
+SUP-048,Mekong Logistics,Vietnam,Logistics,LTL Freight (per shipment),10,511.42,457.1,552.81,10.5,13,5391.59,10.0,0.1,0.0,90.0
+SUP-048,Mekong Logistics,Vietnam,Logistics,Last-Mile Delivery Batch,9,317.76,295.45,363.98,11.11,13,3531.44,0.0,0.0,0.0,100.0
+SUP-048,Mekong Logistics,Vietnam,Logistics,Ocean Container (40ft),17,3883.77,3353.77,4291.73,1.47,3,5726.07,23.53,0.35,0.0,76.47
+SUP-049,Han River Freight,South Korea,Logistics,Air Freight (per 100kg),14,616.06,540.39,678.19,4.79,8,2957.29,7.14,0.29,0.0,92.86
+SUP-049,Han River Freight,South Korea,Logistics,FTL Freight (per load),13,1854.97,1608.5,2118.61,3.0,5,5625.53,7.69,0.15,0.0,92.31
+SUP-049,Han River Freight,South Korea,Logistics,LTL Freight (per shipment),14,411.89,366.28,448.28,9.57,16,3959.04,14.29,0.29,0.0,85.71
+SUP-049,Han River Freight,South Korea,Logistics,Last-Mile Delivery Batch,10,270.07,249.23,303.73,9.5,18,2535.47,20.0,0.8,0.0,80.0
+SUP-049,Han River Freight,South Korea,Logistics,Ocean Container (40ft),8,3214.96,2830.65,3469.11,1.62,3,5215.11,12.5,0.12,0.0,87.5
+SUP-050,Redwood Freight,USA,Logistics,Air Freight (per 100kg),232,636.68,520.5,750.0,4.49,9,2855.53,10.78,0.21,0.86,89.22
+SUP-050,Redwood Freight,USA,Logistics,FTL Freight (per load),188,1933.36,1646.72,2262.65,3.66,8,7073.64,9.04,0.21,1.6,90.96
+SUP-050,Redwood Freight,USA,Logistics,LTL Freight (per shipment),225,436.52,368.18,519.67,9.51,18,4138.11,8.89,0.23,1.78,91.11
+SUP-050,Redwood Freight,USA,Logistics,Last-Mile Delivery Batch,215,269.48,221.01,323.09,11.42,21,3081.87,13.02,0.33,0.93,86.98
+SUP-050,Redwood Freight,USA,Logistics,Ocean Container (40ft),187,3340.31,2861.03,3976.29,1.57,3,5244.47,8.56,0.18,0.53,91.44
+SUP-051,Shenzhou Transport,China,Logistics,Air Freight (per 100kg),422,644.25,545.44,764.82,4.81,11,3094.68,11.14,0.29,2.13,88.86
+SUP-051,Shenzhou Transport,China,Logistics,FTL Freight (per load),434,1959.43,1630.14,2372.17,3.47,8,6815.26,10.37,0.25,1.15,89.63
+SUP-051,Shenzhou Transport,China,Logistics,LTL Freight (per shipment),463,446.32,369.09,528.78,9.66,20,4305.86,13.17,0.27,1.94,86.83
+SUP-051,Shenzhou Transport,China,Logistics,Last-Mile Delivery Batch,451,274.1,230.07,328.51,11.45,23,3135.54,10.2,0.26,0.67,89.8
+SUP-051,Shenzhou Transport,China,Logistics,Ocean Container (40ft),442,3398.8,2788.39,4052.38,1.56,4,5295.3,12.67,0.37,1.58,87.33
+SUP-052,Del Norte Logistics,Mexico,Logistics,Air Freight (per 100kg),137,637.13,551.14,730.84,4.39,9,2806.29,12.41,0.32,0.73,87.59
+SUP-052,Del Norte Logistics,Mexico,Logistics,FTL Freight (per load),140,1929.37,1646.8,2230.99,3.71,9,7169.2,10.71,0.29,4.29,89.29
+SUP-052,Del Norte Logistics,Mexico,Logistics,LTL Freight (per shipment),131,434.85,369.36,510.47,9.76,18,4258.19,6.11,0.15,1.53,93.89
+SUP-052,Del Norte Logistics,Mexico,Logistics,Last-Mile Delivery Batch,151,271.18,230.22,313.8,11.6,22,3140.67,13.25,0.35,3.31,86.75
+SUP-052,Del Norte Logistics,Mexico,Logistics,Ocean Container (40ft),159,3328.53,2817.81,3953.31,1.58,3,5278.73,7.55,0.2,1.89,92.45
+SUP-053,Sterling Shipping Lines,USA,Logistics,Air Freight (per 100kg),46,665.81,562.31,759.96,4.46,10,2971.35,15.22,0.35,0.0,84.78
+SUP-053,Sterling Shipping Lines,USA,Logistics,FTL Freight (per load),63,1996.31,1762.44,2355.74,3.32,5,6656.27,14.29,0.56,0.0,85.71
+SUP-053,Sterling Shipping Lines,USA,Logistics,LTL Freight (per shipment),63,454.27,398.3,526.87,9.38,19,4271.67,9.52,0.21,1.59,90.48
+SUP-053,Sterling Shipping Lines,USA,Logistics,Last-Mile Delivery Batch,57,282.13,243.98,337.16,12.16,24,3406.98,5.26,0.23,0.0,94.74
+SUP-053,Sterling Shipping Lines,USA,Logistics,Ocean Container (40ft),61,3501.3,3131.88,3903.4,1.56,3,5420.02,11.48,0.34,0.0,88.52
+SUP-054,Great Wall Shipping Lines,China,Logistics,Air Freight (per 100kg),80,655.2,585.6,779.35,4.69,8,3052.73,12.5,0.34,0.0,87.5
+SUP-054,Great Wall Shipping Lines,China,Logistics,FTL Freight (per load),73,2029.78,1766.44,2413.82,3.59,7,7291.77,5.48,0.07,0.0,94.52
+SUP-054,Great Wall Shipping Lines,China,Logistics,LTL Freight (per shipment),79,455.62,374.21,515.05,9.24,16,4222.59,6.33,0.14,1.27,93.67
+SUP-054,Great Wall Shipping Lines,China,Logistics,Last-Mile Delivery Batch,63,278.55,237.35,317.16,11.32,21,3171.6,11.11,0.29,1.59,88.89
+SUP-054,Great Wall Shipping Lines,China,Logistics,Ocean Container (40ft),75,3526.69,3057.16,3980.42,1.63,3,5757.27,13.33,0.24,2.67,86.67
+SUP-055,Baltic Freight,Poland,Logistics,Air Freight (per 100kg),119,708.59,598.42,821.48,4.35,10,3094.99,8.4,0.18,2.52,91.6
+SUP-055,Baltic Freight,Poland,Logistics,FTL Freight (per load),118,2160.93,1801.58,2509.0,3.73,7,8047.3,4.24,0.05,2.54,95.76
+SUP-055,Baltic Freight,Poland,Logistics,LTL Freight (per shipment),105,489.36,419.55,573.88,9.1,16,4432.87,7.62,0.16,2.86,92.38
+SUP-055,Baltic Freight,Poland,Logistics,Last-Mile Delivery Batch,107,300.3,258.73,353.57,10.52,20,3161.32,8.41,0.21,0.0,91.59
+SUP-055,Baltic Freight,Poland,Logistics,Ocean Container (40ft),111,3741.37,3159.64,4265.13,1.51,3,5696.47,8.11,0.23,1.8,91.89
+SUP-056,Apex Shipping Lines,USA,Logistics,Air Freight (per 100kg),34,762.43,662.44,850.18,4.79,9,3630.44,17.65,0.35,2.94,82.35
+SUP-056,Apex Shipping Lines,USA,Logistics,FTL Freight (per load),51,2337.52,1962.82,2671.52,3.59,7,8352.45,7.84,0.08,0.0,92.16
+SUP-056,Apex Shipping Lines,USA,Logistics,LTL Freight (per shipment),43,529.46,466.92,595.16,9.58,19,5077.47,6.98,0.12,4.65,93.02
+SUP-056,Apex Shipping Lines,USA,Logistics,Last-Mile Delivery Batch,40,319.6,270.78,356.66,11.22,21,3573.17,5.0,0.1,0.0,95.0
+SUP-056,Apex Shipping Lines,USA,Logistics,Ocean Container (40ft),38,3970.69,3524.7,4561.65,1.74,3,6830.92,15.79,0.45,2.63,84.21
+SUP-057,Bharat Digital Systems,India,IT Services,Cloud Hosting (monthly block),319,4556.55,3917.24,5222.29,1.0,2,4571.25,8.15,0.18,0.94,91.85
+SUP-057,Bharat Digital Systems,India,IT Services,Cybersecurity Audit,305,9234.43,8115.25,10724.34,1.0,2,9264.6,8.85,0.22,0.33,91.15
+SUP-057,Bharat Digital Systems,India,IT Services,Managed IT Support (monthly),306,6111.69,5222.03,7015.86,1.01,2,6151.05,9.8,0.25,0.65,90.2
+SUP-057,Bharat Digital Systems,India,IT Services,Network Equipment Bundle,381,3161.35,2698.76,3714.26,1.6,3,5050.06,9.19,0.21,1.57,90.81
+SUP-057,Bharat Digital Systems,India,IT Services,"SaaS Licences (per seat, annual)",338,412.07,337.21,476.12,24.93,57,10282.97,9.76,0.19,2.66,90.24
+SUP-058,Del Norte Technologies,Mexico,IT Services,Managed IT Support (monthly),4,6564.76,6373.63,6765.38,1.0,1,6564.76,25.0,1.0,0.0,75.0
+SUP-058,Del Norte Technologies,Mexico,IT Services,Network Equipment Bundle,3,3492.28,3335.22,3670.54,1.0,1,3492.28,33.33,0.67,0.0,66.67
+SUP-058,Del Norte Technologies,Mexico,IT Services,"SaaS Licences (per seat, annual)",2,432.78,432.56,433.01,15.0,19,6492.68,0.0,0.0,0.0,100.0
+SUP-059,Azteca Technologies,Mexico,IT Services,Cloud Hosting (monthly block),113,4678.84,4095.85,5255.78,1.0,1,4678.84,9.73,0.24,0.0,90.27
+SUP-059,Azteca Technologies,Mexico,IT Services,Cybersecurity Audit,120,9501.63,8466.06,10473.85,1.0,1,9501.63,14.17,0.32,1.67,85.83
+SUP-059,Azteca Technologies,Mexico,IT Services,Managed IT Support (monthly),122,6258.32,5661.72,7085.43,1.0,1,6258.32,9.02,0.21,2.46,90.98
+SUP-059,Azteca Technologies,Mexico,IT Services,Network Equipment Bundle,110,3246.13,2808.25,3703.03,1.58,3,5135.31,10.0,0.34,0.0,90.0
+SUP-059,Azteca Technologies,Mexico,IT Services,"SaaS Licences (per seat, annual)",126,421.11,362.12,470.14,24.96,57,10543.65,7.14,0.25,0.79,92.86
+SUP-060,Halong IT Solutions,Vietnam,IT Services,Cloud Hosting (monthly block),43,4492.65,4052.01,4996.23,1.02,2,4604.42,6.98,0.3,2.33,93.02
+SUP-060,Halong IT Solutions,Vietnam,IT Services,Cybersecurity Audit,27,9220.56,8378.07,10672.18,1.0,1,9220.56,11.11,0.15,0.0,88.89
+SUP-060,Halong IT Solutions,Vietnam,IT Services,Managed IT Support (monthly),29,6056.88,5342.67,6960.71,1.0,1,6056.88,20.69,0.38,0.0,79.31
+SUP-060,Halong IT Solutions,Vietnam,IT Services,Network Equipment Bundle,35,3116.17,2694.59,3433.34,1.66,3,5154.7,11.43,0.23,0.0,88.57
+SUP-060,Halong IT Solutions,Vietnam,IT Services,"SaaS Licences (per seat, annual)",38,403.23,368.31,438.82,23.5,38,9442.36,10.53,0.5,0.0,89.47
+SUP-061,Shenzhou IT Solutions,China,IT Services,Cloud Hosting (monthly block),148,4542.4,4016.03,5049.63,1.0,1,4542.4,8.78,0.2,2.03,91.22
+SUP-061,Shenzhou IT Solutions,China,IT Services,Cybersecurity Audit,139,9205.73,8156.68,10297.64,1.0,1,9205.73,10.07,0.25,0.0,89.93
+SUP-061,Shenzhou IT Solutions,China,IT Services,Managed IT Support (monthly),141,6007.88,5048.49,6760.35,1.0,1,6007.88,12.06,0.26,1.42,87.94
+SUP-061,Shenzhou IT Solutions,China,IT Services,Network Equipment Bundle,133,3118.62,2575.48,3545.53,1.59,4,4986.65,6.02,0.12,1.5,93.98
+SUP-061,Shenzhou IT Solutions,China,IT Services,"SaaS Licences (per seat, annual)",154,413.95,345.17,472.09,25.38,47,10529.68,12.34,0.32,2.6,87.66
+SUP-062,Liberty Technologies,USA,IT Services,Cloud Hosting (monthly block),15,4804.42,4447.32,5451.05,1.0,1,4804.42,20.0,0.6,0.0,80.0
+SUP-062,Liberty Technologies,USA,IT Services,Cybersecurity Audit,16,10112.67,9234.69,11016.09,1.0,1,10112.67,0.0,0.0,0.0,100.0
+SUP-062,Liberty Technologies,USA,IT Services,Managed IT Support (monthly),23,6489.69,5615.07,7447.13,1.0,1,6489.69,8.7,0.13,0.0,91.3
+SUP-062,Liberty Technologies,USA,IT Services,Network Equipment Bundle,13,3405.1,3147.92,3685.33,1.08,2,3688.59,23.08,0.54,0.0,76.92
+SUP-062,Liberty Technologies,USA,IT Services,"SaaS Licences (per seat, annual)",12,430.73,371.45,503.27,25.25,43,10882.29,8.33,0.08,0.0,91.67
+SUP-063,Cascade Technologies,USA,IT Services,Cloud Hosting (monthly block),11,4499.28,3711.57,4967.4,1.0,1,4499.28,100.0,9.45,18.18,0.0
+SUP-063,Cascade Technologies,USA,IT Services,Cybersecurity Audit,11,7737.26,5526.42,9299.93,1.0,1,7737.26,100.0,10.45,9.09,0.0
+SUP-063,Cascade Technologies,USA,IT Services,Managed IT Support (monthly),8,5922.68,4444.22,8262.44,1.0,1,5922.68,100.0,11.88,12.5,0.0
+SUP-063,Cascade Technologies,USA,IT Services,Network Equipment Bundle,13,2863.09,2233.85,3242.98,1.77,3,5115.45,100.0,8.77,7.69,0.0
+SUP-063,Cascade Technologies,USA,IT Services,"SaaS Licences (per seat, annual)",5,398.06,351.51,491.44,22.8,30,9190.18,100.0,12.4,0.0,0.0
+SUP-064,Sierra Technologies,Mexico,IT Services,Cybersecurity Audit,5,10253.28,9931.88,10710.55,1.0,1,10253.28,0.0,0.0,0.0,100.0
+SUP-064,Sierra Technologies,Mexico,IT Services,Managed IT Support (monthly),2,6479.1,6329.37,6628.84,1.0,1,6479.1,0.0,0.0,0.0,100.0
+SUP-064,Sierra Technologies,Mexico,IT Services,Network Equipment Bundle,5,3397.97,3247.01,3559.51,1.2,2,4067.51,0.0,0.0,0.0,100.0
+SUP-064,Sierra Technologies,Mexico,IT Services,"SaaS Licences (per seat, annual)",3,446.58,437.31,452.3,21.67,27,9654.75,0.0,0.0,0.0,100.0
+SUP-065,Summit Technologies,USA,IT Services,Cloud Hosting (monthly block),8,4145.06,3767.08,4554.96,1.12,2,4670.33,12.5,0.12,0.0,87.5
+SUP-065,Summit Technologies,USA,IT Services,Cybersecurity Audit,5,8779.28,8304.07,9172.95,1.0,1,8779.28,20.0,0.2,0.0,80.0
+SUP-065,Summit Technologies,USA,IT Services,Managed IT Support (monthly),7,5263.19,4860.87,5641.58,1.0,1,5263.19,0.0,0.0,0.0,100.0
+SUP-065,Summit Technologies,USA,IT Services,Network Equipment Bundle,4,3037.7,2904.16,3193.07,1.0,1,3037.7,0.0,0.0,0.0,100.0
+SUP-065,Summit Technologies,USA,IT Services,"SaaS Licences (per seat, annual)",11,382.21,330.87,408.91,25.36,36,9701.01,0.0,0.0,0.0,100.0
+SUP-066,Sterling Technologies,USA,IT Services,Cloud Hosting (monthly block),1,4921.82,4921.82,4921.82,1.0,1,4921.82,0.0,0.0,0.0,100.0
+SUP-066,Sterling Technologies,USA,IT Services,Cybersecurity Audit,2,9147.65,9104.34,9190.97,1.0,1,9147.65,0.0,0.0,0.0,100.0
+SUP-066,Sterling Technologies,USA,IT Services,Managed IT Support (monthly),2,6061.33,5916.39,6206.27,1.0,1,6061.33,0.0,0.0,0.0,100.0
+SUP-066,Sterling Technologies,USA,IT Services,Network Equipment Bundle,1,3484.33,3484.33,3484.33,1.0,1,3484.33,0.0,0.0,0.0,100.0
+SUP-066,Sterling Technologies,USA,IT Services,"SaaS Licences (per seat, annual)",1,387.98,387.98,387.98,17.0,17,6595.66,0.0,0.0,0.0,100.0
+SUP-067,Schwarzwald Workplace,Germany,Office Supplies,Copy Paper (per case),10,36.8,33.95,40.61,35.9,56,1316.98,10.0,0.7,10.0,90.0
+SUP-067,Schwarzwald Workplace,Germany,Office Supplies,Office Chairs,8,162.04,146.6,179.05,8.0,13,1303.25,0.0,0.0,0.0,100.0
+SUP-067,Schwarzwald Workplace,Germany,Office Supplies,Stationery Kit,11,20.98,20.35,22.71,52.18,68,1095.35,27.27,0.64,0.0,72.73
+SUP-067,Schwarzwald Workplace,Germany,Office Supplies,Toner Cartridges,9,92.11,86.43,101.97,15.0,20,1386.77,11.11,0.33,0.0,88.89
+SUP-067,Schwarzwald Workplace,Germany,Office Supplies,Whiteboard & Supplies,12,68.66,63.0,76.34,4.83,7,333.74,25.0,0.75,0.0,75.0
+SUP-068,Mekong Supplies Co,Vietnam,Office Supplies,Copy Paper (per case),10,32.12,30.58,33.69,34.4,59,1093.05,0.0,0.0,0.0,100.0
+SUP-068,Mekong Supplies Co,Vietnam,Office Supplies,Office Chairs,4,154.81,148.63,159.31,9.25,12,1434.47,0.0,0.0,0.0,100.0
+SUP-068,Mekong Supplies Co,Vietnam,Office Supplies,Stationery Kit,3,18.23,17.39,18.81,44.33,59,801.13,33.33,0.33,0.0,66.67
+SUP-068,Mekong Supplies Co,Vietnam,Office Supplies,Toner Cartridges,3,78.2,74.79,83.49,16.33,18,1283.01,33.33,1.0,0.0,66.67
+SUP-068,Mekong Supplies Co,Vietnam,Office Supplies,Whiteboard & Supplies,3,60.43,56.76,64.04,6.67,8,405.29,0.0,0.0,0.0,100.0
+SUP-069,Apex Supplies Co,USA,Office Supplies,Copy Paper (per case),32,31.07,27.17,33.97,35.56,56,1104.72,15.62,0.22,3.12,84.38
+SUP-069,Apex Supplies Co,USA,Office Supplies,Office Chairs,31,142.08,128.16,153.14,7.16,15,1025.52,6.45,0.06,0.0,93.55
+SUP-069,Apex Supplies Co,USA,Office Supplies,Stationery Kit,34,17.14,15.22,18.81,49.79,79,854.31,26.47,0.59,0.0,73.53
+SUP-069,Apex Supplies Co,USA,Office Supplies,Toner Cartridges,25,76.43,69.97,87.9,15.0,26,1145.46,4.0,0.12,0.0,96.0
+SUP-069,Apex Supplies Co,USA,Office Supplies,Whiteboard & Supplies,33,58.08,52.5,62.98,5.64,11,328.87,12.12,0.33,0.0,87.88
+SUP-070,Hanseatic Workplace,Germany,Office Supplies,Copy Paper (per case),6,37.23,34.77,40.09,35.33,54,1320.5,0.0,0.0,0.0,100.0
+SUP-070,Hanseatic Workplace,Germany,Office Supplies,Office Chairs,5,169.93,156.01,183.58,5.4,9,933.54,40.0,0.8,0.0,60.0
+SUP-070,Hanseatic Workplace,Germany,Office Supplies,Stationery Kit,2,20.96,20.89,21.02,30.0,35,628.98,0.0,0.0,0.0,100.0
+SUP-070,Hanseatic Workplace,Germany,Office Supplies,Toner Cartridges,1,94.03,94.03,94.03,13.0,13,1222.39,0.0,0.0,0.0,100.0
+SUP-070,Hanseatic Workplace,Germany,Office Supplies,Whiteboard & Supplies,4,69.23,68.62,69.74,4.75,6,329.1,0.0,0.0,0.0,100.0
+SUP-071,Redwood Supplies Co,USA,Office Supplies,Copy Paper (per case),9,36.99,33.77,40.05,30.11,47,1107.76,11.11,0.11,0.0,88.89
+SUP-071,Redwood Supplies Co,USA,Office Supplies,Office Chairs,11,165.18,155.1,174.61,8.27,14,1367.53,18.18,0.91,0.0,81.82
+SUP-071,Redwood Supplies Co,USA,Office Supplies,Stationery Kit,2,19.6,18.4,20.8,57.5,66,1137.2,50.0,2.0,0.0,50.0
+SUP-071,Redwood Supplies Co,USA,Office Supplies,Toner Cartridges,7,88.34,84.42,92.51,15.71,23,1381.43,14.29,0.14,0.0,85.71
+SUP-071,Redwood Supplies Co,USA,Office Supplies,Whiteboard & Supplies,12,69.9,66.05,73.23,6.83,11,476.73,33.33,0.5,0.0,66.67
+SUP-072,Krakow Office Products,Poland,Office Supplies,Copy Paper (per case),479,36.47,31.15,42.11,38.61,77,1408.03,13.15,0.29,1.04,86.85
+SUP-072,Krakow Office Products,Poland,Office Supplies,Office Chairs,496,164.55,139.98,186.16,7.61,16,1252.92,9.48,0.24,1.61,90.52
+SUP-072,Krakow Office Products,Poland,Office Supplies,Stationery Kit,509,20.55,17.12,23.25,50.58,98,1038.87,8.45,0.19,1.38,91.55
+SUP-072,Krakow Office Products,Poland,Office Supplies,Toner Cartridges,473,89.28,76.46,102.47,14.09,29,1257.85,9.51,0.21,0.21,90.49
+SUP-072,Krakow Office Products,Poland,Office Supplies,Whiteboard & Supplies,505,68.5,58.37,77.97,5.61,12,384.22,10.69,0.25,1.19,89.31
+SUP-073,Kansai Supplies Co,Japan,Office Supplies,Copy Paper (per case),12,34.68,31.57,37.3,39.25,63,1361.15,8.33,0.17,0.0,91.67
+SUP-073,Kansai Supplies Co,Japan,Office Supplies,Office Chairs,8,161.45,152.99,175.9,7.12,11,1155.05,12.5,0.12,0.0,87.5
+SUP-073,Kansai Supplies Co,Japan,Office Supplies,Stationery Kit,9,19.61,18.48,21.07,54.89,84,1063.86,0.0,0.0,0.0,100.0
+SUP-073,Kansai Supplies Co,Japan,Office Supplies,Toner Cartridges,17,85.22,74.05,95.4,13.71,21,1184.54,11.76,0.12,0.0,88.24
+SUP-073,Kansai Supplies Co,Japan,Office Supplies,Whiteboard & Supplies,5,65.11,59.71,69.28,4.6,8,299.13,20.0,0.2,0.0,80.0
+SUP-074,Jade Harbor Workplace,China,Office Supplies,Copy Paper (per case),32,33.96,31.41,37.57,42.03,69,1427.41,21.88,0.72,0.0,78.12
+SUP-074,Jade Harbor Workplace,China,Office Supplies,Office Chairs,33,154.22,137.74,165.98,6.52,11,1002.11,6.06,0.27,3.03,93.94
+SUP-074,Jade Harbor Workplace,China,Office Supplies,Stationery Kit,23,18.87,17.71,20.9,50.3,77,949.98,13.04,0.22,0.0,86.96
+SUP-074,Jade Harbor Workplace,China,Office Supplies,Toner Cartridges,26,82.92,77.06,89.3,14.35,32,1188.19,7.69,0.19,0.0,92.31
+SUP-074,Jade Harbor Workplace,China,Office Supplies,Whiteboard & Supplies,42,62.85,55.29,69.96,5.07,13,318.62,7.14,0.12,0.0,92.86
+SUP-075,Lotus Office Products,India,Office Supplies,Copy Paper (per case),8,33.16,30.45,35.04,37.75,56,1243.5,12.5,0.25,0.0,87.5
+SUP-075,Lotus Office Products,India,Office Supplies,Office Chairs,7,154.96,144.14,167.22,8.57,12,1324.06,14.29,0.29,0.0,85.71
+SUP-075,Lotus Office Products,India,Office Supplies,Stationery Kit,7,19.89,18.17,21.78,51.43,67,1015.43,0.0,0.0,0.0,100.0
+SUP-075,Lotus Office Products,India,Office Supplies,Toner Cartridges,12,82.57,75.56,87.91,15.33,25,1263.96,16.67,0.33,0.0,83.33
+SUP-075,Lotus Office Products,India,Office Supplies,Whiteboard & Supplies,8,63.61,56.83,68.79,5.0,8,321.25,0.0,0.0,0.0,100.0
+SUP-076,Golden Dragon Supplies Co,China,Office Supplies,Copy Paper (per case),11,33.45,31.09,35.52,37.73,60,1262.63,0.0,0.0,0.0,100.0
+SUP-076,Golden Dragon Supplies Co,China,Office Supplies,Office Chairs,13,155.02,142.99,162.18,6.69,10,1037.63,7.69,0.31,0.0,92.31
+SUP-076,Golden Dragon Supplies Co,China,Office Supplies,Stationery Kit,9,18.97,17.6,20.29,49.0,70,928.0,22.22,0.56,0.0,77.78
+SUP-076,Golden Dragon Supplies Co,China,Office Supplies,Toner Cartridges,14,82.98,75.12,89.45,14.14,27,1169.54,7.14,0.14,0.0,92.86
+SUP-076,Golden Dragon Supplies Co,China,Office Supplies,Whiteboard & Supplies,12,62.56,56.2,66.77,4.92,9,308.09,8.33,0.08,0.0,91.67
+SUP-077,Bergmann Supplies Co,Germany,Office Supplies,Copy Paper (per case),18,32.81,29.84,35.65,32.44,51,1058.34,0.0,0.0,0.0,100.0
+SUP-077,Bergmann Supplies Co,Germany,Office Supplies,Office Chairs,26,150.09,139.33,163.52,8.42,13,1263.34,15.38,0.31,0.0,84.62
+SUP-077,Bergmann Supplies Co,Germany,Office Supplies,Stationery Kit,24,18.41,17.08,20.01,49.33,81,907.07,12.5,0.17,0.0,87.5
+SUP-077,Bergmann Supplies Co,Germany,Office Supplies,Toner Cartridges,27,80.23,73.31,87.52,16.56,26,1322.95,7.41,0.15,0.0,92.59
+SUP-077,Bergmann Supplies Co,Germany,Office Supplies,Whiteboard & Supplies,26,60.71,53.46,65.44,4.62,8,279.04,7.69,0.08,0.0,92.31
+SUP-078,Baltic Workplace,Poland,Office Supplies,Copy Paper (per case),44,34.42,21.39,44.61,37.48,72,1276.45,90.91,11.18,6.82,9.09
+SUP-078,Baltic Workplace,Poland,Office Supplies,Office Chairs,46,149.96,95.2,200.98,7.43,12,1115.97,86.96,10.76,8.7,13.04
+SUP-078,Baltic Workplace,Poland,Office Supplies,Stationery Kit,37,19.0,14.86,23.45,52.14,80,989.12,94.59,10.65,2.7,5.41
+SUP-078,Baltic Workplace,Poland,Office Supplies,Toner Cartridges,30,79.27,60.35,96.24,13.17,24,1031.94,100.0,10.17,20.0,0.0
+SUP-078,Baltic Workplace,Poland,Office Supplies,Whiteboard & Supplies,36,60.91,36.39,75.79,5.69,9,344.85,94.44,12.17,13.89,5.56
+SUP-079,Great Wall Workplace,China,Office Supplies,Copy Paper (per case),192,36.55,31.8,42.15,40.59,78,1484.12,10.94,0.29,2.08,89.06
+SUP-079,Great Wall Workplace,China,Office Supplies,Office Chairs,175,166.27,143.92,186.43,7.89,14,1312.74,7.43,0.17,1.14,92.57
+SUP-079,Great Wall Workplace,China,Office Supplies,Stationery Kit,179,20.52,17.96,23.21,47.41,91,971.99,10.61,0.2,2.23,89.39
+SUP-079,Great Wall Workplace,China,Office Supplies,Toner Cartridges,201,88.98,77.53,101.36,14.19,31,1264.12,9.45,0.22,1.49,90.55
+SUP-079,Great Wall Workplace,China,Office Supplies,Whiteboard & Supplies,178,68.57,59.94,77.77,5.56,11,381.29,8.99,0.19,1.12,91.01
+SUP-080,Jade Harbor Chem Industries,China,Chemicals,Adhesive Compound (drum),1,638.65,638.65,638.65,3.0,3,1915.95,0.0,0.0,0.0,100.0
+SUP-080,Jade Harbor Chem Industries,China,Chemicals,Catalyst Powder (per 25kg),5,1168.07,1067.74,1276.22,3.6,5,4248.71,40.0,0.6,0.0,60.0
+SUP-080,Jade Harbor Chem Industries,China,Chemicals,Cleaning Agent (drum),3,268.94,267.59,270.25,12.67,18,3410.17,33.33,1.0,0.0,66.67
+SUP-080,Jade Harbor Chem Industries,China,Chemicals,Coating Resin (drum),2,675.94,665.86,686.01,6.5,10,4428.84,50.0,2.5,0.0,50.0
+SUP-080,Jade Harbor Chem Industries,China,Chemicals,Industrial Solvent (drum),4,447.48,414.7,474.3,16.0,27,7298.72,25.0,0.25,0.0,75.0
+SUP-081,Redwood Specialty Chem,USA,Chemicals,Adhesive Compound (drum),104,594.87,465.84,732.35,9.46,17,5665.4,3.85,0.06,4.81,96.15
+SUP-081,Redwood Specialty Chem,USA,Chemicals,Catalyst Powder (per 25kg),94,1016.33,783.3,1224.96,4.61,9,4707.08,14.89,0.38,0.0,85.11
+SUP-081,Redwood Specialty Chem,USA,Chemicals,Cleaning Agent (drum),79,218.94,171.3,271.81,21.62,44,4745.49,17.72,0.51,2.53,82.28
+SUP-081,Redwood Specialty Chem,USA,Chemicals,Coating Resin (drum),94,699.05,553.9,869.35,7.5,14,5226.8,8.51,0.26,2.13,91.49
+SUP-081,Redwood Specialty Chem,USA,Chemicals,Industrial Solvent (drum),100,393.86,315.94,501.43,16.8,28,6609.8,10.0,0.24,1.0,90.0
+SUP-082,Himalaya Chemicals,India,Chemicals,Adhesive Compound (drum),66,579.68,457.05,719.32,9.33,17,5430.71,10.61,0.33,1.52,89.39
+SUP-082,Himalaya Chemicals,India,Chemicals,Catalyst Powder (per 25kg),58,1007.68,822.33,1247.58,4.48,8,4572.81,13.79,0.36,1.72,86.21
+SUP-082,Himalaya Chemicals,India,Chemicals,Cleaning Agent (drum),57,220.16,177.99,279.36,21.98,42,4860.3,5.26,0.11,3.51,94.74
+SUP-082,Himalaya Chemicals,India,Chemicals,Coating Resin (drum),58,691.26,521.85,848.41,7.26,13,4975.4,10.34,0.26,0.0,89.66
+SUP-082,Himalaya Chemicals,India,Chemicals,Industrial Solvent (drum),65,392.75,317.4,496.36,17.23,31,6778.96,12.31,0.32,3.08,87.69
+SUP-083,Krakow Chemicals,Poland,Chemicals,Adhesive Compound (drum),366,687.35,521.64,922.22,9.61,21,6599.67,8.74,0.22,2.19,91.26
+SUP-083,Krakow Chemicals,Poland,Chemicals,Catalyst Powder (per 25kg),362,1164.84,862.34,1498.21,4.67,10,5447.56,11.88,0.27,0.28,88.12
+SUP-083,Krakow Chemicals,Poland,Chemicals,Cleaning Agent (drum),344,252.65,194.87,329.62,22.3,41,5651.76,10.17,0.24,2.03,89.83
+SUP-083,Krakow Chemicals,Poland,Chemicals,Coating Resin (drum),303,815.66,608.39,1076.66,7.5,16,6128.07,11.88,0.35,2.97,88.12
+SUP-083,Krakow Chemicals,Poland,Chemicals,Industrial Solvent (drum),357,454.8,351.41,562.15,17.44,34,7924.08,10.08,0.28,1.96,89.92
+SUP-084,Ganga Specialty Chem,India,Chemicals,Adhesive Compound (drum),3,668.95,595.06,756.42,8.67,11,5761.89,0.0,0.0,0.0,100.0
+SUP-084,Ganga Specialty Chem,India,Chemicals,Catalyst Powder (per 25kg),6,1166.59,961.06,1428.44,4.5,7,5089.46,16.67,0.33,0.0,83.33
+SUP-084,Ganga Specialty Chem,India,Chemicals,Cleaning Agent (drum),6,264.05,224.53,326.53,17.0,25,4608.29,0.0,0.0,16.67,100.0
+SUP-084,Ganga Specialty Chem,India,Chemicals,Coating Resin (drum),3,885.31,806.04,993.95,7.0,9,6305.79,0.0,0.0,0.0,100.0
+SUP-084,Ganga Specialty Chem,India,Chemicals,Industrial Solvent (drum),5,451.96,395.69,530.12,17.2,22,7592.96,40.0,1.0,0.0,60.0
+SUP-085,Sterling Chem Industries,USA,Chemicals,Catalyst Powder (per 25kg),1,1017.94,1017.94,1017.94,3.0,3,3053.82,0.0,0.0,0.0,100.0
+SUP-085,Sterling Chem Industries,USA,Chemicals,Cleaning Agent (drum),2,218.62,216.32,220.91,28.0,29,6118.92,50.0,1.0,0.0,50.0
+SUP-085,Sterling Chem Industries,USA,Chemicals,Coating Resin (drum),1,731.51,731.51,731.51,3.0,3,2194.53,0.0,0.0,0.0,100.0
+SUP-086,Summit Chem Industries,USA,Chemicals,Adhesive Compound (drum),2,581.23,526.93,635.53,9.5,10,5494.54,0.0,0.0,0.0,100.0
+SUP-086,Summit Chem Industries,USA,Chemicals,Catalyst Powder (per 25kg),6,1077.71,924.5,1245.65,3.17,5,3413.98,0.0,0.0,0.0,100.0
+SUP-086,Summit Chem Industries,USA,Chemicals,Cleaning Agent (drum),11,238.35,190.8,294.66,23.18,45,5590.87,18.18,0.36,0.0,81.82
+SUP-086,Summit Chem Industries,USA,Chemicals,Coating Resin (drum),2,653.88,632.05,675.7,5.0,5,3269.38,0.0,0.0,0.0,100.0
+SUP-086,Summit Chem Industries,USA,Chemicals,Industrial Solvent (drum),4,408.76,366.97,456.72,21.75,25,8837.86,0.0,0.0,0.0,100.0
+SUP-087,Jade Harbor Specialty Chem,China,Chemicals,Adhesive Compound (drum),50,644.26,533.47,775.28,8.76,17,5596.52,22.0,0.64,4.0,78.0
+SUP-087,Jade Harbor Specialty Chem,China,Chemicals,Catalyst Powder (per 25kg),55,1064.35,884.72,1363.84,4.11,8,4352.67,7.27,0.11,0.0,92.73
+SUP-087,Jade Harbor Specialty Chem,China,Chemicals,Cleaning Agent (drum),42,236.93,197.11,287.16,22.17,40,5205.09,0.0,0.0,9.52,100.0
+SUP-087,Jade Harbor Specialty Chem,China,Chemicals,Coating Resin (drum),45,758.03,594.58,909.31,7.4,13,5574.86,15.56,0.49,0.0,84.44
+SUP-087,Jade Harbor Specialty Chem,China,Chemicals,Industrial Solvent (drum),50,415.96,314.24,515.03,18.76,32,7814.46,12.0,0.16,2.0,88.0
+SUP-088,Bharat Specialty Chem,India,Chemicals,Coating Resin (drum),1,710.73,710.73,710.73,5.0,5,3553.65,0.0,0.0,0.0,100.0
+SUP-088,Bharat Specialty Chem,India,Chemicals,Industrial Solvent (drum),2,385.85,340.92,430.78,25.0,29,9466.53,50.0,2.0,0.0,50.0
+SUP-089,Pioneer Chem Industries,USA,Chemicals,Adhesive Compound (drum),1,639.11,639.11,639.11,14.0,14,8947.54,0.0,0.0,0.0,100.0
+SUP-089,Pioneer Chem Industries,USA,Chemicals,Catalyst Powder (per 25kg),3,1217.17,1037.59,1418.33,5.0,7,6287.0,33.33,0.33,0.0,66.67
+SUP-089,Pioneer Chem Industries,USA,Chemicals,Cleaning Agent (drum),3,234.57,213.14,253.43,23.0,34,5438.84,0.0,0.0,0.0,100.0
+SUP-089,Pioneer Chem Industries,USA,Chemicals,Coating Resin (drum),2,811.85,783.71,839.99,7.0,9,5739.23,0.0,0.0,0.0,100.0
+SUP-089,Pioneer Chem Industries,USA,Chemicals,Industrial Solvent (drum),1,413.14,413.14,413.14,23.0,23,9502.22,0.0,0.0,0.0,100.0
+SUP-090,Nippon Chem Industries,Japan,Chemicals,Adhesive Compound (drum),7,686.18,608.28,785.09,11.57,16,7821.57,0.0,0.0,0.0,100.0
+SUP-090,Nippon Chem Industries,Japan,Chemicals,Catalyst Powder (per 25kg),14,1160.22,930.36,1375.81,4.71,7,5443.62,7.14,0.07,0.0,92.86
+SUP-090,Nippon Chem Industries,Japan,Chemicals,Cleaning Agent (drum),12,258.5,200.27,287.15,23.83,35,6146.51,0.0,0.0,0.0,100.0
+SUP-090,Nippon Chem Industries,Japan,Chemicals,Coating Resin (drum),13,798.08,687.95,894.38,8.31,11,6607.77,7.69,0.08,7.69,92.31
+SUP-090,Nippon Chem Industries,Japan,Chemicals,Industrial Solvent (drum),10,462.44,403.31,535.02,16.3,36,7277.77,10.0,0.2,0.0,90.0
+SUP-091,Frontier Chem Industries,USA,Chemicals,Adhesive Compound (drum),2,525.25,506.5,544.0,11.0,11,5777.75,0.0,0.0,0.0,100.0
+SUP-091,Frontier Chem Industries,USA,Chemicals,Catalyst Powder (per 25kg),12,1057.41,925.22,1230.96,4.83,7,5101.07,8.33,0.17,8.33,91.67
+SUP-091,Frontier Chem Industries,USA,Chemicals,Cleaning Agent (drum),3,202.69,181.15,219.19,16.0,27,3251.65,0.0,0.0,0.0,100.0
+SUP-091,Frontier Chem Industries,USA,Chemicals,Coating Resin (drum),7,751.99,563.03,863.74,8.43,14,6322.96,14.29,0.29,0.0,85.71
+SUP-091,Frontier Chem Industries,USA,Chemicals,Industrial Solvent (drum),7,405.86,342.18,449.79,15.86,23,6404.84,14.29,0.14,0.0,85.71
+SUP-092,Apex Specialty Chem,USA,Chemicals,Adhesive Compound (drum),52,648.2,523.3,784.75,9.44,16,6088.25,7.69,0.19,0.0,92.31
+SUP-092,Apex Specialty Chem,USA,Chemicals,Catalyst Powder (per 25kg),58,1091.02,875.73,1351.59,4.43,10,4824.71,6.9,0.29,1.72,93.1
+SUP-092,Apex Specialty Chem,USA,Chemicals,Cleaning Agent (drum),50,230.17,184.52,286.77,19.82,38,4574.98,18.0,0.5,2.0,82.0
+SUP-092,Apex Specialty Chem,USA,Chemicals,Coating Resin (drum),49,740.44,532.74,927.49,7.69,13,5682.64,8.16,0.2,0.0,91.84
+SUP-092,Apex Specialty Chem,USA,Chemicals,Industrial Solvent (drum),50,399.93,323.96,490.88,17.98,32,7235.52,10.0,0.26,0.0,90.0
+SUP-093,Albion Chem Industries,UK,Chemicals,Adhesive Compound (drum),339,688.19,550.72,894.48,9.45,19,6506.09,10.03,0.24,0.88,89.97
+SUP-093,Albion Chem Industries,UK,Chemicals,Catalyst Powder (per 25kg),301,1167.22,843.61,1458.79,4.51,10,5262.34,8.64,0.18,1.99,91.36
+SUP-093,Albion Chem Industries,UK,Chemicals,Cleaning Agent (drum),322,248.29,191.08,315.77,21.03,47,5215.55,11.49,0.26,1.86,88.51
+SUP-093,Albion Chem Industries,UK,Chemicals,Coating Resin (drum),275,807.38,615.05,1054.01,7.46,16,6038.19,10.91,0.25,0.73,89.09
+SUP-093,Albion Chem Industries,UK,Chemicals,Industrial Solvent (drum),292,456.23,344.67,581.27,17.79,33,8102.99,7.53,0.19,2.74,92.47
+SUP-094,Shenzhou Chem Industries,China,Chemicals,Adhesive Compound (drum),8,686.53,585.91,792.14,10.5,15,7173.01,12.5,0.38,0.0,87.5
+SUP-094,Shenzhou Chem Industries,China,Chemicals,Catalyst Powder (per 25kg),12,1111.32,901.81,1315.15,4.17,6,4553.87,8.33,0.08,0.0,91.67
+SUP-094,Shenzhou Chem Industries,China,Chemicals,Cleaning Agent (drum),9,260.21,213.93,298.96,21.11,32,5521.95,0.0,0.0,11.11,100.0
+SUP-094,Shenzhou Chem Industries,China,Chemicals,Coating Resin (drum),11,813.47,669.18,906.45,6.82,13,5480.28,36.36,1.09,9.09,63.64
+SUP-094,Shenzhou Chem Industries,China,Chemicals,Industrial Solvent (drum),10,432.6,344.69,515.04,23.2,34,10222.17,0.0,0.0,10.0,100.0
+SUP-095,Busan Machinery,South Korea,Machinery,CNC Spare Parts Kit,269,3816.62,3325.02,4380.94,1.65,3,6285.59,11.52,0.27,1.12,88.48
+SUP-095,Busan Machinery,South Korea,Machinery,Compressor Unit,268,10373.88,8770.65,11779.21,1.0,1,10373.88,12.31,0.24,1.12,87.69
+SUP-095,Busan Machinery,South Korea,Machinery,Injection Mould Tooling,283,14118.35,12336.53,16291.25,1.0,1,14118.35,10.6,0.24,1.06,89.4
+SUP-095,Busan Machinery,South Korea,Machinery,Precision Jig Set,270,2370.25,2031.91,2743.69,2.6,5,6169.97,15.93,0.39,1.11,84.07
+SUP-095,Busan Machinery,South Korea,Machinery,Robotic Arm Servicing,263,7641.06,6556.19,8697.45,1.0,2,7670.13,6.84,0.19,3.42,93.16
+SUP-096,Pioneer Engineering Works,USA,Machinery,CNC Spare Parts Kit,9,3333.02,3050.97,3722.9,1.89,3,6331.38,11.11,0.11,0.0,88.89
+SUP-096,Pioneer Engineering Works,USA,Machinery,Compressor Unit,7,8948.05,8212.81,9250.81,1.0,1,8948.05,14.29,0.14,0.0,85.71
+SUP-096,Pioneer Engineering Works,USA,Machinery,Injection Mould Tooling,5,12126.9,11578.82,12845.33,1.0,1,12126.9,0.0,0.0,0.0,100.0
+SUP-096,Pioneer Engineering Works,USA,Machinery,Precision Jig Set,4,2043.96,1981.46,2070.35,2.5,3,5100.88,0.0,0.0,0.0,100.0
+SUP-096,Pioneer Engineering Works,USA,Machinery,Robotic Arm Servicing,3,6860.67,6219.93,7209.1,1.0,1,6860.67,33.33,1.0,0.0,66.67
+SUP-097,Azteca Advisory,Mexico,Professional Services,Audit & Compliance Review,247,10523.59,9017.6,12086.66,1.0,2,10565.27,11.34,0.27,2.02,88.66
+SUP-097,Azteca Advisory,Mexico,Professional Services,Legal Advisory (retainer),260,8251.13,7147.27,9415.38,1.0,1,8251.13,10.38,0.27,3.08,89.62
+SUP-097,Azteca Advisory,Mexico,Professional Services,Market Research Study,259,12083.58,10303.73,13935.14,1.0,2,12131.53,11.58,0.24,1.93,88.42
+SUP-097,Azteca Advisory,Mexico,Professional Services,Recruitment Fee,246,5759.42,4890.26,6871.81,1.0,1,5759.42,9.76,0.23,0.41,90.24
+SUP-097,Azteca Advisory,Mexico,Professional Services,Training Programme,235,4195.07,3524.68,5226.18,1.61,3,6780.38,10.21,0.23,2.13,89.79
+SUP-098,Bergmann Advisory,Germany,Professional Services,Audit & Compliance Review,19,9583.41,8338.47,10781.68,1.0,1,9583.41,5.26,0.26,0.0,94.74
+SUP-098,Bergmann Advisory,Germany,Professional Services,Legal Advisory (retainer),28,7715.3,6574.47,8921.96,1.04,2,8033.94,14.29,0.39,0.0,85.71
+SUP-098,Bergmann Advisory,Germany,Professional Services,Market Research Study,28,11107.58,9911.27,12484.02,1.0,1,11107.58,14.29,0.39,0.0,85.71
+SUP-098,Bergmann Advisory,Germany,Professional Services,Recruitment Fee,28,5311.67,4839.52,6078.31,1.0,1,5311.67,3.57,0.04,3.57,96.43
+SUP-098,Bergmann Advisory,Germany,Professional Services,Training Programme,29,3858.3,3530.22,4244.58,1.38,3,5306.38,17.24,0.17,3.45,82.76
+SUP-099,Taegu Consulting,South Korea,Professional Services,Audit & Compliance Review,12,11838.75,11032.8,12960.11,1.0,1,11838.75,16.67,0.17,0.0,83.33
+SUP-099,Taegu Consulting,South Korea,Professional Services,Legal Advisory (retainer),11,8718.15,8088.43,9173.94,1.0,1,8718.15,0.0,0.0,0.0,100.0
+SUP-099,Taegu Consulting,South Korea,Professional Services,Market Research Study,8,13368.09,11680.33,14475.2,1.0,1,13368.09,0.0,0.0,0.0,100.0
+SUP-099,Taegu Consulting,South Korea,Professional Services,Recruitment Fee,18,6280.01,5657.12,6836.35,1.0,1,6280.01,33.33,0.61,0.0,66.67
+SUP-099,Taegu Consulting,South Korea,Professional Services,Training Programme,16,4485.81,4040.64,5016.4,1.44,2,6475.91,6.25,0.06,12.5,93.75
+SUP-100,Cascade Advisory,USA,Professional Services,Audit & Compliance Review,44,11058.96,8853.34,12630.13,1.0,1,11058.96,9.09,0.18,2.27,90.91
+SUP-100,Cascade Advisory,USA,Professional Services,Legal Advisory (retainer),29,8506.83,7416.64,9678.11,1.0,1,8506.83,13.79,0.28,0.0,86.21
+SUP-100,Cascade Advisory,USA,Professional Services,Market Research Study,45,12852.87,10855.21,14305.67,1.0,1,12852.87,11.11,0.31,2.22,88.89
+SUP-100,Cascade Advisory,USA,Professional Services,Recruitment Fee,29,5909.59,5374.16,6537.25,1.03,2,6126.08,6.9,0.07,3.45,93.1
+SUP-100,Cascade Advisory,USA,Professional Services,Training Programme,27,4302.07,3761.32,4934.54,1.63,3,6960.26,11.11,0.26,3.7,88.89
+SUP-101,Cascade Partners,USA,Professional Services,Audit & Compliance Review,2,9603.16,9597.08,9609.24,1.0,1,9603.16,0.0,0.0,0.0,100.0
+SUP-101,Cascade Partners,USA,Professional Services,Legal Advisory (retainer),3,8161.5,7600.58,8765.16,1.0,1,8161.5,0.0,0.0,0.0,100.0
+SUP-101,Cascade Partners,USA,Professional Services,Market Research Study,1,12142.0,12142.0,12142.0,1.0,1,12142.0,0.0,0.0,0.0,100.0
+SUP-101,Cascade Partners,USA,Professional Services,Recruitment Fee,1,5828.05,5828.05,5828.05,1.0,1,5828.05,0.0,0.0,0.0,100.0
+SUP-101,Cascade Partners,USA,Professional Services,Training Programme,3,3841.58,3613.62,4162.9,1.67,2,6478.61,0.0,0.0,0.0,100.0
+SUP-102,Frontier Consulting,USA,Professional Services,Audit & Compliance Review,143,9577.99,8304.29,10887.43,1.01,2,9646.97,9.79,0.31,2.1,90.21
+SUP-102,Frontier Consulting,USA,Professional Services,Legal Advisory (retainer),146,7546.04,6580.0,8656.44,1.01,2,7598.55,4.79,0.12,3.42,95.21
+SUP-102,Frontier Consulting,USA,Professional Services,Market Research Study,146,11087.76,9328.06,12780.98,1.01,2,11171.65,13.01,0.29,2.05,86.99
+SUP-102,Frontier Consulting,USA,Professional Services,Recruitment Fee,134,5273.59,4562.39,6270.14,1.0,1,5273.59,7.46,0.21,2.24,92.54
+SUP-102,Frontier Consulting,USA,Professional Services,Training Programme,141,3786.57,3295.95,4346.7,1.62,3,6122.92,9.22,0.26,2.13,90.78
+SUP-103,Cascade Consulting,USA,Professional Services,Audit & Compliance Review,35,11358.54,9937.56,12889.89,1.0,1,11358.54,5.71,0.14,0.0,94.29
+SUP-103,Cascade Consulting,USA,Professional Services,Legal Advisory (retainer),25,8876.41,7718.22,9714.08,1.0,1,8876.41,28.0,1.04,4.0,72.0
+SUP-103,Cascade Consulting,USA,Professional Services,Market Research Study,36,12946.11,11148.93,14339.32,1.0,1,12946.11,16.67,0.31,2.78,83.33
+SUP-103,Cascade Consulting,USA,Professional Services,Recruitment Fee,30,6131.52,5544.96,6717.92,1.0,1,6131.52,10.0,0.23,0.0,90.0
+SUP-103,Cascade Consulting,USA,Professional Services,Training Programme,30,4564.86,3779.89,5271.06,1.57,3,7117.43,13.33,0.37,0.0,86.67
+SUP-104,Apex Consulting,USA,Professional Services,Audit & Compliance Review,5,10788.43,10001.12,11202.59,1.0,1,10788.43,0.0,0.0,0.0,100.0
+SUP-104,Apex Consulting,USA,Professional Services,Legal Advisory (retainer),5,8659.94,8414.37,9198.89,1.0,1,8659.94,0.0,0.0,0.0,100.0
+SUP-104,Apex Consulting,USA,Professional Services,Market Research Study,3,12935.72,12364.12,13586.42,1.0,1,12935.72,33.33,0.33,0.0,66.67
+SUP-104,Apex Consulting,USA,Professional Services,Recruitment Fee,4,6248.78,5578.64,6806.94,1.0,1,6248.78,0.0,0.0,0.0,100.0
+SUP-104,Apex Consulting,USA,Professional Services,Training Programme,4,4570.06,4201.68,4890.07,1.5,2,6947.44,0.0,0.0,0.0,100.0
+SUP-105,Krakow Consulting,Poland,Professional Services,Audit & Compliance Review,127,11387.4,9778.58,13127.19,1.0,1,11387.4,8.66,0.15,0.0,91.34
+SUP-105,Krakow Consulting,Poland,Professional Services,Legal Advisory (retainer),138,8966.58,7362.33,10730.4,1.0,1,8966.58,13.04,0.3,0.0,86.96
+SUP-105,Krakow Consulting,Poland,Professional Services,Market Research Study,135,13132.19,11068.65,15857.38,1.0,1,13132.19,11.85,0.27,1.48,88.15
+SUP-105,Krakow Consulting,Poland,Professional Services,Recruitment Fee,167,6197.45,5252.52,7088.44,1.0,1,6197.45,10.78,0.31,0.0,89.22
+SUP-105,Krakow Consulting,Poland,Professional Services,Training Programme,141,4565.37,3802.12,5521.21,1.73,3,7906.64,7.8,0.13,2.84,92.2
+SUP-106,Frontier Advisory,USA,Professional Services,Audit & Compliance Review,12,10525.18,9612.64,11739.19,1.0,1,10525.18,8.33,0.42,8.33,91.67
+SUP-106,Frontier Advisory,USA,Professional Services,Legal Advisory (retainer),16,8380.55,7431.76,9055.2,1.0,1,8380.55,18.75,0.44,6.25,81.25
+SUP-106,Frontier Advisory,USA,Professional Services,Market Research Study,13,12649.84,11712.58,14433.92,1.0,1,12649.84,23.08,0.92,0.0,76.92
+SUP-106,Frontier Advisory,USA,Professional Services,Recruitment Fee,11,5828.09,5606.66,6222.68,1.0,1,5828.09,9.09,0.18,0.0,90.91
+SUP-106,Frontier Advisory,USA,Professional Services,Training Programme,6,4318.69,4094.23,4876.33,1.17,2,5030.06,16.67,0.17,0.0,83.33

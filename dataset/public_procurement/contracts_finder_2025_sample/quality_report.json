@@ -1,0 +1,23 @@
+{
+  "releases": 100,
+  "unique_processes": 96,
+  "distinct_supplier_ids": 248,
+  "categories": {
+    "services": 69,
+    "goods": 17,
+    "works": 14
+  },
+  "field_coverage": {
+    "description": 100,
+    "structured_quantity": 0,
+    "structured_unit_price": 0,
+    "contract_implementation": 0,
+    "award_value_and_currency": 100
+  },
+  "source_hash_verified": true,
+  "published_from": "2025-12-30T13:37:03Z",
+  "published_to": "2025-12-31T18:06:56Z",
+  "sampling": "One bounded API page, not all 2025 notices or a representative market sample",
+  "more_pages": true,
+  "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+}

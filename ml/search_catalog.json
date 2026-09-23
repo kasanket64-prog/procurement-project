@@ -1,0 +1,457 @@
+{
+  "version": 1,
+  "provenance": "Assistant-authored retrieval enrichment for the existing synthetic catalog; not verified supplier specifications.",
+  "language": "en",
+  "items": [
+    {
+      "item": "Adhesive Compound (drum)",
+      "aliases": [
+        "industrial adhesive",
+        "bonding compound",
+        "industrial glue"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Air Freight (per 100kg)",
+      "aliases": [
+        "air cargo shipping",
+        "air freight service",
+        "cargo transport by air"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Aluminium Sheet (per ton)",
+      "aliases": [
+        "aluminum sheet",
+        "aluminium sheet metal",
+        "aluminum flat sheet"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Audit & Compliance Review",
+      "aliases": [
+        "compliance assessment",
+        "regulatory compliance review",
+        "organizational audit"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Bubble Wrap Rolls",
+      "aliases": [
+        "bubble packaging film",
+        "protective bubble wrap",
+        "cushioning wrap"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "CNC Spare Parts Kit",
+      "aliases": [
+        "CNC machine spare parts",
+        "CNC replacement parts kit",
+        "CNC spares"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Catalyst Powder (per 25kg)",
+      "aliases": [
+        "powdered catalyst",
+        "catalyst material in powder form",
+        "industrial catalyst powder"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Cleaning Agent (drum)",
+      "aliases": [
+        "industrial cleaning chemical",
+        "cleaning compound",
+        "cleaning agent"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Cloud Hosting (monthly block)",
+      "aliases": [
+        "cloud infrastructure hosting",
+        "hosted cloud resources",
+        "monthly cloud hosting"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Coating Resin (drum)",
+      "aliases": [
+        "resin for coatings",
+        "coating formulation resin",
+        "coating resin material"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Compressor Unit",
+      "aliases": [
+        "compressor equipment",
+        "compressor machine",
+        "compressor unit"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Connector Kit CK-8",
+      "aliases": [
+        "CK-8 connector kit",
+        "connector set CK-8",
+        "CK8 connectors"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Conveyor Belt Section",
+      "aliases": [
+        "conveyor belt segment",
+        "replacement conveyor belt section",
+        "conveyor belting section"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Copper Wire Rod (per ton)",
+      "aliases": [
+        "copper wire rod stock",
+        "copper rod for wire production",
+        "copper wire rod"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Copy Paper (per case)",
+      "aliases": [
+        "copier paper",
+        "office printing paper",
+        "printer paper"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Corrugated Boxes (per 1000)",
+      "aliases": [
+        "corrugated shipping boxes",
+        "corrugated cardboard boxes",
+        "corrugated cartons"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Cybersecurity Audit",
+      "aliases": [
+        "information security audit",
+        "cyber security assessment",
+        "IT security review"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "FTL Freight (per load)",
+      "aliases": [
+        "full truckload freight",
+        "full truck load transport",
+        "dedicated truckload shipping"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Hydraulic Fluid (drum)",
+      "aliases": [
+        "hydraulic oil",
+        "fluid for hydraulic systems",
+        "hydraulic system fluid"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Industrial Bearings",
+      "aliases": [
+        "machine bearings",
+        "industrial bearing components",
+        "replacement bearings"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Industrial Solvent (drum)",
+      "aliases": [
+        "solvent chemical",
+        "industrial solvent material",
+        "solvent in drums"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Injection Mould Tooling",
+      "aliases": [
+        "injection mold tooling",
+        "tooling for injection moulding",
+        "injection molding tools"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "LTL Freight (per shipment)",
+      "aliases": [
+        "less than truckload freight",
+        "partial truckload shipping",
+        "shared truck freight"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Last-Mile Delivery Batch",
+      "aliases": [
+        "last mile delivery service",
+        "final mile distribution",
+        "local final delivery batch"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Legal Advisory (retainer)",
+      "aliases": [
+        "legal advice retainer",
+        "retained legal counsel",
+        "ongoing legal advisory service"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Machine Lubricant (drum)",
+      "aliases": [
+        "machinery lubricant",
+        "machine lubricating oil",
+        "industrial machine lubrication"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Managed IT Support (monthly)",
+      "aliases": [
+        "monthly IT support service",
+        "managed information technology support",
+        "ongoing IT helpdesk support"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Market Research Study",
+      "aliases": [
+        "market analysis study",
+        "market research service",
+        "market investigation study"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Microcontroller MCU-9",
+      "aliases": [
+        "MCU-9 microcontroller",
+        "microcontroller chip MCU9",
+        "MCU9 controller"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Network Equipment Bundle",
+      "aliases": [
+        "networking hardware bundle",
+        "network equipment package",
+        "network hardware set"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Ocean Container (40ft)",
+      "aliases": [
+        "40 foot ocean container",
+        "40ft shipping container",
+        "forty foot sea container"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Office Chairs",
+      "aliases": [
+        "office seating",
+        "desk chairs",
+        "chairs for office work"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "PCB Assembly A-11",
+      "aliases": [
+        "A-11 printed circuit board assembly",
+        "assembled PCB A11",
+        "A11 circuit board"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Polypropylene Resin (per ton)",
+      "aliases": [
+        "PP resin",
+        "polypropylene polymer resin",
+        "polypropylene raw resin"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Power Supply Unit 450W",
+      "aliases": [
+        "450 watt PSU",
+        "450W power supply",
+        "power supply unit rated 450 watts"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Precision Jig Set",
+      "aliases": [
+        "precision fixture jig set",
+        "precision production jigs",
+        "precision jig tools"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Printed Labels (per 1000)",
+      "aliases": [
+        "printed product labels",
+        "printed identification labels",
+        "label printing output"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Recruitment Fee",
+      "aliases": [
+        "staff recruitment service fee",
+        "hiring agency fee",
+        "recruitment agency service"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Robotic Arm Servicing",
+      "aliases": [
+        "robot arm maintenance",
+        "servicing industrial robotic arms",
+        "robotic manipulator servicing"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Rubber Compound (per ton)",
+      "aliases": [
+        "compounded rubber material",
+        "rubber compound stock",
+        "industrial rubber compound"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "SaaS Licences (per seat, annual)",
+      "aliases": [
+        "annual SaaS subscriptions",
+        "software as a service licences",
+        "annual per user software licence"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Safety Gloves (per 100)",
+      "aliases": [
+        "protective work gloves",
+        "safety hand protection",
+        "workplace protective gloves"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Sensor Module SM-3",
+      "aliases": [
+        "SM-3 sensor module",
+        "SM3 sensing module",
+        "sensor unit SM3"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Stationery Kit",
+      "aliases": [
+        "office stationery set",
+        "stationery supplies kit",
+        "office writing supplies kit"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Steel Coil (per ton)",
+      "aliases": [
+        "coiled steel",
+        "steel in coil form",
+        "rolled steel coil"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Stretch Film Rolls",
+      "aliases": [
+        "stretch wrap film",
+        "pallet wrapping stretch film",
+        "stretch packaging rolls"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Toner Cartridges",
+      "aliases": [
+        "printer toner cartridges",
+        "laser printer toner",
+        "replacement toner cartridge"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Training Programme",
+      "aliases": [
+        "employee training program",
+        "staff training course",
+        "workforce training service"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Whiteboard & Supplies",
+      "aliases": [
+        "whiteboard and accessories",
+        "white board supplies set",
+        "office whiteboard kit"
+      ],
+      "specifications_verified": false
+    },
+    {
+      "item": "Wooden Pallets",
+      "aliases": [
+        "wood shipping pallets",
+        "timber pallets",
+        "wooden transport pallets"
+      ],
+      "specifications_verified": false
+    }
+  ]
+}
