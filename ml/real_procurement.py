@@ -78,7 +78,41 @@ def indexed(rows, name, *, required=True):
     return result
 
 
-def evaluate(bundle, as_of):
+def brand_review(request, quote):
+    """Compare declared identifiers only; never infer brand or equivalence from prose."""
+    policy = request.get('brand_policy', 'exact')
+    if policy not in ('exact', 'alternatives'):
+        raise DataError('brand_policy must be exact or alternatives')
+    missing, mismatches = [], []
+    details = {}
+    for label, required_key, offered_key in (
+            ('Brand', 'required_brand', 'offered_brand'),
+            ('Model/part number', 'required_model', 'offered_model')):
+        required, offered = request.get(required_key), quote.get(offered_key)
+        if required is not None:
+            required = text(required, required_key)
+        if offered is not None:
+            offered = text(offered, offered_key)
+        details[required_key], details[offered_key] = required, offered
+        if required is None:
+            continue
+        if offered is None:
+            missing.append(label + ' not stated in quotation')
+        elif ' '.join(required.casefold().split()) != ' '.join(offered.casefold().split()):
+            mismatches.append(label + ' differs from requested value')
+    constrained = any(details[k] is not None for k in ('required_brand', 'required_model'))
+    status = 'not_requested' if not constrained else 'matched'
+    reasons = missing + mismatches
+    if missing:
+        status = 'missing_information'
+    elif mismatches:
+        status = 'alternative_pending_review' if policy == 'alternatives' else 'mismatch'
+        if policy == 'alternatives':
+            reasons.append('Alternative requires buyer review; excluded from eligible ranking')
+    return dict(details, policy=policy, status=status, reasons=reasons)
+
+
+def evaluate(bundle, as_of, *, demo=False):
     """Return a fresh quote report, without mutating inputs or using synthetic risk."""
     if as_of.tzinfo is None:
         raise DataError('Decision timestamp must include timezone')
@@ -94,7 +128,9 @@ def evaluate(bundle, as_of):
         raise DataError('request must be an object')
 
     for source in sources.values():
-        if source.get('data_kind') != 'real' or source.get('permission_confirmed') is not True:
+        if demo and source.get('data_kind') != 'synthetic':
+            raise DataError('Demo mode requires exclusively synthetic sources')
+        if not demo and (source.get('data_kind') != 'real' or source.get('permission_confirmed') is not True):
             raise DataError('Sources must be declared real and authorized for this use')
         text(source.get('reference'), 'source.reference')
         text(source.get('reviewed_by'), 'source.reviewed_by')
@@ -169,6 +205,8 @@ def evaluate(bundle, as_of):
         if promised < issued.astimezone(destination_zone).date():
             raise DataError('Quote delivery date precedes issue date')
         reasons = []
+        brand = brand_review(request, quote)
+        reasons.extend(brand['reasons'])
         if issued > as_of or received > as_of or reviewed > as_of:
             reasons.append('Quote or review not available at decision time')
         if expires <= as_of:
@@ -199,6 +237,7 @@ def evaluate(bundle, as_of):
                      'eligible': not reasons, 'reasons': reasons,
                      'currency': quoted_currency, 'quoted_total': str(total),
                      'cost_rank': None, 'risk_estimate': None})
+        rows[-1]['brand_review'] = brand
     eligible = sorted((r for r in rows if r['eligible']), key=lambda r: (Decimal(r['quoted_total']), r['quote_id']))
     previous, rank = None, None
     for position, row in enumerate(eligible, 1):
@@ -208,9 +247,9 @@ def evaluate(bundle, as_of):
         row['cost_rank'] = rank
         previous = value
     return {'schema_version': '1.0', 'decision_at': as_of.isoformat(),
-            'status': 'QUOTATION_REVIEW_ONLY', 'purchase_authorized': False,
+            'status': 'SYNTHETIC_DEMONSTRATION' if demo else 'QUOTATION_REVIEW_ONLY', 'purchase_authorized': False,
             'risk_status': 'Unavailable: real delivery history has not been validated',
-            'provenance_status': 'Operator declarations; authenticity not independently verified',
+            'provenance_status': 'Fictional suppliers and quotations for demonstration only' if demo else 'Operator declarations; authenticity not independently verified',
             'ranking_basis': 'Lowest documented total among eligible quotes; not overall supplier quality',
             'currency': currency, 'decision_timezone': destination_zone.key,
             'timezone_basis': 'Legacy India input: Asia/Kolkata' if legacy_zone else 'Explicit destination timezone',

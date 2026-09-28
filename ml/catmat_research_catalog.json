@@ -1,0 +1,962 @@
+{
+  "usage": "Local research only; dataset-specific reuse terms unverified",
+  "sources": [
+    {
+      "path": "research/catalog_audit_20260923/furniture.json",
+      "sha256": "9873402e95753e83ce0547033b648b24d12a0a4e3aff7b53c5d3da0b67d129cc"
+    },
+    {
+      "path": "research/catalog_audit_20260923/technology.json",
+      "sha256": "b41e7999f6fee514b5d73d359e6e85f60483d8d1820e2ede6bbe161acd5fd633"
+    },
+    {
+      "path": "research/catalog_audit_20260923/hardware.json",
+      "sha256": "d722f6dee2f85261feeb0208056e8b76517296f960a641b7e1fe1f7ec2c65b84"
+    },
+    {
+      "path": "research/catalog_audit_20260923/mixed.json",
+      "sha256": "a67cd5f1a4063ee8c519ea9383da98f8ca263fddcc7128ae5854563672ca3b4d"
+    },
+    {
+      "path": "research/catalog_pilot.json",
+      "sha256": "d9a8fd9ba489fdee65e599196f7186f55388d60eabced2968a72c850683184d9"
+    }
+  ],
+  "records": [
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 207085,
+        "codigoGrupo": 71,
+        "nomeGrupo": "MOBILIÁRIOS",
+        "codigoClasse": 7105,
+        "nomeClasse": "MOBILIÁRIO DOMÉSTICO",
+        "codigoPdm": 327,
+        "nomePdm": "ARCA",
+        "descricaoItem": "ARCA, MATERIAL: MADEIRA , COMPRIMENTO: 100 CM, LARGURA: 40 CM, ALTURA: 40 CM, ACABAMENTO SUPERFICIAL: ENVERNIZADO , TIPO SUPORTE: COM ALÇA(S) ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/furniture.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 207086,
+        "codigoGrupo": 71,
+        "nomeGrupo": "MOBILIÁRIOS",
+        "codigoClasse": 7105,
+        "nomeClasse": "MOBILIÁRIO DOMÉSTICO",
+        "codigoPdm": 327,
+        "nomePdm": "ARCA",
+        "descricaoItem": "ARCA, MATERIAL: METAL , COMPRIMENTO: 80 CM, LARGURA: 50 CM, ALTURA: 40 CM, ACABAMENTO SUPERFICIAL: PINTADO , TIPO SUPORTE: COM ALÇA(S) ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/furniture.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 388630,
+        "codigoGrupo": 71,
+        "nomeGrupo": "MOBILIÁRIOS",
+        "codigoClasse": 7105,
+        "nomeClasse": "MOBILIÁRIO DOMÉSTICO",
+        "codigoPdm": 329,
+        "nomePdm": "BIOMBO",
+        "descricaoItem": "BIOMBO, MATERIAL: MADEIRA AGLOMERADA ALTA DENSIDADE , QUANTIDADE MÓDULOS: 1 UN, LARGURA MÓDULO: 100 CM, ESPESSURA MÓDULO: 8 CM, ALTURA MÓDULO: 160 CM, CARACTERÍSTICAS ADICIONAIS: PLACA FECHAMENTO EM BP AGLOMERADO, BORDAS RETAS EM , ACABAMENTO: ALUMÍNIO EXTRUDADO FORMA CÔNCAVA TIPO CEGO , REVESTIMENTO: LAMINADO MELAMÍNICO , ESTRUTURA: CHAPA AÇO #18 DOBRADA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/furniture.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 388631,
+        "codigoGrupo": 71,
+        "nomeGrupo": "MOBILIÁRIOS",
+        "codigoClasse": 7105,
+        "nomeClasse": "MOBILIÁRIO DOMÉSTICO",
+        "codigoPdm": 329,
+        "nomePdm": "BIOMBO",
+        "descricaoItem": "BIOMBO, MATERIAL: MADEIRA AGLOMERADA ALTA DENSIDADE , QUANTIDADE MÓDULOS: 1 UN, LARGURA MÓDULO: 80 CM, ESPESSURA MÓDULO: 8 CM, ALTURA MÓDULO: 160 CM, CARACTERÍSTICAS ADICIONAIS: PLACA FECHAMENTO EM BP AGLOMERADO, BORDAS RETAS EM , ACABAMENTO: ALUMÍNIO EXTRUDADO FORMA CÔNCAVA TIPO CEGO , REVESTIMENTO: LAMINADO MELAMÍNICO , ESTRUTURA: CHAPA AÇO #18 DOBRADA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/furniture.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 272395,
+        "codigoGrupo": 71,
+        "nomeGrupo": "MOBILIÁRIOS",
+        "codigoClasse": 7105,
+        "nomeClasse": "MOBILIÁRIO DOMÉSTICO",
+        "codigoPdm": 329,
+        "nomePdm": "BIOMBO",
+        "descricaoItem": "BIOMBO, MATERIAL: MADEIRA MDF , QUANTIDADE MÓDULOS: 1 UN, LARGURA MÓDULO: 1200 MM, ESPESSURA MÓDULO: 30 MM, ALTURA MÓDULO: 1350 MM, CARACTERÍSTICAS ADICIONAIS: VIDRO EMBUTIDO NO MDF MEDINDO 1200MM DE LARGURA, , COR: CINZA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/furniture.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 269925,
+        "codigoGrupo": 71,
+        "nomeGrupo": "MOBILIÁRIOS",
+        "codigoClasse": 7105,
+        "nomeClasse": "MOBILIÁRIO DOMÉSTICO",
+        "codigoPdm": 329,
+        "nomePdm": "BIOMBO",
+        "descricaoItem": "BIOMBO, MATERIAL: MADEIRA AGLOMERADA , QUANTIDADE MÓDULOS: 2 UN, LARGURA MÓDULO: 800 MM, ESPESSURA MÓDULO: 90 MM, ALTURA MÓDULO: 1100 MM, CARACTERÍSTICAS ADICIONAIS: CONSTITUÍDO POR 2 PAINÉIS DE 12MM EM AGLOMERADO RE , COR: ARGILA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/furniture.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 304236,
+        "codigoGrupo": 71,
+        "nomeGrupo": "MOBILIÁRIOS",
+        "codigoClasse": 7105,
+        "nomeClasse": "MOBILIÁRIO DOMÉSTICO",
+        "codigoPdm": 329,
+        "nomePdm": "BIOMBO",
+        "descricaoItem": "BIOMBO, MATERIAL: CHAPA DURA FIBRA MADEIRA , QUANTIDADE MÓDULOS: 1 UN, LARGURA MÓDULO: 60 CM, ESPESSURA MÓDULO: 35 MM, ALTURA MÓDULO: 170 CM, CARACTERÍSTICAS ADICIONAIS: MIOLO TIPO COLMÉIA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/furniture.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 351181,
+        "codigoGrupo": 71,
+        "nomeGrupo": "MOBILIÁRIOS",
+        "codigoClasse": 7105,
+        "nomeClasse": "MOBILIÁRIO DOMÉSTICO",
+        "codigoPdm": 329,
+        "nomePdm": "BIOMBO",
+        "descricaoItem": "BIOMBO, MATERIAL: AÇO , QUANTIDADE MÓDULOS: 1 UN, LARGURA MÓDULO: 1,95 MM, ESPESSURA MÓDULO: 90 MM, ALTURA MÓDULO: 1,55 MM, CARACTERÍSTICAS ADICIONAIS: QUADRO MODULAR/MÓDULO MADEIRA MDF/COLUNAS SUSTENTA , COR: ARGILA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/furniture.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 388635,
+        "codigoGrupo": 71,
+        "nomeGrupo": "MOBILIÁRIOS",
+        "codigoClasse": 7105,
+        "nomeClasse": "MOBILIÁRIO DOMÉSTICO",
+        "codigoPdm": 329,
+        "nomePdm": "BIOMBO",
+        "descricaoItem": "BIOMBO, MATERIAL: MADEIRA AGLOMERADA ALTA DENSIDADE , QUANTIDADE MÓDULOS: 1 UN, LARGURA MÓDULO: 120 CM, ESPESSURA MÓDULO: 8 CM, ALTURA MÓDULO: 110 CM, CARACTERÍSTICAS ADICIONAIS: PLACA FECHAMENTO EM BP AGLOMERADO, BORDAS RETAS EM , ACABAMENTO: ALUMÍNIO EXTRUDADO FORMA CÔNCAVA TIPO CEGO , REVESTIMENTO: LAMINADO MELAMÍNICO , ESTRUTURA: CHAPA AÇO #18 DOBRADA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/furniture.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 388634,
+        "codigoGrupo": 71,
+        "nomeGrupo": "MOBILIÁRIOS",
+        "codigoClasse": 7105,
+        "nomeClasse": "MOBILIÁRIO DOMÉSTICO",
+        "codigoPdm": 329,
+        "nomePdm": "BIOMBO",
+        "descricaoItem": "BIOMBO, MATERIAL: MADEIRA AGLOMERADA ALTA DENSIDADE , QUANTIDADE MÓDULOS: 1 UN, LARGURA MÓDULO: 60 CM, ESPESSURA MÓDULO: 8 CM, ALTURA MÓDULO: 110 CM, CARACTERÍSTICAS ADICIONAIS: PLACA FECHAMENTO EM BP AGLOMERADO, BORDAS RETAS EM , ACABAMENTO: ALUMÍNIO EXTRUDADO FORMA CÔNCAVA TIPO CEGO , REVESTIMENTO: LAMINADO MELAMÍNICO , ESTRUTURA: CHAPA AÇO #18 DOBRADA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/furniture.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 205159,
+        "codigoGrupo": 70,
+        "nomeGrupo": "INFORMÁTICA - EQUIPAMENTOS,  PEÇAS, ACESSÓRIOS E SUPRIMENTOSDE TIC",
+        "codigoClasse": 7010,
+        "nomeClasse": "COMPUTADORES",
+        "codigoPdm": 239,
+        "nomePdm": "\"SERVIDOR IMPRESSÃO\"",
+        "descricaoItem": "\"SERVIDOR IMPRESSÃO\", TIPO PROTOCOLO: NET WARE , TENSÃO ALIMENTAÇÃO: 115 / 230 V, VELOCIDADE REDE: 10/100 MB/S, CONECTORES: RJ-45 , VELOCIDADE IMPRESSÃO: 0 A 200 MB/S",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/technology.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 130354,
+        "codigoGrupo": 70,
+        "nomeGrupo": "INFORMÁTICA - EQUIPAMENTOS,  PEÇAS, ACESSÓRIOS E SUPRIMENTOSDE TIC",
+        "codigoClasse": 7010,
+        "nomeClasse": "COMPUTADORES",
+        "codigoPdm": 239,
+        "nomePdm": "\"SERVIDOR IMPRESSÃO\"",
+        "descricaoItem": "\"SERVIDOR IMPRESSÃO\", NOME: SERVIDOR IMPRESSAO ( PRINT SERVER ) ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/technology.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 205157,
+        "codigoGrupo": 70,
+        "nomeGrupo": "INFORMÁTICA - EQUIPAMENTOS,  PEÇAS, ACESSÓRIOS E SUPRIMENTOSDE TIC",
+        "codigoClasse": 7010,
+        "nomeClasse": "COMPUTADORES",
+        "codigoPdm": 239,
+        "nomePdm": "\"SERVIDOR IMPRESSÃO\"",
+        "descricaoItem": "\"SERVIDOR IMPRESSÃO\", TIPO PROTOCOLO: APPLE TALK , TENSÃO ALIMENTAÇÃO: 12,70 A 18 V, VELOCIDADE REDE: 3/64 MB/S, CONECTORES: RJ-45 , VELOCIDADE IMPRESSÃO: 0 A 200 MB/S",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/technology.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 294736,
+        "codigoGrupo": 70,
+        "nomeGrupo": "INFORMÁTICA - EQUIPAMENTOS,  PEÇAS, ACESSÓRIOS E SUPRIMENTOSDE TIC",
+        "codigoClasse": 7010,
+        "nomeClasse": "COMPUTADORES",
+        "codigoPdm": 239,
+        "nomePdm": "\"SERVIDOR IMPRESSÃO\"",
+        "descricaoItem": "\"SERVIDOR IMPRESSÃO\", TIPO PROTOCOLO: TCP/IP , TENSÃO ALIMENTAÇÃO: 5 V, VELOCIDADE REDE: 10/100 MB/S, CONECTORES: 1 PORTA RJ-45 E 1 PORTA PARALELA BIDIRECIONAL , VELOCIDADE IMPRESSÃO: 100 MB/S, CARACTERÍSTICAS ADICIONAIS: SUPORTE GERENCIAMENTO WEB BROSER, PROTOCOLO DHCP ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/technology.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 294394,
+        "codigoGrupo": 70,
+        "nomeGrupo": "INFORMÁTICA - EQUIPAMENTOS,  PEÇAS, ACESSÓRIOS E SUPRIMENTOSDE TIC",
+        "codigoClasse": 7010,
+        "nomeClasse": "COMPUTADORES",
+        "codigoPdm": 239,
+        "nomePdm": "\"SERVIDOR IMPRESSÃO\"",
+        "descricaoItem": "\"SERVIDOR IMPRESSÃO\", TIPO PROTOCOLO: TCP/IP, IPX/SPX , TENSÃO ALIMENTAÇÃO: 110/127 V, VELOCIDADE REDE: 10/100 MB/S, CONECTORES: 1 PORTA RJ-45 E 3 PORTAS PARALELAS BIDIRECIONAIS , CARACTERÍSTICAS ADICIONAIS: LEDS INDICADORES POWER ON, CONEXAÇÃO REDE E PORTAS ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/technology.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 320378,
+        "codigoGrupo": 70,
+        "nomeGrupo": "INFORMÁTICA - EQUIPAMENTOS,  PEÇAS, ACESSÓRIOS E SUPRIMENTOSDE TIC",
+        "codigoClasse": 7010,
+        "nomeClasse": "COMPUTADORES",
+        "codigoPdm": 239,
+        "nomePdm": "\"SERVIDOR IMPRESSÃO\"",
+        "descricaoItem": "\"SERVIDOR IMPRESSÃO\", TIPO PROTOCOLO: TCP/IP , TENSÃO ALIMENTAÇÃO: 110/127 V, VELOCIDADE REDE: 10/1000 MB/S, CONECTORES: RJ-45 , CARACTERÍSTICAS ADICIONAIS: 2 PORTAS USB 2.0 ALTA VELOCIDADE, I PÁRALELA BIDI ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/technology.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 236086,
+        "codigoGrupo": 70,
+        "nomeGrupo": "INFORMÁTICA - EQUIPAMENTOS,  PEÇAS, ACESSÓRIOS E SUPRIMENTOSDE TIC",
+        "codigoClasse": 7010,
+        "nomeClasse": "COMPUTADORES",
+        "codigoPdm": 239,
+        "nomePdm": "\"SERVIDOR IMPRESSÃO\"",
+        "descricaoItem": "\"SERVIDOR IMPRESSÃO\", TIPO PROTOCOLO: TCP/IP, IPX/SPX, ETHERTALK , TENSÃO ALIMENTAÇÃO: 110/127 V, VELOCIDADE REDE: 10/100 MB/S, CONECTORES: 1 PORTA RJ-45 E 1 PORTA USB , CARACTERÍSTICAS ADICIONAIS: COMPATÍVEL COM PERIFÉRICOS COM CONEXÃO USB ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/technology.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 205158,
+        "codigoGrupo": 70,
+        "nomeGrupo": "INFORMÁTICA - EQUIPAMENTOS,  PEÇAS, ACESSÓRIOS E SUPRIMENTOSDE TIC",
+        "codigoClasse": 7010,
+        "nomeClasse": "COMPUTADORES",
+        "codigoPdm": 239,
+        "nomePdm": "\"SERVIDOR IMPRESSÃO\"",
+        "descricaoItem": "\"SERVIDOR IMPRESSÃO\", TIPO PROTOCOLO: APPLE TALK , TENSÃO ALIMENTAÇÃO: 12 V, VELOCIDADE REDE: 3/64 MB/S, CONECTORES: RJ-45 , VELOCIDADE IMPRESSÃO: 0 A 200 MB/S",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/technology.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 451800,
+        "codigoGrupo": 70,
+        "nomeGrupo": "INFORMÁTICA - EQUIPAMENTOS,  PEÇAS, ACESSÓRIOS E SUPRIMENTOSDE TIC",
+        "codigoClasse": 7010,
+        "nomeClasse": "COMPUTADORES",
+        "codigoPdm": 6484,
+        "nomePdm": "MICROCOMPUTADOR ALL IN ONE",
+        "descricaoItem": "MICROCOMPUTADOR ALL IN ONE, TELA: ATÉ 21,5 POL, INTERATIVIDADE DA TELA: SEM INTERATIVIDADE , MEMÓRIA RAM: SUPERIOR A 4 GB, NÚCLEOS POR PROCESSADOR: ATÉ 4 , ARMAZENAMENTO HDD: 501 GB A 1 TB., ARMAZENAMENTO SSD: SEM DISCO SSD , FONTE ALIMENTAÇÃO: BIVOLT AUTOMÁTICA , SISTEMA OPERACIONAL: PROPRIETÁRIO , GARANTIA ON SITE: 36 MESES",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": "84714900",
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": true,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/technology.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 481548,
+        "codigoGrupo": 70,
+        "nomeGrupo": "INFORMÁTICA - EQUIPAMENTOS,  PEÇAS, ACESSÓRIOS E SUPRIMENTOSDE TIC",
+        "codigoClasse": 7010,
+        "nomeClasse": "COMPUTADORES",
+        "codigoPdm": 6484,
+        "nomePdm": "MICROCOMPUTADOR ALL IN ONE",
+        "descricaoItem": "MICROCOMPUTADOR ALL IN ONE, TELA: SUPERIOR A 21,5 POL, INTERATIVIDADE DA TELA: SEM INTERATIVIDADE , MEMÓRIA RAM: SUPERIOR A 4 GB, NÚCLEOS POR PROCESSADOR: SUPERIOR A 8 , ARMAZENAMENTO HDD: SUPERIOR A 1 TB., ARMAZENAMENTO SSD: 310 A 500 , FONTE ALIMENTAÇÃO: BIVOLT AUTOMÁTICA , SISTEMA OPERACIONAL: PROPRIETÁRIO , GARANTIA ON SITE: 12 MESES",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": "84714900",
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": true,
+        "dataHoraAtualizacao": "2021-12-01T18:16:49.250612"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/technology.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 39950,
+        "codigoGrupo": 53,
+        "nomeGrupo": "FERRAGENS E ABRASIVOS",
+        "codigoClasse": 5305,
+        "nomeClasse": "PARAFUSOS SEM PORCA",
+        "codigoPdm": 10439,
+        "nomePdm": "PARAFUSO METÁLICO",
+        "descricaoItem": "PARAFUSO METÁLICO, NOME: PARAFUSO METALICO - USO GERAL ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2022-05-31T10:37:31.688588"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/hardware.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 339437,
+        "codigoGrupo": 53,
+        "nomeGrupo": "FERRAGENS E ABRASIVOS",
+        "codigoClasse": 5305,
+        "nomeClasse": "PARAFUSOS SEM PORCA",
+        "codigoPdm": 10435,
+        "nomePdm": "PARAFUSO FIXAÇÃO TELHADO",
+        "descricaoItem": "PARAFUSO FIXAÇÃO TELHADO, MATERIAL: AÇO CARBONO , ACABAMENTO SUPERFICIAL: ZINCADO AMARELO (ECOSEAL) , COMPRIMENTO: 50,8 MM, DIÂMETRO: 5,33 MM, TIPO ROSCA: AUTO BROCANTE , CARACTERÍSTICAS ADICIONAIS: COM ARRUELAS EPDM , PASSO ROSCA: 2,79 MM A 5,35 MM MM",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/hardware.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 256401,
+        "codigoGrupo": 53,
+        "nomeGrupo": "FERRAGENS E ABRASIVOS",
+        "codigoClasse": 5305,
+        "nomeClasse": "PARAFUSOS SEM PORCA",
+        "codigoPdm": 10435,
+        "nomePdm": "PARAFUSO FIXAÇÃO TELHADO",
+        "descricaoItem": "PARAFUSO FIXAÇÃO TELHADO, MATERIAL: AÇO CARBONO , ACABAMENTO SUPERFICIAL: ZINCADO , COMPRIMENTO: 150 MM, DIÂMETRO: 5 MM, TIPO ROSCA: SOBERBA , CARACTERÍSTICAS ADICIONAIS: COM ANEL DE BORRACHA FLEXÍVEL PARA VEDAÇÃO ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/hardware.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 452745,
+        "codigoGrupo": 53,
+        "nomeGrupo": "FERRAGENS E ABRASIVOS",
+        "codigoClasse": 5305,
+        "nomeClasse": "PARAFUSOS SEM PORCA",
+        "codigoPdm": 10435,
+        "nomePdm": "PARAFUSO FIXAÇÃO TELHADO",
+        "descricaoItem": "PARAFUSO FIXAÇÃO TELHADO, MATERIAL: AÇO CARBONO , ACABAMENTO SUPERFICIAL: ZINCADO , COMPRIMENTO: 500 MM, DIÂMETRO: 5/16 POL, TIPO ROSCA: SOBERBA , CARACTERÍSTICAS ADICIONAIS: COM ANEL DE BORRACHA FLEXÍVEL PARA VEDAÇÃO ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/hardware.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 443337,
+        "codigoGrupo": 53,
+        "nomeGrupo": "FERRAGENS E ABRASIVOS",
+        "codigoClasse": 5305,
+        "nomeClasse": "PARAFUSOS SEM PORCA",
+        "codigoPdm": 10435,
+        "nomePdm": "PARAFUSO FIXAÇÃO TELHADO",
+        "descricaoItem": "PARAFUSO FIXAÇÃO TELHADO, MATERIAL: AÇO CARBONO , ACABAMENTO SUPERFICIAL: ZINCADO , COMPRIMENTO: 200 MM, DIÂMETRO: 5 MM, TIPO ROSCA: SOBERBA , CARACTERÍSTICAS ADICIONAIS: COM ANEL DE BORRACHA FLEXÍVEL PARA VEDAÇÃO ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/hardware.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 369128,
+        "codigoGrupo": 53,
+        "nomeGrupo": "FERRAGENS E ABRASIVOS",
+        "codigoClasse": 5305,
+        "nomeClasse": "PARAFUSOS SEM PORCA",
+        "codigoPdm": 10435,
+        "nomePdm": "PARAFUSO FIXAÇÃO TELHADO",
+        "descricaoItem": "PARAFUSO FIXAÇÃO TELHADO, MATERIAL: ALUMÍNIO , COMPRIMENTO: 300 MM, DIÂMETRO: 1/4 POL, CARACTERÍSTICAS ADICIONAIS: PORCA, ARRUELA CÔNCAVA FERRO E ARRUELA LISA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/hardware.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 382292,
+        "codigoGrupo": 53,
+        "nomeGrupo": "FERRAGENS E ABRASIVOS",
+        "codigoClasse": 5305,
+        "nomeClasse": "PARAFUSOS SEM PORCA",
+        "codigoPdm": 10435,
+        "nomePdm": "PARAFUSO FIXAÇÃO TELHADO",
+        "descricaoItem": "PARAFUSO FIXAÇÃO TELHADO, MATERIAL: AÇO CARBONO , ACABAMENTO SUPERFICIAL: ZINCADO , COMPRIMENTO: 100 MM, DIÂMETRO: 1/4 POL, TIPO ROSCA: SOBERBA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/hardware.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 384127,
+        "codigoGrupo": 53,
+        "nomeGrupo": "FERRAGENS E ABRASIVOS",
+        "codigoClasse": 5305,
+        "nomeClasse": "PARAFUSOS SEM PORCA",
+        "codigoPdm": 10435,
+        "nomePdm": "PARAFUSO FIXAÇÃO TELHADO",
+        "descricaoItem": "PARAFUSO FIXAÇÃO TELHADO, MATERIAL: FERRO GALVANIZADO , ACABAMENTO SUPERFICIAL: ZINCADO , COMPRIMENTO: 300 MM, DIÂMETRO: 8 MM, TIPO ROSCA: SOBERBA , CARACTERÍSTICAS ADICIONAIS: CONJUNTO VEDAÇÃO:  ARRUELA DE AÇO INOX E BORRACHA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/hardware.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 368937,
+        "codigoGrupo": 53,
+        "nomeGrupo": "FERRAGENS E ABRASIVOS",
+        "codigoClasse": 5305,
+        "nomeClasse": "PARAFUSOS SEM PORCA",
+        "codigoPdm": 10435,
+        "nomePdm": "PARAFUSO FIXAÇÃO TELHADO",
+        "descricaoItem": "PARAFUSO FIXAÇÃO TELHADO, MATERIAL: AÇO CARBONO , COMPRIMENTO: 110 MM, DIÂMETRO: 5/16 POL, CARACTERÍSTICAS ADICIONAIS: ARRUELA METAL E ARRUELA BORRACHA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/hardware.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 444464,
+        "codigoGrupo": 53,
+        "nomeGrupo": "FERRAGENS E ABRASIVOS",
+        "codigoClasse": 5305,
+        "nomeClasse": "PARAFUSOS SEM PORCA",
+        "codigoPdm": 10435,
+        "nomePdm": "PARAFUSO FIXAÇÃO TELHADO",
+        "descricaoItem": "PARAFUSO FIXAÇÃO TELHADO, MATERIAL: AÇO CARBONO , ACABAMENTO SUPERFICIAL: ZINCADO , COMPRIMENTO: 100 MM, DIÂMETRO: 6 MM, TIPO ROSCA: SOBERBA , CARACTERÍSTICAS ADICIONAIS: ARRUELA METAL E ARRUELA BORRACHA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/hardware.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 206504,
+        "codigoGrupo": 71,
+        "nomeGrupo": "MOBILIÁRIOS",
+        "codigoClasse": 7110,
+        "nomeClasse": "MOBILIÁRIO PARA ESCRITÓRIO",
+        "codigoPdm": 313,
+        "nomePdm": "CADEIRA ESCRITÓRIO",
+        "descricaoItem": "CADEIRA ESCRITÓRIO, MATERIAL ESTRUTURA: TUBO AÇO , MATERIAL REVESTIMENTO ASSENTO E ENCOSTO: COURO , MATERIAL ENCOSTO: ESPUMA INJETADA , MATERIAL ASSENTO: ESPUMA LAMINADA , TRATAMENTO SUPERFICIAL ESTRUTURA: NIQUELADO , TIPO BASE: GIRATÓRIO , TIPO ENCOSTO: BAIXO , APOIO BRAÇO: COM BRAÇOS , REGULAGEM VERTICAL: COM REGULAGEM , COR: AMARELA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/mixed.json"
+      ],
+      "english_title": "Office chair — yellow, swivel base",
+      "english_description": "Steel-tube frame; leather seat and back covering; injected-foam back; laminated-foam seat; nickel-plated frame; swivel base; low back; armrests; vertical adjustment; yellow.",
+      "translation_status": "Assistant translation checked against captured description; independent review pending"
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 243756,
+        "codigoGrupo": 71,
+        "nomeGrupo": "MOBILIÁRIOS",
+        "codigoClasse": 7110,
+        "nomeClasse": "MOBILIÁRIO PARA ESCRITÓRIO",
+        "codigoPdm": 313,
+        "nomePdm": "CADEIRA ESCRITÓRIO",
+        "descricaoItem": "CADEIRA ESCRITÓRIO, MATERIAL REVESTIMENTO ASSENTO E ENCOSTO: TECIDO 100% LÃ , MATERIAL ASSENTO: ESPUMA POLIURETANO INJETADO , TIPO BASE: FIXO , TIPO ENCOSTO: MÉDIO , APOIO BRAÇO: COM BRAÇOS , REGULAGEM VERTICAL: SEM REGULAGEM , COR: AZUL , ACABAMENTO SUPERFICIAL ESTRUTURA: PINTURA , COR ESTRUTURA: PRETA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/mixed.json"
+      ],
+      "english_title": "Office chair — blue, fixed base",
+      "english_description": "Seat and back covering: 100% wool fabric; injected polyurethane foam seat; fixed base; medium back; armrests; no vertical adjustment; blue; painted frame with black frame colour.",
+      "translation_status": "Assistant translation checked against captured description; independent review pending"
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 399016,
+        "codigoGrupo": 68,
+        "nomeGrupo": "SUBSTÂNCIAS E PRODUTOS QUÍMICOS",
+        "codigoClasse": 6810,
+        "nomeClasse": "PRODUTOS QUÍMICOS",
+        "codigoPdm": 10081,
+        "nomePdm": "BETA-NICOTINAMIDA ADENINA DINUCLEOTÍDEO",
+        "descricaoItem": "BETA-NICOTINAMIDA ADENINA DINUCLEOTÍDEO, ASPECTO FÍSICO: PÓ BRANCO HIGROSCÓPICO , FÓRMULA QUÍMICA: C21H27N7O14P2.3H2O , PESO MOLECULAR: 717,50 G/MOL, TEOR DE PUREZA: PUREZA MÍNIMA DE 98% , NÚMERO DE REFERÊNCIA QUÍMICA: CAS 53-84-9 ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/mixed.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 275035,
+        "codigoGrupo": 53,
+        "nomeGrupo": "FERRAGENS E ABRASIVOS",
+        "codigoClasse": 5310,
+        "nomeClasse": "PORCAS E ARRUELAS",
+        "codigoPdm": 642,
+        "nomePdm": "ARRUELA",
+        "descricaoItem": "ARRUELA, MATERIAL: AÇO CARBONO , DIÂMETRO INTERNO: 5/16 POL, DIÂMETRO EXTERNO: 21 MM, ESPESSURA: 1,50 MM, TRATAMENTO SUPERFICIAL: GALVANIZADO , TIPO: LISA , FORMATO: REDONDO ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/mixed.json"
+      ],
+      "english_title": "Galvanized carbon-steel flat washer",
+      "english_description": "Carbon steel; internal diameter 5/16 inch; external diameter 21 mm; thickness 1.50 mm; galvanized; flat; round.",
+      "translation_status": "Assistant translation checked against captured description; independent review pending"
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 481608,
+        "codigoGrupo": 70,
+        "nomeGrupo": "INFORMÁTICA - EQUIPAMENTOS,  PEÇAS, ACESSÓRIOS E SUPRIMENTOSDE TIC",
+        "codigoClasse": 7030,
+        "nomeClasse": "EQUIPAMENTOS DE ARMAZENAMENTO DE DADOS",
+        "codigoPdm": 216,
+        "nomePdm": "DISCO MAGNÉTICO",
+        "descricaoItem": "DISCO MAGNÉTICO, MEMÓRIA: 1 PB., APLICAÇÃO: ARMAZENAMENTO DADOS , MODELO: NL-SAS , VELOCIDADE MÍNIMA DISCO: 7.200 RPM",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": "84717010",
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": true,
+        "dataHoraAtualizacao": "2021-12-01T18:18:08.34599"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/mixed.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 438070,
+        "codigoGrupo": 65,
+        "nomeGrupo": "EQUIPAMENTOS E ARTIGOS PARA USO MÉDICO, DENTÁRIO E VETERINÁRIO",
+        "codigoClasse": 6520,
+        "nomeClasse": "INSTRUMENTOS, EQUIPAMENTOS E SUPRIMENTOS DENTÁRIOS",
+        "codigoPdm": 11632,
+        "nomePdm": "REMOVEDOR USO ODONTOLÓGICO",
+        "descricaoItem": "REMOVEDOR USO ODONTOLÓGICO, ASPECTO FÍSICO: LÍQUIDO , APLICAÇÃO: PARA GESSO E ALGINATO ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": "90",
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": true,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/mixed.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 485231,
+        "codigoGrupo": 34,
+        "nomeGrupo": "MAQUINAS PARA TRABALHO EM METAIS",
+        "codigoClasse": 3449,
+        "nomeClasse": "MÁQUINAS AUXILIARES PARA MODELAGEM E CORTE DE METAL",
+        "codigoPdm": 1144,
+        "nomePdm": "POLITRIZ ANGULAR",
+        "descricaoItem": "POLITRIZ ANGULAR, POTÊNCIA: 800 W, ALIMENTAÇÃO: 127 V, DIÂMETRO DISCO: 4 1/2 POL",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2022-04-28T03:00:19.150259"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/mixed.json"
+      ],
+      "english_title": "Angle polisher — 800 W, 127 V",
+      "english_description": "Power 800 W; supply 127 V; disc diameter 4 1/2 inches.",
+      "translation_status": "Assistant translation checked against captured description; independent review pending"
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 429634,
+        "codigoGrupo": 99,
+        "nomeGrupo": "DIVERSOS",
+        "codigoClasse": 9999,
+        "nomeClasse": "ITENS DIVERSOS",
+        "codigoPdm": 16898,
+        "nomePdm": "PEÇAS / ACESSÓRIOS EQUIPAMENTOS ESPECIALIZADOS",
+        "descricaoItem": "PEÇAS / ACESSÓRIOS EQUIPAMENTOS ESPECIALIZADOS, APLICAÇÃO 1: SECADOR , TIPO 5: ABSORVEDOR ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/mixed.json"
+      ]
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 224359,
+        "codigoGrupo": 63,
+        "nomeGrupo": "SISTEMAS DE ALARME, SINALIZAÇÃO E DETECÇÃO PARA SEGURANÇA",
+        "codigoClasse": 6350,
+        "nomeClasse": "SISTEMAS DIVERSOS DE SINALIZAÇÃO, ALARME E DETECÇÃO PARA  SEGURANÇA",
+        "codigoPdm": 1519,
+        "nomePdm": "DETECTOR FUMAÇA",
+        "descricaoItem": "DETECTOR FUMAÇA, MATERIAL: PLÁSTICO ABS , TIPO: ANALÓGICO , PRINCÍPIO DETECÇÃO: ÓPTICO , ÁREA PROTEÇÃO: 60 A 80 M2, ALTURA MÁXIMA INSTALAÇÃO: 12 M, DIÂMETRO: 99 MM, ALTURA: 45 MM, COR: BRANCA ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/mixed.json"
+      ],
+      "english_title": "Optical smoke detector — analog",
+      "english_description": "ABS plastic; analog; optical detection; protected area 60 to 80 square metres; maximum installation height 12 m; diameter 99 mm; height 45 mm; white.",
+      "translation_status": "Assistant translation checked against captured description; independent review pending"
+    },
+    {
+      "source_type": "catalog_entry",
+      "source_language": "pt-BR",
+      "source_record": {
+        "codigoItem": 237152,
+        "codigoGrupo": 70,
+        "nomeGrupo": "INFORMÁTICA - EQUIPAMENTOS,  PEÇAS, ACESSÓRIOS E SUPRIMENTOSDE TIC",
+        "codigoClasse": 7010,
+        "nomeClasse": "COMPUTADORES",
+        "codigoPdm": 9726,
+        "nomePdm": "\"MICROCOMPUTADOR PESSOAL NOTEBOOK\"",
+        "descricaoItem": "\"MICROCOMPUTADOR PESSOAL NOTEBOOK\", PROCESSADOR: PENTIUM III 1 GHZ , DISCO RÍGIDO: 20 GB , COMPONENTES ADICIONAIS: COM CD-RW E DVD-ROM (COMBO) / BATERIA, FLOPPY , MEMÓRIA RAM: 256 MB , DISCO FLEXÍVEL: 1.44 MB , TAXA TRANSFERÊNCIA PLACA REDE: 10/100 MB , DIMENSÃO CINESCÓPIO: 14.1 , PESO: 3,5 KG (MÁXIMO) ",
+        "statusItem": true,
+        "itemSustentavel": false,
+        "codigo_ncm": null,
+        "descricao_ncm": null,
+        "aplica_margem_preferencia": null,
+        "dataHoraAtualizacao": "2021-10-16T09:43:08.030221"
+      },
+      "evidence_files": [
+        "research/catalog_audit_20260923/mixed.json"
+      ]
+    }
+  ]
+}

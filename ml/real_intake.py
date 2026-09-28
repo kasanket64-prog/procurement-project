@@ -4,8 +4,10 @@ import hashlib
 import json
 from pathlib import Path
 import uuid
+from dataclasses import asdict
+from quotation_mapping import map_bundle
 
-from real_procurement import DataError, amount, day, decision_zone, evaluate
+from real_procurement import DataError, amount, day, decision_zone, evaluate, brand_review
 
 
 class Cancelled(Exception):
@@ -20,6 +22,12 @@ def menu_choice(value):
 def currency_code(value):
     if len(value) != 3 or not value.isascii() or not value.isalpha() or not value.isupper():
         raise ValueError('Enter three uppercase letters, for example INR.')
+
+
+def iso_country_code(value):
+    """Syntax validation only; no claim of ISO registry membership."""
+    if len(value) != 2 or not value.isascii() or not value.isalpha() or not value.isupper():
+        raise ValueError('Enter two uppercase country-code letters, for example IN or GB.')
 
 
 def read(label, validate=None, *, ask=input, tell=print, default=None):
@@ -75,7 +83,7 @@ def local_timestamp(value, timezone_name='UTC'):
     return candidates[0].isoformat()
 
 
-def collect_request(*, ask=input, tell=print, clock=lambda: datetime.now(timezone.utc)):
+def collect_request(*, ask=input, tell=print, clock=lambda: datetime.now(timezone.utc), catalog_entry=None, product_defaults=None):
     r = lambda label, check=None, **kw: read(label, check, ask=ask, tell=tell, **kw)
     zone_name = r('IANA destination timezone (for example Asia/Kolkata or Europe/London)',
                   lambda v: decision_zone(v))
@@ -83,24 +91,65 @@ def collect_request(*, ask=input, tell=print, clock=lambda: datetime.now(timezon
     def future_date(value):
         if day(value, 'Delivery date') < clock().astimezone(zone).date():
             raise DataError('Choose today or a future delivery date.')
-    name = r('Product name')
-    specification = r('Exact specifications (model, material, size, grade, etc.)')
+    product_defaults = product_defaults or {}
+    name_default = product_defaults.get('name')
+    specification_default = None
+    if catalog_entry is not None:
+        source = catalog_entry['source_record']
+        tell('Catalog reference only. Confirm or edit the proposed name and specifications; English drafts need review.')
+        tell('Original description: ' + source['descricaoItem'])
+        name_default = catalog_entry.get('english_title') or source['nomePdm']
+        specification_default = catalog_entry.get('english_description') or source['descricaoItem']
+    name = r('Product name', default=name_default)
+    specification = r('Exact specifications (model, material, size, grade, etc.)', default=specification_default)
+    brand = r('Required brand, or any', default='any')
+    model = r('Required model/part number, or any', default='any')
+    brand = None if brand.casefold() == 'any' else brand
+    model = None if model.casefold() == 'any' else model
+    policy = 'exact'
+    if brand is not None or model is not None:
+        def check_policy(value):
+            if value not in ('exact', 'alternatives'):
+                raise ValueError('Enter exact or alternatives.')
+        policy = r('Brand/model policy: exact or alternatives (alternatives need buyer review)', check_policy, default='exact')
     unit = r('Purchasing unit (for example each, kg, or a specified pack)')
-    quantity = r('Required quantity, without commas', lambda v: amount(v, 'Quantity'))
+    initial_quantity = product_defaults.get('quantity')
+    quantity = r('Required quantity, without commas', lambda v: amount(v, 'Quantity'),
+                 default=format(initial_quantity, 'f').rstrip('0').rstrip('.') if isinstance(initial_quantity, float) else initial_quantity)
     destination = r('Delivery country, city and postal code if applicable')
+    delivery_country = r('Two-letter delivery country code (for example IN or GB)', iso_country_code)
     needed = r('Required delivery date (YYYY-MM-DD)', future_date)
     currency = r('Three-letter budget currency (for example INR, USD or EUR)', currency_code)
     budget = r(f'Your internal total budget in {currency}, without commas', lambda v: amount(v, 'Budget'))
     country = r('Required supplier country, or any', default='any')
-    return {'product': {'id': 'product-1', 'name': name, 'specification': specification, 'unit': unit},
+    if catalog_entry is not None and not yes('Have you checked the specifications, purchasing unit and quantity for this request', ask=ask, tell=tell):
+        raise Cancelled()
+    details = {'product': {'id': 'product-1', 'name': name, 'specification': specification, 'unit': unit},
             'request': {'product_id': 'product-1', 'unit': unit, 'quantity': quantity,
                         'currency': currency, 'total_budget': budget, 'needed_by': needed,
                         'decision_timezone': zone_name,
+                        'delivery_country': delivery_country,
+                        'required_brand': brand, 'required_model': model, 'brand_policy': policy,
                         'destination_id': destination, 'supplier_country': None if country.lower() == 'any' else country}}
+    if catalog_entry is not None:
+        from copy import deepcopy
+        details['catalog_reference'] = deepcopy(catalog_entry)
+        details['product']['source_classification'] = {'scheme': 'CATMAT', 'code': str(source['codigoItem'])}
+    return details
 
 
 def rfq_text(details):
     p, r = details['product'], details['request']
+    classification = p.get('source_classification')
+    reference = (f"- Catalog reference: {classification['scheme']} {classification['code']} (reference only; specifications below govern)\n"
+                 if classification else '')
+    brand_terms = ''
+    if r.get('required_brand') or r.get('required_model'):
+        brand_terms = (f"- Required brand: {r.get('required_brand') or 'Any'}\n"
+                       f"- Required model/part number: {r.get('required_model') or 'Any'}\n"
+                       '- Substitution policy: ' + ('Alternatives may be submitted separately for buyer review; not automatically accepted.'
+                       if r.get('brand_policy') == 'alternatives' else 'Exact requested brand/model only.') + '\n'
+                       '- State the offered brand and model/part number explicitly in your quotation.\n')
     return f'''# Request for quotation — {p['name']}
 
 Hello,
@@ -108,8 +157,8 @@ Hello,
 Please provide a written quotation for the following requirement:
 
 - Product: {p['name']}
-- Exact specifications: {p['specification']}
-- Quantity: {r['quantity']}
+{reference}- Exact specifications: {p['specification']}
+{brand_terms}- Quantity: {r['quantity']}
 - Purchasing unit: {r['unit']}
 - Delivery location: {r['destination_id']}
 - Required delivery date: {r['needed_by']}
@@ -157,10 +206,17 @@ def collect_bundle(details, *, ask=input, tell=print, clock=lambda: datetime.now
             tell(f"Using supplier: {supplier['name']}")
         quote = {'id': f'quote-{number}', 'supplier_id': supplier_id, 'product_id': product['id'],
                  'source_id': f'quote-source-{number}', 'source_record_id': r('Supplier quotation number and revision')}
+        quote['description_raw'] = r('Exact offered product description from quotation')
+        if bundle['request'].get('required_brand') or bundle['request'].get('required_model'):
+            for key, label in [('offered_brand', 'Offered brand'), ('offered_model', 'Offered model/part number')]:
+                value = r(label + ' as written in quotation, or unknown')
+                quote[key] = None if value.casefold() == 'unknown' else value
         quote['quantity'] = r('Quoted quantity', lambda v: amount(v, 'Quantity'))
         quote['unit'] = r('Quoted purchasing unit')
         quote['currency'] = r(f"Quoted currency code (requested {bundle['request']['currency']})", currency_code)
         quote['total_amount'] = r('Quoted total payable, without commas', lambda v: amount(v, 'Total'))
+        goods = r('Goods-only amount, or unknown', lambda v: None if v == 'unknown' else amount(v, 'Goods', zero=True))
+        quote['goods_amount'] = None if goods == 'unknown' else goods
         same_destination = y('Does the quote explicitly cover the requested delivery location')
         quote['destination_id'] = bundle['request']['destination_id'] if same_destination else '__destination_not_confirmed__'
         quote['issued_at'] = e('Quotation issue time')
@@ -172,7 +228,7 @@ def collect_bundle(details, *, ask=input, tell=print, clock=lambda: datetime.now
         quote['terms_reference'] = r('Reference to payment, warranty and delivery terms')
         quote['reviewed_by'] = reviewer
         quote['reviewed_at'] = clock().isoformat()
-        source = {'id': quote['source_id'], 'data_kind': 'real', 'permission_confirmed': True,
+        source = {'id': quote['source_id'], 'data_kind': 'real', 'source_type': 'genuine_quotation', 'permission_confirmed': True,
                   'reference': reference, 'reviewed_by': reviewer, 'reviewed_at': quote['reviewed_at']}
         candidate = dict(bundle, sources=bundle['sources'] + [source], quotes=bundle['quotes'] + [quote],
                          suppliers=bundle['suppliers'] + [dict(supplier, source_id=source['id'], source_record_id=supplier_id)] if new_supplier else list(bundle['suppliers']))
@@ -185,9 +241,24 @@ def collect_bundle(details, *, ask=input, tell=print, clock=lambda: datetime.now
             raise Cancelled()
         bundle = candidate
         result = report['quotes'][-1]
-        tell('Eligible for cost comparison.' if result['eligible'] else 'Excluded: ' + '; '.join(result['reasons']))
+        prefix = 'ALTERNATIVE - BUYER REVIEW REQUIRED: ' if result['brand_review']['status'] == 'alternative_pending_review' else 'Excluded: '
+        tell('Eligible for cost comparison.' if result['eligible'] else prefix + '; '.join(result['reasons']))
         if not y('Add another quotation'):
             return bundle
+
+
+def schema_review(bundle, now):
+    """Report every mapping failure explicitly; never replace the cost engine."""
+    results = []
+    for quote in bundle['quotes']:
+        try:
+            records = map_bundle(dict(bundle, quotes=[quote]),
+                                 delivery_country=bundle['request'].get('delivery_country'), as_of=now)
+            results.append({'quote_id': quote['id'], 'status': 'mapped', 'record': asdict(records[0]),
+                            'brand_review': brand_review(bundle['request'], quote)})
+        except (ValueError, KeyError, TypeError, StopIteration) as error:
+            results.append({'quote_id': quote['id'], 'status': 'rejected', 'reason': str(error) or 'Missing source'})
+    return results
 
 
 def save_session(folder, *, details=None, bundle=None, clock=lambda: datetime.now(timezone.utc)):
@@ -195,6 +266,8 @@ def save_session(folder, *, details=None, bundle=None, clock=lambda: datetime.no
     now = clock()
     session = folder / (now.strftime('%Y%m%d-%H%M%S') + '-' + uuid.uuid4().hex[:8])
     report = evaluate(bundle, now) if bundle is not None else None
+    if report is not None:
+        report['schema_mapping'] = schema_review(bundle, now)
     session.mkdir(parents=True, exist_ok=False)
     if bundle is None:
         (session / 'supplier_request.md').write_text(rfq_text(details), encoding='utf-8')
@@ -205,14 +278,23 @@ def save_session(folder, *, details=None, bundle=None, clock=lambda: datetime.no
         report['input_sha256'] = hashlib.sha256(raw).hexdigest()
         report['engine_sha256'] = hashlib.sha256(Path(__file__).with_name('real_procurement.py').read_bytes()).hexdigest()
         report['intake_sha256'] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
-        (session / 'review.json').write_text(json.dumps(report, indent=2), encoding='utf-8')
+        (session / 'review.json').write_text(json.dumps(report, indent=2, default=str), encoding='utf-8')
         lines = ['QUOTATION REVIEW — HUMAN DECISION REQUIRED', report['decision_at'],
                  f"Destination timezone: {report['decision_timezone']}", report['ranking_basis'], '']
         names = {s['id']: s['name'] for s in bundle['suppliers']}
         for row in report['quotes']:
             status = f"Cost rank {row['cost_rank']}" if row['eligible'] else 'EXCLUDED: ' + '; '.join(row['reasons'])
             lines.append(f"{row['quote_id']} | {names[row['supplier_id']]} | {row['currency']} {row['quoted_total']} | {status}")
+            brand = row['brand_review']
+            if brand['status'] != 'not_requested':
+                lines.append(f"  Brand/model: {brand['status']} | Required: {brand['required_brand']} / {brand['required_model']} | Offered: {brand['offered_brand']} / {brand['offered_model']}")
         lines.extend(['', report['risk_status'], 'No purchase has been authorized.'])
+        lines.append('Schema audit is separate from cost eligibility:')
+        for mapped in report['schema_mapping']:
+            lines.append(f"{mapped['quote_id']}: {mapped['status']}" + (': ' + mapped['reason'] if mapped['status'] == 'rejected' else ''))
+            if mapped['status'] == 'mapped':
+                for issue in mapped['record']['review']['unresolved']:
+                    lines.append(f"  Unresolved {issue['field']}: {issue['reason']}")
         (session / 'comparison.txt').write_text('\n'.join(lines), encoding='utf-8')
     return session
 
