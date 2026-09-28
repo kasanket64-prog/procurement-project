@@ -1,0 +1,6 @@
+# Optional advanced semantic demo; not a locked training environment.
+-r requirements-terminal.txt
+numpy
+scikit-learn
+joblib
+sentence-transformers

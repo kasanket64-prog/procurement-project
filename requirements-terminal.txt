@@ -1,0 +1,3 @@
+# Optional CLI tools. The main browser launcher uses only the Python standard library.
+pandas
+tzdata
