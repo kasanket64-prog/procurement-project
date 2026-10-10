@@ -47,6 +47,8 @@ def prepare(records, manifest):
 
 def build_page(data, template):
     # JSON is data only. Escape HTML-sensitive characters even inside script blocks.
+    # Supplier details are hidden in browser output, not deleted from storage.
+    data = dict(data, suppliers=[], processes=0)
     encoded = json.dumps(data, ensure_ascii=True).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     return template.replace('__SUPPLIER_DATA__', encoded)
 

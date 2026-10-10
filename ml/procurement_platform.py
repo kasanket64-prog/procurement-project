@@ -14,6 +14,11 @@ def build(root, destination):
     data = {'demo': demo,
             'public': json.loads((ml / 'public_supplier_leads.json').read_text(encoding='utf-8')),
             'catalog': json.loads((ml / 'catmat_research_catalog.json').read_text(encoding='utf-8'))['records']}
+    # Keep source files intact; omit supplier records from the browser payload.
+    data['products'] = sorted({row['item'] for row in demo})
+    data['demo'] = demo
+    data['public'] = dict(data['public'], suppliers=[], processes=0)
+    data['researched'] = json.loads((ml / 'researched_supplier_leads.json').read_text(encoding='utf-8'))
     encoded = json.dumps(data, ensure_ascii=True).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     template = Path(__file__).with_name('procurement_platform_template.html').read_text(encoding='utf-8')
     Path(destination).write_text(template.replace('__DATA__', encoded), encoding='utf-8')

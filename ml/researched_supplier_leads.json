@@ -1,0 +1,230 @@
+{
+  "records": [
+    {
+      "id": "hebei-jianxin",
+      "name": "河北建新化工股份有限公司",
+      "country": "China",
+      "status": "Company disclosure",
+      "fields": {
+        "name": {
+          "value": "河北建新化工股份有限公司",
+          "source_url": "https://static.cninfo.com.cn/finalpage/2025-12-12/1224872189.PDF",
+          "evidence_status": "company_disclosure",
+          "source_date": "2025-12-12",
+          "inspected_date": "2026-10-03",
+          "inspection_method": "browsing service returned document content; live availability not established",
+          "page": 1
+        },
+        "registration_identifier": {
+          "value": "911309007502944073",
+          "source_url": "https://static.cninfo.com.cn/finalpage/2025-12-12/1224872189.PDF",
+          "evidence_status": "company_disclosure",
+          "source_date": "2025-12-12",
+          "inspected_date": "2026-10-03",
+          "inspection_method": "browsing service returned document content; live availability not established",
+          "page": 1
+        },
+        "registered_capital": {
+          "value": "RMB 562,782,268",
+          "source_url": "https://static.cninfo.com.cn/finalpage/2025-12-12/1224872189.PDF",
+          "evidence_status": "company_disclosure",
+          "source_date": "2025-12-12",
+          "inspected_date": "2026-10-03",
+          "inspection_method": "browsing service returned document content; live availability not established",
+          "page": 1
+        },
+        "address": {
+          "value": "沧州临港化工园区（中捷农场）",
+          "source_url": "https://static.cninfo.com.cn/finalpage/2025-12-12/1224872189.PDF",
+          "evidence_status": "company_disclosure",
+          "source_date": "2025-12-12",
+          "inspected_date": "2026-10-03",
+          "inspection_method": "browsing service returned document content; live availability not established",
+          "page": 2
+        },
+        "products": {
+          "value": "Business-scope summary: m-aminophenol, phloroglucinol, specialty paper chemicals, epoxy resins and curing agents, organic intermediates and fluorescent brighteners. Some activities are subject to licence conditions.",
+          "source_url": "https://static.cninfo.com.cn/finalpage/2025-12-12/1224872189.PDF",
+          "evidence_status": "company_disclosure",
+          "source_date": "2025-12-12",
+          "inspected_date": "2026-10-03",
+          "inspection_method": "browsing service returned document content; live availability not established",
+          "page": 2
+        }
+      },
+      "keywords": [
+        "m-aminophenol",
+        "phloroglucinol",
+        "epoxy resin",
+        "epoxy resins",
+        "curing agent",
+        "curing agents",
+        "organic intermediates",
+        "fluorescent brighteners",
+        "specialty paper chemicals"
+      ],
+      "pending": [
+        "English name",
+        "Company website",
+        "Business contact",
+        "Certifications"
+      ],
+      "price": null,
+      "moq": null,
+      "delivery_commitment": null,
+      "delivery_risk": null,
+      "quotation_status": "No quotation received"
+    },
+    {
+      "id": "hebei-lucky",
+      "name": "乐凯化学材料有限公司",
+      "country": "China",
+      "status": "Company-reported",
+      "fields": {
+        "name": {
+          "value": "乐凯化学材料有限公司",
+          "source_url": "https://www.bdluckychem.com/",
+          "evidence_status": "company_website",
+          "source_date": null,
+          "inspected_date": "2026-10-03",
+          "inspection_method": "browsing service returned document content; live availability not established",
+          "page": null
+        },
+        "products": {
+          "value": "Light stabilizers UV-1084, UV-829, UV-646, UV-90 and UV-100; UV absorber UV-80; antioxidants AO-1081 and AO-2365; photographic additives, dyes and chemicals.",
+          "source_url": "https://www.bdluckychem.com/",
+          "evidence_status": "company_website",
+          "source_date": null,
+          "inspected_date": "2026-10-03",
+          "inspection_method": "browsing service returned document content; live availability not established",
+          "page": null
+        },
+        "certifications": {
+          "value": "ISO 9001 / 45001 / 14001 claimed; certificate validity not independently checked.",
+          "source_url": "https://www.bdluckychem.com/",
+          "evidence_status": "company_claim",
+          "source_date": null,
+          "inspected_date": "2026-10-03",
+          "inspection_method": "browsing service returned document content; live availability not established",
+          "page": null
+        },
+        "email": {
+          "value": "marketing@bdluckychem.com",
+          "source_url": "https://www.bdluckychem.com/contact/",
+          "evidence_status": "company_published_contact",
+          "source_date": null,
+          "inspected_date": "2026-10-03",
+          "inspection_method": "browsing service returned document content; live availability not established",
+          "page": null
+        },
+        "phone": {
+          "value": "+86 317 5687181",
+          "source_url": "https://www.bdluckychem.com/contact/",
+          "evidence_status": "company_published_contact",
+          "source_date": null,
+          "inspected_date": "2026-10-03",
+          "inspection_method": "browsing service returned document content; live availability not established",
+          "page": null
+        },
+        "address": {
+          "value": "河北省沧州市临港化工园区",
+          "source_url": "https://www.bdluckychem.com/contact/",
+          "evidence_status": "company_published_contact",
+          "source_date": null,
+          "inspected_date": "2026-10-03",
+          "inspection_method": "browsing service returned document content; live availability not established",
+          "page": null
+        }
+      },
+      "keywords": [
+        "light stabilizer",
+        "light stabilizers",
+        "antioxidant",
+        "antioxidants",
+        "UV absorber",
+        "UV-1084",
+        "AO-1081",
+        "AO-2365",
+        "photographic chemicals"
+      ],
+      "pending": [
+        "English name",
+        "Registration identifier",
+        "Certificate numbers",
+        "Independent certification checks"
+      ],
+      "price": null,
+      "moq": null,
+      "delivery_commitment": null,
+      "delivery_risk": null,
+      "quotation_status": "No quotation received"
+    },
+    {
+      "id": "hebei-risun",
+      "name": "沧州旭阳化工有限公司",
+      "country": "China",
+      "status": "Parent-company reported",
+      "fields": {
+        "name": {
+          "value": "沧州旭阳化工有限公司",
+          "source_url": "https://www.risun.com/news/details_294_1067.html",
+          "evidence_status": "company_website",
+          "source_date": "2024-01-03",
+          "inspected_date": "2026-10-03",
+          "inspection_method": "browsing service returned document content; live availability not established",
+          "page": null
+        },
+        "relationship": {
+          "value": "Described as a wholly owned Risun Group subsidiary at the article date.",
+          "source_url": "https://www.risun.com/news/details_294_1067.html",
+          "evidence_status": "company_website",
+          "source_date": "2024-01-03",
+          "inspected_date": "2026-10-03",
+          "inspection_method": "browsing service returned document content; live availability not established",
+          "page": null
+        },
+        "products": {
+          "value": "Caprolactam, cyclohexanone, ammonium sulphate and polyamide thermoplastic nylon elastomers.",
+          "source_url": "https://www.risun.com/news/details_294_1067.html",
+          "evidence_status": "company_website",
+          "source_date": "2024-01-03",
+          "inspected_date": "2026-10-03",
+          "inspection_method": "browsing service returned document content; live availability not established",
+          "page": null
+        }
+      },
+      "keywords": [
+        "caprolactam",
+        "cyclohexanone",
+        "ammonium sulphate",
+        "ammonium sulfate",
+        "polyamide",
+        "nylon elastomers"
+      ],
+      "pending": [
+        "English name",
+        "Independent website",
+        "Business contact",
+        "Registration identifier",
+        "Certifications"
+      ],
+      "price": null,
+      "moq": null,
+      "delivery_commitment": null,
+      "delivery_risk": null,
+      "quotation_status": "No quotation received"
+    }
+  ],
+  "unresolved_candidates": [
+    {
+      "name": "中海石油中捷石化有限公司",
+      "status": "unresolved",
+      "reason": "Permit claims not inspected"
+    },
+    {
+      "name": "河北鑫海化工集团有限公司",
+      "status": "unresolved",
+      "reason": "Permit claims not inspected"
+    }
+  ]
+}
