@@ -16,10 +16,10 @@ The ML requirements include the terminal requirements. Install them only for tho
 
 ## Run the history regression tests
 
-With Python 3.10 or later, install `python -m pip install -r requirements-terminal.txt`,
+With Python 3.10 or later, install `python -m pip install pandas numpy scikit-learn joblib`,
 then run `python -m unittest discover -v` from the repository root.
-The history and chronological-split tests use pandas and NumPy (installed with pandas), plus Python's
-standard-library test runner. No ML models or semantic-model downloads are needed.
+The history, chronological-split and validation-policy tests use Python's standard-library
+test runner. No trained ML models or semantic-model downloads are needed.
 They check outcome availability, same-day exclusions, open-order labels, future-outcome
 isolation, duplicate order IDs and risk-snapshot dates; they do not validate real supplier performance.
 
@@ -43,6 +43,28 @@ Threshold diagnostics use validation only; final-test metrics use the fixed 0.50
 The existing 300-tree seeded Random Forest and input columns are retained. The command overwrites
 `models/delivery_risk_model_clean.pkl`; copy any model you need to preserve before training.
 This remains a synthetic experiment, and other experimental trainers have not been corrected.
+
+## Investigate recall without scoring the final test
+
+Using the corrected saved model, run from the repository root:
+
+```powershell
+python ml/validation_recall.py --validation-start 2025-01-01 --test-start 2025-10-25 --output validation-runs/thresholds.json
+python ml/compare_validation_recall.py --validation-start 2025-01-01 --test-start 2025-10-25 --output validation-runs/candidates
+```
+
+Use new output paths for every run. The first command reports threshold trade-offs, maximum F2
+and missed-delay score bands. The second fits only two additional Random Forest leaf sizes
+(20 and 100) on mature training labels, then selects maximum validation recall subject to
+precision of at least 50%. That floor is a provisional review-workload assumption, not an
+approved buyer requirement. Test-period rows are excluded before outcome parsing or feature
+building; neither command scores the final test or overwrites the original model.
+
+The second command saves `selected-model.pkl` and `policy.json`. To apply the experimental
+policy, compare its class-1 probability with the exact threshold in `policy.json` using `>=`.
+The pipeline's ordinary `predict()` still uses 0.50; application behavior is not changed
+automatically. Verify the model hash against the policy before use. See
+[validation results](training-results/validation-recall.md) for the false-alert cost and limits.
 
 ## What is in the repository
 

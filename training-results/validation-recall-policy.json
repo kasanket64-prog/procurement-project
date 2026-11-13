@@ -1,0 +1,106 @@
+{
+  "objective": "Maximum validation recall subject to precision >= 0.50; ties prefer precision then smaller leaves",
+  "precision_floor": 0.5,
+  "threshold": 0.4165148635841162,
+  "positive_class": 1,
+  "rule": "late alert if predict_proba(X)[:, positive_class_index] >= threshold; pipeline.predict retains 0.50",
+  "min_samples_leaf": 100,
+  "validation_start": "2025-01-01",
+  "test_start": "2025-10-25",
+  "training_rows": 26316,
+  "validation_rows": 9574,
+  "final_test_scored": false,
+  "source_model_sha256": "707f607994001e6afddb236dfdf87b83c3f32722150e667f85f581c20bff3840",
+  "selected_model_sha256": "333f5d80e5f7cc0a9fe71562f9d8cb9ab762311fb8deb36cf484ab52c46ecf23",
+  "data_sha256": "a6f64c2629fc1983a9e1722d22aa88317a6d1d3dfb6ed2a827eb4d9f1b893b32",
+  "validation_operating_point": {
+    "threshold": 0.4165148635841162,
+    "precision": 0.501432664756447,
+    "recall": 0.45190445448676564,
+    "f2": 0.4610115911485774,
+    "true_positives": 700,
+    "false_positives": 696,
+    "false_negatives": 849,
+    "true_negatives": 7329,
+    "alerts": 1396
+  },
+  "candidates": [
+    {
+      "min_samples_leaf": 1,
+      "selected": {
+        "threshold": 0.19666666666666666,
+        "precision": 0.519245283018868,
+        "recall": 0.44415752098127825,
+        "f2": 0.4573859859061295,
+        "true_positives": 688,
+        "false_positives": 637,
+        "false_negatives": 861,
+        "true_negatives": 7388,
+        "alerts": 1325
+      },
+      "fixed_half": {
+        "threshold": 0.5,
+        "precision": 0.949685534591195,
+        "recall": 0.3899289864428664,
+        "f2": 0.4420374707259953,
+        "true_positives": 604,
+        "false_positives": 32,
+        "false_negatives": 945,
+        "true_negatives": 7993,
+        "alerts": 636
+      }
+    },
+    {
+      "min_samples_leaf": 20,
+      "selected": {
+        "threshold": 0.3963337337293538,
+        "precision": 0.5029112081513828,
+        "recall": 0.4460942543576501,
+        "f2": 0.45640686922060764,
+        "true_positives": 691,
+        "false_positives": 683,
+        "false_negatives": 858,
+        "true_negatives": 7342,
+        "alerts": 1374
+      },
+      "fixed_half": {
+        "threshold": 0.5,
+        "precision": 0.9467084639498433,
+        "recall": 0.3899289864428664,
+        "f2": 0.44190810652619256,
+        "true_positives": 604,
+        "false_positives": 34,
+        "false_negatives": 945,
+        "true_negatives": 7991,
+        "alerts": 638
+      }
+    },
+    {
+      "min_samples_leaf": 100,
+      "selected": {
+        "threshold": 0.4165148635841162,
+        "precision": 0.501432664756447,
+        "recall": 0.45190445448676564,
+        "f2": 0.4610115911485774,
+        "true_positives": 700,
+        "false_positives": 696,
+        "false_negatives": 849,
+        "true_negatives": 7329,
+        "alerts": 1396
+      },
+      "fixed_half": {
+        "threshold": 0.5,
+        "precision": 0.905688622754491,
+        "recall": 0.3905745642349903,
+        "f2": 0.4407051282051282,
+        "true_positives": 605,
+        "false_positives": 63,
+        "false_negatives": 944,
+        "true_negatives": 7962,
+        "alerts": 668
+      }
+    }
+  ],
+  "reload_scores_and_decisions_match": true,
+  "warning": "Provisional synthetic review policy. Precision floor is an assumption, not a buyer-approved requirement."
+}
