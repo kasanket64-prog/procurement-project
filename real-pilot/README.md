@@ -8,6 +8,13 @@ The first practical use is to compare documented quotes for one precisely specif
 
 ## What to collect first
 
+For a consenting buyer collecting historical and prospective delivery outcomes,
+use the [practical collection plan](buyer-data-collection/PLAN.md) and
+[blank workbook](buyer-data-collection/buyer-data-template.xlsx). Matching CSV
+headers and a field dictionary are in that folder. Copy templates outside Git
+before filling them. This pack is separate from the quotation-review JSON format
+and does not import directly into the current trainer.
+
 | Evidence | Required information |
 |---|---|
 | Buyer requirement | Exact product and specifications, quantity and purchasing unit, destination, destination timezone, delivery deadline, total budget and currency |

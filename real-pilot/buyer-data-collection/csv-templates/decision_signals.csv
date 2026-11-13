@@ -1,0 +1,1 @@
+signal_id,order_line_id,signal_type,event_at,value_number,value_text,value_unit,valid_until,verification,supersedes_id,pilot_id,data_kind,source_ref,known_at,captured_at,reviewer_id
