@@ -19,243 +19,19 @@ from sklearn.metrics import (
 )
 
 
-# ==========================================
-# 1. LOAD DATASET
-# ==========================================
+from argparse import ArgumentParser
+from procurement_history import build_features
+from procurement_training import chronological_split
 
-df = pd.read_csv(
-    "dataset/procurement.csv"
-)
+parser = ArgumentParser(description='Train the synthetic demo with as-of history and mature chronological labels.')
+parser.add_argument('--validation-start', required=True, help='First validation order day (YYYY-MM-DD)')
+parser.add_argument('--test-start', required=True, help='First final-test order day (YYYY-MM-DD)')
+parser.add_argument('--as-of', required=True, help='Exclusive final outcome-availability cutoff (YYYY-MM-DD)')
+args = parser.parse_args()
 
-print("Dataset loaded!")
-print("Shape:", df.shape)
-
-
-# ==========================================
-# 2. CONVERT DATES
-# ==========================================
-
-date_columns = [
-    "order_date",
-    "promised_delivery_date",
-    "actual_delivery_date"
-]
-
-for column in date_columns:
-    df[column] = pd.to_datetime(
-        df[column]
-    )
-
-
-# ==========================================
-# 3. CREATE TARGET
-# ==========================================
-
-df["delivery_delay_days"] = (
-    df["actual_delivery_date"]
-    - df["promised_delivery_date"]
-).dt.days
-
-df["late_delivery"] = (
-    df["delivery_delay_days"] > 0
-).astype(int)
-
-df["promised_lead_days"] = (
-    df["promised_delivery_date"]
-    - df["order_date"]
-).dt.days
-
-
-# ==========================================
-# 4. SORT DATA
-# ==========================================
-
-df = (
-    df.sort_values(
-        ["order_date", "po_id"]
-    )
-    .reset_index(drop=True)
-)
-
-print("\nDataset sorted by date.")
-
-
-# ==========================================
-# 5. BUILD SUPPLIER-DATE HISTORY
-# ==========================================
-#
-# IMPORTANT:
-# Orders from the SAME DATE must receive
-# identical supplier history.
-#
-# Only dates STRICTLY BEFORE the current
-# order date are used.
-# ==========================================
-
-daily = (
-    df.groupby(
-        [
-            "supplier_id",
-            "order_date"
-        ],
-        as_index=False
-    )
-    .agg(
-        daily_orders=(
-            "po_id",
-            "count"
-        ),
-        daily_late=(
-            "late_delivery",
-            "sum"
-        ),
-        daily_delay_sum=(
-            "delivery_delay_days",
-            "sum"
-        )
-    )
-)
-
-
-daily = (
-    daily.sort_values(
-        [
-            "supplier_id",
-            "order_date"
-        ]
-    )
-    .reset_index(drop=True)
-)
-
-
-# ==========================================
-# 6. STRICTLY PREVIOUS HISTORY
-# ==========================================
-
-daily["supplier_previous_orders"] = (
-    daily.groupby(
-        "supplier_id"
-    )["daily_orders"]
-    .cumsum()
-    - daily["daily_orders"]
-)
-
-
-daily["supplier_previous_late"] = (
-    daily.groupby(
-        "supplier_id"
-    )["daily_late"]
-    .cumsum()
-    - daily["daily_late"]
-)
-
-
-daily["supplier_previous_delay_sum"] = (
-    daily.groupby(
-        "supplier_id"
-    )["daily_delay_sum"]
-    .cumsum()
-    - daily["daily_delay_sum"]
-)
-
-
-# ==========================================
-# 7. HISTORICAL RATES
-# ==========================================
-
-daily["supplier_late_rate"] = (
-    daily["supplier_previous_late"]
-    / daily["supplier_previous_orders"]
-)
-
-daily["supplier_avg_delay"] = (
-    daily["supplier_previous_delay_sum"]
-    / daily["supplier_previous_orders"]
-)
-
-
-daily["supplier_late_rate"] = (
-    daily["supplier_late_rate"]
-    .fillna(0)
-)
-
-daily["supplier_avg_delay"] = (
-    daily["supplier_avg_delay"]
-    .fillna(0)
-)
-
-
-# ==========================================
-# 8. MERGE HISTORY BACK TO ORDERS
-# ==========================================
-
-history_columns = [
-    "supplier_id",
-    "order_date",
-    "supplier_previous_orders",
-    "supplier_previous_late",
-    "supplier_previous_delay_sum",
-    "supplier_late_rate",
-    "supplier_avg_delay"
-]
-
-
-df = df.merge(
-    daily[history_columns],
-    on=[
-        "supplier_id",
-        "order_date"
-    ],
-    how="left"
-)
-
-
-# ==========================================
-# 9. DATE FEATURES
-# ==========================================
-
-df["order_month"] = (
-    df["order_date"].dt.month
-)
-
-df["order_dayofweek"] = (
-    df["order_date"].dt.dayofweek
-)
-
-
-# ==========================================
-# 10. VERIFY SAME-DAY PROTECTION
-# ==========================================
-
-print(
-    "\n=========================="
-)
-
-print(
-    "SAME-DAY LEAKAGE CHECK"
-)
-
-print(
-    "=========================="
-)
-
-
-check = (
-    df[
-        [
-            "order_date",
-            "supplier_id",
-            "supplier_previous_orders",
-            "supplier_previous_late",
-            "supplier_late_rate",
-            "supplier_avg_delay"
-        ]
-    ]
-    .head(20)
-)
-
-print(check)
-
+df = build_features(pd.read_csv('dataset/procurement.csv'))
+print('SYNTHETIC EXPERIMENT - not validated real supplier risk.')
+print('Dataset shape:', df.shape)
 
 # ==========================================
 # 11. MODEL FEATURES
@@ -291,83 +67,21 @@ features = (
 )
 
 
-X = df[features].copy()
-
-y = df[
-    "late_delivery"
-].copy()
-
-
-# ==========================================
-# 12. TIME-BASED SPLIT
-# ==========================================
-
-split_index = int(
-    len(df) * 0.80
+train, validation, test = chronological_split(
+    df, args.validation_start, args.test_start, args.as_of
 )
+X_train, y_train = train[features], train['late_delivery'].astype(int)
+X_validation, y_validation = validation[features], validation['late_delivery'].astype(int)
+X_test, y_test = test[features], test['late_delivery'].astype(int)
+if y_train.nunique() != 2:
+    raise ValueError('Training requires both on-time and late mature outcomes.')
 
-
-X_train = (
-    X.iloc[:split_index]
-    .copy()
-)
-
-X_test = (
-    X.iloc[split_index:]
-    .copy()
-)
-
-y_train = (
-    y.iloc[:split_index]
-    .copy()
-)
-
-y_test = (
-    y.iloc[split_index:]
-    .copy()
-)
-
-
-print(
-    "\n=========================="
-)
-
-print(
-    "TIME BASED SPLIT"
-)
-
-print(
-    "=========================="
-)
-
-print(
-    "Training:",
-    len(X_train)
-)
-
-print(
-    "Testing:",
-    len(X_test)
-)
-
-print(
-    "Train period:",
-    df["order_date"].iloc[0],
-    "to",
-    df["order_date"].iloc[
-        split_index - 1
-    ]
-)
-
-print(
-    "Test period:",
-    df["order_date"].iloc[
-        split_index
-    ],
-    "to",
-    df["order_date"].iloc[-1]
-)
-
+for name, partition in [('Training', train), ('Validation', validation), ('Final test', test)]:
+    print(name, len(partition), '| order days:', partition.order_date.min().date(),
+          'to', partition.order_date.max().date(),
+          '| latest available label:', partition.outcome_available_at.max().date())
+print('Excluded immature/open/out-of-window rows:', len(df) - len(train) - len(validation) - len(test))
+print('Threshold is fixed at 0.50 for final testing; other thresholds are validation diagnostics only.')
 
 # ==========================================
 # 13. PREPROCESSOR
@@ -428,7 +142,7 @@ pipeline = Pipeline(
 # ==========================================
 
 print(
-    "\nTraining leakage-free model..."
+    "\nTraining with outcome-available history..."
 )
 
 pipeline.fit(
@@ -465,7 +179,7 @@ print(
 )
 
 print(
-    "LEAKAGE-FREE MODEL RESULTS"
+    "FINAL CHRONOLOGICAL TEST RESULTS (fixed threshold 0.50)"
 )
 
 print(
@@ -508,10 +222,7 @@ print(
 
 print(
     "ROC-AUC:",
-    roc_auc_score(
-        y_test,
-        probabilities
-    )
+    roc_auc_score(y_test, probabilities) if y_test.nunique() == 2 else "Unavailable: only one test class"
 )
 
 print(
@@ -549,7 +260,7 @@ print(
 
 
 # ==========================================
-# 19. THRESHOLD TEST
+# 19. VALIDATION THRESHOLD DIAGNOSTICS
 # ==========================================
 
 print(
@@ -557,13 +268,15 @@ print(
 )
 
 print(
-    "THRESHOLD TEST"
+    "VALIDATION THRESHOLD DIAGNOSTICS"
 )
 
 print(
     "=========================="
 )
 
+
+validation_probabilities = pipeline.predict_proba(X_validation)[:, 1]
 
 thresholds = [
     0.50,
@@ -576,7 +289,7 @@ thresholds = [
 for threshold in thresholds:
 
     threshold_predictions = (
-        probabilities >= threshold
+        validation_probabilities >= threshold
     ).astype(int)
 
     print(
@@ -587,7 +300,7 @@ for threshold in thresholds:
     print(
         "Precision:",
         precision_score(
-            y_test,
+            y_validation,
             threshold_predictions,
             zero_division=0
         )
@@ -596,7 +309,7 @@ for threshold in thresholds:
     print(
         "Recall:",
         recall_score(
-            y_test,
+            y_validation,
             threshold_predictions
         )
     )
@@ -604,14 +317,14 @@ for threshold in thresholds:
     print(
         "F1:",
         f1_score(
-            y_test,
+            y_validation,
             threshold_predictions
         )
     )
 
     print(
         confusion_matrix(
-            y_test,
+            y_validation,
             threshold_predictions
         )
     )

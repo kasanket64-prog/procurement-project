@@ -18,10 +18,31 @@ The ML requirements include the terminal requirements. Install them only for tho
 
 With Python 3.10 or later, install `python -m pip install -r requirements-terminal.txt`,
 then run `python -m unittest discover -v` from the repository root.
-The six history tests use pandas and NumPy (installed with pandas), plus Python's
+The history and chronological-split tests use pandas and NumPy (installed with pandas), plus Python's
 standard-library test runner. No ML models or semantic-model downloads are needed.
 They check outcome availability, same-day exclusions, open-order labels, future-outcome
 isolation, duplicate order IDs and risk-snapshot dates; they do not validate real supplier performance.
+
+## Run the corrected training experiment
+
+Install `python -m pip install pandas numpy scikit-learn joblib`, then run from the repository root:
+
+```powershell
+python ml/train_improved_model.py --validation-start 2025-01-01 --test-start 2025-10-25 --as-of 2026-11-13
+```
+
+Choose and freeze the dates before comparing results. Training uses orders and labels known before
+validation starts. Validation uses later orders with labels known before testing starts. The final
+test includes orders and labels strictly before `--as-of`; open or immature labels are excluded,
+and their count is printed. No calendar day is divided between partitions. History features use
+the shared outcome-available builder, including outcomes disclosed during validation/test before
+each order day. When the source lacks `outcome_available_at`, completion date is the assumed
+availability date; real records require verified disclosure timestamps.
+
+Threshold diagnostics use validation only; final-test metrics use the fixed 0.50 threshold.
+The existing 300-tree seeded Random Forest and input columns are retained. The command overwrites
+`models/delivery_risk_model_clean.pkl`; copy any model you need to preserve before training.
+This remains a synthetic experiment, and other experimental trainers have not been corrected.
 
 ## What is in the repository
 
