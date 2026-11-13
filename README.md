@@ -14,6 +14,15 @@ Optional command-line/data tools: `python -m pip install -r requirements-termina
 Optional machine-learning and semantic-matching dependencies: `python -m pip install -r requirements-ml.txt`.
 The ML requirements include the terminal requirements. Install them only for those modules; the browser demo does not need them. The repository does not document one universal training command.
 
+## Run the history regression tests
+
+With Python 3.10 or later, install `python -m pip install -r requirements-terminal.txt`,
+then run `python -m unittest discover -v` from the repository root.
+The six history tests use pandas and NumPy (installed with pandas), plus Python's
+standard-library test runner. No ML models or semantic-model downloads are needed.
+They check outcome availability, same-day exclusions, open-order labels, future-outcome
+isolation, duplicate order IDs and risk-snapshot dates; they do not validate real supplier performance.
+
 ## What is in the repository
 
 - `dataset/`: procurement records, supplier history, supplier-item data, and a public-procurement sample.
