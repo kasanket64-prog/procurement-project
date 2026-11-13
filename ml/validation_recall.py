@@ -67,6 +67,21 @@ def select_precision_constrained(curve):
     return eligible.sort_values(['recall', 'precision', 'threshold'], ascending=False).iloc[0]
 
 
+def select_false_alert_budget(labels, probabilities, budget):
+    """Maximize validation detections under a fixed false-positive count budget."""
+    if isinstance(budget, bool) or not isinstance(budget, (int, np.integer)) or budget < 0:
+        raise ValueError('False-alert budget must be a nonnegative integer.')
+    curve = threshold_tradeoff(labels, probabilities)
+    tp = np.rint(curve.recall * np.count_nonzero(np.asarray(labels) == 1)).astype(int)
+    alerts = np.divide(tp, curve.precision, out=np.zeros(len(curve)), where=curve.precision > 0)
+    curve['false_positives'] = np.rint(alerts).astype(int) - tp
+    eligible = curve[curve.false_positives <= budget]
+    if eligible.empty:
+        return operating_point(np.asarray(labels), np.asarray(probabilities), float(np.nextafter(1., 2.)))
+    chosen = eligible.sort_values(['recall', 'precision', 'threshold'], ascending=False).iloc[0]
+    return operating_point(np.asarray(labels), np.asarray(probabilities), chosen.threshold)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--data', type=Path, default=Path('dataset/procurement.csv'))

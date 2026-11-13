@@ -66,6 +66,20 @@ The pipeline's ordinary `predict()` still uses 0.50; application behavior is not
 automatically. Verify the model hash against the policy before use. See
 [validation results](training-results/validation-recall.md) for the false-alert cost and limits.
 
+To compare recall while allowing no more false alerts than the original validation
+baseline, run:
+
+```powershell
+python ml/compare_low_alert_recall.py --validation-start 2025-01-01 --test-start 2025-10-25 --output validation-runs/low-alert
+```
+
+This compares the original forest, larger forest leaves, Extra Trees and histogram
+boosting using the same training/validation cutoffs. The budget is the original
+model's validation false-positive count at 0.50. Ties retain the original policy;
+a new model is saved only for a better validation operating point. It never scores
+the final test. See [the low-alert results](training-results/low-alert-recall.md):
+the current candidate set did not improve recall at the original false-alert budget.
+
 ## What is in the repository
 
 - `dataset/`: procurement records, supplier history, supplier-item data, and a public-procurement sample.

@@ -8,7 +8,8 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'ml'))
-from validation_recall import load_validation, operating_point, select_precision_constrained, threshold_tradeoff
+from validation_recall import (load_validation, operating_point, select_false_alert_budget,
+                               select_precision_constrained, threshold_tradeoff)
 
 
 class ValidationRecallTests(unittest.TestCase):
@@ -72,6 +73,28 @@ class ValidationRecallTests(unittest.TestCase):
         curve = threshold_tradeoff([1, 0, 0], [.1, .8, .9])
         with self.assertRaisesRegex(ValueError, '50% precision'):
             select_precision_constrained(curve)
+
+    def test_false_alert_budget_maximizes_detections(self):
+        labels = np.array([0, 1, 0, 1, 1])
+        scores = np.array([.1, .2, .2, .7, .9])
+        for budget in (0, 1, 2):
+            with self.subTest(budget=budget):
+                selected = select_false_alert_budget(labels, scores, budget)
+                feasible = [operating_point(labels, scores, t) for t in np.unique(scores)]
+                feasible = [point for point in feasible if point['false_positives'] <= budget]
+                self.assertLessEqual(selected['false_positives'], budget)
+                self.assertEqual(selected['true_positives'], max(p['true_positives'] for p in feasible))
+
+    def test_unaffordable_score_tie_produces_no_alerts(self):
+        point = select_false_alert_budget([0, 1], [.8, .8], 0)
+        self.assertEqual(point['alerts'], 0)
+        self.assertEqual(point['false_positives'], 0)
+        self.assertGreater(point['threshold'], 1)
+
+    def test_invalid_false_alert_budgets_are_rejected(self):
+        for budget in (-1, .5, True):
+            with self.subTest(budget=budget), self.assertRaises(ValueError):
+                select_false_alert_budget([0, 1], [.1, .9], budget)
 
 
 if __name__ == '__main__':
