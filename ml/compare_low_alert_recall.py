@@ -12,7 +12,8 @@ from sklearn.ensemble import ExtraTreesClassifier, HistGradientBoostingClassifie
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OrdinalEncoder
 
-from procurement_history import CATEGORICAL
+from procurement_history import CATEGORICAL, build_features
+from procurement_experiment_features import EXTRA, ITEM, RECENT, WORKLOAD, build_experiment_features
 from validation_recall import load_development, operating_point, select_false_alert_budget
 
 
@@ -23,10 +24,12 @@ def main():
     parser.add_argument('--validation-start', required=True)
     parser.add_argument('--test-start', required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--experimental-features', action='store_true', help='Compare workload, recent and supplier-item history ablations')
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError('Use a new output directory to preserve previous evidence.')
-    train, validation = load_development(args.data, args.validation_start, args.test_start)
+    train, validation = load_development(args.data, args.validation_start, args.test_start,
+        feature_builder=build_experiment_features if args.experimental_features else build_features)
     original = joblib.load(args.model)
     columns = list(original.feature_names_in_)
     y_train, labels = train.late_delivery.astype(int), validation.late_delivery.astype(int).to_numpy()
@@ -49,13 +52,31 @@ def main():
             ('model', ExtraTreesClassifier(n_estimators=300, min_samples_leaf=5,
                 class_weight='balanced', random_state=42, n_jobs=-1))])),
         ('histogram_boosting', histogram)]
+    input_columns = {}
+    feature_groups = {}
+    if args.experimental_features:
+        feature_groups = {'workload': WORKLOAD, 'recent': RECENT, 'item': ITEM, 'combined': EXTRA}
+        candidates = [('original', original)]
+        for group, extra in feature_groups.items():
+            name = f'forest_{group}'
+            input_columns[name] = columns + extra
+            model = clone(original).set_params(model__n_jobs=-1)
+            model.named_steps['preprocessor'].transformers = [
+                (key, transformer, numeric + extra if key == 'numeric' else fields)
+                for key, transformer, fields in model.named_steps['preprocessor'].transformers]
+            candidates.append((name, model))
+        boosted = clone(histogram)
+        boosted.named_steps['preprocessor'].transformers[1] = ('numeric', 'passthrough', numeric + EXTRA)
+        candidates.append(('boosting_combined', boosted))
+        input_columns['boosting_combined'] = columns + EXTRA
     results, best_key = [], None
     for name, model in candidates:
+        model_columns = input_columns.get(name, columns)
         if name != 'original':
-            model.fit(train[columns], y_train)
+            model.fit(train[model_columns], y_train)
         if 'n_jobs' in model.named_steps['model'].get_params():
             model.named_steps['model'].n_jobs = 1
-        scores = model.predict_proba(validation[columns])[:, list(model.classes_).index(1)]
+        scores = model.predict_proba(validation[model_columns])[:, list(model.classes_).index(1)]
         point = select_false_alert_budget(labels, scores, budget)
         if name == 'original' and (point['true_positives'], point['false_positives']) == (baseline['true_positives'], baseline['false_positives']):
             point = baseline
@@ -67,6 +88,7 @@ def main():
         key = (point['true_positives'], -point['false_positives'])
         if best_key is None or key > best_key:
             best_key, best_name, best_model, best_scores, best_point = key, name, model, scores, point
+            best_columns = model_columns
         print(json.dumps(result), flush=True)
     args.output.mkdir(parents=True)
     improved = best_key > (baseline['true_positives'], -baseline['false_positives'])
@@ -74,7 +96,7 @@ def main():
     if improved:
         joblib.dump(best_model, model_path, compress=3)
     reloaded = joblib.load(model_path)
-    scores = reloaded.predict_proba(validation[columns])[:, list(reloaded.classes_).index(1)]
+    scores = reloaded.predict_proba(validation[best_columns])[:, list(reloaded.classes_).index(1)]
     np.testing.assert_allclose(scores, best_scores, atol=1e-14, rtol=0)
     np.testing.assert_array_equal(scores >= best_point['threshold'], best_scores >= best_point['threshold'])
     report = dict(objective='Maximum validation true positives with false positives <= original model at threshold 0.50',
@@ -88,6 +110,7 @@ def main():
         selected_model_sha256=hashlib.sha256(model_path.read_bytes()).hexdigest(),
         data_sha256=hashlib.sha256(args.data.read_bytes()).hexdigest(),
         reload_scores_and_decisions_match=True, candidates=results,
+        experimental_features=args.experimental_features, feature_groups=feature_groups, selected_features=best_columns,
         warning='Validation-selected synthetic results; repeated validation reuse can overfit selection. No independent improvement claim.')
     (args.output / 'policy.json').write_text(json.dumps(report, indent=2), encoding='utf-8')
 

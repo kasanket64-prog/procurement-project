@@ -96,6 +96,11 @@ class ValidationRecallTests(unittest.TestCase):
             with self.subTest(budget=budget), self.assertRaises(ValueError):
                 select_false_alert_budget([0, 1], [.1, .9], budget)
 
+    def test_zero_true_positives_do_not_hide_false_alerts(self):
+        point = select_false_alert_budget([1, 0], [.1, .9], 0)
+        self.assertEqual(point['false_positives'], 0)
+        self.assertEqual(point['alerts'], 0)
+
 
 if __name__ == '__main__':
     unittest.main()

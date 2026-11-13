@@ -80,6 +80,21 @@ a new model is saved only for a better validation operating point. It never scor
 the final test. See [the low-alert results](training-results/low-alert-recall.md):
 the current candidate set did not improve recall at the original false-alert budget.
 
+To test additional leakage-safe history features with the same validation protocol:
+
+```powershell
+python ml/compare_low_alert_recall.py --experimental-features --validation-start 2025-01-01 --test-start 2025-10-25 --output validation-runs/history-features
+```
+
+The flag compares workload, recent disclosed outcomes, supplier-item history and their
+combination. Features are built before excluding immature labels, so open orders remain
+visible in workload history. Final-test rows are still excluded before feature building.
+The production history schema, trainer and app defaults remain unchanged. See
+[feature investigation results](training-results/leakage-safe-features.md) for definitions,
+the small validation-only gain and artifact limitations. The experimental model needs
+`build_experiment_features` and its recorded feature columns; existing caller inputs
+are not automatically compatible.
+
 ## What is in the repository
 
 - `dataset/`: procurement records, supplier history, supplier-item data, and a public-procurement sample.

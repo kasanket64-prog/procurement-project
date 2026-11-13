@@ -13,7 +13,7 @@ from sklearn.metrics import confusion_matrix, precision_recall_curve
 from procurement_history import build_features
 
 
-def load_development(path, validation_start, test_start):
+def load_development(path, validation_start, test_start, *, feature_builder=build_features):
     """Discard test rows before parsing their outcomes or building history."""
     start, end = pd.Timestamp(validation_start), pd.Timestamp(test_start)
     if any(pd.isna(day) or day.tzinfo is not None or day != day.normalize() for day in (start, end)) or start >= end:
@@ -22,7 +22,7 @@ def load_development(path, validation_start, test_start):
         rows = [row for row in csv.DictReader(stream) if pd.Timestamp(row['order_date']) < end]
     if not rows:
         raise ValueError('No pre-test orders available.')
-    features = build_features(pd.DataFrame(rows))
+    features = feature_builder(pd.DataFrame(rows))
     validation = features[(features.order_date >= start) & (features.outcome_available_at < end)
                           & features.late_delivery.notna()].copy()
     if validation.empty:
@@ -73,8 +73,9 @@ def select_false_alert_budget(labels, probabilities, budget):
         raise ValueError('False-alert budget must be a nonnegative integer.')
     curve = threshold_tradeoff(labels, probabilities)
     tp = np.rint(curve.recall * np.count_nonzero(np.asarray(labels) == 1)).astype(int)
-    alerts = np.divide(tp, curve.precision, out=np.zeros(len(curve)), where=curve.precision > 0)
-    curve['false_positives'] = np.rint(alerts).astype(int) - tp
+    sorted_scores = np.sort(np.asarray(probabilities))
+    alerts = len(sorted_scores) - np.searchsorted(sorted_scores, curve.threshold.to_numpy(), side='left')
+    curve['false_positives'] = alerts - tp
     eligible = curve[curve.false_positives <= budget]
     if eligible.empty:
         return operating_point(np.asarray(labels), np.asarray(probabilities), float(np.nextafter(1., 2.)))
