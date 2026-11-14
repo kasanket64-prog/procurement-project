@@ -1,0 +1,55 @@
+name: Phase task
+description: Plan a small task linked to the phased roadmap.
+title: "[Phase NN] "
+body:
+  - type: markdown
+    attributes:
+      value: "Use artificial examples only. Never attach buyer records, filled templates, credentials or identity mappings. Phase tracker: https://github.com/users/kasanket64-prog/projects/1"
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Phase
+      options:
+        - "01 Requirements and progress (#7)"
+        - "02 Evidence foundation (#8)"
+        - "03 Consenting buyer pilot (#9)"
+        - "04 Modern review interface (#10)"
+        - "05 Reliable predictions (#11)"
+        - "06 Explanations and uncertainty (#12)"
+        - "07 Monitoring and feedback (#13)"
+        - "08 Recovery planning (#14)"
+        - "09 Integrations and documents (#15)"
+        - "10 Secure operation and expansion (#16)"
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome and scope
+      description: State the user need, affected workflow and relevant FR/NFR/AT identifiers.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance checklist
+      description: Give observable pass/fail criteria and dependencies. Link the phase issue explicitly.
+      value: "- [ ] Expected behaviour verified\n- [ ] Evidence and limitations recorded"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Validation plan and evidence
+      description: Record exact commit, artificial fixture, command/result or document review. Planned checks are not passed checks.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Boundaries
+      options:
+        - label: No buyer records, secrets or private attachments are included.
+          required: true
+        - label: Tested, merged and buyer-validated are separate statuses; this issue grants no permission to merge or purchase.
+          required: true

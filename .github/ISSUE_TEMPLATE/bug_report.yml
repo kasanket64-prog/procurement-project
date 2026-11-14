@@ -1,0 +1,42 @@
+name: Bug or evidence-quality defect
+description: Report a reproducible failure using artificial records.
+title: "[Bug][Phase NN] "
+body:
+  - type: markdown
+    attributes:
+      value: "Do not upload real buyer records or logs containing private fields. Reproduce with artificial inputs. Link a phase issue from #7 through #16."
+  - type: input
+    id: phase
+    attributes:
+      label: Phase issue and requirement IDs
+      placeholder: "Phase issue #8; FR05; AT11"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Include exact commit/environment and minimal artificial steps or input.
+    validations:
+      required: true
+  - type: textarea
+    id: expected_actual
+    attributes:
+      label: Expected and actual behaviour
+      description: Include the observed error, affected workflow and evidence limits.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Fix acceptance and regression check
+      description: Describe the smallest check that should fail before a fix and pass afterwards.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: All examples are artificial; no buyer records, private attachments or secrets are included.
+          required: true

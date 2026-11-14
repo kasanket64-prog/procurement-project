@@ -35,6 +35,10 @@ Historical project notes reported an experimental model with 89.90% accuracy, 93
 
 ## Next steps
 
+Track progress on the [phase board](https://github.com/users/kasanket64-prog/projects/1)
+and see [phase issues and status rules](docs/PHASE-TRACKING.md). Templates are
+proposed on a separate branch; main is not changed by the live board.
+
 1. Clone this private repository and review the current main branch before continuing.
 2. Run the browser demo and record setup or output issues.
 3. Verify whether the planned What-If simulation is complete and connected end to end; an earlier project checkpoint listed it as upcoming.
