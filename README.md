@@ -35,6 +35,10 @@ Historical project notes reported an experimental model with 89.90% accuracy, 93
 
 ## Next steps
 
+See [the phased feature roadmap](ROADMAP.md) for the proposed modern platform,
+verified branch-specific progress, selected open-source tools and acceptance gates.
+Planned features are not represented as implemented or merged.
+
 1. Clone this private repository and review the current main branch before continuing.
 2. Run the browser demo and record setup or output issues.
 3. Verify whether the planned What-If simulation is complete and connected end to end; an earlier project checkpoint listed it as upcoming.
