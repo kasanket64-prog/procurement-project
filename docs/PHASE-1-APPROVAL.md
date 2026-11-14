@@ -11,13 +11,16 @@ platform, grant buyer-data permission or authorise a merge.
 |---|---|---|
 | SRS v0.3, PDF and architecture | PR #6, `4afa82d9100d8b6d8097458f83b5f8c390bcad10` | [SRS](https://github.com/kasanket64-prog/procurement-project/blob/4afa82d9100d8b6d8097458f83b5f8c390bcad10/docs/SRS.md), [PDF](https://github.com/kasanket64-prog/procurement-project/blob/4afa82d9100d8b6d8097458f83b5f8c390bcad10/docs/SRS.pdf), [architecture](https://github.com/kasanket64-prog/procurement-project/blob/4afa82d9100d8b6d8097458f83b5f8c390bcad10/docs/ARCHITECTURE.md) |
 | Ten-phase roadmap | Updated roadmap in PR #6 at the same commit; earlier PR #5 overlaps | [Roadmap](https://github.com/kasanket64-prog/procurement-project/blob/4afa82d9100d8b6d8097458f83b5f8c390bcad10/ROADMAP.md) |
-| Tracking guide and templates | PR #17, `92d0120081d4b8a0bae8e20ee516cb22412df0a7` | [Guide](https://github.com/kasanket64-prog/procurement-project/blob/92d0120081d4b8a0bae8e20ee516cb22412df0a7/docs/PHASE-TRACKING.md), [issue forms](https://github.com/kasanket64-prog/procurement-project/tree/92d0120081d4b8a0bae8e20ee516cb22412df0a7/.github/ISSUE_TEMPLATE), [PR template](https://github.com/kasanket64-prog/procurement-project/blob/92d0120081d4b8a0bae8e20ee516cb22412df0a7/.github/PULL_REQUEST_TEMPLATE.md) |
+| Tracking guide | PR #18, `1a905f6504c71bc0ab206113a167f00cae0055e6` | [Guide including the checklist link and PR #18 phase index](https://github.com/kasanket64-prog/procurement-project/blob/1a905f6504c71bc0ab206113a167f00cae0055e6/docs/PHASE-TRACKING.md) |
+| Issue and PR templates | PR #17, `92d0120081d4b8a0bae8e20ee516cb22412df0a7` | [Issue forms](https://github.com/kasanket64-prog/procurement-project/tree/92d0120081d4b8a0bae8e20ee516cb22412df0a7/.github/ISSUE_TEMPLATE), [PR template](https://github.com/kasanket64-prog/procurement-project/blob/92d0120081d4b8a0bae8e20ee516cb22412df0a7/.github/PULL_REQUEST_TEMPLATE.md) |
 | Live phase board | Not versioned by Git; recheck at sign-off | [Board](https://github.com/users/kasanket64-prog/projects/1), [phase-1 issue #7](https://github.com/kasanket64-prog/procurement-project/issues/7) |
 
 Record the actual reviewed commits, date and any newer revisions below. A later
 change to scope, targets, evidence boundaries or approval controls requires review
 of the affected criteria. Existing technical reviews are supporting evidence,
-not signatures from the owner or teacher.
+not signatures from the owner or teacher. The PR #18 checklist and tracking-guide
+changes are part of this review pack, alongside the separately pinned PR #17
+templates; record the actual checklist revision in the sign-off record.
 
 ## 2. How to record a decision
 
