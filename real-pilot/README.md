@@ -16,6 +16,10 @@ headers and a field dictionary are in that folder. Copy templates outside Git
 before filling them. This pack is separate from the quotation-review JSON format
 and does not import directly into the current trainer.
 
+The [read-only snapshot checker](buyer-data-collection/SNAPSHOT-CHECK.md) checks
+declared pilot approval, release fields and correction links in external working
+CSVs. Passing does not establish receipt outcomes or make records model-ready.
+
 | Evidence | Required information |
 |---|---|
 | Buyer requirement | Exact product and specifications, quantity and purchasing unit, destination, destination timezone, delivery deadline, total budget and currency |
