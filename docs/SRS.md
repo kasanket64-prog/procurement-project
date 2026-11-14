@@ -33,7 +33,7 @@ installed integrations. Owner, academic and buyer approvals remain distinct.
 |---|---|---|
 | 0.1 | Initial structured requirements, module boundaries and staged acceptance | Pending |
 | 0.2 | Reviewed pilot correction/cancellation rules, historical/prospective collection, public-data limits and updated evidence | Pending |
-| 0.3 | Modern feature requirements, architecture diagrams, ten-phase mapping and updated integration evidence | Pending |
+| 0.3 | Modern feature requirements, architecture diagrams, ten-phase mapping and updated integration evidence; review fixes align calibration timing, accepted-outcome flow and sourced recovery constraints | Pending |
 
 The intended readers are the project owner, academic guide, developers, testers
 and a prospective buyer reviewing the pilot. No teacher-specific SRS format has
@@ -403,11 +403,11 @@ Priority: Must, Stage C, phase 6. Acceptance: Explanation features match inferen
 ### FR33 Calibration and insufficient-evidence states
 
 The system shall distinguish risk scores from calibrated probabilities and report calibration evidence and unavailable/out-of-scope cases. Prediction intervals or sets require a separate suitable calibration protocol.
-Priority: Must, Stage C, phase 6. Acceptance: No synthetic score becomes a verified buyer probability; missing prerequisites show unavailable; MAPIE coverage is measured on the agreed temporal evaluation and never asserted unconditionally under shift.
+Priority: Must, Stage C, phases 5-6. Acceptance: Before any final evaluation, define chronological calibration/selection partitions and freeze every fitted calibrator, prediction-set method and threshold with the model manifest. Final-test rows cannot fit or select any component. Phase 6 may add read-only explanations and diagnostics; any later fitted change requires a fresh future evaluation. No synthetic score becomes a verified buyer probability; missing prerequisites show unavailable; coverage is measured and never asserted unconditionally under shift.
 
 ### FR34 Experiment manifest and constrained selection
 
-Each comparison shall record dataset fingerprint, cohort/label policy, code/environment, features, split boundaries, seed and threshold search. Training transforms fit only training rows.
+Each comparison shall record dataset fingerprint, cohort/label policy, code/environment, features, split boundaries, seed and threshold search. Training transforms fit only training rows. Calibration, when used, fits only its predeclared non-test calibration partition; candidate/threshold selection uses validation. All fitted postprocessing is frozen before the final evaluation.
 Priority: Must, Stage C, phase 5. Acceptance: Only validation selects settings; final test remains outside all selection loops. The existing DataCo comparison retains its <=265 false-alert constraint on that same validation set; a new buyer budget requires separate agreement.
 
 ### FR35 Batch monitoring and delayed-outcome evaluation
@@ -480,6 +480,24 @@ Priority: Should, Stage D, phase 10 optional. Acceptance: An extension has its o
 | Quotation | Quote/version, supplier/product/line terms, exact quantity/total/currency, issue/receipt/expiry and source | Eligibility precedes cost ranking |
 | Model and policy | Artifact/hash, feature/target version, cutoffs, dependencies and threshold | Threshold belongs to one identified artifact |
 | Scenario or proposal | Baseline ID, input changes, fixed evidence timestamp, compared records and limits | Retains original and does not execute a purchase |
+
+### Accepted outcomes and recovery inputs
+
+The controlled cohort adapter joins decision-time feature rows to separately
+stored, human-accepted outcome labels using scoped line IDs and target versions.
+Only labels mature at the applicable learning/evaluation cutoff are eligible.
+Accepted outcomes feed supervised evaluation and delayed-outcome monitoring;
+they never feed decision-time inference features. The accepted-outcome cohort
+in architecture view 1 is the output of view 2 and the cohort input of view 3.
+Unaccepted proposals, missing coverage and unresolved disputes remain excluded.
+
+Recovery consumes two independent inputs: a qualified prediction/scenario and
+validated, current constraints from approved offers and buyer requirements.
+The constraint gate checks eligibility, quantity/unit, destination, documented
+price/currency, capacity, commitment/lead time, effective dates and provenance.
+Missing or stale constraints yield needs-review/unavailable; complete but
+infeasible constraints yield infeasible. Risk scores cannot supply missing
+capacity or establish feasibility. The buyer retains all purchasing authority.
 
 ### Modern feature data contracts
 
@@ -666,12 +684,12 @@ feasibility claim; a proposal alone cannot authorize a purchase.
 | AT18 | Unaccepted proposals stay out of training; reviewed exports exclude private fields and preserve prior reports. | FR30 |
 | AT19 | Chart/table totals match; missing map/network support gives a fallback without invented live tracking. | FR31 |
 | AT20 | Model-compatible explanation contributions reconcile on the declared output scale; schema mismatch blocks. | FR32 |
-| AT21 | Calibration protocol is separate from final evaluation; unavailable/shifted cases do not receive fabricated confidence. | FR33 |
-| AT22 | Run manifest binds data/code/splits; validation alone selects settings and preserves the applicable alert budget. | FR34 |
-| AT23 | Changed batch yields a repeatable drift report; absent labels cannot yield measured accuracy-change claims. | FR35 |
+| AT21 | Calibration/selection partitions are declared before final evaluation; all fitted postprocessing is frozen without test access. Later fitted changes require a fresh future test; read-only diagnostics do not change the frozen policy. Unavailable/shifted cases receive no fabricated confidence. | FR33 |
+| AT22 | Run manifest binds data/code/splits and fitted postprocessing; validation alone selects settings, calibration uses its declared non-test partition and the applicable alert budget is preserved. | FR34 |
+| AT23 | Changed batch yields a repeatable drift report; supervised evaluation and outcome monitoring join only human-accepted, cutoff-mature labels. Unaccepted/future-known labels cannot enter evaluation or inference features; absent labels cannot yield measured accuracy-change claims. | FR13, FR25, FR35 |
 | AT24 | Subjective ratings cannot rewrite receipts/labels; factual corrections preserve provenance and as-of behaviour. | FR36 |
 | AT25 | Repeated batch alerts deduplicate; drift/feedback cannot auto-promote a model; rollback reference is retained. | FR37 |
-| AT26 | Recovery respects capacity/budget; infeasible/missing-input/time-limited cases remain explicit and execute nothing. | FR38 |
+| AT26 | Recovery validates sourced offers and buyer constraints independently of risk scores. Missing/stale inputs are unavailable/needs-review; complete but infeasible inputs are infeasible. Capacity/budget limits hold; solver limits are explicit and no purchase executes. | FR20, FR38 |
 | AT27 | Dependency scenarios preserve their baseline and expose unknown links and assumptions. | FR39 |
 | AT28 | Connector retries do not duplicate events; revoked permission/schema drift/partial coverage fail safely. | FR40 |
 | AT29 | Ambiguous extracted fields and name matches require source-linked review; no silent identity merge occurs. | FR41 |
@@ -727,13 +745,15 @@ shadow recovery review without autonomous purchasing.
 | 2. Evidence foundation | B; FR05, FR13, FR23-FR25 | Reviewed integration tests and separately authorised merges |
 | 3. Buyer pilot | B; FR04/FR18/FR25 | Consent, protected evidence and human-reviewed outcomes |
 | 4. Modern review interface | B; FR26-FR31 | Artificial browser tests and buyer workflow acceptance |
-| 5. Reliable prediction | C; FR09-FR16/FR34 | Reproducible chronological comparison and frozen final evaluation |
-| 6. Explanation/uncertainty | C; FR32-FR33 | Explanation correctness and calibration assessment |
+| 5. Reliable prediction | C; FR09-FR16/FR33-FR34 | Declare calibration/selection partitions; freeze the full pipeline before final evaluation |
+| 6. Explanation/uncertainty | C; FR32-FR33 | Read-only explanations/diagnostics of the frozen pipeline; fitted changes require a fresh future test |
 | 7. Monitoring/feedback | B/C; FR35-FR37 | Repeated batches, reviewed feedback and mature-label evaluation |
 | 8. Recovery | D; FR20-FR22/FR38-FR39 | Sourced constraints, solver checks and human shadow review |
 | 9. Connectors/documents | B for this capability; FR40-FR41 | Permission, reviewed mappings and idempotence/failure checks |
 | 10. Operation/extensions | B/C/D as applicable; FR42-FR45 | Hosting controls before hosting; separate extension acceptance |
 
+Calibration fitting belongs before the phase-5 final-evaluation gate. Phase 6
+assesses the frozen pipeline; it does not permit tuning against the final test.
 The ten phases refine stages A-D; they do not postpone controls required for
 earlier use. Local pilot access/storage/restore controls apply in phase 3.
 Hosted access controls apply before any hosted private use, even if hosting is

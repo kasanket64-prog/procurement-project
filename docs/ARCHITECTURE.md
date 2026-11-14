@@ -11,7 +11,7 @@ Human approval and permission are required controls, not declarations the system
 
 ## 1. System components and authority boundaries
 
-Proposed logical architecture. Existing Python and offline browser foundations remain; adapters, review UI, monitoring and recovery are planned. Permissioned buyer files stay outside Git. Shared rules serve browser and CLI. Training is a separate activity; no component places purchases. Source-kind separation is required before downstream use.
+Proposed logical architecture. Existing Python and offline browser foundations remain; adapters, review UI, monitoring and recovery are planned. Permissioned buyer files stay outside Git. Shared rules serve browser and CLI. Training is a separate activity; no component places purchases. Source-kind separation is required before downstream use. Human-accepted, mature outcomes feed evaluation and outcome monitoring through the controlled cohort, never inference features. Recovery also requires independently validated offers/buyer constraints; missing or stale facts block feasibility and complete infeasible constraints are reported explicitly.
 
 ![System components and authority boundaries](diagrams/system.svg)
 
@@ -27,7 +27,10 @@ flowchart TD
     labels["Receipts / label proposals<br/>Draft tested foundation"]
     features["As-of feature builder<br/>Decision-time facts only"]
     review["Evidence / label review<br/>Human acceptance gate"]
+    cohort["Accepted outcome cohort<br/>Human reviewed + mature"]
     risk["Prediction + explanation<br/>Later model acceptance"]
+    constraints["Offers + buyer constraints<br/>Price, capacity, dates"]
+    constraint_gate["Constraint validation gate<br/>Missing / stale / infeasible"]
     monitor["Evaluation / monitoring<br/>Separate controlled activity"]
     decision["Buyer decision outside app<br/>No automatic purchasing"]
     recovery["Recovery comparison<br/>Later sourced constraints"]
@@ -43,9 +46,14 @@ flowchart TD
     quotes --> review
     labels --> review
     features --> monitor
+    review -->|"accepted"| cohort
+    cohort --> monitor
     features --> risk
     registry --> risk
     risk --> recovery
+    store --> constraints
+    constraints --> constraint_gate
+    constraint_gate -->|"valid"| recovery
     recovery --> decision
     review --> decision
     monitor -->|"reviewed release"| registry
@@ -83,7 +91,7 @@ flowchart TD
 
 ## 3. Chronological evaluation and controlled model release
 
-Proposed model governance. Freeze the target/cohort and decision-time features; fit transforms and models on training only. Select models and alert thresholds on validation only. Freeze the candidate before the final evaluation; an unsuitable result is reported honestly, and the same test is not recycled for tuning. Only an authorised release reaches inference. Drift or feedback cannot automatically promote a model. Calibration, if used, needs its own suitable partition and protocol.
+Proposed model governance. Freeze the target/cohort and decision-time features; fit transforms and models on training only. Select models and alert thresholds on validation only. Freeze the candidate before the final evaluation; an unsuitable result is reported honestly, and the same test is not recycled for tuning. Only an authorised release reaches inference. Drift or feedback cannot automatically promote a model. Calibration/selection partitions are declared before final evaluation. Fit any calibrator on its non-test partition, then freeze all postprocessing and thresholds with the candidate. Later fitted changes require a fresh future test; phase-6 explanations/diagnostics are read-only.
 
 ![Chronological evaluation and controlled model release](diagrams/model-release.svg)
 
@@ -92,9 +100,10 @@ flowchart TD
     cohort["Approved cohort / target<br/>Decision-time features + labels"]
     split["Chronological partitions<br/>Mature labels at each cutoff"]
     train["Training only<br/>Fit transforms + candidates"]
+    calibration["Non-test calibration data<br/>Fit optional postprocessing"]
     validation["Validation only<br/>Select model + threshold"]
     test["Reserved final period<br/>No selection access"]
-    freeze["Freeze candidate + policy<br/>Data / code / model manifest"]
+    freeze["Freeze complete pipeline<br/>Model + calibration + threshold"]
     evaluate["Controlled final evaluation<br/>Report success or failure"]
     release["Authorised release gate<br/>Reviewed metrics + rollback"]
     report["If unsuitable: report / stop<br/>Fresh future test for new work"]
@@ -104,6 +113,10 @@ flowchart TD
     split --> train
     split --> validation
     split -->|"reserved"| test
+    split -->|"predeclared"| calibration
+    train -->|"candidate"| calibration
+    calibration -->|"calibrated"| validation
+    calibration -->|"if used"| freeze
     train -->|"candidates"| validation
     validation --> freeze
     freeze --> evaluate

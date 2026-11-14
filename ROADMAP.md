@@ -34,8 +34,8 @@ merged, and artificial fixtures do not establish real-world effectiveness.
 | 2. Evidence foundation | Tested at combined PR #4 tip; review pending | Validated snapshots, receipts and proposed labels | Stack reviewed; merges separately authorised |
 | 3. Buyer pilot | Templates prepared; real collection pending | Consented, traceable real outcomes | Buyer confirms data permission, coverage and labels |
 | 4. Modern review interface | Planned; existing demo retained | Readiness dashboard and evidence review | Artificial browser checks and buyer workflow review |
-| 5. Reliable predictions | Experimental; acceptance pending | Reproducible chronological evaluation | Agreed metrics and untouched final evaluation |
-| 6. Explanations and uncertainty | Planned | Reviewable prediction evidence and limits | Explanation correctness and calibration assessment |
+| 5. Reliable predictions | Experimental; acceptance pending | Reproducible chronological evaluation | Freeze model, calibration and thresholds before final evaluation |
+| 6. Explanations and uncertainty | Planned | Reviewable prediction evidence and limits | Read-only frozen-pipeline assessment; fitted changes need fresh future evaluation |
 | 7. Monitoring and feedback | Planned | Changes detected; outcomes reviewed | Repeated batches and reliable delayed-label evaluation |
 | 8. Recovery planning | Planned | Feasible, explainable action comparisons | Valid constraints and human acceptance |
 | 9. Integrations and documents | Planned | Reliable authorised imports | Reviewed mapping, reconciliation and failure recovery |
@@ -112,7 +112,8 @@ network access and attribution. Maps do not provide shipment tracking data.
 - [ ] Preserve the existing experiment's validation constraint of at most 265 false alerts for that same validation set;
   negotiate an operational rate or workload budget separately for different batch sizes.
 - [ ] Save a model with feature schema, training/evaluation ranges and a reproducible evaluation report.
-- [ ] Complete one controlled final evaluation after selection; do not recycle that test for later tuning.
+- [ ] Predeclare chronological calibration/selection partitions when calibration is used; never fit or select postprocessing on the final test.
+- [ ] Freeze the full model, fitted calibration/prediction-set method and threshold before one controlled final evaluation; do not recycle that test for later tuning.
 
 Start with existing scikit-learn and file-based reports. Consider
 [Optuna](https://github.com/optuna/optuna) for bounded validation searches and
@@ -124,8 +125,8 @@ when the number of runs makes them worthwhile. Neither automatically prevents le
 - [ ] Show model version, prediction time and evidence availability beside each score.
 - [ ] Add model-compatible SHAP explanations and verify feature names/output scale.
 - [ ] Separate model feature contributions from causal claims about supplier behaviour.
-- [ ] Assess probability calibration on appropriate held-out data.
-- [ ] Investigate prediction sets/intervals only with a suitable calibration partition.
+- [ ] Assess calibration of the phase-5 frozen pipeline using read-only diagnostics; fitting or changing a calibrator requires a fresh future evaluation.
+- [ ] Investigate prediction sets/intervals using predeclared non-test calibration data before final evaluation; any later fitted change requires a fresh future test.
 - [ ] Show insufficient-evidence and out-of-scope states; do not invent confidence percentages.
 - [ ] Require human review before any purchasing action.
 
@@ -138,6 +139,7 @@ coverage as a guarantee for changing supplier data.
 
 - [ ] Compare missing values, schema, new categories and input distributions between batches.
 - [ ] Monitor prediction distributions and data/evidence freshness separately.
+- [ ] Join human-accepted, cutoff-mature outcomes through the controlled cohort adapter for supervised evaluation and outcome monitoring; keep labels outside inference features.
 - [ ] Evaluate actual precision, recall and alert workload when confirmed outcomes mature.
 - [ ] Collect structured buyer feedback tied to order ID, timestamp, evidence and reviewer.
 - [ ] Keep factual receipt corrections, label review and subjective supplier ratings separate.
@@ -152,7 +154,8 @@ not proof that a supplier is unreliable or that model accuracy has fallen.
 
 ## 8. Recovery planning and disruption simulation
 
-- [ ] Capture approved alternatives, quantities, documented capacities, lead times, costs and effective dates.
+- [ ] Feed approved alternatives, quantities, documented capacities, lead times, costs and effective dates through a separate recovery-constraint gate.
+- [ ] Treat missing/stale constraints as unavailable/needs-review and complete but infeasible constraints as infeasible; predictions cannot supply missing facts.
 - [ ] Compare waiting, expediting and split-order scenarios under explicit assumptions.
 - [ ] Enforce budget, minimum quantity, capacity and documented eligibility constraints.
 - [ ] Show infeasibility and missing inputs explicitly instead of fabricating an alternative.
