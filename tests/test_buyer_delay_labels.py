@@ -133,6 +133,31 @@ class BuyerDelayLabelTests(unittest.TestCase):
         row=review(delivery_status='cancelled',exclusion_or_dispute='cancel-1')
         self.assertEqual(self.result(signals=[original],reviews=[row]),self.result(signals=[corrected,original],reviews=[row]))
 
+    def test_pre_release_enrichment_does_not_block_or_change_labels(self):
+        baseline=self.result()
+        for kind in ('acknowledgement','stock_commitment','capacity_commitment','dispatch_milestone','disruption'):
+            enrichment=signal('pre-release',signal_type=kind,event_at='2026-11-01T12:00:00Z',
+                              known_at='2026-11-01T13:00:00Z',captured_at='2026-11-01T14:00:00Z')
+            with self.subTest(kind=kind):
+                self.assertEqual(self.result(signals=[enrichment]),baseline)
+
+    def test_pre_placement_lifecycle_events_and_reviews_still_block(self):
+        for kind in ('cancellation','quantity_change','specification_change'):
+            event=signal(signal_type=kind,event_at='2026-11-01T12:00:00Z',
+                         known_at='2026-11-01T13:00:00Z',captured_at='2026-11-01T14:00:00Z')
+            with self.subTest(kind=kind),self.assertRaises(DataError):self.result(signals=[event])
+        early=review(reviewed_at='2026-11-01T12:00:00Z',known_at='2026-11-01T13:00:00Z',
+                     captured_at='2026-11-01T14:00:00Z',coverage_confirmed='no',register_coverage_through='')
+        with self.assertRaises(DataError):self.result(reviews=[early])
+
+    def test_pre_release_enrichment_retains_time_and_capture_approval_checks(self):
+        base=signal(signal_type='stock_commitment',event_at='2026-11-01T12:00:00Z',
+                    known_at='2026-11-01T13:00:00Z',captured_at='2026-11-01T14:00:00Z')
+        for changes in [dict(known_at='2026-11-01T11:00:00Z'),dict(captured_at='2026-11-01T12:30:00Z'),
+                        dict(captured_at='2026-11-15T00:00:00Z'),
+                        dict(event_at='2026-10-31T10:00:00Z',known_at='2026-10-31T11:00:00Z',captured_at='2026-10-31T12:00:00Z')]:
+            with self.subTest(changes=changes),self.assertRaises(DataError):self.result(signals=[dict(base,**changes)])
+
     def test_original_promise_ignores_buyer_requested_date(self):
         self.assertEqual(self.result(),self.result(order=snapshot(original_promise_date='2026-11-10',needed_by_date='2026-12-01')))
 

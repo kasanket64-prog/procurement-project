@@ -72,8 +72,11 @@ def records(rows, setup, orders, as_of, *, signals):
         known = timestamp(row['known_at'], f'{label}.known_at')
         capture = timestamp(row['captured_at'], f'{label}.captured_at')
         placed = timestamp(orders[row['order_line_id']]['order_placed_at'], 'order_placed_at')
-        if not placed <= event <= known <= capture <= as_of or capture < approval_start:
-            raise DataError(f'{label}: require placement <= event/review <= known <= capture <= check time, within capture approval')
+        if not event <= known <= capture <= as_of or capture < approval_start:
+            raise DataError(f'{label}: require event/review <= known <= capture <= check time, within capture approval')
+        lifecycle = not signals or row.get('signal_type') in ('cancellation', 'quantity_change', 'specification_change')
+        if lifecycle and event < placed:
+            raise DataError(f'{label}: lifecycle event/review cannot precede order placement')
         parent = row.get('supersedes_id', '')
         if not isinstance(parent, str) or parent != parent.strip():
             raise DataError(f'{label}.supersedes_id: use an exact ID or blank')

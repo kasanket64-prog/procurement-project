@@ -92,6 +92,12 @@ and reviewer-known timestamps, supporting-evidence availability and generation
 time; they are not release-time inputs. Actual label_known_at remains unset because
 these are proposals, not a record of completed human label acceptance.
 
+Pre-release enrichment, such as a stock commitment or acknowledgement, may
+precede placement and remains excluded from delay-label evidence. Its event,
+known and capture times must still be ordered, and capture must be within active
+approval. Cancellations, material-change events and outcome reviews must not
+precede placement.
+
 ## Run and verify
 
 ```powershell
