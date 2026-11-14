@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="720" height="560" preserveAspectRatio="xMinYMin meet" viewBox="0 0 720 560" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="720" height="560"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-560)" style="clip-path: url(#clip)">
+		<g transform="">
+			<path d="M 120,498 L 120,427.5 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="120 427.5, 122.6098 432.9027, 117.3902 432.9027" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 220,401.5 L 260,401.5 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="260 401.5, 254.5973 404.1098, 254.5973 398.8902" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 360,498 L 360,427.5 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="360 427.5, 362.6098 432.9027, 357.3902 432.9027" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 600,498 L 360,427.5 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="360 427.5, 365.9192 426.5187, 364.4481 431.5267" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 460,401.5 L 500,401.5 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="500 401.5, 494.5973 404.1098, 494.5973 398.8902" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 360,375.5 L 120,305 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="120 305, 125.9192 304.0187, 124.4481 309.0267" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<rect x="215.3" y="335.25" width="49.39999999999998" height="13.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="223.992" y="339.25" style="font-family: Helvetica; font-size: 8px;fill: rgb(21%,25%,32%); stroke:none;" transform="translate(0,678) scale(1,-1)">validated</text>
+			<path d="M 600,375.5 L 360,305 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="360 305, 365.9192 304.0187, 364.4481 309.0267" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 600,375.5 L 600,305 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="600 305, 602.6098 310.4027, 597.3902 310.4027" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 120,253 L 120,182.5 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="120 182.5, 122.6098 187.9027, 117.3902 187.9027" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 360,253 L 120,182.5 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="120 182.5, 125.9192 181.5187, 124.4481 186.5267" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 600,253 L 600,182.5 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="600 182.5, 602.6098 187.9027, 597.3902 187.9027" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 600,253 L 360,182.5 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="360 182.5, 365.9192 181.5187, 364.4481 186.5267" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 600,60 L 360,130.5 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="360 130.5, 364.4481 126.4733, 365.9192 131.4813" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 360,130.5 L 360,60 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="360 60, 362.6098 65.40268, 357.3902 65.40268" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 260,34 L 220,34 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="220 34, 225.4027 31.39021, 225.4027 36.60979" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 120,130.5 L 120,60 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="120 60, 122.6098 65.40268, 117.3902 65.40268" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 600,130.5 L 600,60 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="600 60, 602.6098 65.40268, 597.3902 65.40268" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<rect x="559.2" y="90.25" width="81.60000000000002" height="13.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="569.768" y="94.25" style="font-family: Helvetica; font-size: 8px;fill: rgb(21%,25%,32%); stroke:none;" transform="translate(0,188) scale(1,-1)">reviewed release</text>
+			<rect x="20" y="498.0" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="81.37" y="531.0" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,1062) scale(1,-1)">Buyer / reviewer</text>
+			<text x="86.988" y="517.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,1034) scale(1,-1)">Human authority</text>
+			<rect x="260" y="498.0" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="297.475" y="531.0" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,1062) scale(1,-1)">Buyer files / later adapters</text>
+			<text x="308.7315" y="517.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,1034) scale(1,-1)">Permissioned; outside Git</text>
+			<rect x="500" y="498.0" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="538.035" y="531.0" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,1062) scale(1,-1)">Synthetic / public sources</text>
+			<text x="552.975" y="517.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,1034) scale(1,-1)">Separate evidence kind</text>
+			<rect x="20" y="375.5" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="65.54" y="408.5" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,817) scale(1,-1)">Browser / CLI adapters</text>
+			<text x="77.3535" y="394.5" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,789) scale(1,-1)">Existing + planned UI</text>
+			<rect x="260" y="375.5" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="295.805" y="408.5" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,817) scale(1,-1)">Permission / schema / time</text>
+			<text x="315.225" y="394.5" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,789) scale(1,-1)">Shared validation gate</text>
+			<rect x="500" y="375.5" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="549.98" y="408.5" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,817) scale(1,-1)">Segregated evidence</text>
+			<text x="543.723" y="394.5" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,789) scale(1,-1)">Protected versioned storage</text>
+			<rect x="20" y="253.0" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="79.435" y="286.0" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,572) scale(1,-1)">Quotation review</text>
+			<text x="65.973" y="272.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,544) scale(1,-1)">Existing domain foundation</text>
+			<rect x="260" y="253.0" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="298.31" y="286.0" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,572) scale(1,-1)">Receipts / label proposals</text>
+			<text x="314.4735" y="272.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,544) scale(1,-1)">Draft tested foundation</text>
+			<rect x="500" y="253.0" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="551.105" y="286.0" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,572) scale(1,-1)">As-of feature builder</text>
+			<text x="552.489" y="272.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,544) scale(1,-1)">Decision-time facts only</text>
+			<rect x="20" y="130.5" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="65.525" y="163.5" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,327) scale(1,-1)">Evidence / label review</text>
+			<text x="71.2245" y="149.5" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,299) scale(1,-1)">Human acceptance gate</text>
+			<rect x="260" y="130.5" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="302.065" y="163.5" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,327) scale(1,-1)">Prediction + explanation</text>
+			<text x="311.976" y="149.5" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,299) scale(1,-1)">Later model acceptance</text>
+			<rect x="500" y="130.5" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="544.435" y="163.5" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,327) scale(1,-1)">Evaluation / monitoring</text>
+			<text x="545.9775" y="149.5" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,299) scale(1,-1)">Separate controlled activity</text>
+			<rect x="20" y="8.0" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="54.705" y="41.0" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,82) scale(1,-1)">Buyer decision outside app</text>
+			<text x="70.22999999999999" y="27.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,54) scale(1,-1)">No automatic purchasing</text>
+			<rect x="260" y="8.0" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="307.76" y="41.0" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,82) scale(1,-1)">Recovery comparison</text>
+			<text x="309.4785" y="27.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,54) scale(1,-1)">Later sourced constraints</text>
+			<rect x="500" y="8.0" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="538.87" y="41.0" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,82) scale(1,-1)">Reviewed model manifest</text>
+			<text x="550.23" y="27.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,54) scale(1,-1)">Trusted inference artifact</text>
+		</g>
+	</g>
+</svg>

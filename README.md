@@ -35,9 +35,11 @@ Historical project notes reported an experimental model with 89.90% accuracy, 93
 
 ## Next steps
 
-Review the [Software Requirements Specification draft v0.2](docs/SRS.md)
+Review the [Software Requirements Specification draft v0.3](docs/SRS.md)
 ([PDF](docs/SRS.pdf)) before further implementation. It separates current prototype
 evidence, the proposed buyer pilot and later prediction/recovery requirements.
+See the [architecture diagrams](docs/ARCHITECTURE.md) and [phased roadmap](ROADMAP.md)
+for modern feature requirements and completion gates.
 
 1. Clone this private repository and review the current main branch before continuing.
 2. Run the browser demo and record setup or output issues.

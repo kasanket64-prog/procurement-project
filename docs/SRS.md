@@ -2,14 +2,14 @@
 
 Software Requirements Specification
 
-Version 0.2 | Draft for review | 14 November 2026
+Version 0.3 | Draft for review | 14 November 2026
 
 This specification defines a structured decision-support platform for discovering
 suppliers, reviewing quotations, analysing delivery evidence and comparing
 procurement scenarios. It is the proposed requirements baseline for the existing
 project. Requirements describe the intended product; they do not certify that the
 prototype already meets them. The project owner and academic guide should review
-scope and priorities before implementation continues.
+scope and priorities before implementation continues. See [the phased roadmap](../ROADMAP.md) and [architecture diagrams](ARCHITECTURE.md).
 
 ## 1 Document control and purpose
 
@@ -21,10 +21,19 @@ baseline was 52bbac4c6e3e992a56411237139ad65cb9187d67. Main remains at
 is maintained on its own documentation branch; no experiment or pilot branch
 is represented as merged or production-ready.
 
+Version 0.3 adds the modern-feature roadmap from documentation commit a8f867a
+(draft PR #5) and the combined evidence-pipeline baseline at 5d20b67 (draft
+PR #4). The combined tip passed 57 unit tests and 21 artificial end-to-end
+scenarios / 63 command runs. Those results do not belong to main or establish
+buyer validation. This SRS update performs no new model evaluation.
+The roadmap and architecture diagrams are requirements/design documents, not
+installed integrations. Owner, academic and buyer approvals remain distinct.
+
 | Revision | Change | Approval |
 |---|---|---|
 | 0.1 | Initial structured requirements, module boundaries and staged acceptance | Pending |
 | 0.2 | Reviewed pilot correction/cancellation rules, historical/prospective collection, public-data limits and updated evidence | Pending |
+| 0.3 | Modern feature requirements, architecture diagrams, ten-phase mapping and updated integration evidence | Pending |
 
 The intended readers are the project owner, academic guide, developers, testers
 and a prospective buyer reviewing the pilot. No teacher-specific SRS format has
@@ -100,19 +109,36 @@ before buyer release; no GPU or minimum hardware claim is established here.
 | Module | Owns | Existing starting point |
 |---|---|---|
 | Requirement and discovery | Product confirmation, catalog retrieval and lead provenance | procurement_search.py, supplier_matcher.py, catalog_search.py |
-| Evidence and intake | Versioned identities, permissions, snapshots and timestamp validation | real_intake.py and quotation_schema.py for quote intake; blank buyer templates in draft PR #1; order importer planned |
+| Evidence and intake | Versioned identities, permissions, snapshots and timestamp validation | real_intake.py and quotation_schema.py; buyer_snapshot_check.py on draft PR #2/#4; general buyer adapter planned |
 | Quotation review | Commercial eligibility, exclusions and exact cost ranking | real_procurement.py and quotation_mapping.py |
 | History and prediction | As-of features, evidence counts, model inference and uncertainty labels | procurement_history.py, procurement_risk.py |
 | Scenario comparison | Independent baseline/scenario inputs and comparable outputs | procurement_ai.py and quotation_demo.py |
 | Evaluation and artifacts | Mature chronological splits, experiment policies and model manifests | procurement_training.py, corrected trainer and validation scripts |
 | Presentation and reporting | Browser/CLI interactions, explanations and controlled exports | procurement_platform.py, HTML template and report outputs |
 | Recovery proposals | Verified feasibility checks and evidence-linked alternatives | Planned; no validated recovery engine exists |
+| Receipts and label review | Accepted quantities, reversals, coverage and human label acceptance | buyer_receipts.py and buyer_delay_labels.py on draft PR #3/#4; human acceptance workflow planned |
+| Monitoring and feedback | Batch quality, delayed-label evaluation, dispute/feedback history | Planned; no automatic retraining or deployment |
 
 The intended dependency flow is input adapters to validation and evidence, then
 shared domain functions, then presentation/export. Training is an explicit
 evaluation activity and must not run when a user requests a recommendation.
 Quotation review must not load the synthetic model to manufacture real risk.
 Browser and CLI adapters should use the same documented business rules.
+
+### Architecture views and implementation boundary
+
+The companion [architecture document](ARCHITECTURE.md) contains three editable
+Mermaid diagrams and local SVG previews: logical system components,
+evidence-to-label processing, and controlled model evaluation/release. Each
+diagram also has a plain-language explanation. The PDF includes the same views.
+These show intended boundaries, not a deployed service topology.
+
+Current foundations remain local Python domain functions with browser/CLI
+adapters. Planned adapters, monitoring and recovery modules are added only at
+their acceptance gates. External access always passes permission, mapping and
+validation checks. Raw buyer data and identity mappings remain outside Git.
+The model registry is a logical controlled manifest/artifact store; it does not
+require MLflow or a hosted service. Training never runs on a recommendation request.
 
 ### Repository structure and migration
 
@@ -332,6 +358,113 @@ promise evidence, receipt reconciliation, availability and collection group are
 checked; unresolved records are quarantined with reasons. Neither the blank
 workbook nor the public-data research preparation is accepted as this adapter.
 
+### Modern platform requirements
+
+These requirements extend the existing rules; they do not replace them. Stage
+letters A-D describe release gates; phase numbers refer to ROADMAP.md. A Must
+requirement applies before its named capability is released, not as a claim that
+every later capability is required for the initial manual pilot.
+
+### FR26 Responsive review workspace
+
+The interface shall provide labelled controls, search, filters, sorting and pagination for review tables, with explicit loading, empty, partial and failed states. Saved views shall store preferences without exposing buyer records.
+Priority: Must, Stage B, phase 4. Acceptance: Keyboard-only review reaches every action; filtering preserves source IDs and visible totals; blocked records never appear as healthy results; narrow layouts retain readable content.
+
+### FR27 Data-readiness dashboard and import preview
+
+The system shall preview source-to-schema mappings and show passed checks, quarantined rows, permission state and import/evidence freshness before accepting a batch. Schema changes shall require reviewed mapping.
+Priority: Must, Stage B, phase 4. Acceptance: Missing columns, invalid timestamps and unknown units produce specific errors; preview is read-only; invalid rows cannot bypass the existing shared validators.
+
+### FR28 Order evidence timeline
+
+The system shall present original snapshots, correction links, promise changes, receipts, rejections, reversals and outcome reviews with source and event/known/capture times.
+Priority: Must, Stage B, phase 4. Acceptance: A partial receipt followed by a reversal displays both events; valid active corrections repair old business values while historical provenance and lineage remain checked; originals are preserved.
+
+### FR29 Supplier scorecards with denominators
+
+The system shall show confirmed outcome counts, unknown/pending/cancelled counts, observation window, product/site scope and freshness beside performance summaries.
+Priority: Must, Stage B, phase 4. Acceptance: Unknown outcomes are not counted as on-time deliveries; a zero eligible denominator displays unavailable; changing filters recomputes both numerator and denominator.
+
+### FR30 Review queue and controlled exports
+
+The system shall queue missing coverage, disputes and proposed labels with reviewer decisions and reasons. Exports shall identify filters, source/engine versions and limitations and omit private fields unless explicitly authorised.
+Priority: Must, Stage B, phase 4. Acceptance: An unaccepted label proposal remains model_ready=false; export preview contains no excluded identity fields; earlier reports and source records remain unchanged.
+
+### FR31 Interactive analytical views
+
+The interface shall offer delivery distributions, time trends and independent scenario comparisons with units, legends, denominator counts and a tabular alternative. Location maps are optional when decision-relevant.
+Priority: Should, Stage B, phase 4. Acceptance: Chart filters match table totals; risk meaning is not conveyed by colour alone; offline operation or missing map tiles gives a readable fallback, not a false tracking status.
+
+### FR32 Prediction explanation contract
+
+Each explanation shall identify model/feature schema, prediction time, score scale, explainer/background version, feature contributions and unavailable inputs. SHAP is the selected candidate, subject to model compatibility.
+Priority: Must, Stage C, phase 6. Acceptance: Explanation features match inference inputs; contributions reconcile to the supported model output within recorded numerical tolerance; tests reject schema mismatch; no causal delivery claim is inferred.
+
+### FR33 Calibration and insufficient-evidence states
+
+The system shall distinguish risk scores from calibrated probabilities and report calibration evidence and unavailable/out-of-scope cases. Prediction intervals or sets require a separate suitable calibration protocol.
+Priority: Must, Stage C, phase 6. Acceptance: No synthetic score becomes a verified buyer probability; missing prerequisites show unavailable; MAPIE coverage is measured on the agreed temporal evaluation and never asserted unconditionally under shift.
+
+### FR34 Experiment manifest and constrained selection
+
+Each comparison shall record dataset fingerprint, cohort/label policy, code/environment, features, split boundaries, seed and threshold search. Training transforms fit only training rows.
+Priority: Must, Stage C, phase 5. Acceptance: Only validation selects settings; final test remains outside all selection loops. The existing DataCo comparison retains its <=265 false-alert constraint on that same validation set; a new buyer budget requires separate agreement.
+
+### FR35 Batch monitoring and delayed-outcome evaluation
+
+Monitoring shall compare schema, missingness, unseen categories, input/score distributions and freshness against a versioned reference. Confirmed mature outcomes shall separately support precision, recall and workload reports.
+Priority: Must, Stage C, phase 7. Acceptance: A changed batch produces a reproducible report; missing labels prevent claims of measured accuracy change; no drift flag alone declares a supplier unreliable. Evidently is the selected candidate.
+
+### FR36 Structured feedback and disputes
+
+Feedback shall link to scoped order/prediction IDs, reviewer, known/capture times, evidence, feedback type and correction history. Subjective ratings, factual corrections and human label acceptance shall remain distinct.
+Priority: Must, Stage B, phase 7. Acceptance: A negative opinion cannot overwrite accepted quantities or a factual label; disputes remain visible and excluded where policy requires; future feedback cannot change earlier decision-time features.
+
+### FR37 Controlled alerts and model promotion
+
+Alert rules shall define severity, deduplication, reviewer ownership and workload limits. Retraining candidates and model promotion shall require recorded evaluation and authorised review.
+Priority: Must, Stage C, phase 7. Acceptance: Repeated processing does not duplicate an alert; feedback/drift alone cannot retrain and deploy; every promoted model has a reviewed manifest and a rollback reference.
+
+### FR38 Constrained recovery optimisation
+
+The system shall compare waiting, expediting and split-order choices only against approved supplier/product eligibility, sourced costs, quantities, capacities, destinations and time constraints.
+Priority: Should, Stage D, phase 8. Acceptance: Known capacity/budget limits hold; infeasible and incomplete-input cases are explicit; outputs show objective, assumptions, solver status and limits. OR-Tools is the selected candidate; no output executes a purchase.
+
+### FR39 Dependency exposure and sensitivity
+
+The system shall optionally model sourced supplier-product-site relationships and compare outcomes under explicit disruption assumptions. NetworkX is conditional on needing graph analysis.
+Priority: Should, Stage D, phase 8. Acceptance: An unknown dependency remains unknown; scenario inputs and baseline are immutable; simulated effects are labelled conditional rather than observed or guaranteed.
+
+### FR40 Authorised idempotent connectors
+
+A connector shall enforce permission scope, stable source IDs, source availability/retrieval times, reviewed mapping, schema version and reconciled import counts, with retry and partial-failure handling.
+Priority: Must, Stage B, phase 9. Acceptance: Reimport/retry creates no duplicate events; revoked permission blocks access; schema drift is quarantined; incomplete export coverage cannot establish absence of a receipt. Start with one buyer-specific adapter.
+
+### FR41 Assisted document extraction and entity matching
+
+Extracted fields and suggested name matches shall retain source page/location, extraction/matching version and review status. Docling and RapidFuzz are conditional candidates.
+Priority: Should, Stage B, phase 9. Acceptance: An ambiguous quantity/date or supplier match stays unresolved until human verification; extraction cannot establish authenticity or silently merge identities; original evidence remains available.
+
+### FR42 Hosted access and tenant isolation
+
+Before shared hosting of private records, access shall use authenticated identities, role/tenant checks, protected transport/storage and managed secrets. The deployment design shall define upload/export protections and audit access.
+Priority: Must, Stage B, phase 10 before hosting. Acceptance: Cross-tenant and unauthorised access tests fail closed; no credentials or buyer data enter Git, public logs or CI artifacts. Local pilot protection remains required before this later hosting phase.
+
+### FR43 Operational recovery and retention
+
+The operator shall document service health, backup/restore, interrupted import recovery, retention/deletion, incident ownership and release rollback. Audit and backup retention shall follow approved obligations.
+Priority: Must, Stage B, phase 10 before hosting. Acceptance: A recorded restore and rollback exercise succeeds in a controlled environment; partial writes are detectable/recoverable; deletion follows the approved scope rather than silently destroying audit evidence.
+
+### FR44 Dependency and regression governance
+
+Every adopted component shall have a documented need, pinned compatible version, reviewed licence/attribution, data transmission/offline requirements and focused checks. Existing browser and CLI contracts shall be preserved.
+Priority: Must, Stage A onward, phases 1 and 10. Acceptance: The documentation-only SRS update installs no runtime packages; each later change records affected callers/contracts and tests; artificial fixtures alone enter public/CI test artifacts.
+
+### FR45 Separately gated planning extensions
+
+Demand forecasting, inventory optimisation and streaming learning shall require separate targets, data, baselines and acceptance protocols. StatsForecast, Stockpyl and River are conditional references, not current dependencies.
+Priority: Should, Stage D, phase 10 optional. Acceptance: An extension has its own approved specification and chronological evaluation; demand predictions are never reported as validated delivery-delay predictions; scope expansion cannot bypass earlier gates.
+
 ## 8 Data requirements and interfaces
 
 ### Data entities
@@ -347,6 +480,18 @@ workbook nor the public-data research preparation is accepted as this adapter.
 | Quotation | Quote/version, supplier/product/line terms, exact quantity/total/currency, issue/receipt/expiry and source | Eligibility precedes cost ranking |
 | Model and policy | Artifact/hash, feature/target version, cutoffs, dependencies and threshold | Threshold belongs to one identified artifact |
 | Scenario or proposal | Baseline ID, input changes, fixed evidence timestamp, compared records and limits | Retains original and does not execute a purchase |
+
+### Modern feature data contracts
+
+Import manifests record source/schema/mapping versions, batch fingerprint, row
+counts, retrieval/as-of time, permission and quarantine results. Explanation
+records bind prediction/model/schema and background configuration; monitoring
+records bind reference/current batches, metrics, thresholds and label maturity.
+Feedback records preserve reviewer authority, type, evidence and correction links.
+Recovery records retain baseline, objective, sourced constraints, solver status
+and human decision. These are proposed logical contracts, not new workbook/CSV
+columns. Schema implementation requires a versioned mapping and separate review.
+Raw buyer records, credentials and identity maps must never enter this repository.
 
 ### Availability and precision rules
 
@@ -391,6 +536,15 @@ requirements. Supersedes links are required for corrections, not original rows.
 Cancellation/material-change events are required when they occur; other enrichment
 signals remain optional. Template versions and source mappings must be recorded
 before import. The current schema is a reviewed proposal, not a populated dataset.
+
+At combined draft tip 5d20b67, snapshot, receipt and label commands implement
+read-only preflight/proposals, not a general model-ready importer. Label policy
+must be explicitly approved; the implemented first policy uses zero grace and
+net acceptance at original local date-end. Binary proposals wait for that date
+to close, including early-completed orders. Register coverage must reach the
+exclusive next-local-day boundary. Nonzero grace and material scope changes
+remain unsupported/unknown rather than silently falling back to this policy.
+Every generated proposal still requires human review and is not model-ready.
 
 The date-based delivery target uses the original supplier-committed deadline in
 the destination timezone, with only an expressly approved grace period. Full
@@ -449,6 +603,11 @@ versioning, concurrency and backup behavior before acceptance.
 | NFR08 | Model safety. Load only trusted, registered artifacts whose hash/schema match the policy; do not deserialize arbitrary uploaded pickle files. | C |
 | NFR09 | Compatibility. Publish tested Python/library/browser versions; basic browser launch remains independent of semantic model downloads. | B |
 | NFR10 | Accessibility of evidence. Every displayed recommendation has a source kind, decision time and understandable limitation; no colour-only decision meaning. | B onward |
+| NFR11 | UI resilience. Verify keyboard navigation, narrow layouts, empty/loading/error states and table/chart equivalence in the agreed browser matrix. | B |
+| NFR12 | Isolation. Before hosting, exercise role and tenant denial tests, upload/export boundaries and secret/log inspection. | Before hosted private use |
+| NFR13 | Monitoring integrity. Version references, metric rules and label-maturity cutoffs; rerunning a batch reproduces its report without duplicate alerts. | C |
+| NFR14 | Component governance. Record licence, attribution, supported versions, external transmissions and offline limitations before adopting each component. | A onward |
+| NFR15 | Release recovery. Demonstrate documented backup restore, partial-import recovery and model/application rollback before the relevant operational release. | Before operational release |
 
 Performance figures are proposed acceptance targets, not reproduced benchmark
 claims. Precision/recall acceptance levels and review budgets remain buyer-specific
@@ -500,6 +659,33 @@ feasibility claim; a proposal alone cannot authorize a purchase.
 | AT11 | Original snapshot has no predecessor; valid transcription correction links the same line; broken, cyclic or competing chains stay quarantined. | FR05, FR23, FR25 |
 | AT12 | Cancellation/change requires a sourced event and known time; after-deadline cancellation preserves evidenced lateness under the approved rule. | FR13, FR24 |
 | AT13 | Historical/prospective groups remain traceable; unverified timing, mismatched schemas/units and public/synthetic rows cannot enter the buyer modelling cohort. | FR04, FR09, FR25 |
+| AT14 | Keyboard and narrow-screen review works; filter totals and empty/error states remain accurate. | FR26 |
+| AT15 | Import preview catches schema/time/unit errors without changing source files or admitting invalid rows. | FR27 |
+| AT16 | Evidence timeline retains original errors/corrections and accepted/rejected/reversed receipt history. | FR28 |
+| AT17 | Supplier counts reconcile to the selected cohort; unknowns are separate and zero denominators unavailable. | FR29 |
+| AT18 | Unaccepted proposals stay out of training; reviewed exports exclude private fields and preserve prior reports. | FR30 |
+| AT19 | Chart/table totals match; missing map/network support gives a fallback without invented live tracking. | FR31 |
+| AT20 | Model-compatible explanation contributions reconcile on the declared output scale; schema mismatch blocks. | FR32 |
+| AT21 | Calibration protocol is separate from final evaluation; unavailable/shifted cases do not receive fabricated confidence. | FR33 |
+| AT22 | Run manifest binds data/code/splits; validation alone selects settings and preserves the applicable alert budget. | FR34 |
+| AT23 | Changed batch yields a repeatable drift report; absent labels cannot yield measured accuracy-change claims. | FR35 |
+| AT24 | Subjective ratings cannot rewrite receipts/labels; factual corrections preserve provenance and as-of behaviour. | FR36 |
+| AT25 | Repeated batch alerts deduplicate; drift/feedback cannot auto-promote a model; rollback reference is retained. | FR37 |
+| AT26 | Recovery respects capacity/budget; infeasible/missing-input/time-limited cases remain explicit and execute nothing. | FR38 |
+| AT27 | Dependency scenarios preserve their baseline and expose unknown links and assumptions. | FR39 |
+| AT28 | Connector retries do not duplicate events; revoked permission/schema drift/partial coverage fail safely. | FR40 |
+| AT29 | Ambiguous extracted fields and name matches require source-linked review; no silent identity merge occurs. | FR41 |
+| AT30 | Unauthorised/cross-tenant access is denied; uploads/exports and logs expose no prohibited private content. | FR42 |
+| AT31 | Controlled restore, interrupted-import recovery, rollback and retention/deletion checks follow the approved procedure. | FR43 |
+| AT32 | New component has a reviewed compatibility/licence record and targeted checks; existing entry points remain compatible. | FR44 |
+| AT33 | Optional forecasting/inventory/streaming extension has separate approved data, target and evaluation. | FR45 |
+
+UC07 Review modern workspace: preview a batch, resolve readiness issues, inspect
+an order timeline, filter supplier evidence and review proposed labels without
+rewriting sources. UC08 Monitor and dispute: inspect changed-batch reports,
+submit sourced feedback and route alerts to a named reviewer without automatic
+model promotion. UC09 Import assisted evidence: verify extracted fields and
+suggested identities before using an authorised idempotent connector's results.
 
 Requirements not yet implemented need new acceptance tests; traceability is a
 plan, not a statement that every AT case has already passed. The separate research
@@ -520,6 +706,8 @@ performed while preparing this SRS.
 | DataCo public research | 180,519 item rows across 65,752 orders; 28,965 provisional COMPLETE/CLOSED orders; cancellation/fraud and unresolved statuses separated | Historical shipping proxy with unverified availability, receipt and domain suitability; separate from buyer and synthetic data |
 | DataCo validation comparison | 6,422 validation orders; shipping mode detects 1,994 delays with 265 false alerts; threshold-selected logistic detects 1,995 with 265 | One added detection is not a practical improvement claim; selected/measured on validation; final test remains unscored |
 | Buyer data collection | Draft PR #1 reviewed at 335cdf7; 87-field blank pack with snapshot links, required cancellation events and related ignore rules | Still draft/unmerged; no buyer contacted, consent granted or real records supplied; native Excel and buyer export checks pending |
+| Combined evidence pipeline | PR #4 tip 5d20b67: 57 unit tests and 21 artificial scenarios / 63 CLI runs passed | Draft stack unmerged; real buyer export, human label acceptance and operational validation pending |
+| Modern feature roadmap | Draft PR #5 at a8f867a; ten phases and proposed feature checklist | Documentation only; selected libraries are not installed integrations |
 | Recovery engine | Product direction and requirements only | Verified constraints, uncertainty, feasibility implementation and approval gates required |
 
 Stage A exit: review this SRS, resolve requirement owners and maintain the regression
@@ -530,6 +718,46 @@ before model use. Stage C exit: freeze a real target and costs,
 collect mature evidence, compare baselines and obtain agreed future-period
 evaluation results. Stage D exit: reconcile every proposed constraint and conduct
 shadow recovery review without autonomous purchasing.
+
+### Ten-phase release mapping
+
+| Phase | Stage and requirement focus | Exit evidence |
+|---|---|---|
+| 1. Requirements and progress | A; FR44, NFR04/NFR14 | SRS/diagrams drafted and checked; owner/teacher review pending |
+| 2. Evidence foundation | B; FR05, FR13, FR23-FR25 | Reviewed integration tests and separately authorised merges |
+| 3. Buyer pilot | B; FR04/FR18/FR25 | Consent, protected evidence and human-reviewed outcomes |
+| 4. Modern review interface | B; FR26-FR31 | Artificial browser tests and buyer workflow acceptance |
+| 5. Reliable prediction | C; FR09-FR16/FR34 | Reproducible chronological comparison and frozen final evaluation |
+| 6. Explanation/uncertainty | C; FR32-FR33 | Explanation correctness and calibration assessment |
+| 7. Monitoring/feedback | B/C; FR35-FR37 | Repeated batches, reviewed feedback and mature-label evaluation |
+| 8. Recovery | D; FR20-FR22/FR38-FR39 | Sourced constraints, solver checks and human shadow review |
+| 9. Connectors/documents | B for this capability; FR40-FR41 | Permission, reviewed mappings and idempotence/failure checks |
+| 10. Operation/extensions | B/C/D as applicable; FR42-FR45 | Hosting controls before hosting; separate extension acceptance |
+
+The ten phases refine stages A-D; they do not postpone controls required for
+earlier use. Local pilot access/storage/restore controls apply in phase 3.
+Hosted access controls apply before any hosted private use, even if hosting is
+started before phase 10. Phase 1 document preparation is not owner/teacher approval.
+
+### Selected and conditional open-source components
+
+| Component | Decision and capability | Gate |
+|---|---|---|
+| Mermaid | Selected for editable diagrams; not an application runtime requirement | Phase 1 rendering and accessible text |
+| Plotly | Selected when current charts are insufficient | Phase 4 browser/offline/privacy compatibility |
+| SHAP | Selected model-explanation candidate | Phase 6 model/schema/output compatibility |
+| Evidently | Selected batch-monitoring candidate | Phase 7 real reference batches and delayed outcomes |
+| OR-Tools | Selected recovery-optimisation candidate | Phase 8 sourced constraints, status and feasibility tests |
+| MAPIE / Optuna / MLflow / DVC | Conditional uncertainty, search and experiment/data management | Demonstrated need and separate reviewed integration |
+| RapidFuzz / Docling / Airbyte | Conditional matching, extraction and connectors | Buyer system selected; permission, source review and mappings |
+| NetworkX / Leaflet / DuckDB | Conditional dependency analysis, maps and local analytics | Required relationships/location/scale justify adoption |
+| Playwright / Hypothesis / Ruff | Conditional focused quality tools | Critical browser flows, invariants or static checks justify use |
+| River / StatsForecast / Stockpyl | Optional later learning/planning modules | Separate approved target/data/evaluation specification |
+
+Reuse existing Python domain checks, browser/CLI entry points and standard-library
+capabilities first. Do not install all candidates together. Every adopted version
+requires licence/attribution, maintenance, dependency and transmission review.
+No selected library itself validates supplier claims or establishes buyer consent.
 
 ## 12 Assumptions decisions and references
 
@@ -583,8 +811,25 @@ its reserved test remains unscored but is not a pristine unseen source. No later
 decision may disguise those limitations. Future requirement changes must record
 reason, owner, affected FR/NFR IDs and acceptance evidence in project history.
 
+### Modern component references
+
+Official project references consulted for capability selection; these are not
+dependency pins or promises of compatibility with this repository:
+
+- Mermaid: https://mermaid.js.org/intro/
+- Plotly: https://github.com/plotly/plotly.py
+- SHAP: https://github.com/shap/shap
+- Evidently: https://github.com/evidentlyai/evidently
+- OR-Tools: https://github.com/google/or-tools
+- MAPIE: https://github.com/scikit-learn-contrib/MAPIE
+
+PR #4 combined evidence baseline: https://github.com/kasanket64-prog/procurement-project/pull/4
+PR #5 roadmap baseline: https://github.com/kasanket64-prog/procurement-project/pull/5
+Version 0.3 preserves earlier experiment figures as attributed historical results;
+it does not rerun them or claim they validate the new features.
+
 ### Review record
 
 Project owner review: pending. Academic guide review: pending. Buyer data and
-operational approval: pending. Version 0.2 is a review draft and does not authorize
+operational approval: pending. Version 0.3 is a review draft and does not authorize
 deployment, procurement actions, data collection or merging development work into main.

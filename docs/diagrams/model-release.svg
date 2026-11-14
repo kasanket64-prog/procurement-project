@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="720" height="600" preserveAspectRatio="xMinYMin meet" viewBox="0 0 720 600" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="720" height="600"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-600)" style="clip-path: url(#clip)">
+		<g transform="">
+			<path d="M 360,538 L 360,501.666667 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="360 501.6667, 362.6098 507.0693, 357.3902 507.0693" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 360,449.666667 L 120,413.333333 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="120 413.3333, 125.7325 411.5616, 124.9512 416.7224" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 360,449.666667 L 360,413.333333 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="360 413.3333, 362.6098 418.736, 357.3902 418.736" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 360,449.666667 L 600,413.333333 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="600 413.3333, 595.0488 416.7224, 594.2675 411.5616" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<rect x="457.6" y="426.5" width="44.80000000000001" height="13.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="464.44" y="430.5" style="font-family: Helvetica; font-size: 8px;fill: rgb(21%,25%,32%); stroke:none;" transform="translate(0,861) scale(1,-1)">reserved</text>
+			<path d="M 220,387.333333 L 260,387.333333 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="260 387.3333, 254.5973 389.9431, 254.5973 384.7235" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<rect x="213.0" y="382.33333333333337" width="54.0" height="13.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="220.656" y="386.33333333333337" style="font-family: Helvetica; font-size: 8px;fill: rgb(21%,25%,32%); stroke:none;" transform="translate(0,772) scale(1,-1)">candidates</text>
+			<path d="M 360,361.333333 L 360,325 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="360 325, 362.6098 330.4027, 357.3902 330.4027" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 460,299 L 500,299 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="500 299, 494.5973 301.6098, 494.5973 296.3902" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 600,361.333333 L 600,325 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="600 325, 602.6098 330.4027, 597.3902 330.4027" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<rect x="570.7" y="338.1666666666667" width="58.60000000000002" height="13.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="579.1" y="342.1666666666667" style="font-family: Helvetica; font-size: 8px;fill: rgb(21%,25%,32%); stroke:none;" transform="translate(0,684) scale(1,-1)">once frozen</text>
+			<path d="M 600,273 L 360,236.666667 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="360 236.6667, 365.7325 234.895, 364.9512 240.0557" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<rect x="453.0" y="249.83333333333334" width="54.0" height="13.000000000000028" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="460.656" y="253.83333333333334" style="font-family: Helvetica; font-size: 8px;fill: rgb(21%,25%,32%); stroke:none;" transform="translate(0,507) scale(1,-1)">acceptable</text>
+			<path d="M 600,273 L 600,236.666667 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="600 236.6667, 602.6098 242.0693, 597.3902 242.0693" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<rect x="573.0" y="249.83333333333334" width="54.0" height="13.000000000000028" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="581.768" y="253.83333333333334" style="font-family: Helvetica; font-size: 8px;fill: rgb(21%,25%,32%); stroke:none;" transform="translate(0,507) scale(1,-1)">unsuitable</text>
+			<path d="M 360,184.666667 L 360,148.333333 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="360 148.3333, 362.6098 153.736, 357.3902 153.736" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<path d="M 360,96.333333 L 360,60 Z" style="stroke: rgb(34%,41%,50%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="360 60, 362.6098 65.40268, 357.3902 65.40268" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(34%,41%,50%); fill-rule: evenodd;"/>
+			<rect x="260" y="538.0" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="301.65999999999997" y="571.0" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,1142) scale(1,-1)">Approved cohort / target</text>
+			<text x="298.35450000000003" y="557.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,1114) scale(1,-1)">Decision-time features + labels</text>
+			<rect x="260" y="449.6666666666667" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="302.215" y="482.6666666666667" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,965) scale(1,-1)">Chronological partitions</text>
+			<text x="304.722" y="468.6666666666667" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,937) scale(1,-1)">Mature labels at each cutoff</text>
+			<rect x="20" y="361.33333333333337" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="88.605" y="394.33333333333337" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,788) scale(1,-1)">Training only</text>
+			<text x="65.604" y="380.33333333333337" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,760) scale(1,-1)">Fit transforms + candidates</text>
+			<rect x="260" y="361.33333333333337" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="324.435" y="394.33333333333337" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,788) scale(1,-1)">Validation only</text>
+			<text x="310.3515" y="380.33333333333337" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,760) scale(1,-1)">Select model + threshold</text>
+			<rect x="500" y="361.33333333333337" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="549.15" y="394.33333333333337" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,788) scale(1,-1)">Reserved final period</text>
+			<text x="559.986" y="380.33333333333337" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,760) scale(1,-1)">No selection access</text>
+			<rect x="260" y="273.0" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="299.28" y="306.0" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,612) scale(1,-1)">Freeze candidate + policy</text>
+			<text x="302.724" y="292.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,584) scale(1,-1)">Data / code / model manifest</text>
+			<rect x="500" y="273.0" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="537.21" y="306.0" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,612) scale(1,-1)">Controlled final evaluation</text>
+			<text x="550.2345" y="292.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,584) scale(1,-1)">Report success or failure</text>
+			<rect x="260" y="184.66666666666669" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="303.315" y="217.66666666666669" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,435) scale(1,-1)">Authorised release gate</text>
+			<text x="303.8625" y="203.66666666666669" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,407) scale(1,-1)">Reviewed metrics + rollback</text>
+			<rect x="500" y="184.66666666666669" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,94%,90%); fill-rule: evenodd;"/>
+			<text x="538.325" y="217.66666666666669" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,435) scale(1,-1)">If unsuitable: report / stop</text>
+			<text x="540.4784999999999" y="203.66666666666669" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,407) scale(1,-1)">Fresh future test for new work</text>
+			<rect x="260" y="96.33333333333337" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="284.56" y="129.33333333333337" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,258) scale(1,-1)">Trusted inference + explanation</text>
+			<text x="305.7255" y="115.33333333333337" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,230) scale(1,-1)">No training on user request</text>
+			<rect x="260" y="8.0" width="200" height="52.0" rx="5" ry="5" style="stroke: rgb(45%,54%,65%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,98%); fill-rule: evenodd;"/>
+			<text x="296.515" y="41.0" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,82) scale(1,-1)">Monitor + human feedback</text>
+			<text x="299.9745" y="27.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,54) scale(1,-1)">Review future candidates only</text>
+		</g>
+	</g>
+</svg>
