@@ -3,6 +3,10 @@
 [Live GitHub board](https://github.com/users/kasanket64-prog/projects/1).
 The board is project metadata; it does not merge or modify main.
 
+Use the [Phase 1 approval checklist](PHASE-1-APPROVAL.md) for separate owner and
+teacher decisions on the SRS, diagrams, board and templates. Approval is pending
+and does not authorise a merge or buyer-data use.
+
 | Phase | Issue | Existing PRs | Phase gate |
 |---|---|---|---|
 | 01 Requirements and progress | #7 | #5, #6, #17 | Awaiting owner/teacher review |
