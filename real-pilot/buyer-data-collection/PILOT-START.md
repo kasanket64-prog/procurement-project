@@ -21,7 +21,7 @@ Agree these existing setup fields in particular:
 | history_window | Historical dates/export rule, omissions, prospective start and proposed end |
 | decision_rule | PO-line release/placement; `decision_at = order_placed_at` |
 | target_version | Full original quantity accepted at the original destination by the original supplier-committed date |
-| grace_and_scope_rules | Explicit grace, cancellation, returns/rejections, reversals and material-change treatment |
+| grace_and_scope_rules | Explicit grace, cancellation before/after deadline, returns/rejections, reversals and material-change treatment; preserve evidenced delays |
 | timezone | Destination IANA timezone; date-based promise unless an exact-time target is separately agreed |
 | permitted_use | Collection/reconciliation first; model development only if included in approved scope |
 
@@ -29,11 +29,11 @@ Agree these existing setup fields in particular:
 
 Copy the blank workbook **outside Git** into buyer-approved protected storage before filling it. Alternatively use the existing CSV templates; choose one authoritative working record, rather than maintaining contradictory workbook and CSV copies. No credentials, bank details or personal contacts belong in the shared analysis.
 
-1. **Order snapshots:** one immutable release snapshot per line. Record stable pseudonymous line/supplier/product/destination IDs, placement/decision times, original supplier promise, promise evidence, original quantity/unit and destination timezone. Complete provenance/verification fields; optional commercial facts stay blank if not sourced.
+1. **Order snapshots:** one immutable release snapshot per line. Record stable pseudonymous line/supplier/product/destination IDs, placement/decision times, original supplier promise, promise evidence, original quantity/unit and destination timezone. Complete provenance/verification fields; optional commercial facts stay blank if not sourced. For a transcription correction, append a new snapshot_id with supersedes_id referencing the prior snapshot for the same pilot/line; never overwrite it. Resolve one active snapshot per line before analysis; broken or competing correction chains stay quarantined. Later supplier changes belong in event tables.
 2. **Promise events:** record the original communication and each revision with its event time, buyer-known time, capture time and protected source reference. Never overwrite the original promise.
 3. **Receipts:** append every accepted, rejected or reversed quantity, linked to the correct line, destination and unit. Record actual acceptance time separately from ERP posting/buyer-known time. Partial delivery is not full completion.
 4. **Outcomes:** the receiving reviewer reconciles receipts and records delivery status, label, full accepted-completion time where established, coverage, review time and evidence-known time. This table is outcome evidence, never release-time input.
-5. **Signals:** optional for this small pilot; collect only sourced facts already received by the buyer. Later events cannot be backfilled as release-time predictors.
+5. **Signals:** require a row for every cancellation or material quantity/specification change, using the existing signal types and event_at, known_at, captured_at, source_ref, reviewer_id and documented reason/change value. Link its signal_id in the outcome exclusion/dispute note. Other enrichment signals are optional. Later events cannot be backfilled as release-time predictors; missing event timing stays unresolved in quarantine.
 
 For a historical reconstruction, `captured_at` is today's real extraction/entry time, not a fabricated historical timestamp. Use source-supported `known_at`; if release-time availability cannot be established, use `retrospective_unverified` for the snapshot and quarantine it from prediction experiments. Prospective snapshots also need evidence before they are marked `verified_as_of`. Set `data_kind` to real only after genuine source and approved-use checks, never by default.
 
@@ -49,9 +49,11 @@ For this pilot it is the date/time at which the full original quantity was **acc
 | Full quantity accepted after original deadline | `late`; preserve actual completion and original promise |
 | Deadline passed, not fully accepted, complete receipt coverage confirmed through deadline | `late` may be supported while delivery remains open/partial |
 | Deadline not reached, missing promise/receipt coverage, or conflicting facts | `pending` or `unknown`; never assume on-time |
-| Canceled order or material scope change | Preserve reason/time; use agreed cancellation/exclusion policy, never an automatic successful delivery |
+| Canceled order or material scope change | Require a sourced Signal with reason/time and use the approved before/after-deadline exclusion policy; never an automatic successful delivery |
 
 Keep event time, earliest evidenced buyer-known time, capture time and review time distinct. Do not invent exact times for date-only source records. Resolve precision limitations before declaring a timestamp-required record eligible. The original promise remains the target even if a later revision is accepted commercially.
+
+The buyer must approve cancellation treatment before labelling. Proposed rule: retain pre-deadline cancellations as cancelled/excluded; for a post-deadline cancellation preserve a late outcome if complete receipt coverage already establishes the missed deadline. Use delivery_status=cancelled with label=late in that case. Without sufficient evidence keep the outcome unknown. Document any approved deviation and its exclusion count in the review, rather than silently discarding overdue orders. The deadline includes only a buyer-approved grace period, if any.
 
 ## Keep collection groups and data sources separate
 

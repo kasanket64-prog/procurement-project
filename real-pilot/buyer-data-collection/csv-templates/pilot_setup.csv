@@ -13,7 +13,7 @@ history_window,,"Record available history period, source systems and omissions."
 decision_rule,,Proposed: at PO-line release/placement; decision_at equals order_placed_at. Buyer must approve.
 target_version,,Proposed: full original quantity accepted by original supplier-committed date at agreed destination.
 timezone,,IANA name; do not infer a timezone from currency.
-grace_and_scope_rules,,"Agree any grace period, cancellations, rejected/returned goods and material order changes."
+grace_and_scope_rules,,"Agree cancellation before/after deadline; preserve evidenced late outcomes. Also define grace, returns and scope changes."
 review_capacity,,Buyer-approved count and acceptable false-alert/missed-delay trade-off. No model threshold is selected here.
 approved_storage,,"Protected location outside Git; reference, not credentials or public share link."
 access_roles,,"Who may view raw records, identities, reviewed data and exports."

@@ -53,7 +53,7 @@ orders and check label maturity at each future training/evaluation cutoff.
 | Order snapshots | Stable line, supplier, product and destination IDs; release decision/placement times; original promise; quantity/unit; timezone; source/availability | Reconstruct the original decision. Collect price/currency, business unit, payment terms and contract status where sourced. |
 | Promise events | Each original/revised promise, version, event time, known time and source | Preserve commitments without overwriting history. Post-release revisions are not release-time predictors. |
 | Receipts | Every accepted/rejected/reversed quantity, unit, event and known time, source and linked receipt | Reconcile partial deliveries and completion. Historical receipts become features only after disclosure. |
-| Signals | Sourced acknowledgement, stock/capacity commitment, shipment milestone, route disruption or scope change | Optional predictors only if known and still applicable at decision time. Separate supplier claims from verified facts. |
+| Signals | Sourced acknowledgement, stock/capacity commitment, shipment milestone, route disruption or scope change | Cancellation and material quantity/specification changes require event rows when they occur. Other enrichment is optional. Only facts known at decision time can be predictors. |
 | Outcomes | Delivery status, label, completion if known, receipt-register coverage, reviewer and sources | Preserve mature ground truth separately from predictors. |
 
 Every record also needs pilot_id, data_kind, source_ref, known_at, captured_at and
@@ -95,10 +95,38 @@ exclude that line from this initial committed-promise experiment or agree a
 separate acknowledgement-time decision definition before collection.
 
 Append corrections with new IDs and supersedes_id/reverses_event_id; preserve
-original evidence. Receipt quantities are positive: accepted adds quantity,
+original evidence. For Order snapshots, leave supersedes_id blank on the first
+snapshot and require it on each transcription correction, referencing the prior
+snapshot_id for the same pilot_id and order_line_id. Keep the original decision
+and source-supported fact availability, and record the actual correction capture
+time. A later supplier promise is a Promise event, not a snapshot correction.
+Before analysis, resolve one active snapshot per line: the unique end of a
+reviewed correction chain. Missing links, cycles, multiple roots or competing
+corrections remain quarantined until reviewed; never choose the last CSV row by
+position or count all versions as orders.
+
+Receipt quantities are positive: accepted adds quantity,
 reversal subtracts a referenced accepted receipt once, rejected adds no accepted
 quantity. Match line, destination and unit before sums. Resolve corrections and
 scope changes explicitly; never delete inconvenient receipt rows.
+
+For each cancellation or material quantity/specification change, require a
+Signals row using cancellation, quantity_change or specification_change, with
+event_at, known_at, captured_at, source_ref, reviewer_id and the documented reason
+or change value. Also link that signal_id from Outcomes.exclusion_or_dispute.
+If event timing is unavailable, preserve the source in quarantine and leave the
+exclusion unresolved; do not fabricate a time from the review date. These events
+are outcome/context after release and cannot enter earlier decision features.
+
+Before labelling, the buyer must approve an explicit cancellation policy in
+Pilot setup.grace_and_scope_rules for events before versus after the original
+deadline (including any approved grace). Proposed policy: a cancellation before
+the deadline is retained as cancelled/excluded, never on_time; after the deadline,
+preserve any late result already evidenced by complete receipt coverage through
+the deadline, with delivery_status=cancelled and label=late. If lateness cannot
+be established, keep the outcome unknown pending evidence. Record any approved
+deviation and exclusion count; do not silently remove overdue failures. Material
+scope changes likewise require the agreed rule and original target to be kept.
 
 ## Practical first six weeks
 

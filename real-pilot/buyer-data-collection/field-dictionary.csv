@@ -54,8 +54,8 @@ Receipts,captured_at,Project captured at,timestamp,yes,Provenance,Actual extract
 Receipts,reviewer_id,Reviewer ID,text,yes,Provenance,Internal reviewer identifier; keep names/contact details in the restricted identity key.
 Signals,signal_id,Signal ID,text,yes,Identity,Unique immutable fact/change event ID.
 Signals,order_line_id,Order-line ID,text,yes,Join key,Scope each signal to a line; do not apply a general claim to every order.
-Signals,signal_type,Signal type,text,yes,Candidate predictor,"Only a sourced decision-time fact. Post-release signals belong to monitoring/context, not release prediction."
-Signals,event_at,Signal event happened at,timestamp,yes,Event timing,"When the acknowledgement, observation or event occurred."
+Signals,signal_type,Signal type,text,yes,Predictor or outcome context,Cancellation and material quantity/specification changes require a Signal row when they occur. Other enrichment is optional. Only facts known at decision time can be predictors.
+Signals,event_at,Signal event happened at,timestamp,yes,Event timing,"Actual event time, including cancellation/material change; not review or posting time. Missing timing remains unresolved in quarantine."
 Signals,value_number,Numeric value,number,if numeric fact,Candidate predictor,"Sourced measurement; genuine zero allowed. Populate numeric or text, not both."
 Signals,value_text,Text value,text,if nonnumeric fact,Candidate predictor,"Concise documented fact, not an inferred score or an after-the-fact explanation."
 Signals,value_unit,Value unit,text,for numeric quantities,Predictor context,Exact measurement unit or pack definition; do not assume conversion.
@@ -77,7 +77,7 @@ Outcomes,complete_accepted_at,Full acceptance happened at,timestamp,if completed
 Outcomes,register_coverage_through,Receipt register complete through,timestamp,to label absence as late,Outcome evidence,Buyer-confirmed coverage through this time. Without it absence is not proof of late delivery.
 Outcomes,coverage_confirmed,Coverage confirmed,text,yes,Label eligibility,"Reviewer confirmation of completeness, not a default assumption."
 Outcomes,reviewed_at,Review happened at,timestamp,yes,Outcome availability,Actual review time. known_at cannot precede all evidence used; never backdate.
-Outcomes,exclusion_or_dispute,Exclusion or dispute reason,text,if relevant,Outcome context,"Cancellation, changed scope, inconsistent identity/unit, disputed receipts, or unresolved evidence."
+Outcomes,exclusion_or_dispute,Exclusion or dispute reason,text,if relevant,Outcome context,Document the reason and relevant Signal IDs for cancellation/material change. Apply approved before/after-deadline rules; preserve evidenced delays and report exclusions.
 Outcomes,supersedes_id,Supersedes review ID,text,for corrections,Revision link,Preserve previous review and link this correction.
 Outcomes,pilot_id,Pilot ID,text,yes,Identity,"Links to this buyer-approved pilot; pseudonym, not a legal name."
 Outcomes,data_kind,Data kind,text,yes,Separation,Use real only for reviewed genuine records within approval; never mix synthetic records here.
@@ -85,3 +85,4 @@ Outcomes,source_ref,Protected source reference,text,yes,Provenance,Internal docu
 Outcomes,known_at,Buyer knew at,timestamp,yes,Availability gate,Earliest source-supported buyer availability; for a snapshot use latest availability of decision-time business facts; later project audit metadata is excluded.
 Outcomes,captured_at,Project captured at,timestamp,yes,Provenance,Actual extraction/entry time. Never substitute for buyer availability or backdate it.
 Outcomes,reviewer_id,Reviewer ID,text,yes,Provenance,Internal reviewer identifier; keep names/contact details in the restricted identity key.
+Order snapshots,supersedes_id,Supersedes snapshot ID,text,for corrections,Revision link,Required for a transcription correction: prior snapshot_id for the same pilot and line. Blank on the original. Resolve one active chain; quarantine broken or competing links. Later supplier changes use event tables.
