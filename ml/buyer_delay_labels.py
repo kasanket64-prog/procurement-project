@@ -164,7 +164,8 @@ def label_delays(snapshots, receipts, reviews, signals, setup, policy, as_of):
         if len(candidates) > 1 and timestamp(candidates[-2]['reviewed_at'], 'reviewed_at') == at:
             raise DataError('outcome_reviews: competing active reviews at the same review time')
         visible_receipts = [r for r in by_receipt[key] if timestamp(r['known_at'], 'known_at') <= at]
-        visible_signals = active_versions(by_signal[key], at)
+        visible_signals = [r for r in active_versions(by_signal[key], at)
+                           if r['signal_type'] in ('cancellation', 'quantity_change', 'specification_change')]
         line = reconcile_receipts(by_snapshot[key], visible_receipts, setup, as_of)['lines'][0]
         original_day = [r for r in visible_receipts if timestamp(r['event_at'], 'event_at') < boundary]
         at_deadline = reconcile_receipts(by_snapshot[key], original_day, setup, as_of)['lines'][0]

@@ -124,6 +124,8 @@ class BuyerDelayLabelTests(unittest.TestCase):
         future=receipt('future',quantity='6',event_at='2026-11-13T00:00:00Z',known_at='2026-11-13T01:00:00Z',captured_at='2026-11-13T02:00:00Z')
         cancellation=signal(event_at='2026-11-13T00:00:00Z',known_at='2026-11-13T01:00:00Z',captured_at='2026-11-13T02:00:00Z')
         self.assertEqual(before,self.result(receipts=[receipt(),future],signals=[cancellation]))
+        unrelated=signal('stock',signal_type='stock_commitment',captured_at='2026-11-13T02:00:00Z')
+        self.assertEqual(before,self.result(signals=[unrelated]))
 
     def test_future_signal_correction_does_not_hide_past_version(self):
         original=signal()
