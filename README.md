@@ -4,6 +4,10 @@ Private project for supplier discovery, procurement analysis and quotation revie
 
 **Status (13 November 2026): prototype.** The main branch contains procurement datasets, Python analysis and matching modules, an offline HTML demo, and a separately documented real-quotation pilot. This repository snapshot does not establish production readiness or validation against real buyer outcomes.
 
+The proposed structured project requirements are recorded in [SRS draft 0.1](docs/SRS.md)
+with a [formatted PDF](docs/SRS.pdf). This is a review baseline, not approval or a claim
+that all requirements are implemented.
+
 ## Start the browser demo
 
 From the repository root with Python 3.10 or later, run: `python ml/procurement_platform.py`.
