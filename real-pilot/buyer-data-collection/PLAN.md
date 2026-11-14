@@ -106,8 +106,10 @@ corrections remain quarantined until reviewed; never choose the last CSV row by
 position or count all versions as orders.
 
 Receipt quantities are positive: accepted adds quantity,
-reversal subtracts a referenced accepted receipt once, rejected adds no accepted
-quantity. Match line, destination and unit before sums. Resolve corrections and
+rejected adds no accepted quantity, and each uniquely identified reversal is
+applied once against a referenced accepted receipt. Multiple partial reversals
+are allowed only while their cumulative quantity does not exceed that acceptance.
+Match line, destination and unit before sums. Resolve corrections and
 scope changes explicitly; never delete inconvenient receipt rows.
 
 For each cancellation or material quantity/specification change, require a

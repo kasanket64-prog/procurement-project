@@ -20,6 +20,10 @@ The [read-only snapshot checker](buyer-data-collection/SNAPSHOT-CHECK.md) checks
 declared pilot approval, release fields and correction links in external working
 CSVs. Passing does not establish receipt outcomes or make records model-ready.
 
+The [receipt reconciliation command](buyer-data-collection/RECEIPTS.md) adds
+read-only per-line accepted/rejected/reversed balances from the existing receipt
+CSV. It flags quantity excesses and does not assign delivery-delay labels.
+
 | Evidence | Required information |
 |---|---|
 | Buyer requirement | Exact product and specifications, quantity and purchasing unit, destination, destination timezone, delivery deadline, total budget and currency |
