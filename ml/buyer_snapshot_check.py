@@ -51,18 +51,17 @@ def check_approval(setup, as_of):
 
 
 def check_snapshots(rows, setup, as_of):
-    """Fail the whole batch on unresolved records; never create model-ready output."""
+    """Validate audit lineage throughout, then business facts on active versions only."""
     approval_start = check_approval(setup, as_of)
     if not rows:
         raise DataError('order_snapshots: no records supplied')
-    required = ('snapshot_id', 'order_line_id', 'supplier_id', 'product_id', 'destination_id',
-                'decision_at', 'order_placed_at', 'original_promise_date', 'promise_basis',
-                'decision_timezone', 'quantity', 'unit', 'snapshot_status', 'pilot_id',
-                'data_kind', 'source_ref', 'known_at', 'captured_at', 'reviewer_id')
+    history_required = ('snapshot_id', 'order_line_id', 'supplier_id', 'product_id', 'destination_id',
+                        'decision_at', 'order_placed_at', 'unit', 'pilot_id', 'data_kind',
+                        'source_ref', 'known_at', 'captured_at', 'reviewer_id')
     nodes, lines = {}, {}
     for number, row in enumerate(rows, 2):
         label = f'order_snapshots row {number}'
-        for field in required:
+        for field in history_required:
             value = text(row.get(field), f'{label}.{field}')
             if value != row[field]:
                 raise DataError(f'{label}.{field}: remove surrounding whitespace explicitly')
@@ -70,32 +69,12 @@ def check_snapshots(rows, setup, as_of):
             raise DataError(f'{label}.snapshot_id: duplicate ID')
         if row['pilot_id'] != setup['pilot_id'] or row['data_kind'] != 'real':
             raise DataError(f'{label}: wrong pilot or data kind; do not mix sources')
-        if row['snapshot_status'] != 'verified_as_of':
-            raise DataError(f'{label}.snapshot_status: verified_as_of required; retain unresolved evidence separately')
-        if row['promise_basis'] not in ('supplier_quotation', 'supplier_acknowledgement', 'contract_schedule'):
-            raise DataError(f'{label}.promise_basis: a documented supplier commitment is required')
         placed = timestamp(row['order_placed_at'], f'{label}.order_placed_at')
         decision = timestamp(row['decision_at'], f'{label}.decision_at')
         known = timestamp(row['known_at'], f'{label}.known_at')
         captured = timestamp(row['captured_at'], f'{label}.captured_at')
         if decision != placed or known > decision or captured < decision or captured < approval_start or captured > as_of:
             raise DataError(f'{label}: require known <= decision = placement <= capture <= check time, with capture inside approval')
-        if row['decision_timezone'] != setup['timezone']:
-            raise DataError(f'{label}.decision_timezone: must match the approved one-site pilot')
-        decision_zone(row['decision_timezone'])
-        for field in ('original_promise_date', 'needed_by_date'):
-            if row.get(field):
-                if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', row[field]):
-                    raise DataError(f'{label}.{field}: expected YYYY-MM-DD')
-                day(row[field], f'{label}.{field}')
-        amount(row['quantity'], f'{label}.quantity')
-        if row.get('unit_price'):
-            amount(row['unit_price'], f'{label}.unit_price', zero=True)
-            text(row.get('currency'), f'{label}.currency')
-        if row.get('currency') and not re.fullmatch('[A-Z]{3}', row['currency']):
-            raise DataError(f'{label}.currency: three uppercase letters required')
-        if row.get('on_contract', '') not in ('', 'yes', 'no', 'unknown'):
-            raise DataError(f'{label}.on_contract: expected yes, no, unknown or blank')
         predecessor = row.get('supersedes_id', '')
         if not isinstance(predecessor, str) or predecessor != predecessor.strip():
             raise DataError(f'{label}.supersedes_id: use an exact snapshot ID or blank')
@@ -123,6 +102,33 @@ def check_snapshots(rows, setup, as_of):
             key = children.get(key)
         if key is not None or len(visited) != len(keys):
             raise DataError('order_snapshots: cyclic or disconnected correction chain')
+    for key, (row, _, _, _, number) in nodes.items():
+        if key in children:
+            continue
+        label = f'order_snapshots row {number}'
+        for field in ('original_promise_date', 'promise_basis', 'decision_timezone', 'quantity', 'snapshot_status'):
+            if text(row.get(field), f'{label}.{field}') != row[field]:
+                raise DataError(f'{label}.{field}: remove surrounding whitespace explicitly')
+        if row['snapshot_status'] != 'verified_as_of':
+            raise DataError(f'{label}.snapshot_status: verified_as_of required; retain unresolved evidence separately')
+        if row['promise_basis'] not in ('supplier_quotation', 'supplier_acknowledgement', 'contract_schedule'):
+            raise DataError(f'{label}.promise_basis: a documented supplier commitment is required')
+        if row['decision_timezone'] != setup['timezone']:
+            raise DataError(f'{label}.decision_timezone: must match the approved one-site pilot')
+        decision_zone(row['decision_timezone'])
+        for field in ('original_promise_date', 'needed_by_date'):
+            if row.get(field):
+                if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', row[field]):
+                    raise DataError(f'{label}.{field}: expected YYYY-MM-DD')
+                day(row[field], f'{label}.{field}')
+        amount(row['quantity'], f'{label}.quantity')
+        if row.get('unit_price'):
+            amount(row['unit_price'], f'{label}.unit_price', zero=True)
+            text(row.get('currency'), f'{label}.currency')
+        if row.get('currency') and not re.fullmatch('[A-Z]{3}', row['currency']):
+            raise DataError(f'{label}.currency: three uppercase letters required')
+        if row.get('on_contract', '') not in ('', 'yes', 'no', 'unknown'):
+            raise DataError(f'{label}.on_contract: expected yes, no, unknown or blank')
     return {'status': 'snapshot_preflight_passed', 'snapshot_rows': len(rows),
             'active_order_lines': len(lines), 'correction_rows': len(rows) - len(lines),
             'model_ready': False, 'purchase_authorized': False,
@@ -132,7 +138,7 @@ def check_snapshots(rows, setup, as_of):
 
 
 def active_snapshots(rows, setup, as_of):
-    """Resolve leaves only after validating every snapshot and correction chain."""
+    """Return only validated active versions, retaining full lineage checks."""
     check_snapshots(rows, setup, as_of)
     replaced = {row['supersedes_id'] for row in rows if row.get('supersedes_id')}
     return {row['order_line_id']: row for row in rows if row['snapshot_id'] not in replaced}
