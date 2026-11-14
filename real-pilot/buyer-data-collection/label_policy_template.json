@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "",
+  "pilot_id": "",
+  "target_version": "",
+  "approval_ref": "",
+  "approval_confirmed": false,
+  "approved_at": "",
+  "grace_days": 0,
+  "target_rule": "net_accepted_at_original_date_end",
+  "cancellation_rule": "pre_deadline_cancelled_post_deadline_preserve_outcome"
+}
