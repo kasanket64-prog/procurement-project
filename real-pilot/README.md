@@ -24,6 +24,11 @@ The [receipt reconciliation command](buyer-data-collection/RECEIPTS.md) adds
 read-only per-line accepted/rejected/reversed balances from the existing receipt
 CSV. It flags quantity excesses and does not assign delivery-delay labels.
 
+The [delay-label proposal command](buyer-data-collection/DELAY-LABELS.md) combines
+that ledger with the original promise, reviewed receipt coverage and sourced
+cancellation events under an explicitly approved policy. It keeps pending,
+unknown and cancelled outcomes distinct; proposals still require human acceptance.
+
 | Evidence | Required information |
 |---|---|
 | Buyer requirement | Exact product and specifications, quantity and purchasing unit, destination, destination timezone, delivery deadline, total budget and currency |

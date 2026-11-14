@@ -105,6 +105,11 @@ reviewed correction chain. Missing links, cycles, multiple roots or competing
 corrections remain quarantined until reviewed; never choose the last CSV row by
 position or count all versions as orders.
 
+Keep identity, provenance, permission and timing valid across every version.
+Validate business values on the resolved active snapshot; an invalid superseded
+quantity/date remains audit evidence and is never used in receipt balances or
+labels. An invalid active version still blocks the batch until corrected.
+
 Receipt quantities are positive: accepted adds quantity,
 rejected adds no accepted quantity, and each uniquely identified reversal is
 applied once against a referenced accepted receipt. Multiple partial reversals
