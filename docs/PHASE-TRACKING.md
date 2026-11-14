@@ -9,7 +9,7 @@ and does not authorise a merge or buyer-data use.
 
 | Phase | Issue | Existing PRs | Phase gate |
 |---|---|---|---|
-| 01 Requirements and progress | #7 | #5, #6, #17 | Awaiting owner/teacher review |
+| 01 Requirements and progress | #7 | #5, #6, #17, #18 | Awaiting owner/teacher review |
 | 02 Evidence foundation | #8 | #1, #2, #3, #4 | Tested at combined draft tip; integration approval pending |
 | 03 Consenting buyer pilot | #9 | #1 (preparation only) | Planned; consent and actual collection pending |
 | 04 Modern review interface | #10 | None yet | Planned |
