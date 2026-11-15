@@ -96,7 +96,7 @@ class BrowserWorkspaceTests(unittest.TestCase):
         self.assertAlmostEqual(before, after, places=7)
         self.assertFalse(self.errors, self.errors)
 
-    def test_request_draft_requires_review_and_does_not_purchase(self):
+    def fill_rfq(self, *, zone="Asia/Kolkata", date="2099-12-31"):
         self.search_demo()
         self.page.locator("#start-rfq").click()
         self.assertTrue(self.page.locator("#request").is_visible())
@@ -106,12 +106,41 @@ class BrowserWorkspaceTests(unittest.TestCase):
         self.page.locator("#unit").fill("ton")
         self.page.locator("#currency").fill("INR")
         self.page.locator("#destination").fill("Nagpur, Maharashtra, India")
-        self.page.locator("#date").fill("2099-12-31")
-        self.page.locator("#zone").fill("Asia/Kolkata")
+        self.page.locator("#date").fill(date)
+        self.page.locator("#zone").fill(zone)
         self.page.locator("#confirm").check()
+
+    def test_request_draft_requires_review_and_does_not_purchase(self):
+        self.fill_rfq()
+        sent = []
+        self.page.on("request", lambda request: sent.append(request.url)
+                     if request.method != "GET" else None)
         self.page.locator("#rfq-form button[type=submit]").click()
         self.assertTrue(self.page.locator("#preview").is_visible())
         self.assertIn("This is a request, not a purchase order", self.page.locator("#draft").inner_text())
+        self.assertEqual(sent, [], "RFQ preview must not send requests to a server")
+        self.assertFalse(self.errors, self.errors)
+
+    def test_invalid_destination_timezone_does_not_generate_request(self):
+        self.fill_rfq(zone="Invalid/TimeZone")
+        self.page.locator("#rfq-form button[type=submit]").click()
+        self.assertIn("valid destination timezone", self.page.locator("#rfq-error").inner_text())
+        self.assertFalse(self.page.locator("#preview").is_visible())
+        self.assertFalse(self.errors, self.errors)
+
+    def test_past_delivery_deadline_does_not_generate_request(self):
+        self.fill_rfq(date="2000-01-01")
+        self.page.locator("#rfq-form button[type=submit]").click()
+        self.assertIn("future delivery date", self.page.locator("#rfq-error").inner_text())
+        self.assertFalse(self.page.locator("#preview").is_visible())
+        self.assertFalse(self.errors, self.errors)
+
+    def test_editing_after_preview_invalidates_earlier_request(self):
+        self.fill_rfq()
+        self.page.locator("#rfq-form button[type=submit]").click()
+        self.assertTrue(self.page.locator("#preview").is_visible())
+        self.page.locator("#rfq-quantity").fill("20")
+        self.assertFalse(self.page.locator("#preview").is_visible())
         self.assertFalse(self.errors, self.errors)
 
 
