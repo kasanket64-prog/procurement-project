@@ -45,4 +45,8 @@ GitHub Actions run [43674937779](https://github.com/kasanket64-prog/procurement-
 
 ## Merge policy
 
+### Public delivery research added after the baseline
+
+[Public delivery-data research](public-delivery-research.md) now records a local descriptive analysis of 10,324 historical SCMS line items obtained through a pinned public mirror. Scheduled and actual client-delivery dates are available, but source authenticity, conflicting reuse metadata, schedule revisions and feature-availability history remain unresolved. The analysis distinguishes line items from ASN/DN groups and does not train or deploy a model, rank suppliers, or validate the real-quotation pilot. Original baseline results and release gates above remain applicable. Full data analysis was local; CI covers date accounting and rejection of an unreviewed input file with controlled fixtures.
+
 Do not merge this draft PR merely because 36 automated tests are green. Review the source diff, confirm all CI checks at the final SHA, then merge only by explicit maintainer decision. Do not interpret these tests as validation of prediction accuracy or purchasing decisions.
