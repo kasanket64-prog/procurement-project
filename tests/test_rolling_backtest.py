@@ -110,6 +110,27 @@ class RollingBacktestTests(unittest.TestCase):
                 self.assertTrue(0 <= report[key]["expected_calibration_error"] <= 1)
         pd.testing.assert_frame_equal(source, untouched)
 
+    def test_changing_future_test_labels_does_not_choose_a_different_threshold(self):
+        original = fixture()
+        altered = fixture()
+        # All altered orders fall in the last fold's *test* window, strictly
+        # after its calibration and threshold-selection windows.
+        for idx in range(86, 100):
+            placed = pd.Timestamp(altered.loc[idx, "order_date"])
+            promise = pd.Timestamp(altered.loc[idx, "promised_delivery_date"])
+            new_completion = promise + pd.Timedelta(days=3 if idx % 4 else -1)
+            altered.loc[idx, "actual_delivery_date"] = str(new_completion.date())
+        a = evaluate_rolling(original, trees=3)
+        b = evaluate_rolling(altered, trees=3)
+        self.assertEqual(
+            [fold["threshold_selection"] for fold in a["folds"]],
+            [fold["threshold_selection"] for fold in b["folds"]],
+        )
+        self.assertNotEqual(
+            a["folds"][-1]["test_metrics"]["positive_rate"],
+            b["folds"][-1]["test_metrics"]["positive_rate"],
+        )
+
     def test_reliability_rejects_nonprobabilities(self):
         with self.assertRaises(ValueError):
             reliability([0, 1], [-.1, .5])
