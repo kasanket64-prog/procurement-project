@@ -1,6 +1,6 @@
 # AI Supply Chain Prediction & Procurement Platform
 
-Private project for supplier discovery, procurement analysis and quotation review.
+Prototype project for supplier discovery, procurement analysis and quotation review.
 
 **Status (13 November 2026): prototype.** The main branch contains procurement datasets, Python analysis and matching modules, an offline HTML demo, and a separately documented real-quotation pilot. This repository snapshot does not establish production readiness or validation against real buyer outcomes.
 
@@ -19,6 +19,34 @@ The ML requirements include the terminal requirements. Install them only for tho
 - `dataset/`: procurement records, supplier history, supplier-item data, and a public-procurement sample.
 - `ml/`: procurement analysis, supplier discovery/matching, catalog search, risk and training experiments, and the browser demo.
 - `real-pilot/`: input templates and a guided quotation-review pilot. Start with [real-pilot/README.md](real-pilot/README.md).
+
+## Reproducible synthetic ML evaluation
+
+Run a temporal holdout using only mature delivery outcomes for training:
+
+```bash
+python -m pip install numpy pandas scikit-learn joblib
+python ml/evaluate_delivery_risk.py --trees 40 --output evaluation.json
+```
+
+The evaluator uses shared point-in-time features from `ml/procurement_history.py`,
+records the input digest and version metadata, and compares classification
+metrics against an always-prior probability baseline. The [verified baseline,
+confusion matrix, and reproducibility details](docs/model-evaluation.md)
+show **39.97% recall** for late deliveries at the fixed 0.5 threshold on
+synthetic data. This is **not good enough to declare an operational early-warning
+system** and says nothing about real supplier reliability.
+
+A separate [three-window rolling synthetic backtest](docs/rolling-backtest.md)
+adds chronological calibration, validation-only threshold selection, and untouched
+test windows. Late-delivery recall remained roughly **39–41%**. The model
+detected **none** of the late deliveries in three synthetic product categories
+(Chemicals, Logistics, Professional Services), and the historical dataset
+supplied no unseen-supplier test examples. These are **release blockers**, not
+production performance claims. No alert threshold has buyer approval.
+
+The earlier experimental training scripts remain in the repository for
+historical comparison, not as verified leakage-free production pipelines.
 
 ## Current limits and known issues
 

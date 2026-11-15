@@ -1,0 +1,4102 @@
+[
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-31261fc4-e286-460f-b30b-1753471b106f-1",
+    "title": "Contract award for WCM ECC Supervisor, Technical Support and ECoW",
+    "suppliers": [
+      "Jeremy Benn Associates Limited (t/a JBA Consulting)"
+    ],
+    "buyer": "Defra",
+    "award_date": "2025-12-02T00:00:00Z",
+    "amount": 181600,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/f8cab55d-90a5-4f7a-87d4-1ed0f5bd8bef"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-786ce083-5b7d-4908-9383-c98f71986480-1",
+    "title": "Robotic Process Automation for Humber Health Partnership Administration Services",
+    "suppliers": [
+      "E18 Consulting Ltd"
+    ],
+    "buyer": "HULL UNIVERSITY TEACHING HOSPITALS NHS TRUST",
+    "award_date": "2025-10-17T00:00:00+01:00",
+    "amount": 434550,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/e0b6fde2-2738-4fc6-8ee8-8d316b8f674a"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-33eeab57-8c27-4312-a12a-decd380783c8-1",
+    "title": "LAS IUC Strategy",
+    "suppliers": [
+      "TRANSFORMATION NOUS LIMITED"
+    ],
+    "buyer": "London Ambulance Service NHS Trust",
+    "award_date": "2025-09-05T00:00:00+01:00",
+    "amount": 49522,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/71800951-05e4-4431-9ae8-37f76518603f"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-aacf342e-bf29-4470-8a7a-51249a60a4b3-1",
+    "title": "36718 Carrisbrooke",
+    "suppliers": [
+      "Aizel Cabs"
+    ],
+    "buyer": "Leicester City Council",
+    "award_date": "2025-12-31T00:00:00Z",
+    "amount": 22113,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/b60ed20b-ae6f-4cc9-90f8-70ffcad4ad3b"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-edb66ce0-cfe5-433f-8952-8831ef8368ea-1",
+    "title": "36717 - Leicester Partnership School (Carrisbrooke)",
+    "suppliers": [
+      "Smart Plus"
+    ],
+    "buyer": "Leicester City Council",
+    "award_date": "2025-12-31T00:00:00Z",
+    "amount": 20124,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/69b6fe8e-e0b3-420f-adab-fde1ce0ed6b1"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-f5dffbef-4f1a-49c9-a26a-62844e2dba66-1",
+    "title": "Adult Social Care Case Management System - Paris Extension (Civica Care Records)",
+    "suppliers": [
+      "Civica UK Ltd"
+    ],
+    "buyer": "Isle of Wight Council",
+    "award_date": "2025-12-17T00:00:00Z",
+    "amount": 217856,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/86088ae9-dc7e-4fe6-ac90-a06d6f855a20"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-8167650a-ddc9-4a82-b559-36f5863d45bb-1",
+    "title": "SEN15458",
+    "suppliers": [
+      "TLC Cabs"
+    ],
+    "buyer": "Leicestershire County Council",
+    "award_date": "2025-08-20T00:00:00+01:00",
+    "amount": 20700,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/26bad879-211a-4ccb-b3d2-d7be46917e68"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-f6880f72-10f3-4d8e-99c9-2e63a51cdee0-1",
+    "title": "The Kent Health Visiting Service",
+    "suppliers": [
+      "Kent Community Health NHS Foundation Trust"
+    ],
+    "buyer": "Kent County Council",
+    "award_date": "2025-11-23T00:00:00Z",
+    "amount": 141373906,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/125bbda5-6571-4595-86d3-4a53f3c5e464"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-7fc05e26-b082-4b91-95ed-c526a87c894b-1",
+    "title": "Holborn Refurbishment works to Custody suite including ESS works",
+    "suppliers": [
+      "Axis Europe PLC"
+    ],
+    "buyer": "METROPOLITAN POLICE SERVICE",
+    "award_date": "2025-12-20T00:00:00Z",
+    "amount": 928255.65,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/0ba72421-d918-441c-b5ee-50d8f69fde06"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-f835225f-24c1-4a5a-8454-922774f9d014-1",
+    "title": "LAS Demand and Capacity Review",
+    "suppliers": [
+      "OPERATIONAL RESEARCH IN HEALTH LIMITED"
+    ],
+    "buyer": "London Ambulance Service NHS Trust",
+    "award_date": "2025-11-10T00:00:00Z",
+    "amount": 340694,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/a97d5b8d-2773-4b68-b1f1-a2425c5a9fd4"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-ca85d894-a041-408c-a314-47df65b71b1b-2",
+    "title": "LAS Ambulance Funding Model",
+    "suppliers": [
+      "PA CONSULTING SERVICES LIMITED"
+    ],
+    "buyer": "London Ambulance Service NHS Trust",
+    "award_date": "2025-10-21T00:00:00+01:00",
+    "amount": 74500,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/e518d91c-6945-4a3b-ab85-3fdf6387b7ce"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-463bbdc6-2bf2-4ffa-a77d-ca89d987f4af-1",
+    "title": "LAS Power Platform Strategy",
+    "suppliers": [
+      "PA CONSULTING SERVICES LIMITED"
+    ],
+    "buyer": "London Ambulance Service NHS Trust",
+    "award_date": "2025-10-23T00:00:00+01:00",
+    "amount": 96940,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/561f7450-c648-4998-8037-f3cb5a11dd09"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-ed3243a1-ce56-433e-80ba-c3757f2ba949-1",
+    "title": "DfT Provision of Legal Advice - Project Harrier",
+    "suppliers": [
+      "Eversheds Sutherland (International) LLP"
+    ],
+    "buyer": "DfTc - Department for Transport",
+    "award_date": "2025-12-01T00:00:00Z",
+    "amount": 750000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/922c850b-8f80-4054-82bd-1057b35113d4"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-819a40cf-e9e4-4ac3-8111-8b57ac760a3c-1",
+    "title": "36723 - Ellesmere College",
+    "suppliers": [
+      "Skyline Taxis"
+    ],
+    "buyer": "Leicester City Council",
+    "award_date": "2025-12-31T00:00:00Z",
+    "amount": 27378,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/c4439f6a-7db7-4111-8b78-28674268ddfc"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-8bed043c-6477-494b-a999-7bfd787b3769-1",
+    "title": "78 Kensington High Street - External repairs and redecorations",
+    "suppliers": [
+      "Axis Europe PLC"
+    ],
+    "buyer": "METROPOLITAN POLICE SERVICE",
+    "award_date": "2025-12-12T00:00:00Z",
+    "amount": 121909.74,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/85dae259-e0be-43e1-b391-c070aebc69f7"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-16147e5a-549a-4358-8e58-34c8056fd89d-1",
+    "title": "TC061 - Homeless Household Supported Accommodation",
+    "suppliers": [
+      "Great Places Housing Association"
+    ],
+    "buyer": "Bolton Council",
+    "award_date": "2025-07-07T00:00:00+01:00",
+    "amount": 263020,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/30e46fe3-d486-456e-b86e-5c0bda6c0cef"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-c678030a-5dd2-4834-bc24-23d235b4cda7-1",
+    "title": "SEN15456",
+    "suppliers": [
+      "PREMIER TAXIS LEICESTER LTD"
+    ],
+    "buyer": "Leicestershire County Council",
+    "award_date": "2025-08-05T00:00:00+01:00",
+    "amount": 24000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/0a8f1718-d5c6-41df-a0ad-aaa7b1c2b52c"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-54457a26-b43f-4647-9b18-b411978c06ef-1",
+    "title": "Fresh Wharf Custody Base - External repairs and redecorations",
+    "suppliers": [
+      "Axis Europe PLC"
+    ],
+    "buyer": "METROPOLITAN POLICE SERVICE",
+    "award_date": "2025-12-12T00:00:00Z",
+    "amount": 103013.87,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/1c1dd82d-0515-4758-a74a-1ebb531bbdb1"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-4de8971a-52da-4e95-a06f-d8c081385573-1",
+    "title": "NH2164 - SD Core Gym Equipment",
+    "suppliers": [
+      "Technogym U.K. Limited"
+    ],
+    "buyer": "Northumbria Healthcare NHS Foundation Trust",
+    "award_date": "2025-11-13T00:00:00Z",
+    "amount": 205841.3,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/5116a131-f468-402b-82c1-b4e9e252042c"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-26aea41a-950e-4983-b802-b41ae01cef4c-1",
+    "title": "36719 St Botolphs",
+    "suppliers": [
+      "Hansom Taxis"
+    ],
+    "buyer": "Leicester City Council",
+    "award_date": "2025-12-31T00:00:00Z",
+    "amount": 60840,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/d7404f93-a935-40b1-8a8c-9f82c7aaf425"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-61cd6b79-7ed4-407e-80a6-c64279378ccc-1",
+    "title": "Enfield Patrol Base External Repairs and Redecorations",
+    "suppliers": [
+      "Axis Europe PLC"
+    ],
+    "buyer": "METROPOLITAN POLICE SERVICE",
+    "award_date": "2025-12-12T00:00:00Z",
+    "amount": 94746.07,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/e6f51b0d-969a-4728-a09b-aeb3b5c3a16c"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-308552bf-a8f8-4fd8-a184-bf7d99260c03-1",
+    "title": "IT Research and Analysts Service",
+    "suppliers": [
+      "Gartner UK Limited"
+    ],
+    "buyer": "HM Land Registry",
+    "award_date": "2025-11-30T00:00:00Z",
+    "amount": 487200,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/91da9581-5d7d-4082-9dfb-0020f306798d"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-a8647e14-7636-4998-ab0b-bec051f48c20-1",
+    "title": "36716 Keyham Lodge",
+    "suppliers": [
+      "CityRides Leicester Ltd"
+    ],
+    "buyer": "Leicester City Council",
+    "award_date": "2025-12-31T00:00:00Z",
+    "amount": 28080,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/b1f9adcf-6913-4771-a93c-5d9a566c26d3"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-edad6046-1dea-4c36-9e01-3caf03138777-1",
+    "title": "Purchase of Flow Cytometry Systems",
+    "suppliers": [
+      "Fisher Scientific U.K., Limited"
+    ],
+    "buyer": "Medicines and Healthcare Products Regulatory Agency",
+    "award_date": "2025-12-17T00:00:00Z",
+    "amount": 220000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/84ab5909-c39f-4080-9d13-935d0838ed72"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-1924996f-3cbb-45a4-ad40-61f4e47012c4-1",
+    "title": "SEN17189-SEN-TAXI-BIRCH WOOD SCHOOL - GRANGE DRIVE",
+    "suppliers": [
+      "NMI TAXI LTD"
+    ],
+    "buyer": "Leicestershire County Council",
+    "award_date": "2025-12-31T00:00:00Z",
+    "amount": 18850,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/2b98b30e-25d1-4c3a-b088-4e4e44252967"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-0eebce7b-d2de-4646-931d-976d8699d961-1",
+    "title": "WLT3386 Plastics Insourcing",
+    "suppliers": [
+      "National Clinical Insourcing Limited"
+    ],
+    "buyer": "Wrightington Wigan and Leigh Teaching Hospitals NHS Foundation Trust",
+    "award_date": "2025-11-29T00:00:00Z",
+    "amount": 128000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/3b4313ad-8b68-483c-b49a-23a338d14860"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-2ec0b117-0b35-4166-94c8-b5aef7060842-1",
+    "title": "Cisco Licensing for Datacentre Switches",
+    "suppliers": [
+      "Specialist Computer Centres"
+    ],
+    "buyer": "NHS SOUTH, CENTRAL AND WEST COMMISSIONING SUPPORT UNIT",
+    "award_date": "2025-12-10T00:00:00Z",
+    "amount": 31007.04,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/b046449d-d1ea-48ef-882a-318e5d461cfa"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-976f66c5-27f4-477f-86bc-41fd1c766c77-1",
+    "title": "Lot 2-070 Scunthorpe Traffic Counts",
+    "suppliers": [
+      "Pell Frischmann Consultants Ltd"
+    ],
+    "buyer": "North Lincolnshire Council",
+    "award_date": "2025-12-18T00:00:00Z",
+    "amount": 4850,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/9e87f647-e108-4ee1-9345-d71bdcb22bcb"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-0bf15837-3dbc-4352-8495-370d00c19165-1",
+    "title": "36714 Willowbank",
+    "suppliers": [
+      "Hansom Taxis"
+    ],
+    "buyer": "Leicester City Council",
+    "award_date": "2025-12-31T00:00:00Z",
+    "amount": 28080,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/b4542b23-5d9a-4721-a153-7edc6f8dc5e9"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-5330993f-4b90-49b0-9c70-8aad1691bb6c-1",
+    "title": "HCT - NEC OptoMize Agreement",
+    "suppliers": [
+      "NEC SOFTWARE SOLUTIONS UK LIMITED"
+    ],
+    "buyer": "Hertfordshire Community NHS Trust",
+    "award_date": "2024-04-01T00:00:00+01:00",
+    "amount": 200000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/d6575958-e0b9-4d29-af90-d8a07d48e8ef"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-8f3f3000-7846-4c37-83c8-7209b41d9120-1",
+    "title": "TC031 - Home and Community Based Support",
+    "suppliers": [
+      "1 Homecare Ltd",
+      "Bluebird Care Bury",
+      "Care 4 U Homecare Agency Limited",
+      "Care At Home Group Ltd",
+      "Care Choice North West Limited",
+      "Care Connect Bury Ltd",
+      "Care4us health Care Limited",
+      "CHENAI HOLISTIC HOME CARE",
+      "cherishuk",
+      "Choices Homecare (Oldham) Ltd",
+      "Clarity Homecare Bolton",
+      "Complete Care 4 U Ltd",
+      "Delta Care Ltd",
+      "Dignity In Life LTD",
+      "EdenCare Support Services Limited",
+      "EL Care Services Ltd",
+      "Exemplary Care Services LTD",
+      "Guardian Homecare",
+      "Heart of Gold Homecare",
+      "HG Care",
+      "Homecare For You Ltd",
+      "Homecare Haven",
+      "HOMECARERS CARE SERVICES LIMITED",
+      "Icare solutions stockport",
+      "ICRIT HEALTHCARE LTD",
+      "Jewel Home Support Ltd",
+      "Leadership Future Ltd (t/a Care Skilled)",
+      "Orchid Home Care Support Limited",
+      "P&R Services, investments and trading limited. T/A P&R H",
+      "Precedo Healthcare Services Limited",
+      "Premier Care Ltd",
+      "Primary Carers 24/7 Ltd",
+      "Prime way Care",
+      "RECOVERY SUPPORT LIMITED",
+      "Right Care",
+      "RINGS HOMECARE SERVICE",
+      "RNHS Limited",
+      "SAFE HANDS CARE & SUPPORT SERVICES LIMITED",
+      "Sanctus Care Group Limited",
+      "Serenity Healthcare Services Limited",
+      "SEVA LINE",
+      "Sky Futures Ltd t/a Choice Care",
+      "SupportedSteps CIC",
+      "SureCare Bolton",
+      "THE LOCAL CARE COMPANY (BOLTON) LTD",
+      "Valour private limited",
+      "Your care (UK) Ltd",
+      "Your Care Solutions",
+      "Zenith Health Care Northwest Ltd"
+    ],
+    "buyer": "Bolton Council",
+    "award_date": "2025-01-17T00:00:00Z",
+    "amount": 114870000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/7983daee-aed5-4113-b4f8-8b26cddda127"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-af950af5-89bf-4bcf-9820-c1616727746b-1",
+    "title": "L11-259 Epworth Carriageway Resurfacing 2025-2026",
+    "suppliers": [
+      "EC Surfacing Ltd"
+    ],
+    "buyer": "North Lincolnshire Council",
+    "award_date": "2025-12-30T00:00:00Z",
+    "amount": 148650.96,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/0ef0570a-d59f-430e-b499-4e57960abc43"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-73fdb413-58da-47a6-9b6c-7b866294f70c-1",
+    "title": "Executive Recruitment Services",
+    "suppliers": [
+      "Penna Plc"
+    ],
+    "buyer": "Bournemouth Christchurch and Poole Council",
+    "award_date": "2025-12-09T00:00:00Z",
+    "amount": 54000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/c24ab8fe-992a-4f95-b0e6-10bffed45bc6"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-cddbcbbc-6e36-4a3d-853d-4bd35848c572-1",
+    "title": "Cyber Security Awareness Training",
+    "suppliers": [
+      "MetaCompliance Ltd"
+    ],
+    "buyer": "Bournemouth Christchurch and Poole Council",
+    "award_date": "2025-12-02T00:00:00Z",
+    "amount": 94614.15,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/5e6ba932-417e-4f2e-9e53-bb2f70154ead"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-56d126ce-8087-4088-9b2f-49c2850897a5-1",
+    "title": "TC030 - Independent Visiting Service",
+    "suppliers": [
+      "Bolton Lads & Girls Club"
+    ],
+    "buyer": "Bolton Council",
+    "award_date": "2024-07-11T00:00:00+01:00",
+    "amount": 60000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/22aff810-9c2a-4183-a4ff-ef070524d30e"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-062c2336-a540-4761-bf6d-2bfca5163fa2-1",
+    "title": "Supply of a 1st Line Service Desk",
+    "suppliers": [
+      "ONEADVANCED GROUP LIMITED"
+    ],
+    "buyer": "DfTc - Department for Transport",
+    "award_date": "2025-12-15T00:00:00Z",
+    "amount": 4000000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/10eadcf5-9ee2-4513-a016-17635ecd8bd7"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-e1ff7e6f-5e3d-4c8a-b077-6d368f1ac580-1",
+    "title": "Management Consultancy Pathology",
+    "suppliers": [
+      "Akeso & Co"
+    ],
+    "buyer": "Gloucestershire Hospitals NHS Foundation Trust",
+    "award_date": "2025-12-31T00:00:00Z",
+    "amount": 49000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/d2a63beb-778c-4227-9292-a23998dd2399"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-3fcd0512-1b33-4ef8-864a-2ac60791b1a8-1",
+    "title": "WHHT - Civica SLAM",
+    "suppliers": [
+      "CIVICA UK LIMITED"
+    ],
+    "buyer": "West Hertfordshire Teaching Hospital NHS Trust",
+    "award_date": "2025-11-25T00:00:00Z",
+    "amount": 327000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/d30df9ea-86b3-464c-b195-279042edec56"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-ef227571-5c6b-419a-bd6c-8a9f4b091423-2",
+    "title": "Housing Management System",
+    "suppliers": [
+      "NEC Software Solutions UK Limited"
+    ],
+    "buyer": "Bournemouth Christchurch and Poole Council",
+    "award_date": "2025-03-25T00:00:00Z",
+    "amount": 2891223,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/2ccc4e94-9775-47d4-817d-dde3e006d47e"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-27352e6a-874d-4905-9f26-68e201f556ea-1",
+    "title": "POL Digital Capabilities Framework - Branch Hub",
+    "suppliers": [
+      "Softwire Technology Limited"
+    ],
+    "buyer": "Post Office",
+    "award_date": "2025-12-30T00:00:00Z",
+    "amount": 144275,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/da65bb19-a6eb-4229-849f-b7f04e38f857"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-b0f3b3a5-c94e-45c8-90d6-15202c22e1ad-1",
+    "title": "Nat.428 Rosalind Franklin Programme 2025/26",
+    "suppliers": [
+      "Karen Lynas Consulting Limited"
+    ],
+    "buyer": "NHS England",
+    "award_date": "2025-09-05T00:00:00+01:00",
+    "amount": 30807,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/86b34876-929e-4ca7-a735-7b3dfe7aa2a9"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-8b537b38-6287-42a7-ad8e-5b28885e6c24-1",
+    "title": "36713 ALP Leicester",
+    "suppliers": [
+      "Hansom Taxis"
+    ],
+    "buyer": "Leicester City Council",
+    "award_date": "2025-12-31T00:00:00Z",
+    "amount": 39780,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/7cdbbe05-3c43-4cdb-be46-455719f169c3"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-470fc06c-7304-4aaa-8640-c02e57e7cbd5-1",
+    "title": "Contract for the provision of financial and personal data license software requirements for criminal investigation purposes",
+    "suppliers": [
+      "EXPERIAN LIMITED"
+    ],
+    "buyer": "HAMPSHIRE AND ISLE OF WIGHT CONSTABULARY",
+    "award_date": "2025-10-20T00:00:00+01:00",
+    "amount": 541800,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/a93ecd7f-974a-45bc-bf11-be915dfedb2e"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-a48e972b-65c0-4070-bb25-a04a0fe45d67-1",
+    "title": "BHNFT - Pharmacy Cabinets - Annual Maintenance",
+    "suppliers": [
+      "Omnicell Limited"
+    ],
+    "buyer": "Barnsley Hospital NHS Foundation Trust",
+    "award_date": "2025-12-10T00:00:00Z",
+    "amount": 45406.75,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/e4cae7e8-7345-4570-a55d-eb43f4a87b35"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-1b6eb267-4f99-428c-bb46-26a22bee980b-1",
+    "title": "GB-Colchester: 0461-PA St Edmunds House Office Move",
+    "suppliers": [
+      "Re-Gen (UK )Construction Ltd"
+    ],
+    "buyer": "Colchester City Council",
+    "award_date": "2025-12-29T00:00:00Z",
+    "amount": 773500,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/c316a5db-0601-4472-b113-56788c897ebf"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-3b1ff55f-751a-458b-9f6a-11b052fa5e91-1",
+    "title": "Lot 9 - 092 Brigg A18 Wrawby Road Toucan Installation",
+    "suppliers": [
+      "PBS Construction (North East) Ltd"
+    ],
+    "buyer": "North Lincolnshire Council",
+    "award_date": "2025-12-04T00:00:00Z",
+    "amount": 145401.07,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/53bf6e03-5e7a-48d6-b900-efa00fb39780"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-cd528c79-efc3-40c2-a357-c51f6b3c46f7-1",
+    "title": "Provision of Safe and Well Bedding",
+    "suppliers": [
+      "Thomas Kneale and Co Limited"
+    ],
+    "buyer": "Wiltshire Fire And Rescue Service",
+    "award_date": "2025-04-16T00:00:00+01:00",
+    "amount": 47720.64,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/0f4901c7-0cd7-4d8e-bd49-e93a0f6d0e0a"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-be998169-af02-4874-8327-7941888f980c-1",
+    "title": "TC009 - Supply & Delivery of Meat (Halal & Non-Halal)",
+    "suppliers": [
+      "J.W.Young (Butchers) Ltd"
+    ],
+    "buyer": "Bolton Council",
+    "award_date": "2023-08-11T00:00:00+01:00",
+    "amount": 734582.9,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/e0e5be0e-f056-4923-b3ce-cc5431d0857c"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-bd016c5f-330b-407a-9e6a-dc415864a8d1-1",
+    "title": "Maritime Data",
+    "suppliers": [
+      "Constellia Public Limited"
+    ],
+    "buyer": "Home Office",
+    "award_date": "2025-09-01T00:00:00+01:00",
+    "amount": 494384.9,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/e9af796e-9fe1-4c9f-9ac3-37bc91ad639e"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-bcfb18f9-019f-4283-a584-b4c84674fa47-1",
+    "title": "Vehicle Recovery and Disposal Managed Service for NYP",
+    "suppliers": [
+      "Automobile Association Developments Ltd"
+    ],
+    "buyer": "North Yorkshire Police",
+    "award_date": "2025-12-12T00:00:00Z",
+    "amount": 850000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/ecc7ec6a-6df1-440d-bc05-ee682af11b3e"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-c404d23f-3eda-4394-9c4d-6f8141f53389-1",
+    "title": "WHHT - LOGEX Costing Platform (PLICS)",
+    "suppliers": [
+      "Logex Healthcare Analytics Ltd"
+    ],
+    "buyer": "West Hertfordshire Teaching Hospital NHS Trust",
+    "award_date": "2025-09-01T00:00:00+01:00",
+    "amount": 120000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/ff4fdeed-9c10-4d8f-93ed-df54f1f13128"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-256f901d-69d6-43fd-ae1e-551ff83ba8b7-1",
+    "title": "WHHT - Datix Cloud IQ",
+    "suppliers": [
+      "Softcat Plc"
+    ],
+    "buyer": "West Hertfordshire Teaching Hospital NHS Trust",
+    "award_date": "2025-12-09T00:00:00Z",
+    "amount": 207000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/b687d4b7-ea96-4372-874f-4956bc865926"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-79c0f80a-37c5-49bd-9eff-0789ab6d09fc-1",
+    "title": "Ageing Well call-off contract uploads June 2025",
+    "suppliers": [
+      "Albermarle Court (Nottingham) Ltd - T/A Albermarle Court Nursing",
+      "ASHA Healthcare",
+      "Ashlands Residential Care Home",
+      "ashley care centre",
+      "Ashmere Care Homes Nottinghamshire",
+      "Avery Healthcare Group",
+      "Avery Homes TH Limited",
+      "Barchester Healthcare Homes Ltd",
+      "Beckedge Ltd",
+      "Beech House Carehome Worksop Limited",
+      "BKR CCH Limited",
+      "Broadlands Residential Care Home",
+      "Broadoak group",
+      "Carisbrooke Healthcare Ltd",
+      "Castle Central Services",
+      "CCT Community Enablement Team",
+      "Church Farm Care",
+      "Copper Beeches Care Home",
+      "Dualcare Ltd.",
+      "dukeries healthcare limited",
+      "Eastwood House Residential Care Home",
+      "FBC Care Homes",
+      "Fernleaf care home",
+      "Five Focal Point Limited",
+      "Gedling Village",
+      "Haigh Healthcare Limited",
+      "Hanumaan Limited trading as Blyth Country House",
+      "Hazelford care",
+      "HC-One limited",
+      "ideal care homes",
+      "Jasmine Healthcare Ltd",
+      "Landermeads",
+      "Memento Care Ltd",
+      "Milford Care",
+      "Minster Care Group Ltd",
+      "MMCG Topco Holdings Limited",
+      "Monarch Consultants Ltd",
+      "my the orchards ltd",
+      "New Care Grappenhall (OPCO) Limited",
+      "Red oaks community care",
+      "Red Rose Nursing Home",
+      "Regal Care Trading",
+      "Rosmead Healthcare",
+      "RS Care Homes Limited",
+      "Ruddington Apartments Limited",
+      "Ruddington Homes Ltd",
+      "Runwood Homes Ltd",
+      "ST SAVIOURS CARE HOME LTD",
+      "Strong Life Care Limited",
+      "The Manor Residential Home (Arnold) Ltd",
+      "The Troc",
+      "Westfield Care Limited",
+      "Westvilla MPS LTD",
+      "Wilford View Care Home",
+      "Woodleigh Christian Care Limited",
+      "Woodthorpe Manor Nursing Home Ltd",
+      "Wren Hall Nursing Home",
+      "Your Health Ltd",
+      "Zion Care Ltd"
+    ],
+    "buyer": "Nottinghamshire County Council",
+    "award_date": "2025-05-31T00:00:00+01:00",
+    "amount": 11302898.8,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/a416e3b4-8076-457a-8a91-c050213e049b"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-7bc2d313-427b-45ec-98ca-07e551b16956-1",
+    "title": "GB-St. Helens: VIDA by Vitrue Health (MSK Platform)",
+    "suppliers": [
+      "VITRUE LTD"
+    ],
+    "buyer": "Torus Group",
+    "award_date": "2025-12-17T00:00:00Z",
+    "amount": 105600,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/d7d18ca3-19aa-42f9-a5ef-126ad7758042"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-169e1de0-d388-4f82-a933-e24621a75510-1",
+    "title": "Vehicle Purchase - October 2025",
+    "suppliers": [
+      "MERCEDES-BENZ CARS UK LIMITED",
+      "Stellantis",
+      "Volkswagen"
+    ],
+    "buyer": "Lancashire Constabulary",
+    "award_date": "2025-09-23T00:00:00+01:00",
+    "amount": 343947.69,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/5c2a7c7b-2c94-46e0-8274-d875b2d0f261"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-2329c040-f011-4f4e-b906-7a9e7ff8dbc9-1",
+    "title": "Award of a call off contract under the Prison Education Dynamic Purchasing System for Roller Dumper Construction training courses for Prisoners at HMP Portland",
+    "suppliers": [
+      "RMF Construction Training Academy Ltd"
+    ],
+    "buyer": "Ministry of Justice",
+    "award_date": "2025-12-30T00:00:00Z",
+    "amount": 39600,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/7d28d8b9-95a8-48c6-8c9f-fceafc4db48f"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-61698141-0907-4b18-a385-3d5056ea2733-1",
+    "title": "Lambeth Police Station - Lift refurbishment and renewal works",
+    "suppliers": [
+      "Coniston Limited"
+    ],
+    "buyer": "METROPOLITAN POLICE SERVICE",
+    "award_date": "2025-12-02T00:00:00Z",
+    "amount": 1512125.5,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/f13bab94-9521-4bce-8264-49166c9d6eef"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-c255da13-c512-4d45-9321-0f32bd5e49da-1",
+    "title": "Croydon Police Station - Lift refurbishment and renewal works",
+    "suppliers": [
+      "Coniston limited"
+    ],
+    "buyer": "METROPOLITAN POLICE SERVICE",
+    "award_date": "2025-12-02T00:00:00Z",
+    "amount": 338208.46,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/030f1b08-3c4a-4cf4-aabf-42af0a2419ca"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-b6b75f5d-d60e-4fcc-9326-9e90ed91ab73-1",
+    "title": "Asbestos Removal",
+    "suppliers": [
+      "Clarke's Environmental Limited"
+    ],
+    "buyer": "North Yorkshire Police",
+    "award_date": "2025-10-27T00:00:00Z",
+    "amount": 170000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/afbe7586-3858-44a4-aeab-c7945e7530c4"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-7f30f82a-2ee4-445e-8a3d-9f5c2464b8ed-1",
+    "title": "Award of a call off contract under the Prison Education Dynamic Purchasing System for Railtrack training for prisoners at HMP Portland",
+    "suppliers": [
+      "Elite Project Services Ltd"
+    ],
+    "buyer": "Ministry of Justice",
+    "award_date": "2025-12-30T00:00:00Z",
+    "amount": 45832.47,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/cba5c8d3-39f8-4f1a-9d28-75da20127270"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-81a2065b-d049-48f7-934b-443ae74df4a3-1",
+    "title": "C404772 GMTS VAC Assessors 2026",
+    "suppliers": [
+      "Tricordant Limited"
+    ],
+    "buyer": "NHS England",
+    "award_date": "2025-12-11T00:00:00Z",
+    "amount": 23934,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/cc1d654f-3084-480a-8288-351f40aff105"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-b126a1d1-efed-4280-8704-540611ca256c-1",
+    "title": "Data Collection Services",
+    "suppliers": [
+      "Phoenix Software Limited"
+    ],
+    "buyer": "FCA",
+    "award_date": "2025-06-23T00:00:00+01:00",
+    "amount": 210593.53,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/78d334b9-62b7-47c9-a344-95bed1e795d1"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-a4537c36-03d9-422d-a88c-e37be0b87651-1",
+    "title": "C404771 GMTS VAC Assessors 2026",
+    "suppliers": [
+      "Practive Limited"
+    ],
+    "buyer": "NHS England",
+    "award_date": "2025-12-11T00:00:00Z",
+    "amount": 40286,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/f2851cc3-581c-48a7-8fd3-92706040de3e"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-0b08279e-5f78-45eb-9489-5249acf1554e-1",
+    "title": "Bethnal Green Police Station - Lift refurbishment and renewal works",
+    "suppliers": [
+      "Coniston Limited"
+    ],
+    "buyer": "METROPOLITAN POLICE SERVICE",
+    "award_date": "2025-12-01T00:00:00Z",
+    "amount": 773500.21,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/18fc9ebb-e767-4d7b-84f8-a2e55220e99c"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-5de3384c-49ff-4f9a-9252-ef985f2020ff-1",
+    "title": "Award of a call off contract under the Prison Education Dynamic Purchasing System for the provision of Reading & Numeracy Support for prisoners at HMP Full Sutton",
+    "suppliers": [
+      "LTE Group (trading as Novus)"
+    ],
+    "buyer": "Ministry of Justice",
+    "award_date": "2025-12-29T00:00:00Z",
+    "amount": 58621,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/5a65f9fc-6566-4226-88f9-4451ec3c9236"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-401e12c2-e3a5-4c02-a851-7684d64006a5-1",
+    "title": "C404770 GMTS VAC Assessors 2026",
+    "suppliers": [
+      "Keane Training Associates Limited"
+    ],
+    "buyer": "NHS England",
+    "award_date": "2025-12-11T00:00:00Z",
+    "amount": 6538,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/21527e81-e952-4bd3-bfec-af82cc05a001"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-c2c2094c-aef4-4d34-8900-8187d4327ea1-1",
+    "title": "AI Testing & Evaluation",
+    "suppliers": [
+      "ADVAI LTD"
+    ],
+    "buyer": "FCA",
+    "award_date": "2025-06-13T00:00:00+01:00",
+    "amount": 100000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/8a7b9aee-36d8-44b6-af60-4b406d1ec73d"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-3fdcf01f-b230-470a-9fee-bb0d8bb99347-1",
+    "title": "Award of a call off contract under the Prison Education Dynamic Purchasing System for the provision of a Self Development training course for prisoners at HMP Guys Marsh",
+    "suppliers": [
+      "Liberty Choir UK"
+    ],
+    "buyer": "Ministry of Justice",
+    "award_date": "2025-12-22T00:00:00Z",
+    "amount": 9999,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/dbe6eaab-7cef-4da7-8e2c-b842f39d9e8f"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-895f96f8-894a-4f96-a3bc-7d42ed8ae6df-1",
+    "title": "C404769 GMTS VAC Assessors 2026",
+    "suppliers": [
+      "Karen Lynas Consulting Limited"
+    ],
+    "buyer": "NHS England",
+    "award_date": "2025-12-11T00:00:00Z",
+    "amount": 12062,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/3989a3c8-0dcb-49bc-96fd-ca549e328caf"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-13cd6b4f-40aa-434a-95db-04a986274394-1",
+    "title": "C404767 GMTS VAC Assessors 2026",
+    "suppliers": [
+      "Jackie Kay Limited"
+    ],
+    "buyer": "NHS England",
+    "award_date": "2025-12-11T00:00:00Z",
+    "amount": 6695,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/bec44914-3b9b-423f-9d09-609243596c78"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-52690a1a-b091-4b84-96d0-745d5551f2ff-1",
+    "title": "SASE Licences and Support Services",
+    "suppliers": [
+      "Insight Direct (UK) Ltd"
+    ],
+    "buyer": "THE FINANCIAL CONDUCT AUTHORITY",
+    "award_date": "2025-07-23T00:00:00+01:00",
+    "amount": 5024104.34,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/4f874e25-a902-48f3-97c3-40ab1228b372"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-6317f5f1-647d-4684-8edb-8f0e5d35a133-1",
+    "title": "C404766 GMTS VAC Assessors 2026",
+    "suppliers": [
+      "Insightful Exchange"
+    ],
+    "buyer": "NHS England",
+    "award_date": "2025-12-11T00:00:00Z",
+    "amount": 26070,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/2e4ff08d-63d2-4cd1-9e7e-77e2d7283aaa"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-061efb5b-5913-4c34-9fb1-4a41f71c6618-1",
+    "title": "CA16951 - MAINT5830-RFL-Rental and Repair of Specialist Pressure Relieiving Mattresses",
+    "suppliers": [
+      "Arjo UK Ltd"
+    ],
+    "buyer": "Partners Procurement Service (PPS)",
+    "award_date": "2025-12-30T00:00:00Z",
+    "amount": 1281775,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/4f013551-cb4e-4b33-97b2-92f3418b926a"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-aed69cc0-87b2-4169-84ee-3cbd8dd159d8-1",
+    "title": "C404765 GMTS VAC Assessors 2026",
+    "suppliers": [
+      "Fischer Associates Ltd"
+    ],
+    "buyer": "NHS England",
+    "award_date": "2025-12-11T00:00:00Z",
+    "amount": 27350,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/fd6450f8-44e8-41e9-8df3-b2ad3c80325e"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-129c7f26-58fb-4753-aaea-ed5a68192092-1",
+    "title": "Strategic Review and Design of QA Approach",
+    "suppliers": [
+      "BDO LLP"
+    ],
+    "buyer": "FCA",
+    "award_date": "2025-12-15T00:00:00Z",
+    "amount": 210000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/06d3778b-f813-44dc-9dd9-0c7ebb9b0dc4"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-bc62f07b-ff2b-44b6-9226-4dee97fec452-1",
+    "title": "Leeds Area-Based Scheme Detailed Design Study",
+    "suppliers": [
+      "BURO HAPPOLD LIMITED"
+    ],
+    "buyer": "West Yorkshire Combined Authority",
+    "award_date": "2025-12-19T00:00:00Z",
+    "amount": 97984,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/5136b749-52f1-47a8-bfd9-d13899e7699b"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-197e7345-fefc-408a-abaf-6e5221424cc4-1",
+    "title": "Microscope with imaging system",
+    "suppliers": [
+      "Fisher Scientific U.K., Limited"
+    ],
+    "buyer": "UK Health Security Agency",
+    "award_date": "2025-12-24T00:00:00Z",
+    "amount": 20255.82,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/b9dea574-1c72-4406-9674-7b82ca538197"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-60edc4e9-0564-42a3-ae25-7d8e350db38e-1",
+    "title": "ITEP1082 - AWARD Strategic Evaluation Service 25-26",
+    "suppliers": [
+      "COMMERCE DECISIONS LIMITED"
+    ],
+    "buyer": "National Highways Limited",
+    "award_date": "2025-12-04T00:00:00Z",
+    "amount": 93000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/355a917a-55e4-4faf-9c8e-44060433557d"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-a0b8caca-546f-4228-9411-f8e4fce4d08d-1",
+    "title": "Replacement of High Throughput Serology at RVU",
+    "suppliers": [
+      "BECKMAN COULTER UNITED KINGDOM LIMITED"
+    ],
+    "buyer": "UK Health Security Agency",
+    "award_date": "2025-12-18T00:00:00Z",
+    "amount": 182797.1,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/e6697f2f-6ef3-4440-85e0-b1c629a3d668"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-4c5269c0-4a84-477d-b31c-e3a07bf8d558-1",
+    "title": "Replacement of Fluorescence microscope",
+    "suppliers": [
+      "LEICA MICROSYSTEMS (UK) LIMITED"
+    ],
+    "buyer": "UK Health Security Agency",
+    "award_date": "2025-12-18T00:00:00Z",
+    "amount": 31790.81,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/d9ea558c-0eee-491f-ae73-08e02197d2d1"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-2c0cffc3-8ce5-4dcf-b9ee-478aa5a4572c-1",
+    "title": "Pressure Area Care and Patient Handling",
+    "suppliers": [
+      "A.Algeo Limited",
+      "Accora Limited",
+      "Agile Medical Ltd",
+      "Apollo Healthcare Technologies Limited",
+      "Arjo UK Limited",
+      "BES Healthcare Ltd",
+      "Central Medical Supplies Limited",
+      "C J Medical Limited",
+      "Croyde Medical Limited",
+      "Delta Surgical Limited",
+      "Direct Healthcare Group Limited",
+      "Direct Manufacturing Limited",
+      "Drive Devilbiss Healthcare Limited",
+      "Essential Healthcare Solutions (UK) Limited",
+      "Etac Limited",
+      "Felgains Ltd",
+      "Form-Al group Ltd",
+      "Frontier Therapeutics Limited",
+      "GBUK Ltd",
+      "Harvest Healthcare Limited",
+      "Health-Care Equipment and Supplies Co Ltd",
+      "Hill-Rom Limited",
+      "Hospital Direct (Marketing) Limited",
+      "Howard Wright Europe Limited",
+      "Inspire Community Trust",
+      "Interweave Textiles Limited",
+      "Invacare Limited",
+      "IQ Medical Limited",
+      "Iskus Health UK Ltd",
+      "Linet UK Limited",
+      "Liscare Limited",
+      "Live By Lulu Limited",
+      "Medi-Plinth Equipment Limited",
+      "Medline Industries Limited",
+      "Medserve (South West) Ltd",
+      "Medstrom Ltd",
+      "Med-I-Pant (U.K.) Limited",
+      "Molnlycke Health Care Limited",
+      "Montcalm International Limited",
+      "Nottingham Rehab Limited",
+      "Osaka Care Limited",
+      "Peacocks Medical Group Limited",
+      "Performance Health International Limited",
+      "Pressure Care Management Limited",
+      "Prism UK Medical Limited",
+      "Promedics Orthopaedics Limited",
+      "Prosys International Limited",
+      "Renray Healthcare Limited",
+      "Select Health Care (UK) Limited",
+      "Silvalea Limited",
+      "Steris Solutions Limited",
+      "Stryker UK Limited",
+      "Talar-Made Limited",
+      "Ultimate Healthcare Ltd",
+      "V. Guldmann A/S",
+      "Wealden Rehab Ltd",
+      "Winncare Pac Limited"
+    ],
+    "buyer": "Supply Chain Coordination Limited",
+    "award_date": "2025-12-05T00:00:00Z",
+    "amount": 198450000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/b5aae683-346a-49b9-8f8c-98d1b6f05b56"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-f5aecaa1-4bdf-483b-840c-64639d9178a4-1",
+    "title": "Imaging systems for NCPV Laboratories",
+    "suppliers": [
+      "Fisher Scientific U.K., Limited"
+    ],
+    "buyer": "UK Health Security Agency",
+    "award_date": "2025-12-18T00:00:00Z",
+    "amount": 29805.27,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/dcd0f034-1005-4732-b0c5-235d6bbfa6ea"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-77047f99-5083-43ef-b97a-bbf1530b684e-1",
+    "title": "Replacement of Server / Storage",
+    "suppliers": [
+      "EUROPEAN ELECTRONIQUE LIMITED"
+    ],
+    "buyer": "UK Health Security Agency",
+    "award_date": "2025-12-18T00:00:00Z",
+    "amount": 112420.72,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/b66e39c2-9cc0-4028-9f8b-5b5dbea50432"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-456fcc8b-0100-4bf1-82b1-03f34bf132c5-1",
+    "title": "C404763 GMTS VAC Assessors 2026",
+    "suppliers": [
+      "David Bailey"
+    ],
+    "buyer": "NHS England",
+    "award_date": "2025-12-17T00:00:00Z",
+    "amount": 6814.5,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/915096e6-cd21-436e-8ce3-4a7eff295d12"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-a8e84d5a-9901-4466-8d51-e74144997736-1",
+    "title": "Occupational Health & Health Questionnaire Service",
+    "suppliers": [
+      "Optima Health"
+    ],
+    "buyer": "General Pharmaceutical Council",
+    "award_date": "2025-08-28T00:00:00+01:00",
+    "amount": 10000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/6967be5f-ed3e-45f0-a85b-0094f9500844"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-5f0be1cf-f746-4e02-94be-ff5ac2ae461e-1",
+    "title": "Mayors Fund Solar PV Installations",
+    "suppliers": [
+      "Ecolution Group Ltd"
+    ],
+    "buyer": "North Yorkshire Police",
+    "award_date": "2025-10-07T00:00:00+01:00",
+    "amount": 109677,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/4db4904d-d695-4020-ae82-e10b910b0bfb"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-51230538-0ad1-4e6c-b96b-bfe51b5ce707-1",
+    "title": "Kingston PS Custody inc ESS",
+    "suppliers": [
+      "Vinci Construction UK Ltd"
+    ],
+    "buyer": "METROPOLITAN POLICE SERVICE",
+    "award_date": "2025-12-02T00:00:00Z",
+    "amount": 441536.09,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/e8e2a10f-95aa-41d1-b807-9562365196fe"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-29237d7e-960d-43fa-93bd-8ae6d8e95030-2",
+    "title": "Norse-Cromer Hospital -AHU11 Replacement",
+    "suppliers": [
+      "Norse Commercial Services Limited"
+    ],
+    "buyer": "Norfolk and Norwich University Hospitals NHS Foundation Trust",
+    "award_date": "2025-11-20T00:00:00Z",
+    "amount": 232631,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/3bc56e41-4a9b-4d1b-ad78-ae3eac35cc21"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-e2857443-0245-402b-abd4-fbff7259439c-1",
+    "title": "Public Perceptions of Candidate Abuse and Intimidation",
+    "suppliers": [
+      "COMMUNITY RESEARCH LIMITED"
+    ],
+    "buyer": "THE ELECTORAL COMMISSION",
+    "award_date": "2025-12-11T00:00:00Z",
+    "amount": 95000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/25de2bb5-ad50-48b9-832d-e5d89e694f07"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-02ffb910-a251-4ed2-b062-e5fc03297a42-1",
+    "title": "IT Technical Architect",
+    "suppliers": [
+      "Search Consultancy Limited"
+    ],
+    "buyer": "MCA - Maritime and Coastguard Agency",
+    "award_date": "2025-11-28T00:00:00Z",
+    "amount": 69163.9,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/73344cba-13a2-476d-ba4f-f309f7ff1c33"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-0c5cb918-277a-45c2-a926-45e40ec3b8b4-1",
+    "title": "Senior Leader Apprenticeship",
+    "suppliers": [
+      "Universities - Sunderland University - Main Number"
+    ],
+    "buyer": "County Durham and Darlington NHS Foundation Trust",
+    "award_date": "2025-08-01T00:00:00+01:00",
+    "amount": 42000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/38db1f60-475b-447e-8207-085b0d23cf1d"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-8574b0ae-ba68-4ab4-b877-93acefff4454-1",
+    "title": "Pentaco -20 Rouen Road, New roof",
+    "suppliers": [
+      "PENTACO CONSTRUCTION LIMITED"
+    ],
+    "buyer": "Norfolk and Norwich University Hospitals NHS Foundation Trust",
+    "award_date": "2025-11-25T00:00:00Z",
+    "amount": 248078.96,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/6611d5f4-5af6-4dfd-ae9b-d027e69806fd"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-3678be7d-965c-4c31-b93f-387a96c43faf-1",
+    "title": "QOC855 2025-12-17 (0900) Lowestoft to The Bridge Easton School, Norwich (4 seated  vehicle) - AWARD",
+    "suppliers": [
+      "Shah Fahad"
+    ],
+    "buyer": "Suffolk County Council Passenger Transport",
+    "award_date": "2025-12-30T00:00:00Z",
+    "amount": 185996.7,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/9a9367fe-2173-4d18-83d3-7b74f6be370b"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-c2d50c0a-eb76-4359-8db0-462583dfbe85-1",
+    "title": "Advanced Clinical Practitioner Level 7",
+    "suppliers": [
+      "Universities - Sunderland University - Main Number"
+    ],
+    "buyer": "County Durham and Darlington NHS Foundation Trust",
+    "award_date": "2025-12-08T00:00:00Z",
+    "amount": 24000,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/4b970d80-5e8c-469d-9a2a-e0fa24ef7a0a"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-e66d7855-4d4b-46e4-ab42-2bd78fe5572b-1",
+    "title": "QSB244 1000 2025-12-24 Bungay-Wetheringsett manor school, Wetheringsett cum Brockford (4-seated vehicle required) - AWARD",
+    "suppliers": [
+      "24x7 Ltd"
+    ],
+    "buyer": "Suffolk County Council Passenger Transport",
+    "award_date": "2025-12-30T00:00:00Z",
+    "amount": 46712.64,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/13136083-ccf3-4e86-a445-c0f19665e460"
+    ]
+  },
+  {
+    "source": "UK Contracts Finder",
+    "record_id": "ocds-b5fd17-9d80e258-c1d0-4f3a-8230-fecc164cdf67-1",
+    "title": "QSB009 0900 2025-12-24 Bury St Edmunds - Stowupland High School, Church Rd, Stowupland, Stowmarket IP14 4BQ (4-seated individual vehicle required) - AWARD",
+    "suppliers": [
+      "LOYAL EXPRESS CABS LTD"
+    ],
+    "buyer": "Suffolk County Council Passenger Transport",
+    "award_date": "2025-12-30T00:00:00Z",
+    "amount": 28935.1,
+    "currency": "GBP",
+    "record_kind": "Historical award; total is not a unit price",
+    "source_urls": [
+      "https://www.contractsfinder.service.gov.uk/Notice/bbbdd0a7-3deb-4ad1-8c19-bfbaef2ef093"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_HT940216C0001_9700_-NONE-_-NONE-",
+    "title": "IGF::OT::IGF",
+    "suppliers": [
+      "HUMANA GOVERNMENT BUSINESS INC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 51269205263.03,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_HT940216C0001_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC0494AL85000_8900_-NONE-_-NONE-",
+    "title": "Description not provided in source",
+    "suppliers": [
+      "LOCKHEED MARTIN CORP"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 48063737196.35,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC0494AL85000_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DENA0003525_8900_-NONE-_-NONE-",
+    "title": "IGF::CL,CT::IGF CONTRACT AWARD DE-NA0003525 TO THE NATIONAL TECHNOLOGY&ENGINEERING SOLUTIONS OF SANDIA, LLC (NTESS) FOR THE MANAGEMENT AND OPERATION OF THE DEPARTMENT OF ENERGY, NATIONAL NUCLEAR SECURITY ADMINISTRATION'S SANDIA NATIONAL LABORATORIES (SNL)",
+    "suppliers": [
+      "NATIONAL TECHNOLOGY & ENGINEERING SOLUTIONS OF SANDIA, LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 44093914875.26,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DENA0003525_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC0500OR22725_8900_-NONE-_-NONE-",
+    "title": "MANAGEMENT AND OPERATION OF THE OAK RIDGE NATIONAL LABORATORY",
+    "suppliers": [
+      "UT-BATTELLE LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 42970738616.89,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC0500OR22725_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC5207NA27344_8900_-NONE-_-NONE-",
+    "title": "TAS::89 0240::TAS THIS PERFORMANCE-BASED MANAGEMENT CONTRACT (PBMC) IS FOR THE MANAGEMENT AND OPERATION OF THE LAWRENCE LIVERMORE NATIONAL LABORATORY (LLNL). THE CONTRACTOR SHALL, IN ACCORDANCE WITH THE PROVISIONS OF THIS CONTRACT, ACCOMPLISH THE MISSIONS AND PROGRAMS ASSIGNED BY THE U.S. DEPARTMENT OF ENERGY (DOE) AND MANAGE AND OPERATE THE LABORATORY.  THE LABORATORY IS ONE OF DOES OFFICE OF DEFENSE PROGRAM MULTI-PROGRAM LABORATORIES.  THE LABORATORY IS A FEDERALLY FUNDED RESEARCH AND DEVELOPMENT INSTITUTION (ESTABLISHED IN ACCORDANCE WITH THE FEDERAL ACQUISITION REGULATION (FAR) PART 35 AND OPERATED UNDER THIS MANAGEMENT AND OPERATING (M&O) CONTRACT, AS DEFINED IN FAR 17.6 AND DEAR 917.6.",
+    "suppliers": [
+      "LAWRENCE LIVERMORE NATIONAL SECURITY, LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 42157425910.2,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC5207NA27344_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_89233218CNA000001_8900_-NONE-_-NONE-",
+    "title": "IGF::CL::IGF COMPETITION FOR MANAGEMENT AND OPERATION OF LOS ALAMOS NATIONAL LABORATORY",
+    "suppliers": [
+      "TRIAD NATIONAL SECURITY, LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 36289094015.26,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_89233218CNA000001_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0002417C2100_9700_-NONE-_-NONE-",
+    "title": "SSN 802 AND 803 LONG LEAD TIME MATERIAL",
+    "suppliers": [
+      "ELECTRIC BOAT CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 35737749929.0,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0002417C2100_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC3243AL00036_8900_-NONE-_-NONE-",
+    "title": "M&O OF LANL BR OF U OF CA",
+    "suppliers": [
+      "REGENTS OF THE UNIVERSITY OF CALIFORNIA, THE"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 35295925219.18,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC3243AL00036_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DENA0001942_8900_-NONE-_-NONE-",
+    "title": "IGF::CL,CT::IGF MANAGEMENT AND OPERATING CONTRACT FOR Y-12 NATIONAL SECURITY COMPLEX, PANTEX PLANT, WITH AN OPTION FOR SAVANNAH RIVER TRITIUM OPERATIONS",
+    "suppliers": [
+      "CONSOLIDATED NUCLEAR SECURITY, LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 35151184369.83,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DENA0001942_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001917C0001_9700_-NONE-_-NONE-",
+    "title": "LRIP LOT 12 ADVANCE ACQUISITION CONTRACT",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 35135514910.2,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001917C0001_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_FA862511C6600_9700_-NONE-_-NONE-",
+    "title": "KC-X MODERNIZATION PROGRAM",
+    "suppliers": [
+      "THE BOEING COMPANY"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 31972918249.03,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_FA862511C6600_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0002417C2117_9700_-NONE-_-NONE-",
+    "title": "COLUMBIA CLASS DESIGN COMPLETION",
+    "suppliers": [
+      "ELECTRIC BOAT CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 31505020631.0,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0002417C2117_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC0576RL01830_8900_-NONE-_-NONE-",
+    "title": "BATTELLE MEMORIAL INSTITUTE/PACIFIC NORTHWEST               LABORATORY OPERATING AND MANAGING CONTRACT",
+    "suppliers": [
+      "BATTELLE MEMORIAL INSTITUTE"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 31223517818.95,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC0576RL01830_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001920C0009_9700_-NONE-_-NONE-",
+    "title": "THE PURPOSE OF THIS MODIFICATION IS TO AWARD F-35A LRIP 15 USAF  AIRCRAFT* LONG LEAD FUNDING",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 30154748689.06,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001920C0009_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC0908SR22470_8900_-NONE-_-NONE-",
+    "title": "MANAGEMENT AND OPERATING CONTRACT FOR THE SAVANNAH RIVER SITE.",
+    "suppliers": [
+      "SAVANNAH RIVER NUCLEAR SOLUTIONS LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 27995864149.1,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC0908SR22470_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC5206NA25396_8900_-NONE-_-NONE-",
+    "title": "THE CONTRACTOR SHALL, IN ACCORDANCE WITH THE TERMS AND CONDITIONS OF THIS CONTRACT, PROVIDE THE PERSONNEL, EQUIPMENT, MATERIALS, SUPPLIES, AND SERVICES (EXCEPT AS MAY BE FURNISHED BY THE GOVERNMENT) AND OTHERWISE DO ALL THING NECESSARY FOR, OR INCIDENT TO PROVIDING ITS BEST EFFORTS TO EFFECTIVELY, EFFICIENTLY AND SAFELY MANAGE AND OPERATE THE LOS ALAMOS NATIONAL LABORATORY FOR THE U.S. DEPARTMENT OF ENERGY/NATIONAL NUCLEAR SECURITY ADMINISTRATION.",
+    "suppliers": [
+      "LOS ALAMOS NATIONAL SECURITY, LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 27420180285.12,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC5206NA25396_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC0705ID14517_8900_-NONE-_-NONE-",
+    "title": "MANAGEMENT AND OPERATIONS OF THE INL",
+    "suppliers": [
+      "BATTELLE ENERGY ALLIANCE, LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 26808905230.95,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC0705ID14517_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001923C0003_9700_-NONE-_-NONE-",
+    "title": "THE PURPOSE OF THIS CONTRACT IS TO AWARD LONG LEAD FUNDING FOR F-35A, F-35B, AND F-35C AIRCRAFT FOR U.S. SERVICES, NON-DOD PARTNERS, AND FMS CUSTOMERS",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 24588054059.0,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001923C0003_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_HT940216C0002_9700_-NONE-_-NONE-",
+    "title": "IGF::OT::IGF  MANAGED CARE SUPPORT SERVICES IN SUPPORT OF THE TRICARE PROGRAM",
+    "suppliers": [
+      "HEALTH NET FEDERAL SERVICES, LLC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 23484451360.07,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_HT940216C0002_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_NAS1510000_8000_-NONE-_-NONE-",
+    "title": "INTERNATIONAL SPACE STATION",
+    "suppliers": [
+      "THE BOEING COMPANY"
+    ],
+    "buyer": "National Aeronautics and Space Administration",
+    "amount": 22668226734.37,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_NAS1510000_8000_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC0584OR21400_8900_-NONE-_-NONE-",
+    "title": "MANAGEMENT AND OPERATION OF Y-12 PLANT AND OTHER PROGRAMS",
+    "suppliers": [
+      "LOCKHEED MARTIN SERVICES, LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 20646113720.09,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC0584OR21400_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_HT940211C0003_9700_-NONE-_-NONE-",
+    "title": "T3 MANAGED CARE SUPPORT CONTRACT FOR SOUTH REGION",
+    "suppliers": [
+      "HUMANA GOVERNMENT BUSINESS INC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 20451127096.53,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_HT940211C0003_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0002412C2115_9700_-NONE-_-NONE-",
+    "title": "SSN 792 LONG LEAD TIME MATERIAL",
+    "suppliers": [
+      "ELECTRIC BOAT CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 20395165895.0,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0002412C2115_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC0205CH11231_8900_-NONE-_-NONE-",
+    "title": "THIS PERFORMANCE-BASED MANAGEMENT CONTRACT (PBMC) IS FOR THE MANAGEMENT AND OPERATION OF THE ERNEST ORLANDO LAWRENCE BERKELEY NATIONAL LABORATORY (LBNL).  THE CONTRACTOR SHALL, IN ACCORDANCE WITH THE PROVISIONS OF THIS CONTRACT, ACCOMPLISH THE MISSIONS AND PROGRAMS ASSIGNED BY THE U.S. DEPARTMENT OF ENERGY (DOE) AND MANAGE AND OPERATE THE LABORATORY.  THE LABORATORY IS ONE OF THE DOE?S OFFICE OF SCIENCE (SC) MULTI-PROGRAM LABORATORIES.  THE LABORATORY IS A FEDERALLY FUNDED RESEARCH AND DEVELOPMENT CENTER (FFRDC) ESTABLISHED IN ACCORDANCE WITH THE FEDERAL ACQUISITION REGULATION (FAR) PART 35 AND OPERATED UNDER THIS MANAGEMENT AND OPERATING (M&O) CONTRACT, AS DEFINED IN FAR 17.6 AND DEAR 917.6.",
+    "suppliers": [
+      "THE REGENTS OF THE UNIVERSITY OF CALIFORNIA"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 20172696402.58,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC0205CH11231_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_HT940210C0002_9700_-NONE-_-NONE-",
+    "title": "PROVIDE MANAGED CARE SUPPORT TO THE DEPARTMENT OF DEFENSE TRICARE PROGRAM. CONTRACTOR SHALL ASSIST MILITARY HEALTH SYSTEM IN OPERATING AN INTEGRATED HEALTHCARE DELIVERY SYSTEM COMBINING RESOURCES OF THE MILITARY'S DIRECT MEDICAL CARE SYSTEM AND THE CONTRACTORS MANAGED CARE SUPPORT TO PROVIDE HEALTH, MEDICAL AND ADMINISTRATIVE SUPPORT SERVICES TO ELIGIBLE BENEFICIARIES IN THE NORTH REGION.",
+    "suppliers": [
+      "HEALTH NET FEDERAL SERVICES, LLC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 19414789943.3,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_HT940210C0002_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001914C0067_9700_-NONE-_-NONE-",
+    "title": "USN P-8A FRP II LONG LEAD MATERIAL",
+    "suppliers": [
+      "THE BOEING COMPANY"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 18111838529.78,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001914C0067_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DENA0002839_8900_-NONE-_-NONE-",
+    "title": "IGF::CL,CT::IGF MANAGEMENT AND OPERATION OF THE NATIONAL SECURITY CAMPUS -- CONTRACT NO. DE-NA0002839",
+    "suppliers": [
+      "HONEYWELL FEDERAL MANUFACTURING & TECHNOLOGIES, LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 18055468609.71,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DENA0002839_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC0343SF00048_8900_-NONE-_-NONE-",
+    "title": "OPERATION OF LAWRENCE LIVERMORE LABORATORY",
+    "suppliers": [
+      "THE REGENTS OF THE UNIVERSITY OF CALIFORNIA"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 18009881071.27,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC0343SF00048_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC2701RV14136_8900_-NONE-_-NONE-",
+    "title": "Description not provided in source",
+    "suppliers": [
+      "BECHTEL NATIONAL, INC."
+    ],
+    "buyer": "Department of Energy",
+    "amount": 17956041439.14,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC2701RV14136_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC0206CH11357_8900_-NONE-_-NONE-",
+    "title": "PERFORMANCE-BASED CONTRACT FOR MANAGEMENT AND OPERATION OF ARGONNE NATIONAL LABORATORY",
+    "suppliers": [
+      "UCHICAGO ARGONNE, LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 17730321030.51,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC0206CH11357_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0002409C2104_9700_-NONE-_-NONE-",
+    "title": "CONSTRUCTION OF VIRGINIA CLASS BLOCK III SUBMARINES.",
+    "suppliers": [
+      "ELECTRIC BOAT CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 16238775949.0,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0002409C2104_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_NNJ06TA25C_8000_-NONE-_-NONE-",
+    "title": "TAS::80 0124::TAS DESIGN, DEVELOPMENT, TEST&EVALUATION OF PROJECT ORION",
+    "suppliers": [
+      "LOCKHEED MARTIN CORP"
+    ],
+    "buyer": "National Aeronautics and Space Administration",
+    "amount": 15578682243.1,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_NNJ06TA25C_8000_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_89233018CNR000004_8900_-NONE-_-NONE-",
+    "title": "MANAGEMENT AND OPERATION OF THE NAVAL NUCLEAR LABORATORY AND NAVAL NUCLEAR PROPULSION PROGRAM SUPPORT",
+    "suppliers": [
+      "FLUOR MARINE PROPULSION, LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 15126647249.13,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_89233018CNR000004_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC0276SF00515_8900_-NONE-_-NONE-",
+    "title": "OPERATION AND MAINTENANCE                                   LINEAR ACCELLERATOR",
+    "suppliers": [
+      "THE LELAND STANFORD JUNIOR UNIVERSITY"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 15120780108.84,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC0276SF00515_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0002418C2130_9700_-NONE-_-NONE-",
+    "title": "NAVAL NUCLEAR LABORATORY",
+    "suppliers": [
+      "FLUOR MARINE PROPULSION, LLC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 14981924100.48,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0002418C2130_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_FA821920C0006_9700_-NONE-_-NONE-",
+    "title": "GROUND-BASED STRATEGIC DETERRENT (GBSD) ENGINEERING AND MANUFACTURING DEVELOPMENT (EMD) AND EARLY PRODUCTION AND DEPLOYMENT (P&D)",
+    "suppliers": [
+      "NORTHROP GRUMMAN SYSTEMS CORP"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 14379062923.19,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_FA821920C0006_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0002416C2116_9700_-NONE-_-NONE-",
+    "title": "CVN 80 ENGINEERING EFFORTS AND STEEL",
+    "suppliers": [
+      "HUNTINGTON INGALLS INC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 13426828974.85,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0002416C2116_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_HT940212C0001_9700_-NONE-_-NONE-",
+    "title": "T3 MANAGED CARE SUPPORT CONTRACT FOR WEST REGION",
+    "suppliers": [
+      "UNITEDHEALTH MILITARY & VETERANS SERVICES, LLC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 13145560374.49,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_HT940212C0001_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_0005_9700_W52P1J07D0008_9700",
+    "title": "LOGCAP IV SERVICES AFGHANISTAN",
+    "suppliers": [
+      "FLUOR INTERCONTINENTAL, INC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 12568636130.95,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_0005_9700_W52P1J07D0008_9700"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001916C0033_9700_-NONE-_-NONE-",
+    "title": "LRIP 11 AAC",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 12269145508.23,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001916C0033_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_W58RGZ12C0008_9700_-NONE-_-NONE-",
+    "title": "MULTI SERVICE, 5 YR, MULTI-YR CONTRACT FOR H-60 HELICOPTERS.  FY2012   FY2016 PRODUCTION CONTRACT FOR ARMY/NAVY/FMS UH/HH/MH-60 HELICOPTERS TO INCLUDE PROCUREMENT OF UP TO 916 EACH AIRCRAFT AND RELATED SUPPORT, SERVICES, SYSTEMS/PROJECT MANAGEMENT, PUBLICATIONS, AND TECHNICAL DATA.  FMS COUNTRIES INCLUDE SAUDI ARABIAN NATIONAL GUARD (SANG), TAIWAN, THAILAND AND ROYAL AUSTRALIAN NAVY (RAN).",
+    "suppliers": [
+      "SIKORSKY AIRCRAFT CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 11602480135.21,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_W58RGZ12C0008_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC3608GO28308_8900_-NONE-_-NONE-",
+    "title": "AWARD OF CONTRACT TO MANAGE AND OPERATE THE NATIONAL RENEWABLE ENERGY LABORATORY",
+    "suppliers": [
+      "ALLIANCE FOR ENERGY INNOVATION, LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 11311227063.57,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC3608GO28308_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_FA863412C2651_9700_-NONE-_-NONE-",
+    "title": "RSAF F-15 FLEET MODERNIZATION PROGRAM",
+    "suppliers": [
+      "THE BOEING COMPANY"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 11204226412.65,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_FA863412C2651_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_W15QKN21C0012_9700_-NONE-_-NONE-",
+    "title": "COVID-19 VACCINE PRODUCTION",
+    "suppliers": [
+      "PFIZER INC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 11110134065.68,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_W15QKN21C0012_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_FA861404C2004_9700_-NONE-_-NONE-",
+    "title": "Description not provided in source",
+    "suppliers": [
+      "THE BOEING COMPANY"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 11086769499.68,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_FA861404C2004_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001907C0001_9700_-NONE-_-NONE-",
+    "title": "MV-22 AIRCRAFT - FY08 (LOT 12)*",
+    "suppliers": [
+      "BELL BOEING JOINT PROJECT OFFICE"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 11040980157.1,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001907C0001_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC0500OR22800_8900_-NONE-_-NONE-",
+    "title": "MANAGEMENT AND OPERATION OF THE Y-12 FACILITY",
+    "suppliers": [
+      "BWXT Y - 12, LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 10985001041.33,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC0500OR22800_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC2708RV14800_8900_-NONE-_-NONE-",
+    "title": "MANAGEMENT OF THE HANFORD SITE TANK FARMS",
+    "suppliers": [
+      "WASHINGTON RIVER PROTECTION SOLUTIONS LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 10560504771.54,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC2708RV14800_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001915C0003_9700_-NONE-_-NONE-",
+    "title": "LRIP 10 AAC",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 10550927664.07,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001915C0003_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_NNM07AB03C_8000_-NONE-_-NONE-",
+    "title": "PROVIDE DEVELOPMENTAL HARDWARE AND TEST ARTICLES, AND MANUFACTURE AND ASSEMBLE ARES I UPPER STAGES. THE UPPER STAGE (US) ELEMENT IS AN INTEGRAL PART OF THE ARES I LAUNCH VEHICLE AND PROVIDES THE SECOND STAGE OF FLIGHT.  THE US ELEMENT IS RESPONSIBLE FOR THE ROLL CONTROL DURING THE FIRST STAGE BURN AND SEPARATION; AND WILL PROVIDE THE GUIDANCE AND NAVIGATION, COMMAND AND DATA HANDLING, AND OTHER AVIONICS FUNCTIONS FOR THE ARES I DURING ALL PHASES OF THE ASCENT FLIGHT.   THE US ELEMENT IS A NEW DESIGN THAT EMPHASIZES SAFETY, OPERABILITY, AND MINIMUM LIFE CYCLE COST. THE OVERALL DESIGN, DEVELOPMENT, TEST AND EVALUATION (DDT&E), PRODUCTION, AND SUSTAINING ENGINEERING EFFORTS INCLUDE ACTIVITIES PERFORMED BY THREE ORGANIZATIONS; THE NASA DESIGN TEAM (NDT), THE UPPER STAGE PRODUCTION CONTRACTOR (USPC) AND THE INSTRUMENT UNIT PRODUCTION CONTRACTOR (IUPC).  FOR CLARITY, THE USPC WILL BE REFERRED TO AS THE CONTRACTOR THROUGHOUT THIS DOCUMENT. NASA IS RESPONSIBLE FOR THE INTEGRATION OF THE PRIMARY ELEMENTS OF THE ARES I LAUNCH VEHICLE INCLUDING: THE FIRST STAGE, US INCLUDING INSTRUMENT UNIT (IU), AND US ENGINE; AND WILL ALSO INTEGRATE THE ARES I LAUNCH VEHICLE AT THE LAUNCH SITE.   NASA IS RESPONSIBLE FOR THE DDT&E, INCLUDING TECHNICAL AND PROGRAMMATIC INTEGRATION OF THE US SUBSYSTEMS AND GOVERNMENT-FURNISHED PROPERTY.  NASA WILL LEAD THE EFFORT TO DEVELOP THE REQUIREMENTS AND SPECIFICATIONS OF THE US ELEMENT, THE DEVELOPMENT PLAN AND TESTING REQUIREMENTS, AND ALL DESIGN DOCUMENTATION, INITIAL MANUFACTURING AND ASSEMBLY PROCESS PLANNING, LOGISTICS PLANNING, AND OPERATIONS SUPPORT PLANNING.  DEVELOPMENT, QUALIFICATION, AND ACCEPTANCE TESTING WILL BE CONDUCTED BY NASA AND THE CONTRACTOR TO SATISFY REQUIREMENTS AND FOR RISK MITIGATION.  NASA IS RESPONSIBLE FOR THE OVERALL UPPER STAGE VERIFICATION AND VALIDATION PROCESS AND WILL REQUIRE SUPPORT FROM THE CONTRACTOR.   THE CONTRACTOR IS RESPONSIBLE FOR THE MANUFACTURE AND ASSEMBLY OF THE UPPER STAGE TEST FLIGHT AND OPERATIONAL UPPER STAGE UNITS INCLUDING THE INSTALLATION OF UPPER STAGE INSTRUMENT UNIT, THE GOVERNMENT-FURNISHED US ENGINE, BOOSTER SEPARATION MOTORS, AND OTHER GOVERNMENT-FURNISHED PROPERTY.  A DESCRIPTION OF THE NASA MANAGED AND PERFORMED EFFORTS IS CONTAINED IN THE US WORK PACKAGES AND WILL BE MADE AVAILABLE TO THE CONTRACTOR TO ENSURE THEIR UNDERSTANDING OF THE ROLES AND RESPONSIBILITIES OF THE NDT, IUPC, AND CONTRACTOR DURING THE DESIGN, DEVELOPMENT, AND OPERATION OF THE US ELEMENT.   THE US CONCEPTUAL DESIGN DESCRIBED IN THE USO-CLV-SE-25704 US DESIGN DEFINITION DOCUMENT (DDD) IS THE BASELINE DESIGN FOR THIS CONTRACT.  THE CONTRACTORS EARLY ROLE WILL BE TO PROVIDE PRODUCIBILITY ENGINEERING SUPPORT TO NASA VIA THE ESTABLISHED US OFFICE STRUCTURE AND TO PROVIDE INPUTS INTO THE FINAL DESIGN CONFIGURATION, SPECIFICATIONS, AND STANDARDS.    NASA WILL TRANSITION THE MANUFACTURING AND ASSEMBLY, LOGISTICS SUPPORT INFRASTRUCTURE, CONFIGURATION MANAGEMENT, AND THE SUSTAINING ENGINEERING FUNCTIONS TO THE CONTRACTOR AT THE KEY POINTS DURING THE DEVELOPMENT AND IMPLEMENTATION OF THE PROGRAM CURRENTLY PLANNED TO OCCUR NO LATER THAN 90 DAYS AFTER THE COMPLETION OF THE FOLLOWING MAJOR MILESTONES:      MANUFACTURING AND ASSEMBLY  US       PRELIMINARY DESIGN REVIEW (PDR)       LOGISTICS SUPPORT INFRASTRUCTURE   US PDR      CONFIGURATION MANAGEMENT  US CRITICAL  DESIGN REVIEW CDR)      SUSTAINING ENGINEERING    US DESIGN        CERTIFICATION REVIEW (DCR)    AFTER THE COMPLETION OF AN ORDERLY TRANSITION OF ROLES AND RESPONSIBILITIES TO THE CONTRACTOR, NASA WILL ASSUME AN INSIGHT ROLE INTO THE CONTRACTORS PRODUCTION, SUSTAINING ENGINEERING, AND OPERATIONS SUPPORT OF THE ARES I US TEST PROGRAM AND FLIGHT HARDWARE.  AFTER DCR, THE CONTRACTOR WILL BE RESPONSIBLE FOR SUSTAINING ENGINEERING PER SOW SECTION 4.7, AS NECESSARY TO MAINTAIN AND SUPPORT THE US CONFIGURATION AND FOR PRODUCTION AND OPERATIONS SUPPORT.",
+    "suppliers": [
+      "THE BOEING COMPANY"
+    ],
+    "buyer": "National Aeronautics and Space Administration",
+    "amount": 10517828993.0,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_NNM07AB03C_8000_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_W31P4Q20C0023_9700_-NONE-_-NONE-",
+    "title": "THE CONTRACT AWARD IS FOR THE FY21/FY22/FY23 BASE AND OPTION PRICING FOR PHASE ARRAY TRACKING RADAR TO INTERCEPT ON TARGET (PATRIOT) ADVANCED CAPABILITY-3 (PAC-3) PRODUCTION REQUIREMENTS FOR THE UNITED STATES (US) AND FOREIGN MILITARY SALES (FMS).",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 10475265354.17,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_W31P4Q20C0023_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_HQ014717C0032_9700_-NONE-_-NONE-",
+    "title": "HQ0147-17-C-0032 UNDEFINITIZED CONTRACT ACTION (UCA) FOR THAAD INTERCEPTOR LOT 9 PRODUCTION - QTY OF 23",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 10449417335.07,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_HQ014717C0032_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_W31P4Q24C0022_9700_-NONE-_-NONE-",
+    "title": "EXECUTE PHASED ARRAY TRACKING RADAR TO INTERCEPT ON TARGET (PATRIOT) ADVANCED CAPABILITY-3 (PAC-3) MISSILE PRODUCTION BY PROVIDING INCIDENTAL SERVICES, HARDWARE, FACILITIES, EQUIPMENT, AND TECHNICAL, PLANNING, MANAGEMENT, AND MANUFACTURING EFFORTS.",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 10311002794.47,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_W31P4Q24C0022_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_F4261098C0001_9700_-NONE-_-NONE-",
+    "title": "200506!000026!5700!FA8214!OO-ALC/PKME/LMKE                !F4261098C0001  !A!N! !Y!             !P01502!20041213!20050701!001563738!004179453!016435559!N!NORTHROP GRUMMAN SPACE & MISSI!888 S 2000 E              !CLEARFIELD          !UT!84015!13850!011!49!CLEARFIELD          !DAVIS                 !UTAH      !-000001960000!N!N!000000000000!L014!TECH REP SVCS/GUIDED MISSILES                     !A2 !MISSILE AND SPACE SYSTEMS           !302 !MINUTEMAN III GRP             !541330!E! !3! ! !C! ! !20200930!B! ! !A! !A!N!L!2!002!B!  !Z!Y!Z! !  !N!C!N! ! ! !A!A!A!A!000!A!C!N! ! ! ! !    !      !0001! !",
+    "suppliers": [
+      "NORTHROP GRUMMAN SYSTEMS CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 10008567439.01,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_F4261098C0001_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_W58RGZ08C0003_9700_-NONE-_-NONE-",
+    "title": "PROCUREMENT OF 54 EACH ARMY UH-60M BLACK HAWK HELICOPTERS; 18 EACH NAVY MH-60S SEA HAWK HELICOPTERS; 25 EACH NAVY NH-60R SEA HAWK HELICOPTERS; 9 EACH UH-60M BLACK HAWK HELICOPTER FOR BAHRAIN DEFENSE FORCE; TOOLING; PROGRAM SYSTEMS MANAGEMENT; TECHNICAL PUBLICATIONS.",
+    "suppliers": [
+      "SIKORSKY AIRCRAFT CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 9971022710.49,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_W58RGZ08C0003_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_FA881113C0003_9700_-NONE-_-NONE-",
+    "title": "IGF::CT::IGF EELV FY13 + PHASE I BUY",
+    "suppliers": [
+      "UNITED LAUNCH SERVICES, LLC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 9499338750.87,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_FA881113C0003_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0002403C2101_9700_-NONE-_-NONE-",
+    "title": "Description not provided in source",
+    "suppliers": [
+      "ELECTRIC BOAT CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 9397332305.22,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0002403C2101_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_HT940223C0001_9700_-NONE-_-NONE-",
+    "title": "TRICARE MANAGED CARE SUPPORT SERVICES CONTRACT, 5TH GENERATION EAST REGION",
+    "suppliers": [
+      "HUMANA GOVERNMENT BUSINESS INC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 9372151291.16,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_HT940223C0001_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_HT940223C0002_9700_-NONE-_-NONE-",
+    "title": "TRICARE MANAGED CARE SUPPORT SERVICES CONTRACT, 5TH GENERATION WEST REGION",
+    "suppliers": [
+      "TRIWEST HEALTHCARE ALLIANCE CORP"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 9229784861.9,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_HT940223C0002_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_F0470102C0002_9700_-NONE-_-NONE-",
+    "title": "200207!000021!5700!CZ62  !SMC/PKJ LOS ANGELES AFB         !F0470102C0002  !A!N! !N!                   !20011116!20070630!872978978!196596688!834951691!N!LOCKHEED MARTIN CORPORATION   !1111 LOCKHEED MARTIN WAY  !SUNNYVALE           !CA!94089!77000!085!06!SUNNYVALE           !SANTA CLARA           !CALIFORNIA!+000012250000!N!N!000000000000!AR92!RDTE/SPACE - OTHER - APPLIED RESEARCH             !A2 !MISSILE AND SPACE SYSTEMS     !3GFK!MILSTAR                       !541710!E! !1! ! ! ! ! !99990909!B! ! !B! !D!N!J!2!001!N!2A!Z!N!Z!  !  !N!C!N! ! ! !A!A!A!A!000!A!C!N! ! ! ! !    !      !0001!",
+    "suppliers": [
+      "LOCKHEED MARTIN CORP"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 9032605785.68,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_F0470102C0002_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_0159_9700_DAAA0902D0007_9700",
+    "title": "FOLLOW ON TASK ORDER TO 139 IS NOW TASK ORDER 159",
+    "suppliers": [
+      "KBR SERVICES, LLC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 8949368388.58,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_0159_9700_DAAA0902D0007_9700"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_FA861108C2897_9700_-NONE-_-NONE-",
+    "title": "FOLLOW-ON AGILE SUSTAINMENT TO THE RAPTOR (FASTER)",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 8821412144.17,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_FA861108C2897_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DESC0012704_8900_-NONE-_-NONE-",
+    "title": "IGF::OT::IGF TAS::89 0222::TAS M&O CONTRACT FOR BNL",
+    "suppliers": [
+      "BROOKHAVEN SCIENCE ASSOCIATES LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 8803419756.39,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DESC0012704_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001918C1021_9700_-NONE-_-NONE-",
+    "title": "LOT 12 AAC LONG LEAD FOR PROPULSION SYSTEMS",
+    "suppliers": [
+      "RTX CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 8688654906.89,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001918C1021_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_FA880219C0001_9700_-NONE-_-NONE-",
+    "title": "FY19 ENGINEERING SERVICES",
+    "suppliers": [
+      "THE AEROSPACE CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 8571555254.92,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_FA880219C0001_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001918C1037_9700_-NONE-_-NONE-",
+    "title": "E-2D ADVANCED HAWKEYE AIRCRAFT (FRP-7)",
+    "suppliers": [
+      "NORTHROP GRUMMAN SYSTEMS CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 8494620560.67,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001918C1037_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0002423C2307_9700_-NONE-_-NONE-",
+    "title": "CONSTRUCTION OF DDG 51 SHIPS FY23-27",
+    "suppliers": [
+      "HUNTINGTON INGALLS INCORPORATED"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 8322344313.83,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0002423C2307_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC0207CH11359_8900_-NONE-_-NONE-",
+    "title": "OPERATION OF FERMI NATIONAL ACCELERATOR LABORATORY",
+    "suppliers": [
+      "FERMI RESEARCH ALLIANCE, LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 8292579520.86,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC0207CH11359_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001921C0020_9700_-NONE-_-NONE-",
+    "title": "FY21-23 GLOBAL F-35 AIR SYSTEM SUSTAINMENT",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7946633434.5,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001921C0020_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DENA0003624_8900_-NONE-_-NONE-",
+    "title": "IGF::CL,CT::IGF CONTRACT AWARD DE-NA0003624 TO THE MISSION SUPPORT AND TEST SERVICES LLC (MSTS) FOR THE MANAGEMENT AND OPERATION OF THE DEPARTMENT OF ENERGY NATIONAL NUCLEAR SECURITY ADMINISTRATION'S NEVADA NATIONAL SECURITY SITE.",
+    "suppliers": [
+      "MISSION SUPPORT & TEST SERVICES LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 7933559692.74,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DENA0003624_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_0139_9700_DAAA0902D0007_9700",
+    "title": "200612!001884!2100!W52P1J!U.S. ARMY INDUSTRIAL OPERATIONS !DAAA0902D0007  !A!N! !Y!0139         !      !20060822!20120131!133469119!133469119!964409007!N!KELLOGG BROWN&ROOT SERVICES,!4100 CLINTON DRY          !HOUSTON             !TX!77020!00000!   !IZ!                    !                      !IRAQ      !+000400000000!N!N!000000000000!R706!LOGISTICS SUPPORT SERVICES                        !S1 !SERVICES                            !000 !NOT DISCERNABLE               !561210!E! !5!B!S! ! ! !99990909!B! ! !A! !A!U!R!2!003!B!  !Z!N!Z! !  !N!M!N! ! ! ! ! !A!A!000!A!B!N! ! ! ! !    !      !0001! !",
+    "suppliers": [
+      "KBR SERVICES, LLC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7865825758.15,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_0139_9700_DAAA0902D0007_9700"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001924C0039_9700_-NONE-_-NONE-",
+    "title": "CY24 AVSC SUPPLY SUPPORT",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7811016297.0,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001924C0039_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001904C3146_9700_-NONE-_-NONE-",
+    "title": "Description not provided in source",
+    "suppliers": [
+      "THE BOEING COMPANY"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7633729888.76,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001904C3146_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001920C0011_9700_-NONE-_-NONE-",
+    "title": "LOT 15 FMS-1 F135 CTOL PROP SYSTEM",
+    "suppliers": [
+      "RTX CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7498605067.74,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001920C0011_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_FA881018C0005_9700_-NONE-_-NONE-",
+    "title": "NEXT GENERATION OVERHEAD PERSISTENT INFRARED GEOSYNCHRONOUS EARTH ORBIT SPACE VEHICLE 1-3 PHASE 1",
+    "suppliers": [
+      "LOCKHEED MARTIN CORP"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7479775910.2,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_FA881018C0005_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_W58RGZ16C0023_9700_-NONE-_-NONE-",
+    "title": "ADVANCE PROCUREMENT FOR AH-64E REMAN LOT 7 AIRCRAFT AND SUPPORT EQUIPMENT",
+    "suppliers": [
+      "THE BOEING COMPANY"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7473318968.15,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_W58RGZ16C0023_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_0004_9700_W52P1J07D0007_9700",
+    "title": "LOGCAP IV SERVICES IN AFGHANISTAN",
+    "suppliers": [
+      "AMENTUM SERVICES, INC."
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7376022275.01,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_0004_9700_W52P1J07D0007_9700"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001912C2001_9700_-NONE-_-NONE-",
+    "title": "PROCUREMENT OF V-22 LOT 17 LONG LEAD-TIME ITEMS",
+    "suppliers": [
+      "BELL BOEING JOINT PROJECT OFFICE"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7337457221.95,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001912C2001_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_FA862506C6456_9700_-NONE-_-NONE-",
+    "title": "Description not provided in source",
+    "suppliers": [
+      "LOCKHEED MARTIN CORP"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7261932653.67,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_FA862506C6456_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_FA868224CB001_9700_-NONE-_-NONE-",
+    "title": "LONG RANGE ANTI-SHIP MISSILE/JOINT AIR-TO-SURFACE STANDOFF MISSILE LARGE LOT PROCUREMENT",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7207169014.73,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_FA868224CB001_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001911C0083_9700_-NONE-_-NONE-",
+    "title": "F-35 LIGHTNING II JOINT STRIKE FIGHTER (JSF) LOW RATE INITIAL PRODUCTION (LRIP) LOT 6 ADVANCE ACQUISITION CONTRACT",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7186135705.16,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001911C0083_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC0608RL14788_8900_-NONE-_-NONE-",
+    "title": "PLATEAU REMEDIATION CONTRACT - CONTINUE ENVIRONMENTAL REMEDIATION OF SELECT PORTIONS OF THE HANFORD SITE.",
+    "suppliers": [
+      "CH2M HILL PLATEAU REMEDIATION COMPANY"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 7065250859.58,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC0608RL14788_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_FA863418C2701_9700_-NONE-_-NONE-",
+    "title": "F-15, FMS, F-15QA AIR VEHICLE DEVELOPMENT",
+    "suppliers": [
+      "THE BOEING COMPANY"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7043510970.26,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_FA863418C2701_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0002424C2110_9700_-NONE-_-NONE-",
+    "title": "SSN 814 & SSN 815 LONG LEAD TIME MATERIAL",
+    "suppliers": [
+      "ELECTRIC BOAT CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7041693031.0,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0002424C2110_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001917C0015_9700_-NONE-_-NONE-",
+    "title": "CMV-22 PRODUCTION LOT 22 LONG LEAD-TIME ITEMS",
+    "suppliers": [
+      "BELL BOEING JOINT PROJECT OFFICE"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 7039922460.87,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001917C0015_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001914C0002_9700_-NONE-_-NONE-",
+    "title": "LRIP 9 AIRCRAFT AAC",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 6998362070.51,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001914C0002_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0002418C2307_9700_-NONE-_-NONE-",
+    "title": "FY18-FY22 DDG 51 CLASS SHIP CONSTRUCTION",
+    "suppliers": [
+      "HUNTINGTON INGALLS INCORPORATED"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 6958995173.74,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0002418C2307_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_AIDOAATO1500007_7200_AIDOAAI1500004_7200",
+    "title": "IGF::CL::IGF - GHSC IDIQ - HIV/AIDS TO",
+    "suppliers": [
+      "CHEMONICS INTERNATIONAL, INC."
+    ],
+    "buyer": "Agency for International Development",
+    "amount": 6723916684.79,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_AIDOAATO1500007_7200_AIDOAAI1500004_7200"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0002408C2110_9700_-NONE-_-NONE-",
+    "title": "TAS::17 1611::TAS CVN 78 SHIP CONSTRUCTION",
+    "suppliers": [
+      "HUNTINGTON INGALLS INC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 6651038755.11,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0002408C2110_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001923C0030_9700_-NONE-_-NONE-",
+    "title": "LOT 18 PNR/TOOLING",
+    "suppliers": [
+      "RTX CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 6644057263.33,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001923C0030_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_DEAC0909SR22505_8900_-NONE-_-NONE-",
+    "title": "NEW CONTRACT AWARD FOR MANAGEMENT OF THE LIQUID WASTE SYSTEM AT SRS",
+    "suppliers": [
+      "SAVANNAH RIVER REMEDIATION LLC"
+    ],
+    "buyer": "Department of Energy",
+    "amount": 6626030703.19,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_DEAC0909SR22505_8900_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0002423C2305_9700_-NONE-_-NONE-",
+    "title": "CONSTRUCTION OF DDG 51 SHIPS FY23-27",
+    "suppliers": [
+      "BATH IRON WORKS CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 6590794631.0,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0002423C2305_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_HQ014712C0004_9700_-NONE-_-NONE-",
+    "title": "THE MISSILE DEFENSE AGENCY (MDA), GROUND-BASED MIDCOURSE DEFENSE (GMD) DEVELOPMENT AND SUSTAINMENT CONTRACT (DSC) THE GMD DSC WORK INCLUDES, BUT IS NOT LIMITED TO: 1) FUTURE DEVELOPMENT; 2) FIELDING; 3) TEST; 4) SYSTEMS ENGINEERING, INTEGRATION AND CONFIGURATION MANAGEMENT; 5) EQUIPMENT MANUFACTURING AND REFURBISHMENT; 6) TRAINING; AND 7) OPERATIONS AND SUSTAINMENT SUPPORT FOR THE GMD WEAPON SYSTEM AND ASSOCIATED SUPPORT FACILITIES.",
+    "suppliers": [
+      "THE BOEING COMPANY"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 6466627868.26,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_HQ014712C0004_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_W56HZV15C0095_9700_-NONE-_-NONE-",
+    "title": "THE CONTRACT INCLUDES FIRM FIXED PRICE (FFP) CONTRACT LINE ITEM NUMBERS (CLIN) FOR VEHICLES, TRAILERS, KITS (PACKAGED AND INSTALLED), TEST HARDWARE AND SUPPORT, VEHICLE REFURBISHMENT, SYSTEM ENGINEERING/ PROGRAM MANAGEMENT",
+    "suppliers": [
+      "OSHKOSH DEFENSE LLC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 6103838006.83,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_W56HZV15C0095_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001906C0081_9700_-NONE-_-NONE-",
+    "title": "Description not provided in source",
+    "suppliers": [
+      "SIKORSKY AIRCRAFT CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 6103285531.96,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001906C0081_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_0059_9700_DAAA0902D0007_9700",
+    "title": "Description not provided in source",
+    "suppliers": [
+      "KBR SERVICES, LLC"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 6062897262.53,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_0059_9700_DAAA0902D0007_9700"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0001913C0008_9700_-NONE-_-NONE-",
+    "title": "F-35 LRIP 8 AAC",
+    "suppliers": [
+      "LOCKHEED MARTIN CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 6035358369.47,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0001913C0008_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_FA862914C2403_9700_-NONE-_-NONE-",
+    "title": "ACAT 1D - CRH",
+    "suppliers": [
+      "SIKORSKY AIRCRAFT CORPORATION"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 6027003807.21,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_FA862914C2403_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_FA862514C6450_9700_-NONE-_-NONE-",
+    "title": "FY13 ADVANCE PROCUREMENT FUNDS FOR FY14 C-130J AIRCRAFT",
+    "suppliers": [
+      "LOCKHEED MARTIN CORP"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 5934097111.63,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_FA862514C6450_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "USAspending",
+    "record_id": "CONT_AWD_N0002416C2229_9700_-NONE-_-NONE-",
+    "title": "DETAIL DESIGN AND CONSTRUCTION (DD&C) FOR T-AO 205",
+    "suppliers": [
+      "NATIONAL STEEL AND SHIPBUILDING COMPANY"
+    ],
+    "buyer": "Department of Defense",
+    "amount": 5913186703.23,
+    "currency": "USD",
+    "record_kind": "Contract award returned by 2025 activity filter; may have started earlier; total is not a unit price",
+    "source_urls": [
+      "https://www.usaspending.gov/award/CONT_AWD_N0002416C2229_9700_-NONE-_-NONE-"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "1-2025",
+    "title": "Croatia – Supervision of building work – STRUČNI NADZOR NAD RADOVIMA NA REKONSTRUKCIJI I OPREMANJU- HOTEL BELLEVUE",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/1-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "2-2025",
+    "title": "Portugal – Repair and maintenance services of machinery – TA_24_082_CI_S_024_DMA - Aquisição de Serviços de Manutenção de Cogeradores a Biogás em Instalações do Sistema Multimunicipal de Saneamento da Tejo Atlântico – Área Sul, por Lotes",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/2-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "3-2025",
+    "title": "Poland – Education and training services – Przeprowadzenie kursu - Prawo jazdy kategorii B",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/3-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "4-2025",
+    "title": "Germany – Architectural, engineering and surveying services – Rahmenvertrag für Vermessungsleistungen",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/4-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "5-2025",
+    "title": "Poland – Lamps and light fittings – Modernizacja oświetlenia ulicznego w Gminie Witonia",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/5-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "6-2025",
+    "title": "Slovenia – Works for complete or part construction and civil engineering work – Gradbena dela za izgradnjo elektroenergetske infrastrukture",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/6-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "7-2025",
+    "title": "Poland – Repair and maintenance services – Świadczenie usług serwisowania aparatury medycznej dla Klinik Centrum Kliniczno Dydaktycznego Centralnego Szpitala Klinicznego Uniwersytetu Medycznego w Łodzi",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/7-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "8-2025",
+    "title": "Poland – Anti-virus software package – Zakup subskrypcji oraz wsparcia technicznego dla systemu McAfee/Trellix",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/8-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "9-2025",
+    "title": "Poland – Miscellaneous services – „Sukcesywna dostawa produktu leczniczego Jardiance 10 mg, na potrzeby projektu finansowanego przez Agencję Badań Medycznych, Polska, numer Projektu 2020/ABM/01/00001, (....)",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/9-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "10-2025",
+    "title": "Poland – Passenger cars – Pozyskanie pojazdów służbowych.",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/10-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "11-2025",
+    "title": "Poland – Imaging and archiving system – Zakup i wdrożenie kompleksowego systemu archiwizacji i dystrybucji danych obrazowych PACS wraz z dostawą infrastruktury (ZP-107/2024)",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/11-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "12-2025",
+    "title": "Finland – Radio-isotopes – Therapy level Co-60 radiation source into the GammaBeam X200 irradiator (Best Theratronics)",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/12-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "13-2025",
+    "title": "Poland – Refuse and waste related services – Odbiór i zagospodarowanie odpadów komunalnych od właścicieli nieruchomości zamieszkałych na terenie gminy Lubomia w roku 2025",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/13-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "14-2025",
+    "title": "Croatia – Rat-disinfestation services – Preventivna dezinfekcija, dezinsekcija i deratizacija",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/14-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "15-2025",
+    "title": "Poland – Transport services (excl. Waste transport) – Kompleksowa usługa logistyczna na transport zagraniczny obiektów użyczanych na wystawę „Young Poland. Polish Art 1890- 1918” w Kyoto, Japonia",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/15-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "16-2025",
+    "title": "Poland – Roadworks – Bieżące utrzymanie dróg krajowych, w zakresie nakładek i remontów cząstkowych, administrowanych przez GDDKiA Oddział w Olsztynie w podziale na 5 zadań",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/16-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "17-2025",
+    "title": "France – Site preparation and clearance work – MT13 - Accord-cadre d'accompagnement et de balisage",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/17-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "18-2025",
+    "title": "Romania – Orthopaedic prostheses – ENDOPROTEZE ORTOPEDICE ȘI ALTE MATERIALE SANITARE",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/18-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "19-2025",
+    "title": "Poland – Credit granting services – Udzielenie kredytu długoterminowego na sfinansowanie planowanego deficytu budżetu Gminy Wiśniew roku 2024 oraz spłatę wcześniej zaciągniętych zobowiązań z tytułu kredytów i pożyczek",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/19-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "20-2025",
+    "title": "Estonia – Railway construction works – Kiltsi-Rakke-Vägeva raudtee kapitaalremont. Kiltsi ja Rakke jaamade osaline rekonstrueerimine",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/20-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "21-2025",
+    "title": "Hungary – Agricultural machinery – Mezőgazdasági gépek beszerzése 4 részben",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/21-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "22-2025",
+    "title": "Netherlands – Supply services of personnel including temporary staff – Das Projectpersoneel Senior boswachter beheer",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/22-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "23-2025",
+    "title": "Poland – Construction project management services – Usługa pełnienia funkcji Inwestora Zastępczego (z rozszerzonym zakresem obowiązków) przy realizacji inwestycji pod nazwą „Budowa Centrum Edukacji Przyrodniczej MORGI”",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/23-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "24-2025",
+    "title": "Poland – Medical equipments – Dostawa obłożeń operacyjnych, ubrań chirurgicznych, wyrobów medycznych do elektrochirurgii i innych wyrobów używanych przy zabiegach operacyjnych",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/24-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "25-2025",
+    "title": "Estonia – Catering supplies – Portsjoneeritud valmistoidu termokandikud ja transpordikärud",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/25-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "26-2025",
+    "title": "Italy – Cleaning services – Servizi di pulizia dei siti gestiti dall'ASSM",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/26-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "27-2025",
+    "title": "Poland – Pharmaceutical products – Dostawa leków dla Krapkowickiego Centrum Zdrowia Sp. z o.o.",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/27-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "28-2025",
+    "title": "Italy – Operation of water supplies – Servizio gestione utenze servizio idrico, installazione e lettura dei misuratori idrici, bollettazione, contrasto morosita' e riscossione coattiva corrispettivi dovuti Marano di Napoli (NA)",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/28-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "29-2025",
+    "title": "Poland – Repair and maintenance services of medical equipment – świadczenie usługi wykonywania przeglądów technicznych aparatury i urządzeń medycznych przez okres 24 miesięcy",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/29-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "30-2025",
+    "title": "Slovenia – Installation services of fire protection equipment – Vzdrževanje in servisiranje avtomatskega sistema javljanja požara in gašenja v podjetju Luka Koper, d.d.",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/30-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "31-2025",
+    "title": "Poland – Natural risks or hazards protection services – Dozór i utrzymanie obiektów hydrotechnicznych na terenie Zarządu Zlewni w Nowym Sączu – Obsługa i eksploatacja zbiornika wodnego \"Skrzyszów\" - lata 2025 2027",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/31-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "32-2025",
+    "title": "Spain – Project and design preparation, estimation of costs – Consultoría, asistencia y servicios técnicos del proyecto integral de energía limpia de Seròs (Ref/Exp: 3066)",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/32-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "33-2025",
+    "title": "Poland – Refuse collection services – Odbiór i zagospodarowywanie odpadów komunalnych pochodzących z nieruchomości zamieszkałych położonych na terenie Gminy Grabica, powiat piotrkowski, woj. łódzkie",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/33-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "34-2025",
+    "title": "Lithuania – Printing and related services – Reklamos spauda ir sumontavimas komerciniams klientams_Skelbiamos derybos_Supaprastintas",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/34-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "35-2025",
+    "title": "North Macedonia – Medical consumables – Procurement of bandage sanitary material",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/35-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "36-2025",
+    "title": "Croatia – Motor vehicles for the transport of goods – Dugoročni najam viličara",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/36-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "37-2025",
+    "title": "Poland – Planting and maintenance services of green areas – Utrzymanie zieleni niskiej i wysokiej w pasach drogowych na terenie miasta Świętochłowice",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/37-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "38-2025",
+    "title": "Greece – Parts of refrigerating and freezing equipment and heat pumps – ΠΡΟΜΗΘΕΙΑ ΚΑΙ ΥΠΗΡΕΣΙΕΣ ΕΓΚΑΤΑΣΤΑΣΗΣ ΔΥΟ ΝΕΩΝ ΑΕΡΟΨΥΚΤΩΝ ΑΝΤΛΙΩΝ ΘΕΡΜΟΤΗΤΑΣ ΜΕΤΑ ΤΟΥ ΑΠΑΙΤΟΥΜΕΝΟΥ ΕΞΟΠΛΙΣΜΟΥ ΤΟΥΣ ΣΤΟ ΚΤΗΡΙΟ ΤΟΥ ΟΡΓΑΝΙΣΜΟΥ ΒΙΟΜΗΧΑΝΙΚΗΣ ΙΔΙΟΚΤΗΣΙΑΣ-ΜΑΡΟΥΣΙ",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/38-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "39-2025",
+    "title": "Austria – Software package and information systems – Pensionsversicherungsanstalt - Anschaffung von rd. 7.500 Lizenzen (Alfresco, Camunda und Vaadin) im Open Source Umfeld -> Änderung der Camunda-Lizenzierung",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/39-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "40-2025",
+    "title": "Poland – Repair and maintenance services – Świadczenie usług serwisowania aparatury medycznej dla Klinik Centrum Kliniczno Dydaktycznego Centralnego Szpitala Klinicznego Uniwersytetu Medycznego w Łodzi",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/40-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "41-2025",
+    "title": "Croatia – Installation of road signals – Radovi zamjene elastične odbojne ograde na dionici autoceste A3 od čvora Lipovljani do čvora Nova Gradiška",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/41-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "42-2025",
+    "title": "Poland – Repair and maintenance services – Świadczenie usług serwisowania aparatury medycznej dla Klinik Centrum Kliniczno Dydaktycznego Centralnego Szpitala Klinicznego Uniwersytetu Medycznego w Łodzi",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/42-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "43-2025",
+    "title": "France – Repair and maintenance services of taps – Entretien de la robinetterie",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/43-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "44-2025",
+    "title": "Romania – Pharmaceutical products – LICITATIE MEDICAMENTE , PE LOTURI -6 luni,1024",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/44-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "45-2025",
+    "title": "Bulgaria – Occupational clothing, special workwear and accessories – „Доставка чрез закупуване на защитно работно облекло и обувни изделия за работа с бензиномоторни триони за 25 работника, работещи в териториалните поделения на \"ЮЦДП\"\"– гр. Смолян, по обособени позиции",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/45-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "46-2025",
+    "title": "France – Household-refuse collection services – Collecte des déchets ménagers et assimilés : Collecte en porte à porte des ordures ménagères résiduelles, des emballages (hors verre) et papiers à usages graphiques",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/46-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "47-2025",
+    "title": "Romania – Construction work for highways, roads – PROIECTARE SI EXECUTIE “Autostrada Craiova – Filiasi si Drum Expres Filiasi – Targu Jiu – Lotul 1”",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/47-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "48-2025",
+    "title": "Greece – Medical kits – 14. ΠΡΟΜΗΘΕΙΑ ΦΥΓΟΚΕΝΤΡΟΣ 32 ΘΕΣΕΩΝ",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/48-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "49-2025",
+    "title": "Czechia – Construction work – Bazén Nymburk",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/49-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "50-2025",
+    "title": "Poland – Refuse and waste related services – Odbieranie i zagospodarowanie odpadów komunalnych z nieruchomości zamieszkałych położonych na terenie Gminy Zakroczym",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/50-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "51-2025",
+    "title": "Poland – Refuse collection services – Usługi w zakresie odbierania i transportu odpadów komunalnych z nieruchomości objętych gminnym systemem gospodarowania odpadami komunalnymi w granicach administracyjnych Gminy Sztutowo",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/51-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "52-2025",
+    "title": "Finland – Road transport services – Raaseporin sisäinen joukkoliikenne",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/52-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "53-2025",
+    "title": "Moldova – Medical consumables – Consumabile medicale pentru anul 2025",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/53-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "54-2025",
+    "title": "Poland – Insurance services – KU.241/pn64_2024/AT - Ubezpieczenie odpowiedzialności materialnej pracowników MPK Sp. z o.o. we Wrocławiu",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/54-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "55-2025",
+    "title": "France – Meal delivery service – Fourniture et livraison de repas cuisinés à l'avance conservés par le froid destinés à la restauration scolaire de la ville de Saint-Laurent-du-Var",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/55-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "56-2025",
+    "title": "Croatia – Maintenance of information technology software – Implementacija dodatnih funkcionalnosti sustava SAP, redovno održavanje, konzultantska podrška i edukacije",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/56-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "57-2025",
+    "title": "Poland – Engineering design services – Wykonanie dokumentacji projektowej wraz z pełnieniem nadzoru autorskiego oraz uzyskaniem pozwolenia na budowę dla zadania pn. Budowa osiedla Wojszyce 1",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/57-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "58-2025",
+    "title": "Spain – Building-cleaning services – Servicio de limpieza de apoyo en las tareas de limpieza y apoyo al servicio de comedor para el Centro de Acogida a Refugiados (CAR) de Sevilla para un periodo de 12 meses prorrogables por 36 meses mas.",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/58-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "59-2025",
+    "title": "North Macedonia – Transport services (excl. Waste transport) – TRANSPORTATION OF REGULAR STUDENTS TO SECONDARY MUNICIPAL SCHOOLS IN TETOVO FOR A PERIOD OF 1 YEAR",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/59-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "60-2025",
+    "title": "France – Refuse transport services – Transport et stockage de déchets non incinérables",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/60-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "61-2025",
+    "title": "Slovakia – Antibacterials for systemic use – Lieky ATC skupiny J01-Antibiotiká na systémové použitie",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/61-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "62-2025",
+    "title": "Slovenia – Electrical machinery, apparatus, equipment and consumables; lighting – Material in oprema za izgradnjo elektrodistribucijskega omrežja",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/62-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "63-2025",
+    "title": "Poland – Street-lighting maintenance services – Świadczenie usług w zakresie eksploatacji oświetlenia: ulic, placów, skwerów, parków, zieleńców, chodników i przejść dla pieszych, włączonego do szaf oświetleniowych stanowiących własność TAURON Nowe Technologie S.A.",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/63-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "64-2025",
+    "title": "Romania – Refurbishment work – Achiziție LUCRĂRI DE EXECUȚIE pentru obiectivul de investiții „Renovarea energetică a sediului IPJ Sălaj și S.R.I. – UM 0603 Cluj-Napoca, a Corpului administrativ și a Poliției Municipiului Zalău”",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/64-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "65-2025",
+    "title": "Croatia – Railway signalling works – Ugradnja i usklađenje PU i SS infrastrukturnog podsustava na dionici Strizivojna-Vrpolje (isklj.) - Slavonski Šamac (uklj.) - DG pruge M303 Strizivojna - Vrpolje- Slavonski Šamac - državna granica",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/65-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "66-2025",
+    "title": "France – Sewerage work – Un accord-cadre composés de 3 lots pour les travaux de la Direction de l'Eau et de l'Assainissement -Communauté D'Agglomération du Puy en Velay",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/66-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "67-2025",
+    "title": "Italy – Test drilling and boring work – Proc. n. 3776-AP-2024- AQ indagini Sarno",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/67-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "68-2025",
+    "title": "Poland – Repair and maintenance services – Świadczenie usług serwisowania aparatury medycznej dla Klinik Centrum Kliniczno Dydaktycznego Centralnego Szpitala Klinicznego Uniwersytetu Medycznego w Łodzi",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/68-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "69-2025",
+    "title": "Bulgaria – Electricity – “Доставка на електрическа енергия за нуждите на Община Кюстендил, по две обособени позиции”",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/69-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "70-2025",
+    "title": "Greece – Toner for laser printers/fax machines – ΔΘΝ12/2024 ΠΡΟΜΗΘΕΙΑ ΤΟΝΕΡ",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/70-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "71-2025",
+    "title": "Poland – Pharmaceutical products – DOSTAWY PRODUKTÓW FARMACEUTYCZNYCH",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/71-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "72-2025",
+    "title": "France – Asbestos-removal work – Accord-cadre relatif aux travaux de désamiantage en sous-section III, et élimination des déchets au profit du GHT ALLIANCE GIRONDE",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/72-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "73-2025",
+    "title": "Poland – Systems support services – Usługa wsparcia i modyfikacji systemów Ministerstwa Sprawiedliwości",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/73-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "74-2025",
+    "title": "Portugal – Information technology services – Serviços de administração de Plataforma de Integração Microsoft Azure",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/74-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "75-2025",
+    "title": "Spain – Banking services – Contratación, por el sistema de lotes, de un préstamo a largo plazo, por importe global de 21.291.670,00€, destinado a financiar las necesidades del presupuesto de 2024, aprobado por el Ayuntamiento Pleno el 21 de diciembre de 2023.",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/75-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "76-2025",
+    "title": "France – Occupational clothing, special workwear and accessories – ACHAT DE VETEMENTS PROFESSIONNELS ET D EQUIPEMENTS DE PROTECTION INDIVIDUELLE (EPI)",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/76-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "77-2025",
+    "title": "Romania – Food, beverages, tobacco and related products – Achizitie de produse alimentare pentru Microcantina Hestia",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/77-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "78-2025",
+    "title": "Poland – Anaesthesia devices – Dostawa aparatu do znieczulenia z monitorem parametrów życiowych",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/78-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "79-2025",
+    "title": "Spain – Communications equipment – Servicio Guest Wifi en el eje principal de la ZGAT Oviedo",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/79-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "80-2025",
+    "title": "Greece – Resuscitation devices – (25)ΠΡΟΜΗΘΕΙΑ AMBU MASK ΑΣΚΟΥΣ ΑΝΑΝΗΨΗΣ ΜΕ ΡΕΖΕΡΒΟΥΑΡ ΟΞΥΓΟΝΟΥ ΠΟΥ ΝΑ ΑΠΟΣΤΕΙΡΩΝΟΝΤΑΙ",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/80-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "81-2025",
+    "title": "France – Painting work – RELANCE ACCORD-CADRE A BONS DE COMMANDE TRAVAUX D'ENTRETIEN COURANT POUR LE LOT 26 A - PEINTURE CENTRE 1/AGENCE NORD SUR LE PATRIMOINE IMMOBILIER DE LA SA D'HLM OZANAM",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/81-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "82-2025",
+    "title": "Slovenia – Pharmaceutical products – NAKUP, SKLADIŠČENJE IN OBNAVLJANJE ZDRAVIL ZA UPORABO V VETERINARSKI MEDICINI",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/82-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "83-2025",
+    "title": "Bulgaria – Hotel accommodation services – „Предоставяне на хотелиерски и ресторантьорски услуги на спортисти, треньори и длъжностни лица от Български стрелкови съюз при подготовка за участия във вътрешни и международни състезания“ по три обособени позиции",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/83-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "84-2025",
+    "title": "Poland – Building-cleaning services – Świadczenie usług w zakresie kompleksowego sprzątania w budynkach Naczelnego Sądu Administracyjnego wraz z przyległym do nich terenem.",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/84-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "85-2025",
+    "title": "Hungary – Telemetry equipment – Smart modem beszerzése",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/85-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "86-2025",
+    "title": "Poland – Refuse and waste related services – Odbieranie odpadów komunalnych od właścicieli nieruchomości znajdujących się na terenie Miasta Łodzi w sektorach: Bałuty, Śródmieście i Widzew w okresie od 01.01.2025 r. do 30.06.2026 r.",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/86-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "87-2025",
+    "title": "Italy – Accident insurance services – SERVIZIO DI ASSICURAZIONE INFORTUNI EX ART. 51 LEGGE 282/2002 E AL D.P.C.M. 3 NOVEMBRE 2010, RCT.O A FAVORE DELLA FEDERAZIONE ITALIANA SURFING SCI NAUTICO E WAKEBOARD (F.I.S.S.W.) CON DECORRENZA DALLE ORE 00:00 DEL 01.01.2025 AL 31.12.2027",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/87-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "88-2025",
+    "title": "Czechia – Medical software package – Rozšíření nemocničního informačního systému Oblastní nemocnice Náchod a.s.",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/88-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "89-2025",
+    "title": "Italy – Weather and financial loss insurance services – Affidamento della copertura assicurativa annuale All risks della Provincia di Pisa",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/89-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "90-2025",
+    "title": "Hungary – Electricity distribution and control apparatus – TMOK ÉS TMKK URH RÁDIÓS TELEMECHANIKA",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/90-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "91-2025",
+    "title": "Spain – Miscellaneous software development services and computer systems – Servicios de desarrollo y mantenimiento de las aplicaciones sectoriales de energía de la Comisión Nacional de los Mercados y la Competencia (CNMC).",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/91-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "92-2025",
+    "title": "Poland – Repair and maintenance services – Świadczenie usług serwisowania aparatury medycznej dla Klinik Centrum Kliniczno Dydaktycznego Centralnego Szpitala Klinicznego Uniwersytetu Medycznego w Łodzi",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/92-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "93-2025",
+    "title": "Germany – Software programming and consultancy services – indikative Angebote - Beschaffung eines CRM-Systems",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/93-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "94-2025",
+    "title": "Lithuania – Architectural design services – Molainių filtracijos laukų ir šalia esančių teritorijų konversija, pritaikant daugiatiksliam naudojimui projekto konkursas",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/94-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "95-2025",
+    "title": "Italy – Supply services of office personnel – PROCEDURA DI GARA APERTA AI SENSI DELL’ART. 71 DEL D. LGS. N. 36/2023 FINALIZZATA ALL'AFFIDAMENTO DI SERVIZI DI RICERCA, SELEZIONE E VALUTAZIONE DI CANDIDATI ALLA CARICA DI AMMINISTRATORE DI SOCIETÀ PARTECIPATE DA CASSA DEPOSITI E PRESTITI S.P.A.",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/95-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "96-2025",
+    "title": "Hungary – Games and toys; fairground amusements – Ajándéktárgy beszerzés - 2024",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/96-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "97-2025",
+    "title": "Austria – Tailoring services – DBS - Kostüm",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/97-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "98-2025",
+    "title": "Poland – Street-cleaning and sweeping services – Ręczne i mechaniczne oczyszczanie miasta Krakowa z podziałem na części – część 3 (Rejon 3, Rejon 5-5, Rejon 5-7",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/98-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "99-2025",
+    "title": "Poland – Credit granting services – Udzielenie kredytu długoterminowego",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/99-2025"
+    ]
+  },
+  {
+    "source": "EU TED",
+    "record_id": "100-2025",
+    "title": "Croatia – Medical consumables – Medicinski potrošni materijal za obavljanje zdravstvene djelatnosti",
+    "record_kind": "Procurement notice; may be a tender or award, not a supplier quotation",
+    "source_urls": [
+      "https://ted.europa.eu/en/notice/-/detail/100-2025"
+    ]
+  }
+]

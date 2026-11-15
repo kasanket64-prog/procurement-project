@@ -1,0 +1,104 @@
+name: Procurement regression tests
+
+on:
+  push:
+    branches:
+      - test/point-in-time-history-regression
+  pull_request:
+    paths:
+      - "ml/procurement_history.py"
+      - "ml/procurement_ai.py"
+      - "ml/procurement_search.py"
+      - "ml/procurement_risk.py"
+      - "ml/procurement_platform.py"
+      - "ml/procurement_platform_template.html"
+      - "ml/published_delivery_benchmarks.json"
+      - "ml/supplier_matcher.py"
+      - "ml/evaluate_delivery_risk.py"
+      - "ml/backtest_delivery_risk.py"
+      - "ml/analyze_public_deliveries.py"
+      - "dataset/procurement.csv"
+      - "dataset/public_procurement/multisource_2025_sample/**"
+      - "tests/**"
+      - ".github/workflows/history-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install regression test dependencies
+        run: python -m pip install numpy pandas scikit-learn joblib
+      - name: Verify public-record provenance and source-file integrity
+        run: python -m unittest discover -s tests -p "test_public_records.py" -v
+      - name: Verify public-delivery analysis accounting
+        run: python -m unittest discover -s tests -p "test_public_deliveries.py" -v
+      - name: Run procurement regression tests
+        run: python -m unittest discover -s tests -p "test_procurement_history.py" -v && python -m unittest discover -s tests -p "test_what_if.py" -v && python -m unittest discover -s tests -p "test_demo_ranking.py" -v && python -m unittest discover -s tests -p "test_recommendations_integration.py" -v && python -m unittest discover -s tests -p "test_real_procurement.py" -v
+
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install browser test dependency
+        run: python -m pip install playwright
+      - name: Install Chromium for headless checks
+        run: python -m playwright install --with-deps chromium
+      - name: Run browser What-If and RFQ smoke tests
+        run: python -m unittest discover -s tests -p "test_browser_platform.py" -v
+
+  model-evaluation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install model evaluation dependencies
+        run: python -m pip install numpy pandas scikit-learn joblib
+      - name: Check temporal evaluation invariants
+        run: python -m unittest discover -s tests -p "test_ml_evaluation.py" -v
+      - name: Evaluate synthetic orders with mature-label temporal split
+        run: python ml/evaluate_delivery_risk.py --trees 40 --output evaluation.json
+      - name: Archive reproducible metrics and data digest
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-temporal-evaluation
+          path: evaluation.json
+          retention-days: 30
+
+  rolling-backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install rolling backtest dependencies
+        run: python -m pip install numpy pandas scikit-learn joblib
+      - name: Verify split, calibration, and threshold invariants
+        run: python -m unittest discover -s tests -p "test_rolling_backtest.py" -v
+      - name: Run rolling synthetic temporal backtest
+        run: python ml/backtest_delivery_risk.py --trees 20 --output rolling-backtest.json
+      - name: Archive backtest metrics and provenance
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-rolling-backtest
+          path: rolling-backtest.json
+          retention-days: 30

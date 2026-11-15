@@ -1,0 +1,15 @@
+{
+  "publisher": "SourceDay",
+  "source_title": "Supplier Reliability Trends 2026: Record Price Pressure and Rising PO Changes",
+  "source_url": "https://sourceday.com/blog/supplier-reliability-trends-2026/",
+  "methodology_url": "https://sourceday.com/supplier-reliability-index/",
+  "published_date": "2026-10-08",
+  "reviewed_date": "2026-11-15",
+  "population": "Purchase-order lines in SourceDay's network, as reported by SourceDay",
+  "records": [
+    {"quarter": "Q2 2026", "on_time_percent": 68.4, "on_time_in_full_percent": 66.1},
+    {"quarter": "Q3 2026", "on_time_percent": 66.5, "on_time_in_full_percent": 63.6}
+  ],
+  "limitations": "Publisher-reported aggregates, not independently audited here. Underlying PO records, counts and full date-window definitions were not obtained. Network coverage may differ from your suppliers. These figures do not set a target or validate app scores.",
+  "use": "Attributed factual reference only; no underlying proprietary records, charts or report text reproduced. Not training data."
+}
