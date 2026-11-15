@@ -104,6 +104,21 @@ class BrowserWorkspaceTests(unittest.TestCase):
         self.assertIn("No matching record", cards.inner_text())
         self.assertFalse(self.errors, self.errors)
 
+    def test_dashboard_counts_and_small_screen_layout(self):
+        self.assertEqual(self.page.locator("#record-count").inner_text(), "296")
+        self.assertEqual(self.page.locator("#source-count").inner_text(), "3")
+        self.assertEqual(self.page.locator("#catalog-count").inner_text(), "40")
+        for width in (1440, 390, 320):
+            with self.subTest(width=width):
+                self.page.set_viewport_size({"width": width, "height": 900})
+                self.search_demo()
+                self.assertTrue(self.page.evaluate(
+                    "document.documentElement.scrollWidth <= window.innerWidth"
+                ))
+                self.assertTrue(self.page.locator("#product").is_visible())
+                self.assertIn("generated supplier identities", self.page.locator("#demo").inner_text())
+        self.assertFalse(self.errors, self.errors)
+
     def test_budget_filters_and_comparison_records_removals(self):
         self.search_demo()
         self.page.locator("#save-baseline").click()
