@@ -69,6 +69,33 @@ class BrowserWorkspaceTests(unittest.TestCase):
         self.assertIn("Removed by filters", self.page.locator("#comparison").inner_text())
         self.assertFalse(self.errors, self.errors)
 
+
+    def test_budget_filter_does_not_renormalize_experience(self):
+        # Controlled synthetic fixture: only the budget changes. A supplier's
+        # historical experience must not jump when another supplier drops out.
+        self.page.evaluate("""() => {
+          const sample = data.demo.find(r => r.item === 'Steel Coil (per ton)');
+          const rows = [
+            {id:'A',price:100,orders:100},
+            {id:'B',price:10,orders:10},
+            {id:'C',price:20,orders:15}
+          ].map(x => ({...sample, supplier_id:'fixture-'+x.id,
+            supplier_name:'Fixture '+x.id,
+            avg_unit_price:String(x.price), historical_orders:String(x.orders)}));
+          data.demo.splice(0, data.demo.length, ...rows);
+        }""")
+        self.search_demo()
+        before = self.page.evaluate(
+            "() => currentDemo.find(r => r.supplier_id === 'fixture-B').parts[2]"
+        )
+        self.page.locator("#budget").fill("25")
+        self.page.locator("#search-form button[type=submit]").click()
+        after = self.page.evaluate(
+            "() => currentDemo.find(r => r.supplier_id === 'fixture-B').parts[2]"
+        )
+        self.assertAlmostEqual(before, after, places=7)
+        self.assertFalse(self.errors, self.errors)
+
     def test_request_draft_requires_review_and_does_not_purchase(self):
         self.search_demo()
         self.page.locator("#start-rfq").click()
