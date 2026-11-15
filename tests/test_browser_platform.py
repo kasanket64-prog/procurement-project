@@ -87,6 +87,18 @@ class BrowserWorkspaceTests(unittest.TestCase):
                                (ml / "supplier_discovery_template.html").read_text(encoding="utf-8"))
         self.assertEqual(discovery, (ml / "supplier_discovery.html").read_text(encoding="utf-8"))
 
+    def test_external_benchmarks_show_source_period_and_limits(self):
+        section = self.page.locator("#delivery-benchmarks")
+        section.locator("summary").click()
+        self.assertIn("Q3 2026", section.inner_text())
+        self.assertIn("66.5%", section.inner_text())
+        self.assertIn("63.6%", section.inner_text())
+        self.assertIn("not independently audited", section.inner_text())
+        self.assertIn("do not set a target or validate app scores", section.inner_text())
+        self.assertEqual(section.get_by_role("link", name="SourceDay published figures").get_attribute("href"),
+                         "https://sourceday.com/blog/supplier-reliability-trends-2026/")
+        self.assertFalse(self.errors, self.errors)
+
     def test_public_records_are_searchable_and_separate_from_demo_scores(self):
         self.assertEqual(self.page.evaluate("data.awards.length"), 296)
         self.assertTrue(self.page.evaluate("new Set(data.awards.map(r => r.source + r.record_id)).size === data.awards.length"))

@@ -20,6 +20,7 @@ def build(root, destination):
     data['public'] = dict(data['public'], suppliers=[], processes=0)
     data['researched'] = json.loads((ml / 'researched_supplier_leads.json').read_text(encoding='utf-8'))
     data['awards'] = json.loads((root / 'dataset/public_procurement/multisource_2025_sample/records.json').read_text(encoding='utf-8'))
+    data['delivery_benchmarks'] = json.loads((ml / 'published_delivery_benchmarks.json').read_text(encoding='utf-8'))
     encoded = json.dumps(data, ensure_ascii=True).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     template = Path(__file__).with_name('procurement_platform_template.html').read_text(encoding='utf-8')
     Path(destination).write_text(template.replace('__DATA__', encoded), encoding='utf-8')

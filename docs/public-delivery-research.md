@@ -43,4 +43,8 @@ The analyzer rejects files whose byte digest differs from the reviewed snapshot.
 
 ## Product boundary
 
+### Publisher-reported aggregate context
+
+The app separately displays two recent quarters from [SourceDay's published network delivery table](https://sourceday.com/blog/supplier-reliability-trends-2026/), reviewed 15 November 2026. These attributed aggregates are external context only. No underlying proprietary PO records were obtained, no chart or report text is reproduced, and no benchmark enters demo scoring or model training. Source definitions, network selection and unavailable denominators prevent comparison with the SCMS strict-date analysis. The SCMS mirror's source-authenticity and reuse questions remain unresolved; additional search and an attempted archived primary-page retrieval did not resolve them.
+
 This finding supports development of real-date ingestion and descriptive analysis. It does not remove existing release gates for authentic supplier prediction. No trained model, current supplier score, capacity, inventory, quotation or purchase authorization was added. Customer-facing demo comparisons remain labeled; previous audit and model limitations remain intact. The next useful step is to resolve the source authenticity and reuse evidence, then evaluate data availability and generalization before any predictive integration.

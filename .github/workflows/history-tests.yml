@@ -12,6 +12,7 @@ on:
       - "ml/procurement_risk.py"
       - "ml/procurement_platform.py"
       - "ml/procurement_platform_template.html"
+      - "ml/published_delivery_benchmarks.json"
       - "ml/supplier_matcher.py"
       - "ml/evaluate_delivery_risk.py"
       - "ml/backtest_delivery_risk.py"
