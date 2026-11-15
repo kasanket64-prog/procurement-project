@@ -4,9 +4,9 @@ Scope: [draft PR #19](https://github.com/kasanket64-prog/procurement-project/pul
 
 ## Executed checks
 
-Latest verified CI commit covering code and tests: `fcffc63ab62a25895d8241b80f99026894e48632`.
+Latest verified CI commit covering code and tests: `f18af07ac6eb616418eb91bbee683f87ebebfc0b`.
 
-GitHub Actions run [43674682489](https://github.com/kasanket64-prog/procurement-project/actions/runs/43674682489) passed on Python 3.11 / Ubuntu:
+GitHub Actions run [43674937779](https://github.com/kasanket64-prog/procurement-project/actions/runs/43674937779) passed on Python 3.11 / Ubuntu:
 
 - 5 supplier-history point-in-time regression tests.
 - 6 terminal What-If isolation and comparison tests.
@@ -15,9 +15,9 @@ GitHub Actions run [43674682489](https://github.com/kasanket64-prog/procurement-
 - 4 synthetic-fixture quotation-review and human-approval invariant tests.
 - 3 single-holdout temporal ML evaluation tests.
 - 7 rolling-backtest tests: disjoint chronological stages, maturity, calibration bins, validation-only thresholds, future-label isolation and subgroup accounting.
-- 4 headless Chromium browser smoke tests, including a budget-normalization regression and request draft generation.
+- 7 headless Chromium browser tests, including stable budget ranking, RFQ preview with no outbound request, invalid timezone and past-date rejection, and preview invalidation on edit.
 
-**33 tests passed; 0 failed.** The CI also evaluated the 40-tree fixed-threshold model and a separate three-window 20-tree chronological backtest with calibrated scores and validation-selected illustrative thresholds. No live suppliers, real buyer outcomes, or purchasing authorization were validated.
+**36 tests passed; 0 failed.** The CI also evaluated the 40-tree fixed-threshold model and a separate three-window 20-tree chronological backtest with calibrated scores and validation-selected illustrative thresholds. No live suppliers, real buyer outcomes, or purchasing authorization were validated.
 
 ## Reproduced and fixed
 
@@ -36,7 +36,7 @@ GitHub Actions run [43674682489](https://github.com/kasanket64-prog/procurement-
 
 **P1 — More integration coverage**
 - **Completed:** no-mock supplier-risk recommendation and scenario integration tests, plus a reproducible experimental temporal holdout command with data/evaluator hashes.
-- **Still needed:** boundary-case RFQ browser tests; root-cause analysis for zero-recall categories; representative unseen-supplier evaluation, stability/drift checks, and genuine data validation. The rolling test already separates calibration, threshold validation, and final holdout.
+- **Still needed:** broader quotation and browser security tests, root-cause analysis for zero-recall categories, representative unseen-supplier evaluation, drift checks, and genuine data validation. The rolling test already separates calibration, threshold validation, and final holdout.
 - **Not approved:** saving or deploying the experimental model in the real-quotation pilot, or treating its scores as purchase decisions.
 
 **P2 — Maintenance**
@@ -45,4 +45,4 @@ GitHub Actions run [43674682489](https://github.com/kasanket64-prog/procurement-
 
 ## Merge policy
 
-Do not merge this draft PR merely because 33 automated tests are green. Review the source diff, confirm all CI checks at the final SHA, then merge only by explicit maintainer decision. Do not interpret these tests as validation of prediction accuracy or purchasing decisions.
+Do not merge this draft PR merely because 36 automated tests are green. Review the source diff, confirm all CI checks at the final SHA, then merge only by explicit maintainer decision. Do not interpret these tests as validation of prediction accuracy or purchasing decisions.
