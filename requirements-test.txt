@@ -1,0 +1,5 @@
+# Lightweight test environment; excludes optional sentence-transformers and Torch.
+-r requirements-terminal.txt
+numpy
+scikit-learn
+joblib
