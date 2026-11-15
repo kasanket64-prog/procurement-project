@@ -167,6 +167,55 @@ def scores(y, raw, calibrated, threshold, prior):
     }
 
 
+def subgroup_metrics(test, probability, threshold):
+    """Diagnostics on disjoint test outcomes; no group-specific threshold tuning.
+
+    Small groups are reported but explicitly flagged, never silently promoted
+    into reliable subgroup performance claims.
+    """
+    y = test.late_delivery.astype(int).to_numpy()
+    p = np.asarray(probability, dtype=float)
+    if len(test) != len(p):
+        raise ValueError("Test scores and subgroup rows must have equal lengths.")
+    evidence = pd.cut(
+        test.supplier_completed_orders,
+        bins=[-1, 0, 19, np.inf],
+        labels=["no_completed_history", "1_to_19_completed", "20_plus_completed"],
+    ).astype(str)
+    dimensions = {
+        "business_unit": test.business_unit.astype(str),
+        "category": test.category.astype(str),
+        "supplier_history_evidence": evidence,
+    }
+    result = {}
+    for field, values in dimensions.items():
+        groups = []
+        for name in sorted(values.unique()):
+            mask = np.asarray(values == name)
+            targets = y[mask]
+            scores_here = p[mask]
+            predictions = scores_here >= threshold
+            positives = int(targets.sum())
+            flagged = int(predictions.sum())
+            tp = int(((targets == 1) & predictions).sum())
+            fn = positives - tp
+            fp = flagged - tp
+            groups.append({
+                "group": name,
+                "orders": int(mask.sum()),
+                "late_orders": positives,
+                "alerts": flagged,
+                "recall": float(tp / positives) if positives else None,
+                "precision": float(tp / flagged) if flagged else None,
+                "missed_delays": fn,
+                "false_alerts": fp,
+                "brier": float(brier_score_loss(targets, scores_here)),
+                "low_support": len(targets) < 100 or positives < 20,
+            })
+        result[field] = groups
+    return result
+
+
 def evaluate_rolling(raw, *, trees=20):
     """Retrospective folds: fit never sees later outcomes, even if orders precede cutoff."""
     if not isinstance(trees, int) or trees < 1:
@@ -190,6 +239,9 @@ def evaluate_rolling(raw, *, trees=20):
         calibrated_test = cal_model.predict_proba(log_odds(p_test))[:, 1]
         measured = scores(test.late_delivery.astype(int), p_test, calibrated_test,
                           selection["threshold"], float(train.late_delivery.mean()))
+        subgroup = subgroup_metrics(test, calibrated_test, selection["threshold"])
+        seen_suppliers = set(train.supplier_id)
+        unseen_mask = ~test.supplier_id.isin(seen_suppliers)
         folds.append({
             "fold": fold,
             "calibration_start": str(calibrate_start.date()),
@@ -205,6 +257,10 @@ def evaluate_rolling(raw, *, trees=20):
                    | (features.outcome_available_at >= calibrate_start))).sum()),
             "threshold_selection": selection,
             "test_metrics": measured,
+            "test_subgroups": subgroup,
+            "test_unseen_supplier_orders": int(unseen_mask.sum()),
+            "test_unseen_supplier_distinct": int(test.loc[unseen_mask, "supplier_id"].nunique()),
+            "train_positive_rate": float(train.late_delivery.mean()),
         })
     return {
         "status": "SYNTHETIC_EXPERIMENT_NOT_REAL_WORLD_VALIDATION",
@@ -220,7 +276,7 @@ def evaluate_rolling(raw, *, trees=20):
             "All scores are on synthetic, retrospectively labeled data, not live buyer outcomes.",
             "Calibration and thresholds must not be deployed without buyer-approved costs.",
             "Test windows are disjoint, but later folds may reuse earlier fold observations as history.",
-            "Business-segment and new-supplier validation remains outstanding.",
+            "Group diagnostics are synthetic, unadjusted, and not evidence of real-world subgroup reliability.",
         ],
     }
 
