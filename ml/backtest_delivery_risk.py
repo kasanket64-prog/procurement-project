@@ -78,7 +78,10 @@ def stage_rows(features, boundaries):
     assert (calibration.outcome_available_at < validate_start).all()
     assert (validation.outcome_available_at < test_start).all()
     assert (test.order_date >= test_start).all()
-    assert not set(train.po_id) & set(calibration.po_id) & set(validation.po_id)
+    identities = [set(frame.po_id) for frame in (train, calibration, validation, test)]
+    if any(identities[i] & identities[j]
+           for i in range(len(identities)) for j in range(i + 1, len(identities))):
+        raise AssertionError("Fold stages overlap by order ID.")
     return train, calibration, validation, test
 
 
