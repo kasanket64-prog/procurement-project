@@ -37,6 +37,14 @@ show **39.97% recall** for late deliveries at the fixed 0.5 threshold on
 synthetic data. This is **not good enough to declare an operational early-warning
 system** and says nothing about real supplier reliability.
 
+A separate [three-window rolling synthetic backtest](docs/rolling-backtest.md)
+adds chronological calibration, validation-only threshold selection, and untouched
+test windows. Late-delivery recall remained roughly **39–41%**. The model
+detected **none** of the late deliveries in three synthetic product categories
+(Chemicals, Logistics, Professional Services), and the historical dataset
+supplied no unseen-supplier test examples. These are **release blockers**, not
+production performance claims. No alert threshold has buyer approval.
+
 The earlier experimental training scripts remain in the repository for
 historical comparison, not as verified leakage-free production pipelines.
 
