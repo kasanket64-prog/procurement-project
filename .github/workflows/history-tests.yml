@@ -1,4 +1,4 @@
-name: Point-in-time history regression tests
+name: Procurement regression tests
 
 on:
   push:
@@ -7,7 +7,10 @@ on:
   pull_request:
     paths:
       - "ml/procurement_history.py"
-      - "tests/test_procurement_history.py"
+      - "ml/procurement_ai.py"
+      - "ml/procurement_search.py"
+      - "ml/procurement_risk.py"
+      - "tests/**"
       - ".github/workflows/history-tests.yml"
   workflow_dispatch:
 
@@ -23,9 +26,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: pip
-          cache-dependency-path: requirements-terminal.txt
-      - name: Install test dependencies
-        run: python -m pip install numpy pandas
-      - name: Run point-in-time history regression tests
+      - name: Install regression test dependencies
+        run: python -m pip install numpy pandas scikit-learn joblib
+      - name: Run procurement regression tests
         run: python -m unittest discover -s tests -p "test_*.py" -v
