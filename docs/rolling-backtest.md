@@ -2,9 +2,9 @@
 
 **Experimental report, 15 November 2026. Not validated against real buyers or suppliers. Not a release approval.**
 
-Evidence: [GitHub Actions run 43674425960](https://github.com/kasanket64-prog/procurement-project/actions/runs/43674425960) and [archived JSON](https://github.com/kasanket64-prog/procurement-project/actions/runs/43674425960/artifacts/14145478510) (retained 30 days).
+Evidence: [GitHub Actions run 43674682489](https://github.com/kasanket64-prog/procurement-project/actions/runs/43674682489) and [archived JSON](https://github.com/kasanket64-prog/procurement-project/actions/runs/43674682489/artifacts/14146071042) (retained 30 days).
 
-Input: `dataset/procurement.csv`; SHA-256 `fba22a467e5dd800a0af960930d2ca5e2ecbd9d2bc747e37304867d8d031ae21`. Backtest evaluator SHA-256 at the reported run: `cbd3055c76c563ed9a82c68bde232964960d0ce2eefc8bdabb5df28c13c87bfc`.
+Input: `dataset/procurement.csv`; SHA-256 `fba22a467e5dd800a0af960930d2ca5e2ecbd9d2bc747e37304867d8d031ae21`. Backtest evaluator SHA-256 at the reported run: `c4bb49269057d5a2a39c7bbc89b88ade22eef38c9d4af89621db5ba3c05fa548`.
 
 ## Reproduce
 
@@ -46,11 +46,26 @@ The model misses approximately **six in ten known late deliveries** in each time
 
 Brier score and expected calibration error (ECE) are lower-is-better here. ECE uses ten fixed probability bins and is sensitive to binning and sample size; it is diagnostic, not proof of real-world calibration. Calibration improved both diagnostics in these synthetic windows, **but missed-delay recall remains inadequate**.
 
+## Severe product-category failures and missing cold-start evidence
+
+The latest CI artifact also reports pre-specified subgroup diagnostics (business unit, product category, supplier completed-order history) using the **same validation-selected threshold**. No category-specific threshold was tuned on the test sets. Groups with fewer than 100 orders or 20 late-delivery events are labeled low support.
+
+| Category | Late deliveries across the three disjoint test windows | Detected by selected threshold | Observed recall |
+| --- | ---: | ---: | ---: |
+| Chemicals | 185 | **0** | **0%** |
+| Logistics | 207 | **0** | **0%** |
+| Professional Services | 114 | **0** | **0%** |
+| MRO | 777 | approximately 606 | approximately 78% |
+
+The model entirely missed **506** known late deliveries in the first three categories, despite detecting many MRO delays. This is evidence of serious *synthetic-data subgroup disparity*, not a claim about actual industries. The cause has not been established; the dataset-generation process, group prevalence, feature selection, and threshold behavior all need investigation. **Do not generalize this model to procurement categories with zero detected delays.**
+
+Across all three test intervals, **zero orders belonged to suppliers absent from the fold's training supplier-ID set**. Therefore this backtest provides **no cold-start/new-supplier performance evidence**. Only a handful of supplier observations had fewer than 20 completed historical orders; those groups are labeled low support. Missing cold-start coverage must not be represented as a passing test.
+
 ## Release-blocking limitations
 
 - **Do not deploy this threshold/model to the live quotation pilot** or portray scores as supplier reliability.
 - A 5:1 false-negative-to-false-positive cost ratio is an illustrative choice; actual operating policy requires buyer input, capacity and escalation consequences.
-- Verify subgroup performance for new vs established suppliers, business units, and product classes and examine data drift. An aggregated synthetic result can conceal severe subgroup failures.
+- Address the measured category-level failure, obtain genuine cold-start supplier examples, and examine data drift. An aggregated synthetic result can conceal severe subgroup failures.
 - Reproduce on independently sourced, permissioned delivery histories with reliable order, promise, outcome and *information-availability* timestamps.
 - Keep quotation decisions and purchase authorization under human control.
 - Calibration was fitted on held-out synthetic intervals; transportability to actual suppliers remains unknown.
