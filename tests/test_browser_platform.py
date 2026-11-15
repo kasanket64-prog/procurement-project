@@ -57,15 +57,42 @@ class BrowserWorkspaceTests(unittest.TestCase):
         self.assertIn("ORIGINAL:", compare.inner_text())
         self.assertIn("WHAT-IF:", compare.inner_text())
         self.assertGreater(compare.locator("tr").count(), 1)
-        self.assertIn("SYNTHETIC DEMO", baseline)
+        self.assertIn("Demo data", baseline)
         self.assertFalse(self.errors, self.errors)
+
+    def test_customer_labels_and_public_source_separation(self):
+        self.search_demo()
+        self.assertNotIn("synthetic", self.page.locator("body").inner_text().lower())
+        self.assertIn("generated supplier identities", self.page.locator("#demo").inner_text())
+        self.assertIn("Illustrative on-time", self.page.locator("#demo-cards").inner_text())
+        self.page.locator("#product").fill("caprolactam")
+        self.page.locator("#search-form button[type=submit]").click()
+        leads = self.page.locator("#researched-cards")
+        self.assertGreater(leads.locator("article").count(), 0)
+        self.assertNotIn("Demo data", leads.inner_text())
+        leads.locator("summary").first.click()
+        source = leads.get_by_role("link", name="Read source").first
+        self.assertTrue(source.is_visible())
+        self.assertTrue(source.get_attribute("href").startswith("https://"))
+        self.assertIn("No quotation received", leads.inner_text())
+        self.assertFalse(self.errors, self.errors)
+
+    def test_checked_in_pages_match_their_templates(self):
+        self.assertEqual(self.path.read_text(encoding="utf-8"),
+                         (ROOT / "ml/procurement_platform.html").read_text(encoding="utf-8"))
+        from supplier_discovery import build_page
+        import json
+        ml = ROOT / "ml"
+        discovery = build_page(json.loads((ml / "public_supplier_leads.json").read_text(encoding="utf-8")),
+                               (ml / "supplier_discovery_template.html").read_text(encoding="utf-8"))
+        self.assertEqual(discovery, (ml / "supplier_discovery.html").read_text(encoding="utf-8"))
 
     def test_budget_filters_and_comparison_records_removals(self):
         self.search_demo()
         self.page.locator("#save-baseline").click()
         self.page.locator("#budget").fill("0.000001")
         self.page.locator("#search-form button[type=submit]").click()
-        self.assertIn("0 eligible synthetic companies", self.page.locator("#summary").inner_text())
+        self.assertIn("0 eligible demo suppliers", self.page.locator("#summary").inner_text())
         self.assertIn("Removed by filters", self.page.locator("#comparison").inner_text())
         self.assertFalse(self.errors, self.errors)
 
