@@ -16,6 +16,7 @@ on:
       - "ml/evaluate_delivery_risk.py"
       - "ml/backtest_delivery_risk.py"
       - "dataset/procurement.csv"
+      - "dataset/public_procurement/multisource_2025_sample/**"
       - "tests/**"
       - ".github/workflows/history-tests.yml"
   workflow_dispatch:
@@ -34,6 +35,8 @@ jobs:
           python-version: "3.11"
       - name: Install regression test dependencies
         run: python -m pip install numpy pandas scikit-learn joblib
+      - name: Verify public-record provenance and source-file integrity
+        run: python -m unittest discover -s tests -p "test_public_records.py" -v
       - name: Run procurement regression tests
         run: python -m unittest discover -s tests -p "test_procurement_history.py" -v && python -m unittest discover -s tests -p "test_what_if.py" -v && python -m unittest discover -s tests -p "test_demo_ranking.py" -v && python -m unittest discover -s tests -p "test_recommendations_integration.py" -v && python -m unittest discover -s tests -p "test_real_procurement.py" -v
 
