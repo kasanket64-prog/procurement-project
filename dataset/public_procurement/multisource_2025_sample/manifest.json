@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://www.contractsfinder.service.gov.uk/Published/Notices/OCDS/Search?publishedFrom=2025-01-01T00%3A00%3A00&publishedTo=2025-12-31T23%3A59%3A59&stages=award&limit=100",
+    "retrieved_at_utc": "2026-11-15T04:18:14.8408563Z",
+    "source": "uk-contracts-finder",
+    "sha256": "427B15D046104B3FBF37F379672EFAE31024FA4486175596D6988475F903FC63",
+    "file": "uk-contracts-finder.json",
+    "status": "downloaded",
+    "request_body": null
+  },
+  {
+    "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+    "retrieved_at_utc": "2026-11-15T04:18:17.1501063Z",
+    "source": "usaspending",
+    "sha256": "62BAA89BEEDE693FDAF51888BC2A17D4F3BB5CA62DCDAC1AABC2BBA68DC2DA70",
+    "file": "usaspending.json",
+    "status": "downloaded",
+    "request_body": "{\"filters\":{\"award_type_codes\":[\"A\",\"B\",\"C\",\"D\"],\"time_period\":[{\"start_date\":\"2025-01-01\",\"end_date\":\"2025-12-31\"}]},\"fields\":[\"Award ID\",\"Recipient Name\",\"Award Amount\",\"Description\",\"Awarding Agency\",\"Start Date\",\"End Date\"],\"page\":1,\"limit\":100,\"sort\":\"Award Amount\",\"order\":\"desc\"}"
+  },
+  {
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "retrieved_at_utc": "2026-11-15T04:18:41.6788799Z",
+    "source": "eu-ted",
+    "sha256": "969736D4183EC15AB3EB6F4DDB2245D11D9525D3EF428205A8AB3AB2504FE3B5",
+    "file": "eu-ted.json",
+    "status": "downloaded",
+    "request_body": "{\"query\":\"PD >= 20250101 AND PD <= 20251231\",\"fields\":[\"publication-number\",\"notice-title\",\"publication-date\"],\"page\":1,\"limit\":100,\"scope\":\"ALL\"}"
+  }
+]

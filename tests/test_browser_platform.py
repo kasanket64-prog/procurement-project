@@ -87,6 +87,22 @@ class BrowserWorkspaceTests(unittest.TestCase):
                                (ml / "supplier_discovery_template.html").read_text(encoding="utf-8"))
         self.assertEqual(discovery, (ml / "supplier_discovery.html").read_text(encoding="utf-8"))
 
+    def test_public_records_are_searchable_and_separate_from_demo_scores(self):
+        self.assertEqual(self.page.evaluate("data.awards.length"), 300)
+        self.page.locator("#product").fill("supervision")
+        self.page.locator("#search-form button[type=submit]").click()
+        cards = self.page.locator("#public-record-cards")
+        self.assertGreater(cards.locator("article").count(), 0)
+        self.assertLessEqual(cards.locator("article").count(), 20)
+        self.assertTrue(cards.get_by_role("link", name="Official procurement record").first.is_visible())
+        self.assertNotIn("weighted match score", cards.inner_text())
+        self.assertNotIn("Demo data", cards.inner_text())
+        self.page.locator("#product").fill("zzzz-no-public-record-match")
+        self.page.locator("#search-form button[type=submit]").click()
+        self.assertEqual(cards.locator("article").count(), 0)
+        self.assertIn("No matching record", cards.inner_text())
+        self.assertFalse(self.errors, self.errors)
+
     def test_budget_filters_and_comparison_records_removals(self):
         self.search_demo()
         self.page.locator("#save-baseline").click()
