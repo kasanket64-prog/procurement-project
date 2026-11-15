@@ -50,7 +50,7 @@ def build_features(raw):
     d['late_delivery'] = (d.delivery_delay_days > 0).astype(float).where(d.actual_delivery_date.notna())
     d['promised_lead_days'] = (d.promised_delivery_date - d.order_date).dt.days
     d['order_month'] = d.order_date.dt.month
-    d['order_dayofweek'] = d.order_date.dt.dayofweek
+    d['order_dayofweek'] = d.order_date.dt.day_of_week
     for col in HISTORY:
         d[col] = 0.0
     for _, group in d.groupby('supplier_id', sort=False):
