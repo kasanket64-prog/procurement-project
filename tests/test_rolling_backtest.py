@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "ml"))
 from procurement_history import build_features
 from backtest_delivery_risk import (
     CANDIDATE_THRESHOLDS, choose_threshold, evaluate_rolling,
-    fold_boundaries, reliability, stage_rows,
+    fold_boundaries, reliability, stage_rows, subgroup_metrics,
 )
 
 
@@ -103,6 +103,13 @@ class RollingBacktestTests(unittest.TestCase):
                 "confusion_matrix_actual_0_1_predicted_0_1"]), report["orders"])
             self.assertGreaterEqual(report["calibrated_brier"], 0)
             self.assertLessEqual(report["calibrated_brier"], 1)
+            for dimension, groups in fold["test_subgroups"].items():
+                self.assertEqual(sum(g["orders"] for g in groups), report["orders"], dimension)
+                self.assertEqual(sum(g["missed_delays"] for g in groups),
+                                 report["false_negative_count"], dimension)
+                self.assertEqual(sum(g["false_alerts"] for g in groups),
+                                 report["false_positive_count"], dimension)
+            self.assertGreaterEqual(fold["test_unseen_supplier_orders"], 0)
             self.assertGreaterEqual(report["raw_brier"], 0)
             self.assertLessEqual(report["raw_brier"], 1)
             for key in ("raw_reliability", "calibrated_reliability"):
@@ -130,6 +137,25 @@ class RollingBacktestTests(unittest.TestCase):
             a["folds"][-1]["test_metrics"]["positive_rate"],
             b["folds"][-1]["test_metrics"]["positive_rate"],
         )
+
+    def test_group_slices_distinguish_missing_support_and_no_history(self):
+        frame = pd.DataFrame({
+            "late_delivery": [0., 1., 0., 0.],
+            "business_unit": ["Ops", "Ops", "Finance", "Finance"],
+            "category": ["Bearings"] * 4,
+            "supplier_completed_orders": [0, 0, 5, 25],
+        })
+        groups = subgroup_metrics(frame, [.1, .9, .2, .2], .5)
+        by_name = {g["group"]: g for g in groups["business_unit"]}
+        self.assertEqual(by_name["Ops"]["recall"], 1)
+        self.assertIsNone(by_name["Finance"]["recall"])
+        self.assertTrue(by_name["Finance"]["low_support"])
+        evidence_names = {g["group"] for g in groups["supplier_history_evidence"]}
+        self.assertEqual(evidence_names, {
+            "no_completed_history", "1_to_19_completed", "20_plus_completed",
+        })
+        with self.assertRaises(ValueError):
+            subgroup_metrics(frame, [.1], .5)
 
     def test_reliability_rejects_nonprobabilities(self):
         with self.assertRaises(ValueError):
