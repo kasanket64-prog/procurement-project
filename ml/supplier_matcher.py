@@ -40,7 +40,11 @@ def rank_demo(frame, product, country=None, budget=None, quantity=None):
         matches = matches.loc[matches['avg_unit_price'] <= budget].copy()
     if matches.empty:
         return matches
-    max_orders = matches['historical_orders'].max()
+    reference = frame.loc[frame['item'] == product]
+    if country:
+        reference = reference.loc[reference['supplier_country'].str.casefold() == country.casefold()]
+    # Keep the experience denominator stable when the buyer changes the budget.
+    max_orders = reference['historical_orders'].max()
     experience = matches['historical_orders'] / max_orders * 100 if max_orders > 0 else 0
     prices = ((budget - matches['avg_unit_price']) / budget * 100).clip(0, 100) if budget else matches['avg_unit_price'].min() / matches['avg_unit_price'] * 100
     matches['match_score'] = matches['on_time_rate'] * .4 + (100 - matches['rejection_rate']) * .3 + experience * .2 + prices * .1
