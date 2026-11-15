@@ -88,7 +88,8 @@ class BrowserWorkspaceTests(unittest.TestCase):
         self.assertEqual(discovery, (ml / "supplier_discovery.html").read_text(encoding="utf-8"))
 
     def test_public_records_are_searchable_and_separate_from_demo_scores(self):
-        self.assertEqual(self.page.evaluate("data.awards.length"), 300)
+        self.assertEqual(self.page.evaluate("data.awards.length"), 296)
+        self.assertTrue(self.page.evaluate("new Set(data.awards.map(r => r.source + r.record_id)).size === data.awards.length"))
         self.page.locator("#product").fill("supervision")
         self.page.locator("#search-form button[type=submit]").click()
         cards = self.page.locator("#public-record-cards")

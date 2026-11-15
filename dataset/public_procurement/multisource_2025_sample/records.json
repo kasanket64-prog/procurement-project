@@ -193,22 +193,6 @@
   },
   {
     "source": "UK Contracts Finder",
-    "record_id": "ocds-b5fd17-ca85d894-a041-408c-a314-47df65b71b1b-1",
-    "title": "LAS Ambulance Funding Model",
-    "suppliers": [
-      "PA CONSULTING SERVICES LIMITED"
-    ],
-    "buyer": "London Ambulance Service NHS Trust",
-    "award_date": "2025-10-21T00:00:00+01:00",
-    "amount": 74500,
-    "currency": "GBP",
-    "record_kind": "Historical award; total is not a unit price",
-    "source_urls": [
-      "https://www.contractsfinder.service.gov.uk/Notice/0e8068fa-e30a-4856-a56b-fc9b6f0535dc"
-    ]
-  },
-  {
-    "source": "UK Contracts Finder",
     "record_id": "ocds-b5fd17-ed3243a1-ce56-433e-80ba-c3757f2ba949-1",
     "title": "DfT Provision of Legal Advice - Project Harrier",
     "suppliers": [
@@ -785,22 +769,6 @@
   },
   {
     "source": "UK Contracts Finder",
-    "record_id": "ocds-b5fd17-470fc06c-7304-4aaa-8640-c02e57e7cbd5-1",
-    "title": "Contract for the provision of financial and personal data license software requirements for criminal investigation purposes",
-    "suppliers": [
-      "EXPERIAN LIMITED"
-    ],
-    "buyer": "HAMPSHIRE AND ISLE OF WIGHT CONSTABULARY",
-    "award_date": "2025-10-20T00:00:00+01:00",
-    "amount": 722400,
-    "currency": "GBP",
-    "record_kind": "Historical award; total is not a unit price",
-    "source_urls": [
-      "https://www.contractsfinder.service.gov.uk/Notice/a93ecd7f-974a-45bc-bf11-be915dfedb2e"
-    ]
-  },
-  {
-    "source": "UK Contracts Finder",
     "record_id": "ocds-b5fd17-3b1ff55f-751a-458b-9f6a-11b052fa5e91-1",
     "title": "Lot 9 - 092 Brigg A18 Wrawby Road Toucan Installation",
     "suppliers": [
@@ -1357,22 +1325,6 @@
   },
   {
     "source": "UK Contracts Finder",
-    "record_id": "ocds-b5fd17-61698141-0907-4b18-a385-3d5056ea2733-1",
-    "title": "Lambeth Police Station - Lift refurbishment and renewal works",
-    "suppliers": [
-      "Coniston Limited"
-    ],
-    "buyer": "METROPOLITAN POLICE SERVICE",
-    "award_date": "2025-12-02T00:00:00Z",
-    "amount": 1512125.5,
-    "currency": "GBP",
-    "record_kind": "Historical award; total is not a unit price",
-    "source_urls": [
-      "https://www.contractsfinder.service.gov.uk/Notice/f13bab94-9521-4bce-8264-49166c9d6eef"
-    ]
-  },
-  {
-    "source": "UK Contracts Finder",
     "record_id": "ocds-b5fd17-197e7345-fefc-408a-abaf-6e5221424cc4-1",
     "title": "Microscope with imaging system",
     "suppliers": [
@@ -1621,22 +1573,6 @@
   },
   {
     "source": "UK Contracts Finder",
-    "record_id": "ocds-b5fd17-29237d7e-960d-43fa-93bd-8ae6d8e95030-1",
-    "title": "Norse-Cromer Hospital -AHU11 Replacement",
-    "suppliers": [
-      "Norse Commercial Services Limited"
-    ],
-    "buyer": "Norfolk and Norwich University Hospitals NHS Foundation Trust",
-    "award_date": "2025-11-20T00:00:00Z",
-    "amount": 232631,
-    "currency": "GBP",
-    "record_kind": "Historical award; total is not a unit price",
-    "source_urls": [
-      "https://www.contractsfinder.service.gov.uk/Notice/afbcdfc9-da41-4f18-a7ab-6c9c91271658"
-    ]
-  },
-  {
-    "source": "UK Contracts Finder",
     "record_id": "ocds-b5fd17-e2857443-0245-402b-abd4-fbff7259439c-1",
     "title": "Public Perceptions of Candidate Abuse and Intimidation",
     "suppliers": [
@@ -1781,7 +1717,7 @@
   {
     "source": "USAspending",
     "record_id": "CONT_AWD_DEAC0494AL85000_8900_-NONE-_-NONE-",
-    "title": null,
+    "title": "Description not provided in source",
     "suppliers": [
       "LOCKHEED MARTIN CORP"
     ],
@@ -2186,7 +2122,7 @@
   {
     "source": "USAspending",
     "record_id": "CONT_AWD_DEAC2701RV14136_8900_-NONE-_-NONE-",
-    "title": null,
+    "title": "Description not provided in source",
     "suppliers": [
       "BECHTEL NATIONAL, INC."
     ],
@@ -2426,7 +2362,7 @@
   {
     "source": "USAspending",
     "record_id": "CONT_AWD_FA861404C2004_9700_-NONE-_-NONE-",
-    "title": null,
+    "title": "Description not provided in source",
     "suppliers": [
       "THE BOEING COMPANY"
     ],
@@ -2606,7 +2542,7 @@
   {
     "source": "USAspending",
     "record_id": "CONT_AWD_N0002403C2101_9700_-NONE-_-NONE-",
-    "title": null,
+    "title": "Description not provided in source",
     "suppliers": [
       "ELECTRIC BOAT CORPORATION"
     ],
@@ -2846,7 +2782,7 @@
   {
     "source": "USAspending",
     "record_id": "CONT_AWD_N0001904C3146_9700_-NONE-_-NONE-",
-    "title": null,
+    "title": "Description not provided in source",
     "suppliers": [
       "THE BOEING COMPANY"
     ],
@@ -2936,7 +2872,7 @@
   {
     "source": "USAspending",
     "record_id": "CONT_AWD_FA862506C6456_9700_-NONE-_-NONE-",
-    "title": null,
+    "title": "Description not provided in source",
     "suppliers": [
       "LOCKHEED MARTIN CORP"
     ],
@@ -3176,7 +3112,7 @@
   {
     "source": "USAspending",
     "record_id": "CONT_AWD_N0001906C0081_9700_-NONE-_-NONE-",
-    "title": null,
+    "title": "Description not provided in source",
     "suppliers": [
       "SIKORSKY AIRCRAFT CORPORATION"
     ],
@@ -3191,7 +3127,7 @@
   {
     "source": "USAspending",
     "record_id": "CONT_AWD_0059_9700_DAAA0902D0007_9700",
-    "title": null,
+    "title": "Description not provided in source",
     "suppliers": [
       "KBR SERVICES, LLC"
     ],
