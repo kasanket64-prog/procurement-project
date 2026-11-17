@@ -1,6 +1,7 @@
 """Artificial fixed-schema preview checks; no buyer approvals or records."""
 import csv
 import json
+import shutil
 from pathlib import Path
 import subprocess
 import sys
@@ -16,6 +17,31 @@ from test_buyer_snapshot_check import NOW
 
 
 class ImportPreviewTests(unittest.TestCase):
+    @unittest.skipUnless(shutil.which('node'), 'Node is required for the workspace preview contract check')
+    def test_generated_source_previews_are_accepted_by_workspace(self):
+        script = '''
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const source=fs.readFileSync(process.argv[1],'utf8'),context=vm.createContext({});
+vm.runInContext(source.slice(source.indexOf('function parseReadiness('),source.indexOf('function renderReadiness(')),context);
+for(const report of JSON.parse(fs.readFileSync(0,'utf8')))
+  assert.equal(JSON.stringify(context.parseReadiness(JSON.stringify(report))),JSON.stringify(report));
+'''
+        with tempfile.TemporaryDirectory() as temp:
+            folder = Path(temp); readiness_tests.ReadinessTests().folder(folder)
+            reports = [preview(folder, NOW)]
+            path = folder / 'decision_signals.csv'
+            path.write_text('invalid-header\n')
+            reports.append(preview(folder, NOW))
+            path.unlink()
+            reports.append(preview(folder, NOW))
+            (folder / 'pilot_setup.csv').unlink()
+            reports.append(preview(folder, NOW))
+            self.assertEqual(reports[-1]['source_preview'], [])
+            template = Path(__file__).resolve().parents[1] / 'ml/procurement_platform_template.html'
+            result = subprocess.run([shutil.which('node'), '-e', script, str(template)],
+                                    input=json.dumps(reports), capture_output=True, encoding='utf-8', timeout=30)
+            self.assertEqual(result.returncode, 0, result.stderr)
+
     def test_valid_schema_and_pipeline_are_read_only_and_omit_private_values(self):
         with tempfile.TemporaryDirectory() as temp:
             folder = Path(temp); readiness_tests.ReadinessTests().folder(folder)

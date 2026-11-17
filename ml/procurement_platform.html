@@ -135,6 +135,17 @@ function parseReadiness(text){
   }else if(typeof stage.reason!=='string'||stage.reason.length>1000)throw new Error('Invalid reason');
  }
  if(blocked!==(report.status==='blocked'))throw new Error('Inconsistent result');
+ if(Object.hasOwn(report,'source_preview')){
+  const files=['order_snapshots.csv','receipt_events.csv','outcome_reviews.csv','decision_signals.csv'];
+  if(!Array.isArray(report.source_preview)||![0,4].includes(report.source_preview.length)||(report.source_preview.length===0&&!blocked))throw new Error('Invalid source preview');
+  for(const [i,item] of report.source_preview.entries()){
+   if(!item||item.file!==files[i]||!['passed','blocked'].includes(item.status)||!Array.isArray(item.expected_columns)||item.expected_columns.length<1||item.expected_columns.length>100||!item.expected_columns.every(key=>typeof key==='string'&&/^[a-z][a-z0-9_]{0,63}$/.test(key))||new Set(item.expected_columns).size!==item.expected_columns.length)throw new Error('Invalid source columns');
+   if(item.status==='blocked'&&(!blocked||typeof item.reason!=='string'||item.reason.length>1000))throw new Error('Invalid source failure');
+   if(Object.hasOwn(item,'exact_order')){
+    if(typeof item.exact_order!=='boolean'||!Array.isArray(item.missing_columns)||!item.missing_columns.every(key=>item.expected_columns.includes(key))||new Set(item.missing_columns).size!==item.missing_columns.length||!count(item.unexpected_column_count)||!count(item.duplicate_column_count)||item.exact_order!==(item.status==='passed')||(item.exact_order&&(item.missing_columns.length||item.unexpected_column_count||item.duplicate_column_count)))throw new Error('Inconsistent source counts');
+   }else if(item.status!=='blocked'||['missing_columns','unexpected_column_count','duplicate_column_count'].some(key=>Object.hasOwn(item,key)))throw new Error('Missing source counts');
+  }
+ }
  return report;
 }
 function renderReadiness(report){
@@ -145,6 +156,19 @@ function renderReadiness(report){
   if(stage.status!=='passed')a.append(n('p',stage.reason));
   for(const [key,value] of Object.entries(stage.status==='passed'?stage.summary:{}))a.append(n('p',key.replaceAll('_',' ')+': '+(typeof value==='object'?Object.entries(value).map(([label,count])=>label.replaceAll('_',' ')+': '+count).join(', '):value)));
  });
+ if(report.source_preview){
+  const notice=card('readiness-cards','READ-ONLY','Source-column preview');
+  notice.append(n('p','Supplied report mappings only; authenticity and freshness are unverified. Header matches do not validate rows or units. No batch is imported, accepted or partially admitted.'));
+  if(!report.source_preview.length)notice.append(n('p','Source preview skipped: resolve declared permission or setup first.'));
+  for(const item of report.source_preview){
+   const a=card('readiness-cards',item.status.toUpperCase(),item.file,item.status==='blocked'?'demo':'');
+   a.append(n('p',item.status==='passed'?'Header names and order match; review the validation stages above.':item.reason));
+   if(Object.hasOwn(item,'exact_order'))a.append(n('p','Missing: '+(item.missing_columns.join(', ')||'none')+' · Unexpected: '+item.unexpected_column_count+' · Duplicates: '+item.duplicate_column_count+' · Exact order: '+(item.exact_order?'yes':'no')));
+   const details=n('details','');details.append(n('summary','Required source → schema columns'));
+   const list=n('ul','');for(const key of item.expected_columns)list.append(n('li',key+' → '+key));
+   details.append(list);a.append(details);
+  }
+ }
  el('readiness-status').textContent='Imported preview · report checked at '+report.checked_at+' · '+(report.status==='blocked'?'Input checks blocked.':'Structural checks completed; human review required.');
 }
 let readinessImport=0;

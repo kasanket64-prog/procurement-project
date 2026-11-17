@@ -45,12 +45,45 @@ function previewDom(){
     value:'',textContent:'',children:[],replaceChildren(){this.children=[];},
   }]));
   const ui=vm.createContext({
-    el:id=>elements[id],n:(tag,text)=>({tag,text}),
+    el:id=>elements[id],n:(tag,text)=>({tag,text,children:[],append(...items){this.children.push(...items);}}),
     card:(id,badge,title)=>{const node={badge,title,children:[],append(...items){this.children.push(...items);}};elements[id].children.push(node);return node;},
   });
   vm.runInContext(source.slice(source.indexOf('function parseReadiness('),source.indexOf('let currentDemo=')),ui);
   return elements;
 }
+
+function sourceReport(){
+  return {...structuredClone(readiness),source_preview:['order_snapshots.csv','receipt_events.csv','outcome_reviews.csv','decision_signals.csv'].map(file=>({
+    file,status:'passed',expected_columns:['source_ref','known_at'],missing_columns:[],unexpected_column_count:0,duplicate_column_count:0,exact_order:true,
+  }))};
+}
+test('source preview validates supplied mappings and rejects malformed or inconsistent metadata',()=>{
+  assert.equal(context.parseReadiness(JSON.stringify(sourceReport())).source_preview.length,4);
+  for(const change of [
+    r=>{r.source_preview={};},r=>{r.source_preview=[];},r=>{r.source_preview.reverse();},
+    r=>{r.source_preview[0].expected_columns=['<script>'];},r=>{r.source_preview[0].expected_columns=['x','x'];},
+    r=>{r.source_preview[0].missing_columns=['invented'];},r=>{r.source_preview[0].unexpected_column_count=-1;},
+    r=>{r.source_preview[0].duplicate_column_count='0';},r=>{r.source_preview[0].exact_order=false;},
+    r=>{r.source_preview[0].missing_columns=['source_ref'];},r=>{delete r.source_preview[0].exact_order;},
+  ]){const report=sourceReport();change(report);assert.throws(()=>context.parseReadiness(JSON.stringify(report)));}
+});
+test('source preview renders blocked columns safely, clears and preserves legacy reports',async()=>{
+  const dom=previewDom(),report=sourceReport();
+  report.status='blocked';report.stages[2]={key:'labels',status:'blocked',reason:'Schema error'};
+  Object.assign(report.source_preview[3],{status:'blocked',reason:'<script>untrusted</script>',missing_columns:['known_at'],exact_order:false});
+  const open=r=>dom['readiness-file'].onchange({target:{files:[{size:100,text:async()=>JSON.stringify(r)}]}});
+  await open(report);
+  assert.equal(dom['readiness-cards'].children.length,8);
+  const last=dom['readiness-cards'].children[7];
+  assert.equal(last.children[0].text,'<script>untrusted</script>');
+  assert.match(last.children[1].text,/Missing: known_at/);
+  assert.equal(last.children[2].tag,'details');
+  dom['clear-readiness'].onclick();assert.equal(dom['readiness-cards'].children.length,0);
+  await open(readiness);assert.equal(dom['readiness-cards'].children.length,3);
+  report.source_preview=[];await open(report);
+  assert.equal(dom['readiness-cards'].children.length,4);
+  assert.match(dom['readiness-cards'].children[3].children[1].text,/skipped/);
+});
 test('preview handler renders a valid report, rejects invalid replacement and clears', async () => {
   const dom=previewDom();
   const open=report=>dom['readiness-file'].onchange({target:{files:[{size:100,text:async()=>JSON.stringify(report)}]}});
