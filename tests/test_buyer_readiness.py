@@ -34,6 +34,7 @@ class ReadinessTests(unittest.TestCase):
                 if fmt == 'json':
                     report = json.loads(output.getvalue())
                     self.assertEqual(report['status'], 'checks_complete')
+                    self.assertEqual(report['schema_version'], '1.0')
                     self.assertFalse(report['model_ready'])
                     self.assertFalse(report['purchase_authorized'])
                 else:

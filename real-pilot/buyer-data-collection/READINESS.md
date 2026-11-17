@@ -45,5 +45,19 @@ adapter remain necessary before training. Readiness is not a supplier risk score
 Checks read files sequentially at one check time; they are not a transactional
 snapshot. Do not edit inputs during a run, and rerun after any changes. There is
 no upload, persistent review queue, human acceptance storage, automatic correction,
-supplier scorecard or integration into the existing browser demo in this slice.
-Those remain separately scoped work. CLI and browser demo entry points are preserved.
+supplier scorecard or transactional source snapshot. Those remain separately scoped work.
+
+## Preview in the procurement workspace
+
+Generate a version 1.0 JSON report with `--format json`, save it privately, then
+open the workspace's **Evidence readiness** section and select that JSON file.
+The preview stays in the current page; it is not uploaded or persisted. Clear the
+preview or close the page when finished. Files over 1 MB, unsupported versions,
+inconsistent stages/counts or reports granting training/purchasing authority are
+rejected. UTF-8 BOMs from PowerShell exports are supported.
+
+The workspace does not rerun validators, authenticate the report, prove freshness
+or read the original evidence folder. The report's check time is displayed as
+supplied and is not an import time or freshness guarantee. Treat genuine report
+error text and aggregate counts as private. Older unversioned JSON reports must
+be regenerated. CLI and browser entry points remain available.
