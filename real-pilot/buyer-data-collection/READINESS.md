@@ -1,6 +1,7 @@
 # Buyer data readiness report
 
 For the separate read-only source-column preview, see [IMPORT-PREVIEW.md](IMPORT-PREVIEW.md).
+For private per-order history, see [ORDER-TIMELINE.md](ORDER-TIMELINE.md).
 
 This first phase-4 screen combines the existing snapshot, receipt and label
 checks into a read-only HTML report. It uses the same Python rules; it does not
