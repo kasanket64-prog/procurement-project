@@ -11,7 +11,8 @@ python -m unittest discover -s tests -p test_buyer_pipeline_cli.py -v
 ```
 
 The baseline at `5d20b673d39e0f78fdfb217a0f5cecb232e6714f` has 57 tests.
-The new integration test adds 21 scenario subtests and 63 subprocess executions
+The integration test includes the original 21 scenarios plus two UTC timestamp
+range regressions: 23 scenario subtests and 69 subprocess executions
 of the snapshot, receipt and delay-label CLI entry points. It reuses artificial
 fixture factories and the tracked blank CSV schemas. It freezes only each child
 process's clock at 14 November 2026, 12:00 UTC, so approval fixtures do not expire
@@ -21,7 +22,9 @@ Scenarios cover on-time, late, open and partial delivery; missing coverage;
 pre-deadline pending outcomes; rejection; reversal; pre/post-deadline cancellation;
 pre-release enrichment; corrections; pending approval; broken links; invalid receipt
 units; excess reversals; unapproved policy; repaired historical errors; invalid
-active values; missing historical provenance; and competing corrections.
+active values; missing historical provenance; competing corrections; and UTC
+underflow/overflow. Out-of-range UTC conversion must produce blocked JSON with
+exit 2 rather than an uncaught traceback; representable dates retain their meaning.
 
 Checks assert expected exit codes and JSON, no stderr, expected accepted balances
 and proposed labels, `model_ready=false`, and `purchase_authorized=false` on

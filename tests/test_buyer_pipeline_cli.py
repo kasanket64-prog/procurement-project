@@ -75,6 +75,10 @@ add('invalid_active_quantity_blocked',orders=[snapshot(original_promise_date='20
 add('superseded_bad_provenance_blocked',orders=[dict(old_invalid,source_ref=''),fixed],exits=(2,2,2),label=None)
 fork=dict(fixed,snapshot_id='fork')
 add('competing_corrections_with_old_error_blocked',orders=[old_invalid,fixed,fork],exits=(2,2,2),label=None)
+for name, value in [('utc_underflow', '0001-01-01T00:00:00+14:00'),
+                    ('utc_overflow', '9999-12-31T23:59:59-14:00')]:
+    add(name, orders=[snapshot(original_promise_date='2026-11-10', known_at=value)],
+        exits=(2,2,2), label=None)
 
 
 class BuyerPipelineCliTests(unittest.TestCase):

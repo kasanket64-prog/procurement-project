@@ -45,7 +45,10 @@ def timestamp(value, label):
         raise DataError(f'{label}: expected ISO timestamp with timezone') from None
     if result.tzinfo is None:
         raise DataError(f'{label}: timezone required')
-    return result.astimezone(timezone.utc)
+    try:
+        return result.astimezone(timezone.utc)
+    except (OverflowError, ValueError):
+        raise DataError(f'{label}: timestamp is outside the supported UTC range') from None
 
 
 def day(value, label):

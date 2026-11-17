@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from buyer_snapshot_check import check_snapshots, check_folder, TEMPLATES
 from buyer_receipts import reconcile_receipts, reconcile_folder
 from buyer_delay_labels import label_delays, label_folder
-from real_procurement import DataError
+from real_procurement import DataError, timestamp
 from test_buyer_snapshot_check import snapshot, setup, NOW
 from test_buyer_receipts import receipt
 from test_buyer_delay_labels import policy, review
@@ -38,6 +38,22 @@ def stages(rows):
 
 
 class BuyerSnapshotCorrectionTests(unittest.TestCase):
+    def test_representable_utc_boundaries_and_offsets_still_parse(self):
+        for value, expected in [
+            ('0001-01-01T00:00:00Z', '0001-01-01T00:00:00+00:00'),
+            ('9999-12-31T23:59:59Z', '9999-12-31T23:59:59+00:00'),
+            ('2026-11-02T15:30:00+05:30', '2026-11-02T10:00:00+00:00'),
+        ]:
+            with self.subTest(value=value):
+                self.assertEqual(timestamp(value, 'test.time').isoformat(), expected)
+
+    def test_unrepresentable_utc_snapshot_times_block_all_stages(self):
+        for value in ('0001-01-01T00:00:00+14:00', '9999-12-31T23:59:59-14:00'):
+            rows = [snapshot(original_promise_date='2026-11-10', known_at=value)]
+            for index, stage in enumerate(stages(rows)):
+                with self.subTest(value=value, stage=index), self.assertRaises(DataError):
+                    stage()
+
     def test_invalid_superseded_business_values_are_repaired_across_stages(self):
         for changes in BUSINESS_ERRORS:
             original=snapshot(original_promise_date='2026-11-10');original.update(changes)
