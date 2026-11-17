@@ -228,7 +228,8 @@ def label_delays(snapshots, receipts, reviews, signals, setup, policy, as_of):
                             'labels require human acceptance; nonzero grace and material scope changes are unsupported']}
 
 
-def label_folder(folder, as_of):
+def load_pilot_evidence(folder, as_of):
+    """Load the existing fixed-schema evidence after setup, snapshot and policy gates."""
     setup, snapshots = load_pilot_snapshots(folder, as_of)
     active_snapshots(snapshots, setup, as_of)
     folder = Path(folder).resolve()
@@ -242,7 +243,11 @@ def label_folder(folder, as_of):
         with (TEMPLATES / f'{name}.csv').open(encoding='utf-8-sig', newline='') as stream:
             headers = next(csv.reader(stream))
         tables.append(read_csv(folder / f'{name}.csv', headers))
-    return label_delays(snapshots, *tables, setup, policy, as_of)
+    return snapshots, *tables, setup, policy
+
+
+def label_folder(folder, as_of):
+    return label_delays(*load_pilot_evidence(folder, as_of), as_of)
 
 
 def main():
