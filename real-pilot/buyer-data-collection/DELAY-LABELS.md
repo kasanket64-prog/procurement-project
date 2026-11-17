@@ -117,5 +117,5 @@ negative training labels. Human approval of labels, source/coverage checks, a
 reviewed modelling adapter and a frozen evaluation protocol remain separate gates.
 Tests use only artificial temporary fixtures, never genuine buyer data.
 
-See [repeatable Phase 2 integration checks](TESTING.md) for the 21-scenario,
-63-subprocess regression matrix and its fixed test-clock and authority limits.
+See [repeatable Phase 2 integration checks](TESTING.md) for the regression matrix
+and its fixed test-clock and authority limits.

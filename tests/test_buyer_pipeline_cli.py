@@ -39,11 +39,12 @@ cases = []
 
 
 def add(name, *, orders=None, receipts=None, reviews=None, signals=None, settings=None,
-        rules=None, exits=(0,0,0), label='late', net='4'):
+        rules=None, exits=(0,0,0), label='late', net='4', file_changes=None):
     cases.append(dict(name=name, orders=orders if orders is not None else [snapshot(original_promise_date='2026-11-10')],
                       receipts=receipts if receipts is not None else [receipt()],
                       reviews=reviews if reviews is not None else [review()], signals=signals or [],
-                      settings=settings or setup(), rules=rules or policy(), exits=exits, label=label, net=net))
+                      settings=settings or setup(), rules=rules or policy(), exits=exits, label=label, net=net,
+                      file_changes=file_changes or {}))
 
 
 add('partial_overdue_confirmed')
@@ -75,6 +76,22 @@ add('invalid_active_quantity_blocked',orders=[snapshot(original_promise_date='20
 add('superseded_bad_provenance_blocked',orders=[dict(old_invalid,source_ref=''),fixed],exits=(2,2,2),label=None)
 fork=dict(fixed,snapshot_id='fork')
 add('competing_corrections_with_old_error_blocked',orders=[old_invalid,fixed,fork],exits=(2,2,2),label=None)
+for name, value in [('utc_underflow', '0001-01-01T00:00:00+14:00'),
+                    ('utc_overflow', '9999-12-31T23:59:59-14:00')]:
+    add(name, orders=[snapshot(original_promise_date='2026-11-10', known_at=value)],
+        exits=(2,2,2), label=None)
+for name, exits in [('pilot_setup.csv', (2,2,2)), ('order_snapshots.csv', (2,2,2)),
+                    ('receipt_events.csv', (0,2,2)), ('outcome_reviews.csv', (0,0,2)),
+                    ('decision_signals.csv', (0,0,2)), ('label_policy.json', (0,0,2))]:
+    add('missing_' + name, file_changes={name: None}, exits=exits, label=None)
+add('invalid_receipt_encoding', file_changes={'receipt_events.csv': b'\xff\xff'},
+    exits=(0,2,2), label=None)
+add('wrong_receipt_headers', file_changes={'receipt_events.csv': b'private-fixture-header\n'},
+    exits=(0,2,2), label=None)
+add('malformed_policy_json', file_changes={'label_policy.json': b'{private-fixture-value'},
+    exits=(0,0,2), label=None)
+add('duplicate_policy_keys', file_changes={'label_policy.json': b'{"policy_id":"a","policy_id":"b"}'},
+    exits=(0,0,2), label=None)
 
 
 class BuyerPipelineCliTests(unittest.TestCase):
@@ -98,6 +115,11 @@ class BuyerPipelineCliTests(unittest.TestCase):
                         writer.writeheader()
                         writer.writerows(rows)
                 (folder / 'label_policy.json').write_text(json.dumps(case['rules']), encoding='utf-8')
+                for name, content in case['file_changes'].items():
+                    if content is None:
+                        (folder / name).unlink()
+                    else:
+                        (folder / name).write_bytes(content)
                 before = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in folder.iterdir()}
                 for command, expected in zip(commands, case['exits']):
                     with self.subTest(command=command):
@@ -109,6 +131,7 @@ class BuyerPipelineCliTests(unittest.TestCase):
                         report = json.loads(completed.stdout)
                         self.assertIs(report['model_ready'], False)
                         self.assertNotIn('test-only-source', completed.stdout)
+                        self.assertNotIn('private-fixture', completed.stdout)
                         if expected == 2:
                             self.assertEqual(report['status'], 'blocked')
                         else:
