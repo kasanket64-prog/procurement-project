@@ -20,6 +20,7 @@ from procurement_ai import (  # noqa: E402
     simulate,
     unit_budget,
 )
+from procurement_risk import SupplierHistoryRisk  # noqa: E402
 
 
 class WhatIfSimulationTests(unittest.TestCase):
@@ -140,6 +141,49 @@ class WhatIfSimulationTests(unittest.TestCase):
         self.assertEqual(
             comparison.set_index("Supplier ID").loc["A", "Rank change"], "Down 1"
         )
+
+    def test_real_history_risk_and_inputs_stay_fixed_across_scenarios(self):
+        root = Path(__file__).resolve().parents[1]
+        items = pd.read_csv(root / "dataset/supplier_items.csv")
+        model = SupplierHistoryRisk(
+            pd.read_csv(root / "dataset/procurement.csv"), self.today
+        )
+        request = deepcopy(self.request)
+        request.update(
+            product=items.iloc[0]["item"], total_budget=None,
+            business_unit=model.options["business_unit"][0],
+            payment_terms=model.options["payment_terms"][0],
+        )
+        original = deepcopy(request)
+        items_before = items.copy(deep=True)
+        history_before = model.history.copy(deep=True)
+        baseline = recommend_suppliers(
+            items, model.history, model, request, self.today
+        )
+        self.assertGreater(len(baseline), 1)
+        baseline_before = baseline.copy(deep=True)
+        scenarios = (
+            ("quantity", 20.0), ("delivery_days", 14),
+            ("priorities", "Price"),
+            ("total_budget", float(baseline["avg_unit_price"].min()) * 10),
+        )
+        for field, value in scenarios:
+            with self.subTest(field=field):
+                scenario, result = simulate(
+                    request, field, value, items, model.history, model, self.today
+                )
+                self.assertFalse(result.empty)
+                self.assertEqual(scenario["quantity"], 20.0 if field == "quantity" else 10.0)
+                if field == "total_budget":
+                    self.assertLess(len(result), len(baseline))
+                comparison = compare_results(baseline, result)
+                retained = comparison[comparison["What-if rank"] != "N/A"]
+                self.assertEqual(len(retained), len(result))
+                self.assertTrue((retained["Original risk %"] == retained["What-if risk %"]).all())
+                self.assertEqual(request, original)
+                pd.testing.assert_frame_equal(items, items_before)
+                pd.testing.assert_frame_equal(model.history, history_before)
+                pd.testing.assert_frame_equal(baseline, baseline_before)
 
 
 if __name__ == "__main__":
