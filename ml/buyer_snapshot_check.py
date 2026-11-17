@@ -144,8 +144,8 @@ def active_snapshots(rows, setup, as_of):
     return {row['order_line_id']: row for row in rows if row['snapshot_id'] not in replaced}
 
 
-def load_pilot_snapshots(folder, as_of):
-    """Share external-folder/approval/schema checks with receipt reconciliation."""
+def load_pilot_setup(folder, as_of):
+    """Check the external folder and declared permission before reading business records."""
     folder = Path(folder).resolve()
     if folder.is_relative_to(ROOT.resolve()):
         raise DataError('Use a buyer-approved working folder outside the repository; keep tracked templates blank')
@@ -156,9 +156,15 @@ def load_pilot_snapshots(folder, as_of):
         raise DataError('pilot_setup: missing, duplicate or unexpected setup fields')
     setup = {row['field']: row['buyer_value'] for row in setup_rows}
     check_approval(setup, as_of)
+    return setup
+
+
+def load_pilot_snapshots(folder, as_of):
+    """Share external-folder/approval/schema checks with receipt reconciliation."""
+    setup = load_pilot_setup(folder, as_of)
     with (TEMPLATES / 'order_snapshots.csv').open(encoding='utf-8-sig', newline='') as stream:
         headers = next(csv.reader(stream))
-    return setup, read_csv(folder / 'order_snapshots.csv', headers)
+    return setup, read_csv(Path(folder).resolve() / 'order_snapshots.csv', headers)
 
 
 def check_folder(folder, as_of):
