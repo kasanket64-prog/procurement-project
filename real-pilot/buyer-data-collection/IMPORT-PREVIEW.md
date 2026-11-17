@@ -42,7 +42,10 @@ evidence timelines, human acceptance and controlled exports remain pending.
 The check time is not a freshness guarantee. Files are read sequentially; do not
 edit during a run, and rerun after changes. Genuine errors/counts remain private.
 
-The existing workspace JSON reader can display the three validation stages of
-this report; it does not display the new source-column section. Use the standalone
-HTML for that section. Workspace integration and full FR27/AT15 acceptance remain
-separate work. This command adds no runtime dependencies.
+The workspace's Evidence readiness section accepts the JSON report and displays
+both validation stages and source-column cards with expandable required mappings.
+Clear report preview removes both. Reports without the optional source-column
+section continue to show their validation stages. Malformed or inconsistent source
+metadata is rejected. Imported mappings remain supplied, unverified report text;
+the browser does not inspect source CSVs or rerun Python validation.
+Full FR27/AT15 acceptance remains pending. This command adds no runtime dependencies.
