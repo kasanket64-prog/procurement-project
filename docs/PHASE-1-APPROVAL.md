@@ -10,7 +10,7 @@ platform, grant buyer-data permission or authorise a merge.
 | Material | Review baseline | What to open |
 |---|---|---|
 | SRS v0.3, PDF and architecture | PR #6, `4afa82d9100d8b6d8097458f83b5f8c390bcad10` | [SRS](https://github.com/kasanket64-prog/procurement-project/blob/4afa82d9100d8b6d8097458f83b5f8c390bcad10/docs/SRS.md), [PDF](https://github.com/kasanket64-prog/procurement-project/blob/4afa82d9100d8b6d8097458f83b5f8c390bcad10/docs/SRS.pdf), [architecture](https://github.com/kasanket64-prog/procurement-project/blob/4afa82d9100d8b6d8097458f83b5f8c390bcad10/docs/ARCHITECTURE.md) |
-| Ten-phase roadmap | Updated roadmap in PR #6 at the same commit; earlier PR #5 overlaps | [Roadmap](https://github.com/kasanket64-prog/procurement-project/blob/4afa82d9100d8b6d8097458f83b5f8c390bcad10/ROADMAP.md) |
+| Ten-phase roadmap | PR #6 progress reconciliation at `da1cad36870a2f83a1129ee6df318eda217b821a`; SRS unchanged; earlier PR #5 overlaps | [Roadmap](https://github.com/kasanket64-prog/procurement-project/blob/da1cad36870a2f83a1129ee6df318eda217b821a/ROADMAP.md) |
 | Tracking guide | PR #18, `1a905f6504c71bc0ab206113a167f00cae0055e6` | [Guide including the checklist link and PR #18 phase index](https://github.com/kasanket64-prog/procurement-project/blob/1a905f6504c71bc0ab206113a167f00cae0055e6/docs/PHASE-TRACKING.md) |
 | Issue and PR templates | PR #17, `92d0120081d4b8a0bae8e20ee516cb22412df0a7` | [Issue forms](https://github.com/kasanket64-prog/procurement-project/tree/92d0120081d4b8a0bae8e20ee516cb22412df0a7/.github/ISSUE_TEMPLATE), [PR template](https://github.com/kasanket64-prog/procurement-project/blob/92d0120081d4b8a0bae8e20ee516cb22412df0a7/.github/PULL_REQUEST_TEMPLATE.md) |
 | Live phase board | Not versioned by Git; recheck at sign-off | [Board](https://github.com/users/kasanket64-prog/projects/1), [phase-1 issue #7](https://github.com/kasanket64-prog/procurement-project/issues/7) |
@@ -82,6 +82,10 @@ only if the reviewer accepts the named blocking gates above. No universal minimu
 training sample or promised model accuracy is established by this checklist.
 
 ## 5. Known verification and remaining limits
+
+The [17 November technical re-review](PHASE-1-2-REVIEW.md) records new structural
+checks and Phase 2 regression results. It is supporting evidence only; all 22
+worksheet decisions and both sign-offs remain pending.
 
 - Prior technical checks at the pinned SRS baseline found 45 FR, 15 NFR and
   33 AT identifiers, 13 valid local links and three parseable/rendered Mermaid
