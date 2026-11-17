@@ -22,13 +22,14 @@ main{padding:24px 28px 48px}.workflow{display:flex;gap:24px;padding:0;margin:0 0
 #web-links a{border:1px solid #c7d8d2;padding:8px 12px;background:#f6faf7;border-radius:7px;text-decoration:none;font-size:13px}#web-discovery{margin-top:22px}footer{border-top:1px solid var(--line);margin-top:30px;padding-top:16px}footer p{font-size:12px}
 @media(max-width:650px){.masthead{padding:14px 18px}.local-status{font-size:10px}header{padding:26px 18px}main{padding:20px 16px}.workflow{gap:12px;font-size:11px}.workflow li{gap:5px}.workflow span{width:20px;height:20px}.panel,article{padding:18px}#search-form>.grid,.demo-settings .grid{grid-template-columns:1fr}.what-if{padding:16px}.what-if .actions{align-items:stretch}.what-if button{width:100%}.what-if a{margin:4px 0}.metric{font-size:23px}.actions>.examples{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{scroll-behavior:auto!important}}
+.result-grid.timeline{grid-template-columns:1fr}.timeline article{border-left:4px solid #c6e5d7}.timeline summary{font-weight:650}summary:focus-visible{outline:3px solid #dfac42;outline-offset:2px}
 </style></head><body>
 <a class="skip" href="#product">Skip to requirement</a><div class="masthead"><div class="brand"><span class="brand-mark" aria-hidden="true">P</span>Procurement workspace</div><span class="local-status">Local workspace · Prototype</span></div><header><div class="eyebrow">SOURCE WITH CLARITY</div><h1>From requirement to supplier shortlist.</h1><p>Explore supplier leads, compare demo scenarios and prepare a request for quotation — in one workspace.</p></header>
-<main><ol class="workflow" aria-label="Procurement workflow"><li><span>1</span>Define requirement</li><li><span>2</span>Compare options</li><li><span>3</span>Prepare request</li></ol><section class="panel" id="readiness"><details><summary><strong>Evidence readiness</strong> — open a local report</summary>
-<p>Preview the JSON report produced by the buyer readiness command. This reads an existing report; it does not rerun evidence validation.</p>
+<main><ol class="workflow" aria-label="Procurement workflow"><li><span>1</span>Define requirement</li><li><span>2</span>Compare options</li><li><span>3</span>Prepare request</li></ol><section class="panel" id="readiness"><details><summary><strong>Evidence review</strong> — readiness and order timelines</summary>
+<p>Preview readiness, source-column or order-timeline JSON reports. This reads an existing report; it does not rerun evidence validation.</p>
 <p class="note">Local preview only. Report authenticity and freshness are unverified. Human review is required; training and purchasing remain unauthorized. Treat genuine reports as private.</p>
-<label for="readiness-file">Readiness report (.json, up to 1 MB)</label><input id="readiness-file" type="file" accept=".json,application/json" aria-describedby="readiness-help">
-<p class="muted" id="readiness-help">The selected file stays in this page. No upload, storage or supplier communication occurs. Generate it with the read-only buyer readiness command using --format json.</p>
+<label for="readiness-file">Evidence report (.json, up to 1 MB)</label><input id="readiness-file" type="file" accept=".json,application/json" aria-describedby="readiness-help">
+<p class="muted" id="readiness-help">The selected file stays in this page. No upload, storage or supplier communication occurs. Generate readiness or order-timeline reports with the read-only commands using --format json.</p>
 <div class="actions"><button type="button" class="secondary" id="clear-readiness">Clear report preview</button></div>
 <p id="readiness-status" role="status" aria-live="polite">No report selected.</p><p id="readiness-error" class="error" role="alert"></p><div id="readiness-cards" class="result-grid"></div>
 </details></section><section class="panel"><h2>What are you sourcing?</h2><p class="panel-intro">Start with a product, then narrow your search. Add filters or demo scenario inputs when you need them.</p><form id="search-form"><div class="grid">
@@ -148,7 +149,65 @@ function parseReadiness(text){
  }
  return report;
 }
+function parseTimeline(text){
+ if(text.length>1048576)throw new Error('Report too large');
+ const r=JSON.parse(text.replace(/^\uFEFF/,'')),str=(v,max=1000)=>typeof v==='string'&&v.length<=max;
+ const clock=v=>str(v,40)&&/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?(?:Z|[+-]\d{2}:\d{2})$/.test(v)&&Number.isFinite(Date.parse(v))&&new Date(v.slice(0,19)+'Z').toISOString().slice(0,19)===v.slice(0,19);
+ if(!r||r.schema_version!=='1.0'||r.report_kind!=='order_timeline'||r.model_ready!==false||r.purchase_authorized!==false||r.human_review_required!==true||!Array.isArray(r.events)||r.events.length>1000)throw new Error('Unsupported timeline');
+ if(r.status==='blocked'){
+  if(r.events.length||Object.hasOwn(r,'order_line_id')||!str(r.reason))throw new Error('Invalid blocked timeline');
+  return r;
+ }
+ if(r.status!=='timeline_available'||!str(r.order_line_id,200)||!r.order_line_id||!clock(r.checked_at)||!r.events.length)throw new Error('Invalid timeline');
+ const fields={snapshot:['quantity','unit','original_promise_date','snapshot_status'],receipt:['quantity','unit'],signal:['verification'],review:['delivery_status','label','coverage_confirmed']},index=new Map();
+ let previous=-Infinity;
+ for(const e of r.events){
+  if(!e||!str(e.kind,80))throw new Error('Invalid event');
+  const [family,type]=e.kind.split(':');
+  if(!Object.hasOwn(fields,family)||(family==='receipt'?!['accepted','rejected','reversal'].includes(type):family==='signal'?!['acknowledgement','stock_commitment','capacity_commitment','dispatch_milestone','disruption','quantity_change','specification_change','cancellation'].includes(type):e.kind!==family)||e.kind.split(':').length>2)throw new Error('Invalid event kind');
+  if(!str(e.record_id,200)||!e.record_id||!str(e.source_ref,2000)||!e.source_ref||!str(e.supersedes_id,200)||!str(e.reverses_event_id,200)||typeof e.superseded!=='boolean'||![e.event_at,e.known_at,e.captured_at].every(clock)||!e.details||Array.isArray(e.details)||Object.keys(e.details).length!==fields[family].length||!fields[family].every(k=>Object.hasOwn(e.details,k)&&str(e.details[k])))throw new Error('Invalid event fields');
+  const time=Date.parse(e.event_at),known=Date.parse(e.known_at),captured=Date.parse(e.captured_at);
+  if(time<previous||captured>Date.parse(r.checked_at)||captured<Math.max(time,known)||(family==='snapshot'?known>time:time>known))throw new Error('Invalid event clocks');
+  previous=time;
+  const key=family+':'+e.record_id;if(index.has(key))throw new Error('Duplicate event');index.set(key,e);
+  if((family==='receipt'&&e.supersedes_id)||(family!=='receipt'&&e.reverses_event_id)||(family==='receipt'&&(type==='reversal')!==Boolean(e.reverses_event_id)))throw new Error('Invalid event link');
+ }
+ const replaced=new Set();
+ for(const [key,e] of index){
+  const family=e.kind.split(':')[0];
+  if(e.supersedes_id){
+   const parent=family+':'+e.supersedes_id,p=index.get(parent);
+   if(!p||p.kind!==e.kind||replaced.has(parent)||(family!=='snapshot'&&Date.parse(e.known_at)<Date.parse(p.known_at))||Date.parse(e.captured_at)<Date.parse(p.captured_at))throw new Error('Invalid predecessor');
+   replaced.add(parent);
+   const seen=new Set([key]);let cursor=parent;
+   while(cursor){if(seen.has(cursor))throw new Error('Cyclic history');seen.add(cursor);const row=index.get(cursor);cursor=row&&row.supersedes_id?family+':'+row.supersedes_id:null;}
+  }
+  if(e.reverses_event_id){const p=index.get('receipt:'+e.reverses_event_id);if(!p||p.kind!=='receipt:accepted'||Date.parse(e.event_at)<Date.parse(p.event_at)||Date.parse(e.known_at)<Date.parse(p.known_at))throw new Error('Invalid reversal');}
+ }
+ for(const [key,e] of index)if(e.superseded!==replaced.has(key))throw new Error('Invalid superseded marker');
+ return r;
+}
+function renderTimeline(report){
+ el('readiness-cards').className='result-grid timeline';
+ el('readiness-cards').replaceChildren();
+ if(report.status==='blocked'){
+  card('readiness-cards','BLOCKED','Order timeline unavailable','demo').append(n('p',report.reason));
+  el('readiness-status').textContent='Imported blocked timeline · no events loaded.';return;
+ }
+ const notice=card('readiness-cards','PRIVATE · UNVERIFIED','Order line: '+report.order_line_id);
+ notice.append(n('p','Declared sources only. Historical errors are preserved; corrections do not erase originals. Review labels are not accepted training labels. Not superseded does not mean a receipt remains accepted.'));
+ notice.append(n('p','Event-time order is not causation. Snapshot event time is original placement; later capture identifies corrections. Promise changes are unsupported. No source is opened, record changed or purchase authorized.'));
+ for(const e of report.events){
+  const a=card('readiness-cards',e.superseded?'SUPERSEDED HISTORY':'RECORDED EVENT',e.kind+' · '+e.record_id);
+  a.append(n('p','Event: '+e.event_at));
+  const details=n('details','');details.append(n('summary','Evidence and correction links'));
+  for(const [key,value] of Object.entries({...e.details,known_at:e.known_at,captured_at:e.captured_at,source_ref:e.source_ref,supersedes_id:e.supersedes_id||'none',reverses_event_id:e.reverses_event_id||'none'}))details.append(n('p',key.replaceAll('_',' ')+': '+value));
+  a.append(details);
+ }
+ el('readiness-status').textContent='Imported timeline preview · report checked at '+report.checked_at+' · '+report.events.length+' recorded events · human review required.';
+}
 function renderReadiness(report){
+ el('readiness-cards').className='result-grid';
  const titles=['Order snapshots','Receipt reconciliation','Delay label proposals'];
  el('readiness-cards').replaceChildren();
  report.stages.forEach((stage,i)=>{
@@ -179,12 +238,13 @@ el('readiness-file').onchange=async event=>{
  el('readiness-status').textContent='Reading local report…';
  try{
   if(file.size>1048576)throw new Error('Report too large');
-  const report=parseReadiness(await file.text());
-  if(sequence===readinessImport)renderReadiness(report);
+  const text=await file.text(),timeline=JSON.parse(text.replace(/^\uFEFF/,'')).report_kind==='order_timeline';
+  const report=timeline?parseTimeline(text):parseReadiness(text);
+  if(sequence===readinessImport)(timeline?renderTimeline:renderReadiness)(report);
  }catch{
   if(sequence!==readinessImport)return;
   el('readiness-status').textContent='No report loaded.';
-  el('readiness-error').textContent='Cannot preview this file. Use a version 1.0 readiness JSON report up to 1 MB; training and purchasing must remain unauthorized.';
+  el('readiness-error').textContent='Cannot preview this file. Use a version 1.0 evidence JSON report up to 1 MB; training and purchasing must remain unauthorized.';
  }
 };
 el('clear-readiness').onclick=()=>{++readinessImport;el('readiness-file').value='';el('readiness-cards').replaceChildren();el('readiness-error').textContent='';el('readiness-status').textContent='No report selected.';};

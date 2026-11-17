@@ -42,7 +42,7 @@ evidence timelines, human acceptance and controlled exports remain pending.
 The check time is not a freshness guarantee. Files are read sequentially; do not
 edit during a run, and rerun after changes. Genuine errors/counts remain private.
 
-The workspace's Evidence readiness section accepts the JSON report and displays
+The workspace's Evidence review section accepts the JSON report and displays
 both validation stages and source-column cards with expandable required mappings.
 Clear report preview removes both. Reports without the optional source-column
 section continue to show their validation stages. Malformed or inconsistent source

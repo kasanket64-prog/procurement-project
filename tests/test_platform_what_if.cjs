@@ -57,6 +57,35 @@ function sourceReport(){
     file,status:'passed',expected_columns:['source_ref','known_at'],missing_columns:[],unexpected_column_count:0,duplicate_column_count:0,exact_order:true,
   }))};
 }
+function timelineReport(){
+ return {schema_version:'1.0',report_kind:'order_timeline',status:'timeline_available',order_line_id:'line',checked_at:readiness.checked_at,model_ready:false,purchase_authorized:false,human_review_required:true,events:[
+  {kind:'receipt:accepted',record_id:'accept',event_at:'2026-11-05T00:00:00Z',known_at:'2026-11-06T00:00:00Z',captured_at:'2026-11-07T00:00:00Z',source_ref:'<script>private</script>',supersedes_id:'',reverses_event_id:'',superseded:false,details:{quantity:'4',unit:'each'}},
+  {kind:'receipt:reversal',record_id:'undo',event_at:'2026-11-09T00:00:00Z',known_at:'2026-11-10T00:00:00Z',captured_at:'2026-11-11T00:00:00Z',source_ref:'source',supersedes_id:'',reverses_event_id:'accept',superseded:false,details:{quantity:'2',unit:'each'}},
+ ]};
+}
+test('timeline parser validates authority, clocks, identities and history links',()=>{
+ assert.equal(context.parseTimeline('\uFEFF'+JSON.stringify(timelineReport())).events.length,2);
+ for(const change of [r=>{r.model_ready=true;},r=>{r.events.reverse();},r=>{r.events[1].reverses_event_id='missing';},r=>{r.events[0].superseded=true;},r=>{r.events[0].kind='invented';},r=>{r.events[0].known_at='2026-02-30T00:00:00Z';},r=>{r.events[0].captured_at='2027-01-01T00:00:00Z';},r=>{r.events[0].details.extra='private';},r=>{r.events[0].supersedes_id='accept';},r=>{r.events.push(r.events[1]);}]){
+  const r=timelineReport();change(r);assert.throws(()=>context.parseTimeline(JSON.stringify(r)));
+ }
+ assert.throws(()=>context.parseTimeline(' '.repeat(1048577)));
+});
+test('timeline import renders text and links, rejects invalid replacement and clears',async()=>{
+ const dom=previewDom(),r=timelineReport();
+ const open=report=>dom['readiness-file'].onchange({target:{files:[{size:100,text:async()=>JSON.stringify(report)}]}});
+ await open(r);assert.equal(dom['readiness-cards'].children.length,3);
+ assert.match(dom['readiness-status'].textContent,/2 recorded events/);
+ const accepted=dom['readiness-cards'].children[1].children[1];
+ assert.equal(accepted.tag,'details');assert(accepted.children.some(p=>p.text==='source ref: <script>private</script>'));
+ const reversed=dom['readiness-cards'].children[2].children[1];
+ assert(reversed.children.some(p=>p.text==='reverses event id: accept'));
+ r.events[1].reverses_event_id='missing';await open(r);
+ assert.equal(dom['readiness-cards'].children.length,0);assert.match(dom['readiness-error'].textContent,/Cannot preview/);
+ const blocked={schema_version:'1.0',report_kind:'order_timeline',status:'blocked',reason:'Setup blocked',events:[],model_ready:false,purchase_authorized:false,human_review_required:true};
+ await open(blocked);assert.equal(dom['readiness-cards'].children.length,1);
+ blocked.order_line_id='private';await open(blocked);assert.equal(dom['readiness-cards'].children.length,0);
+ await open(timelineReport());dom['clear-readiness'].onclick();assert.equal(dom['readiness-cards'].children.length,0);
+});
 test('source preview validates supplied mappings and rejects malformed or inconsistent metadata',()=>{
   assert.equal(context.parseReadiness(JSON.stringify(sourceReport())).source_preview.length,4);
   for(const change of [

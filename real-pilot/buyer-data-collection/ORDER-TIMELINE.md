@@ -42,9 +42,19 @@ reviewer IDs or free-text signal/dispute descriptions are added to the timeline.
 Permission and authenticity remain declared, not authenticated; coverage still
 needs human review. All outputs retain model_ready=false and purchase_authorized=false.
 
-This is partial FR28/AT16 work: promise-event changes, a workspace timeline reader,
-source authentication, human review decisions, controlled exports and full buyer
-acceptance are not implemented. The workspace readiness reader does not accept
-timeline JSON. Load the standalone HTML locally instead. Input files are read in
+The workspace Evidence review section now also accepts version 1.0 timeline
+JSON with report_kind=order_timeline. It shows recorded events with expandable
+evidence/correction links, or a blocked reason with no events. Clear removes the
+whole preview. Data remains private to the page, without upload or persistence.
+Regenerate older timeline JSON without report_kind. The reader bounds reports to
+1 MB, 1,000 events, 200-character record IDs and order key, 2,000-character source
+references and 1,000-character detail values. Larger reports need the standalone
+HTML workflow or a separately reviewed paging design; do not truncate sources.
+The browser checks report structure, clocks and links, not source truth or the
+full Python business rules. Imported history is explicitly unverified.
+
+This is partial FR28/AT16 work: promise-event changes, source authentication,
+human review decisions, controlled exports and full buyer acceptance remain pending.
+Standalone HTML remains available. Input files are read in
 sequence, not as an atomic filesystem snapshot; avoid edits during the run and
 rerun after changes. Blocked reports contain no events or selected order-line key.

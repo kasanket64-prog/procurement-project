@@ -1,6 +1,7 @@
 """Artificial order history only; no buyer records or genuine acceptance."""
 import copy
 import json
+import shutil
 from pathlib import Path
 import subprocess
 import sys
@@ -18,6 +19,28 @@ import test_buyer_readiness as readiness_fixtures
 
 
 class OrderTimelineTests(unittest.TestCase):
+    @unittest.skipUnless(shutil.which('node'), 'Node is required for the workspace timeline contract check')
+    def test_generated_timelines_are_accepted_by_workspace_reader(self):
+        script = '''
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const source=fs.readFileSync(process.argv[1],'utf8'),context=vm.createContext({});
+vm.runInContext(source.slice(source.indexOf('function parseReadiness('),source.indexOf('function renderReadiness(')),context);
+for(const report of JSON.parse(fs.readFileSync(0,'utf8')))
+ assert.equal(JSON.stringify(context.parseTimeline(JSON.stringify(report))),JSON.stringify(report));
+'''
+        original = snapshot(original_promise_date='2026-11-10', quantity='bad-original')
+        corrected = snapshot('fixed', original_promise_date='2026-11-10', supersedes_id='snapshot-1',
+                             known_at='2026-11-02T08:00:00Z', captured_at='2026-11-04T09:00:00Z')
+        report = self.result(snapshots=[corrected, original], receipts=[receipt(),
+                             later('undo', event_type='reversal', quantity='2', reverses_event_id='receipt-1')])
+        blocked = dict(schema_version='1.0', report_kind='order_timeline', status='blocked', reason='Setup blocked',
+                       events=[], model_ready=False, purchase_authorized=False, human_review_required=True)
+        template = Path(__file__).resolve().parents[1] / 'ml/procurement_platform_template.html'
+        result = subprocess.run([shutil.which('node'), '-e', script, str(template)],
+                                input=json.dumps([report, self.result(signals=[signal(signal_type='disruption')]), blocked]),
+                                capture_output=True, encoding='utf-8', timeout=30)
+        self.assertEqual(result.returncode, 0, result.stderr)
+
     def result(self, snapshots=None, receipts=None, reviews=None, signals=None, key='test-line'):
         return timeline(snapshots or [snapshot(original_promise_date='2026-11-10')],
                         [receipt()] if receipts is None else receipts,
