@@ -8,6 +8,11 @@ The first practical use is to compare documented quotes for one precisely specif
 
 ## What to collect first
 
+For an existing approved external pilot folder, the
+[read-only readiness report](buyer-data-collection/READINESS.md) combines snapshot,
+receipt and label-proposal checks into an offline HTML or JSON summary. Passed
+checks still require human evidence review; they do not approve training or purchasing.
+
 For a consenting buyer collecting historical and prospective delivery outcomes,
 start with the [small buyer pilot guide](buyer-data-collection/PILOT-START.md), then
 use the [practical collection plan](buyer-data-collection/PLAN.md) and
