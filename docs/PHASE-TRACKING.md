@@ -3,12 +3,16 @@
 [Live GitHub board](https://github.com/users/kasanket64-prog/projects/1).
 The board is project metadata; it does not merge or modify main.
 
+Use the [Phase 1 approval checklist](PHASE-1-APPROVAL.md) for separate owner and
+teacher decisions on the SRS, diagrams, board and templates. Approval is pending
+and does not authorise a merge or buyer-data use.
+
 | Phase | Issue | Existing PRs | Phase gate |
 |---|---|---|---|
-| 01 Requirements and progress | #7 | #5, #6, #17 | Awaiting owner/teacher review |
-| 02 Evidence foundation | #8 | #1, #2, #3, #4 | Tested at combined draft tip; integration approval pending |
+| 01 Requirements and progress | #7 | #5, #6, #17, #18 | Awaiting owner/teacher review |
+| 02 Evidence foundation | #8 | #1, #2, #3, #4, #21 | Baseline and repeatable CLI matrix tested; integration approval pending |
 | 03 Consenting buyer pilot | #9 | #1 (preparation only) | Planned; consent and actual collection pending |
-| 04 Modern review interface | #10 | None yet | Planned |
+| 04 Modern review interface | #10 | #20 | Partial What-If/UI work tested; full phase gate remains pending |
 | 05 Reliable predictions | #11 | None yet | Planned acceptance gate; earlier experiments exist |
 | 06 Explanations and uncertainty | #12 | None yet | Planned |
 | 07 Monitoring and feedback | #13 | None yet | Planned |
@@ -78,3 +82,6 @@ Never include buyer exports, filled templates, identity keys, credentials or
 private attachments in issues, PRs or board cards. Use artificial reproductions.
 The board and GitHub checklists organise work; they do not enforce data permission,
 validate model quality or authorise purchasing or merges.
+
+See the [17 November technical re-review](PHASE-1-2-REVIEW.md) for exact
+baselines, new checks, roadmap reconciliation and decisions still awaiting people.
