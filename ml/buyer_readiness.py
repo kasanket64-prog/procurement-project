@@ -32,7 +32,7 @@ def readiness(folder, as_of):
             if field in result:
                 summary[field] = result[field]
         stages.append(dict(key=key, title=title, status='passed', summary=summary))
-    return dict(status='blocked' if blocked else 'checks_complete',
+    return dict(schema_version='1.0', status='blocked' if blocked else 'checks_complete',
                 checked_at=as_of.astimezone(timezone.utc).isoformat(), stages=stages,
                 model_ready=False, purchase_authorized=False, human_review_required=True,
                 next_action=('Correct the reported input or policy issue and rerun all checks.' if blocked else

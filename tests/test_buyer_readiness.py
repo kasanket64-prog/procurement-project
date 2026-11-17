@@ -3,6 +3,7 @@ import csv
 from contextlib import redirect_stdout
 import io
 import json
+import shutil
 from pathlib import Path
 import subprocess
 import sys
@@ -20,6 +21,36 @@ from test_buyer_snapshot_check import NOW, snapshot
 
 
 class ReadinessTests(unittest.TestCase):
+    @unittest.skipUnless(shutil.which('node'), 'Node is required for the workspace report contract check')
+    def test_generated_reports_are_accepted_by_workspace_reader(self):
+        script = '''
+const fs = require('node:fs'), vm = require('node:vm'), assert = require('node:assert/strict');
+const source = fs.readFileSync(process.argv[1], 'utf8'), context = vm.createContext({});
+vm.runInContext(source.slice(source.indexOf('function parseReadiness('), source.indexOf('function renderReadiness(')), context);
+for (const report of JSON.parse(fs.readFileSync(0, 'utf8'))) {
+  const parsed = context.parseReadiness(JSON.stringify(report));
+  assert.equal(JSON.stringify(parsed), JSON.stringify(report));
+}
+'''
+        with tempfile.TemporaryDirectory() as temp:
+            folder = Path(temp); self.folder(folder)
+            reports = [readiness(folder, NOW)]
+            (folder / 'outcome_reviews.csv').write_text(
+                (folder / 'outcome_reviews.csv').read_text().splitlines()[0] + '\n')
+            reports.append(readiness(folder, NOW))
+            for name in ('label_policy.json', 'receipt_events.csv', 'order_snapshots.csv'):
+                (folder / name).unlink()
+                reports.append(readiness(folder, NOW))
+            self.assertEqual([r['stages'][2].get('summary', {}).get('label_counts') for r in reports[:2]],
+                             [{'late': 1}, {'unknown': 1}])
+            self.assertEqual([[s['status'] for s in r['stages']] for r in reports[2:]],
+                             [['passed', 'passed', 'blocked'], ['passed', 'blocked', 'skipped'],
+                              ['blocked', 'skipped', 'skipped']])
+            template = Path(__file__).resolve().parents[1] / 'ml/procurement_platform_template.html'
+            result = subprocess.run([shutil.which('node'), '-e', script, str(template)],
+                                    input=json.dumps(reports), capture_output=True, encoding='utf-8', timeout=30)
+            self.assertEqual(result.returncode, 0, result.stderr)
+
     def test_successful_cli_html_and_json_remain_read_only(self):
         with tempfile.TemporaryDirectory() as temp:
             folder = Path(temp)
@@ -34,6 +65,7 @@ class ReadinessTests(unittest.TestCase):
                 if fmt == 'json':
                     report = json.loads(output.getvalue())
                     self.assertEqual(report['status'], 'checks_complete')
+                    self.assertEqual(report['schema_version'], '1.0')
                     self.assertFalse(report['model_ready'])
                     self.assertFalse(report['purchase_authorized'])
                 else:
