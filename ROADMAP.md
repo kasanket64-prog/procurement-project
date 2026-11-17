@@ -1,6 +1,6 @@
 # Modern supply-chain platform: phased feature roadmap
 
-Updated 14 November 2026. This is a proposed product roadmap, not an assertion
+Updated 17 November 2026. This is a proposed product roadmap, not an assertion
 that planned features are implemented. Expand the existing project in small,
 reviewable releases. Preserve the existing terminal tools and browser demo.
 
@@ -25,6 +25,16 @@ merged, and artificial fixtures do not establish real-world effectiveness.
 - No real buyer outcome validation, production model acceptance or production
   deployment is established by those checks. Historical ML scores remain subject
   to reproduction against their exact dataset and code versions.
+- Phase tracking and draft issue/PR templates are prepared in PR #17; the
+  owner/teacher worksheet is in PR #18. Issue #7 records the earlier live board
+  setup. Board settings have not been re-inspected in this update; templates are
+  not active defaults while main remains unchanged. Acceptance is still pending.
+- PR #21 makes the Phase 2 artificial CLI matrix repeatable at `fcf44c7`:
+  58 tests passed, comprising the 57-test baseline plus one integration test with
+  21 scenario subtests / 63 subprocess executions. It is a stacked draft on
+  PR #4, not an approved integrated release or a main-branch result.
+- PR #20 contains tested What-If/browser UI improvements; these are partial
+  Phase 4 work, not completion of its readiness/evidence-review exit gate.
 
 ## Phase overview
 
@@ -33,7 +43,7 @@ merged, and artificial fixtures do not establish real-world effectiveness.
 | 1. Requirements and progress | SRS v0.3 and architecture drafted; approval pending | Agreed scope, diagrams and tracked tasks | Reviewed SRS and measurable release criteria |
 | 2. Evidence foundation | Tested at combined PR #4 tip; review pending | Validated snapshots, receipts and proposed labels | Stack reviewed; merges separately authorised |
 | 3. Buyer pilot | Templates prepared; real collection pending | Consented, traceable real outcomes | Buyer confirms data permission, coverage and labels |
-| 4. Modern review interface | Planned; existing demo retained | Readiness dashboard and evidence review | Artificial browser checks and buyer workflow review |
+| 4. Modern review interface | Partial What-If/UI work tested in draft PR #20; phase acceptance pending | Readiness dashboard and evidence review | Artificial browser checks and buyer workflow review |
 | 5. Reliable predictions | Experimental; acceptance pending | Reproducible chronological evaluation | Freeze model, calibration and thresholds before final evaluation |
 | 6. Explanations and uncertainty | Planned | Reviewable prediction evidence and limits | Read-only frozen-pipeline assessment; fitted changes need fresh future evaluation |
 | 7. Monitoring and feedback | Planned | Changes detected; outcomes reviewed | Repeated batches and reliable delayed-label evaluation |
@@ -47,9 +57,9 @@ merged, and artificial fixtures do not establish real-world effectiveness.
 - [ ] Define decision time, prediction target, label policy, review capacity and acceptance metrics.
 - [x] Draft SRS v0.3 and Mermaid system, evidence-flow and model-release architecture views; document lifecycle outcomes in the evidence-flow view.
 - [ ] Obtain owner/teacher review of SRS and diagrams; document approval or requested changes.
-- [ ] Create a GitHub phase board with linked issues and PRs; creating this file does not create that board.
-- [ ] Add issue/PR templates with acceptance checks and evidence links.
-- [ ] Track implementation, testing, merging and buyer validation separately.
+- [x] Board setup is recorded in issue #7, with ten phase issues and initial PR links; recheck live configuration at sign-off.
+- [x] Draft issue/PR templates with acceptance/evidence/privacy checks are in PR #17; owner review and default-branch activation remain pending.
+- [x] Tracking guide and approval worksheet distinguish implementation, tests, merge and buyer validation; no phase acceptance is recorded.
 
 Use [Mermaid](https://mermaid.js.org/intro/) for diagrams without adding a
 runtime dependency. Do not assign unsupported percentage-complete figures.
@@ -61,7 +71,8 @@ runtime dependency. Do not assign unsupported percentage-complete figures.
 - [x] Original-promise delay proposals with confirmed receipt coverage and explicit cancellation policy at that tip.
 - [x] Cross-stage correction regressions and artificial end-to-end checks at that tip.
 - [ ] Finish PR-stack approval and integration review before any authorised merges.
-- [ ] Establish repeatable automated checks for the approved integrated branch, using artificial fixtures only.
+- [x] Make the artificial 21-scenario integration matrix repeatable in normal test discovery (draft PR #21, `fcf44c7`).
+- [ ] Run and accept these checks on a separately approved integrated branch; the current tested stack is still draft/unmerged.
 
 Keep our existing Python validators. Borrow the readable validation-report idea
 from [Great Expectations](https://docs.greatexpectations.io/docs/reference/learn/data_quality_use_cases/schema/)
