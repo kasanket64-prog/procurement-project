@@ -53,7 +53,7 @@ supplier scorecard or transactional source snapshot. Those remain separately sco
 ## Preview in the procurement workspace
 
 Generate a version 1.0 JSON report with `--format json`, save it privately, then
-open the workspace's **Evidence readiness** section and select that JSON file.
+open the workspace's **Evidence review** section and select that JSON file.
 The preview stays in the current page; it is not uploaded or persisted. Clear the
 preview or close the page when finished. Files over 1 MB, unsupported versions,
 inconsistent stages/counts or reports granting training/purchasing authority are

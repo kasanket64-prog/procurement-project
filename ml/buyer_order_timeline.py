@@ -38,7 +38,7 @@ def timeline(snapshots, receipts, reviews, signals, setup, policy, as_of, order_
                                details={key: row[key] for key in fields}))
     events.sort(key=lambda row: (timestamp(row['event_at'], 'event_at'), timestamp(row['known_at'], 'known_at'),
                                 timestamp(row['captured_at'], 'captured_at'), row['kind'], row['record_id']))
-    return dict(schema_version='1.0', status='timeline_available', order_line_id=order_line_id,
+    return dict(schema_version='1.0', report_kind='order_timeline', status='timeline_available', order_line_id=order_line_id,
                 checked_at=as_of.astimezone(timezone.utc).isoformat(), events=events,
                 model_ready=False, purchase_authorized=False, human_review_required=True)
 
@@ -86,7 +86,7 @@ def main():
     try:
         report = timeline(*load_pilot_evidence(args.folder, as_of), as_of, args.order_line_id)
     except DataError as error:
-        report = dict(status='blocked', reason=str(error), events=[], model_ready=False,
+        report = dict(schema_version='1.0', report_kind='order_timeline', status='blocked', reason=str(error), events=[], model_ready=False,
                       purchase_authorized=False, human_review_required=True)
     if hasattr(sys.stdout, 'reconfigure'):
         sys.stdout.reconfigure(encoding='utf-8')
