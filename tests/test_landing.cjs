@@ -35,6 +35,21 @@ test('reduced motion does not attach pointer animation',()=>{
   assert.deepEqual(Object.keys(setup().scene.listeners),[]);
   assert.deepEqual(Object.keys(setup(true).scene.listeners),['pointermove','pointerleave']);
 });
+test('primary action and selected tab text meet 4.5:1 contrast',()=>{
+  const css=readFileSync(join(root,'landing.css'),'utf8');
+  const luminance=hex=>{
+    const rgb=hex.match(/../g).map(value=>parseInt(value,16)/255)
+      .map(value=>value<=0.04045?value/12.92:((value+0.055)/1.055)**2.4);
+    return rgb[0]*0.2126+rgb[1]*0.7152+rgb[2]*0.0722;
+  };
+  const tokens=Object.fromEntries([...css.matchAll(/--([\w-]+):#([0-9a-f]{6})/g)].map(m=>[m[1],m[2]]));
+  for(const selector of ['.button.primary','.button.primary:hover','.tabs button[aria-selected=true]']){
+    const escaped=selector.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    const block=css.match(new RegExp(escaped+'\\{([^}]+)\\}'))[1];
+    const background=block.match(/background:var\(--([\w-]+)\)/)[1];
+    assert.ok((1.05/(luminance(tokens[background])+0.05))>=4.5,selector);
+  }
+});
 test('local links and assets exist, fragments resolve and font is WOFF2',()=>{
   const html=readFileSync(join(root,'landing.html'),'utf8');
   const ids=new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));
