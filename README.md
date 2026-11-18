@@ -1,6 +1,8 @@
 # AI Supply Chain Prediction & Procurement Platform
 
-Private project for supplier discovery, procurement analysis and quotation review.
+Public source repository for ProcureAI, a procurement workspace for supplier discovery, comparison and quotation review.
+
+Download [the self-contained website](ml/procurement_platform.html) and open it in a browser. See the [frontend and wireframe brief](docs/frontend-wireframes.md) for the planned design and buyer journey.
 
 **Status (13 November 2026): prototype.** The main branch contains procurement datasets, Python analysis and matching modules, an offline HTML demo, and a separately documented real-quotation pilot. This repository snapshot does not establish production readiness or validation against real buyer outcomes.
 
