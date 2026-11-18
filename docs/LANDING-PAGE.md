@@ -1,5 +1,7 @@
 # NOVA landing page
 
+Track remaining browser and phase checks in [UI acceptance](UI-ACCEPTANCE.md).
+
 Open `ml/landing.html` locally, then select **Open workspace**. The workspace links back through **NOVA home**. The existing Python launcher continues opening the workspace directly.
 
 Editable Figma desktop/mobile frames and foundations: https://www.figma.com/design/eK0wYoaTRimm1VoBAQR2SE?node-id=15-142
