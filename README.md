@@ -6,6 +6,8 @@ Private project for supplier discovery, procurement analysis and quotation revie
 
 ## Start the browser demo
 
+Open `ml/landing.html` for the NOVA landing page, then select **Open workspace**. See [landing-page notes](docs/LANDING-PAGE.md) for the editable Figma design, local assets and prototype boundaries.
+
 From the repository root with Python 3.10 or later, run: `python ml/procurement_platform.py`.
 
 The script generates and opens `ml/procurement_platform.html` using the Python standard library. It rewrites that tracked HTML file; save local edits to it first.
