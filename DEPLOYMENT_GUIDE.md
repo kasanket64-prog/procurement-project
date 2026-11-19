@@ -1,10 +1,38 @@
 # ProcureAI — Complete Deployment & Project Guide (No Vercel / No Phone Verification)
 
-This file consolidates all deployment options, configurations, local project paths, API endpoints, environment settings, and verified test results for deploying **ProcureAI** publicly **without Vercel** (avoiding Vercel's phone verification requirement).
+## Live Production Deployment (Netlify — Deployed & Verified)
+
+ProcureAI is live publicly on **Netlify** (both React frontend and `/api/*` serverless endpoints on a single origin, with visitor access set to Public):
+
+| Item | Live Value |
+| --- | --- |
+| **Live Website URL** | `https://procureai-platform.netlify.app/` |
+| **Live Health API** | `https://procureai-platform.netlify.app/api/health` |
+| **Live Suppliers API** | `https://procureai-platform.netlify.app/api/suppliers` (`361` total: `248` Public source + `113` Simulated) |
+| **Live Catalog API** | `https://procureai-platform.netlify.app/api/catalog?q=bearing` |
+| **Live Compare API** | `https://procureai-platform.netlify.app/api/compare?id=SIM-201&id=SUP-038` |
+| **Live Quotation Demo API** | `https://procureai-platform.netlify.app/api/quotes/demo` |
+| **Live Quotation Total API** | `POST https://procureai-platform.netlify.app/api/quotes/total` |
+| **Live Quotation Review API** | `POST https://procureai-platform.netlify.app/api/quotes/review` |
+| **Netlify Site ID** | `b42166a6-8a9a-4fff-82a8-dd647e01827a` |
+| **Netlify Deploy ID** | `6aff3c2fb7a9e52036fe5880` (`state: ready`, Node `nodejs24.x`) |
+| **Netlify Permalink** | `https://6aff3c2fb7a9e52036fe5880--procureai-platform.netlify.app/` |
+| **Netlify Dashboard** | `https://app.netlify.com/projects/procureai-platform` |
+
+### Verified Live HTTP Checks (`https://procureai-platform.netlify.app`)
+- `GET /` -> `200` (`<div id="root"></div>` present)
+- `GET /api/health` -> `200` (`{"status":"ok"}`)
+- `GET /api/suppliers?limit=5` -> `200` (`total=361`)
+- `GET /api/suppliers?source=public&limit=2` -> `200` (`total=248`)
+- `GET /api/suppliers?source=simulated&limit=2` -> `200` (`total=113`)
+- `POST /api/quotes/total` (`quantity=100`, `unit_price=100`, `freight=1500`) -> `200` (`{"subtotal":"10000","total":"11500","missing":[]}`)
+- `GET /api/catalog?q=bearing` -> `200` (`count=1`)
+- `GET /api/compare?id=SIM-201&id=SUP-038` -> `200` (`count=2`)
+- `GET /api/quotes/demo` -> `200` (`eligible=1`)
 
 ---
 
-## 1. Recommended Option: Single-URL Full-Stack Deployment on Render
+## 1. Alternative Option: Single-URL Full-Stack Deployment on Render
 
 Because `ml/api.py` now serves the production React build from `static/` alongside `/api/*`, deploying **one** Render Python Web Service hosts **both the frontend UI and backend API** on a single HTTPS URL:
 - **No Vercel account needed**
