@@ -1,0 +1,9 @@
+"$schema" = "https://open-api.netlify.com/netlify.schema.json"
+
+[build]
+  publish = "static"
+  command = "echo 'Static bundle prebuilt in static/'"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
