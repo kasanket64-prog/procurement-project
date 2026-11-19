@@ -4,6 +4,7 @@ from decimal import localcontext
 from functools import lru_cache
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
+import mimetypes
 import os
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
@@ -25,6 +26,19 @@ PUBLIC_CATALOG_META = {
     "source_label": "Public source",
     "data_kind": "public",
     "source_reference": "CATMAT Public Catalog (Brazil procurement reference)",
+}
+
+STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
+STATIC_TYPES = {
+    ".html": "text/html; charset=utf-8",
+    ".js": "application/javascript; charset=utf-8",
+    ".mjs": "application/javascript; charset=utf-8",
+    ".css": "text/css; charset=utf-8",
+    ".svg": "image/svg+xml",
+    ".png": "image/png",
+    ".json": "application/json; charset=utf-8",
+    ".txt": "text/plain; charset=utf-8",
+    ".ico": "image/x-icon",
 }
 
 
@@ -149,6 +163,34 @@ class Handler(BaseHTTPRequestHandler):
         if vary:
             self.send_header("Vary", "Origin")
 
+    def serve_static(self, url_path):
+        """Serve built frontend files from static/ for non-API GET routes."""
+        if url_path == "/api" or url_path.startswith("/api/") or not STATIC_DIR.is_dir():
+            return False
+        rel = "index.html" if url_path in ("", "/", "/index.html") else url_path.lstrip("/")
+        if any(part.startswith(".") for part in Path(rel).parts):
+            return False
+        static_root = STATIC_DIR.resolve()
+        target = (static_root / rel).resolve()
+        try:
+            target.relative_to(static_root)
+        except ValueError:
+            return False
+        if not target.is_file():
+            return False
+        content_type = STATIC_TYPES.get(target.suffix.lower())
+        if not content_type:
+            guessed, _ = mimetypes.guess_type(str(target))
+            content_type = guessed or "application/octet-stream"
+        body = target.read_bytes()
+        self.send_response(200)
+        self.send_header("Content-Type", content_type)
+        self.send_header("Content-Length", str(len(body)))
+        self._send_cors_headers()
+        self.end_headers()
+        self.wfile.write(body)
+        return True
+
     def reply(self, status, data):
         body = json.dumps(data, ensure_ascii=False).encode()
         self.send_response(status)
@@ -207,6 +249,8 @@ class Handler(BaseHTTPRequestHandler):
             now = datetime.now(timezone.utc)
             self.reply(200, evaluate(build_demo(now), now, demo=True))
         else:
+            if self.serve_static(url.path):
+                return
             self.reply(404, {"error": "Unknown route"})
 
     def do_POST(self):
