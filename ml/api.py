@@ -122,20 +122,46 @@ def filter_suppliers(rows, query="", product="", grade="", match="", source="", 
     return matches
 
 
+def cors_origin(request_origin):
+    """Resolve allowed CORS origin from ALLOWED_ORIGINS env var."""
+    configured = os.environ.get("ALLOWED_ORIGINS", "*").strip()
+    if not configured or configured == "*":
+        return "*", False
+    if not request_origin:
+        return None, True
+    origin = request_origin.strip().rstrip("/")
+    allowed = [item.strip().rstrip("/") for item in configured.split(",") if item.strip()]
+    for pattern in allowed:
+        if pattern == origin:
+            return request_origin.strip(), True
+        if pattern.startswith("https://*.") and origin.startswith("https://") and origin.endswith(pattern[len("https://*"):]):
+            return request_origin.strip(), True
+        if pattern.startswith("*.") and origin.endswith(pattern[1:]):
+            return request_origin.strip(), True
+    return None, True
+
+
 class Handler(BaseHTTPRequestHandler):
+    def _send_cors_headers(self):
+        origin, vary = cors_origin(self.headers.get("Origin"))
+        if origin:
+            self.send_header("Access-Control-Allow-Origin", origin)
+        if vary:
+            self.send_header("Vary", "Origin")
+
     def reply(self, status, data):
         body = json.dumps(data, ensure_ascii=False).encode()
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(body)))
         self.send_header("Cache-Control", "no-store")
-        self.send_header("Access-Control-Allow-Origin", "*")
+        self._send_cors_headers()
         self.end_headers()
         self.wfile.write(body)
 
     def do_OPTIONS(self):
         self.send_response(204)
-        self.send_header("Access-Control-Allow-Origin", "*")
+        self._send_cors_headers()
         self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
         self.end_headers()
@@ -201,4 +227,5 @@ class Handler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    ThreadingHTTPServer((os.environ.get("HOST", "127.0.0.1"), int(os.environ.get("PORT", "8765"))), Handler).serve_forever()
+    default_host = "0.0.0.0" if ("PORT" in os.environ or "RENDER" in os.environ) else "127.0.0.1"
+    ThreadingHTTPServer((os.environ.get("HOST", default_host), int(os.environ.get("PORT", "8765"))), Handler).serve_forever()

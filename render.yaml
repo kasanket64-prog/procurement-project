@@ -9,4 +9,6 @@ services:
     envVars:
       - key: HOST
         value: 0.0.0.0
+      - key: ALLOWED_ORIGINS
+        value: "*"
 
