@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: procureai-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r real-pilot/requirements.txt
+    startCommand: python ml/api.py
+    healthCheckPath: /api/health
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+
