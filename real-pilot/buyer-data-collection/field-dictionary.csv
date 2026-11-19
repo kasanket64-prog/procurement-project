@@ -1,0 +1,88 @@
+table,field,label,type,required,use,meaning
+Order snapshots,snapshot_id,Snapshot ID,text,yes,Identity,Unique snapshot ID; do not replace earlier snapshots.
+Order snapshots,order_line_id,Order-line ID,text,yes,Identity,Stable buyer-scoped line identifier; all events join to this key.
+Order snapshots,supplier_id,Supplier ID,text,yes,Predictor identity,Stable pseudonymous supplier key; no fuzzy name matching.
+Order snapshots,product_id,Product ID,text,yes,Predictor identity,Stable exact specification/grade/pack identifier; preserve mapping locally.
+Order snapshots,destination_id,Destination ID,text,yes,Predictor identity,"Stable agreed receiving-site key, not an unnecessary personal address."
+Order snapshots,decision_at,Release decision at,timestamp,yes,Decision anchor,PO-line release/placement instant; equals order_placed_at for this first experiment. Freeze before outcomes.
+Order snapshots,order_placed_at,Order placed at,timestamp,yes,Timing evidence,Actual PO-line release/placement instant; equals decision_at for the first release-time model.
+Order snapshots,original_promise_date,Original promise date,date,yes,Predictor and frozen target,"Original supplier-committed full-delivery date known at release, not merely the buyer request. Never backfill a later acknowledgement."
+Order snapshots,promise_basis,Original promise basis,text,yes,Commitment evidence,Supplier source establishing the original promise. buyer_request_only/unknown are not verified commitments.
+Order snapshots,needed_by_date,Buyer needed-by date,date,if sourced,Predictor,Buyer requested date; keep distinct from supplier-committed promise.
+Order snapshots,decision_timezone,Destination timezone,text,yes,Target definition,IANA timezone for the promise-date deadline. Do not infer from currency.
+Order snapshots,quantity,Original quantity,number,yes,Predictor and frozen target,"Original ordered quantity, strictly positive. Later quantity changes are separate signals."
+Order snapshots,unit,Purchasing unit,text,yes,Predictor and reconciliation,Exact each/kg/defined pack. No implicit conversion across receipts or records.
+Order snapshots,unit_price,Unit price,number,if sourced,Predictor,"Order-time documented unit price; leave unknown blank, never insert zero."
+Order snapshots,currency,Currency,text,if price entered,Predictor context,Three uppercase currency letters. Do not compare currencies without a reviewed mapping.
+Order snapshots,business_unit,Business unit,text,if sourced,Predictor,"Buyer unit known at decision, pseudonymized if needed."
+Order snapshots,payment_terms,Payment terms,text,if sourced,Predictor,"Documented order-time terms, not later actual payment performance."
+Order snapshots,on_contract,On contract,text,if sourced,Predictor,Documented contract status at decision; unknown stays unknown.
+Order snapshots,snapshot_status,Snapshot verification,text,yes,Eligibility gate,verified_as_of requires source support for availability of all populated fields.
+Order snapshots,pilot_id,Pilot ID,text,yes,Identity,"Links to this buyer-approved pilot; pseudonym, not a legal name."
+Order snapshots,data_kind,Data kind,text,yes,Separation,Use real only for reviewed genuine records within approval; never mix synthetic records here.
+Order snapshots,source_ref,Protected source reference,text,yes,Provenance,Internal document/export and row reference. Do not paste document contents or public share links.
+Order snapshots,known_at,Buyer knew at,timestamp,yes,Availability gate,Earliest source-supported buyer availability; for a snapshot use latest availability of decision-time business facts; later project audit metadata is excluded.
+Order snapshots,captured_at,Project captured at,timestamp,yes,Provenance,Actual extraction/entry time. Never substitute for buyer availability or backdate it.
+Order snapshots,reviewer_id,Reviewer ID,text,yes,Provenance,Internal reviewer identifier; keep names/contact details in the restricted identity key.
+Promise events,promise_event_id,Promise event ID,text,yes,Identity,Unique immutable event ID.
+Promise events,order_line_id,Order-line ID,text,yes,Join key,Must match an Order snapshots line.
+Promise events,promise_version,Promise version,text,yes,Revision identity,"Source revision/version identifier, preserved exactly."
+Promise events,event_type,Promise event type,text,yes,Event meaning,"Original communication, later revision, or correction."
+Promise events,promised_date,Promised date,date,yes,Predictor only when already known,Date in the line destination timezone. Future communications cannot enter earlier decisions.
+Promise events,event_at,Communication happened at,timestamp,yes,Event timing,"When source communication/change occurred, distinct from buyer availability."
+Promise events,supersedes_id,Supersedes event ID,text,for revisions/corrections,Revision link,Reference the prior promise event. Preserve it; do not overwrite.
+Promise events,reason_text,Documented change reason,text,if sourced,Context only until availability checked,Use concise documented reason; later explanations are not earlier predictors.
+Promise events,pilot_id,Pilot ID,text,yes,Identity,"Links to this buyer-approved pilot; pseudonym, not a legal name."
+Promise events,data_kind,Data kind,text,yes,Separation,Use real only for reviewed genuine records within approval; never mix synthetic records here.
+Promise events,source_ref,Protected source reference,text,yes,Provenance,Internal document/export and row reference. Do not paste document contents or public share links.
+Promise events,known_at,Buyer knew at,timestamp,yes,Availability gate,Earliest source-supported buyer availability; for a snapshot use latest availability of decision-time business facts; later project audit metadata is excluded.
+Promise events,captured_at,Project captured at,timestamp,yes,Provenance,Actual extraction/entry time. Never substitute for buyer availability or backdate it.
+Promise events,reviewer_id,Reviewer ID,text,yes,Provenance,Internal reviewer identifier; keep names/contact details in the restricted identity key.
+Receipts,receipt_event_id,Receipt event ID,text,yes,Identity,Unique receipt/acceptance/reversal event ID.
+Receipts,order_line_id,Order-line ID,text,yes,Join key,Must match the original order line.
+Receipts,destination_id,Destination ID,text,yes,Reconciliation,Actual receiving-site key; reconcile with original destination.
+Receipts,event_type,Receipt event type,text,yes,Outcome evidence,"Accepted quantity, rejected quantity, or reversal of a prior accepted receipt."
+Receipts,event_at,Receipt event happened at,timestamp,yes,Outcome event time,"Actual acceptance/rejection/reversal time, not just ERP posting time."
+Receipts,quantity,Event quantity,number,yes,Outcome quantity,Strictly positive magnitude in the original unit. Direction comes from event_type.
+Receipts,unit,Quantity unit,text,yes,Reconciliation,Must match order unit or remain unresolved pending documented conversion.
+Receipts,reverses_event_id,Reverses receipt ID,text,for reversals,Correction link,Reference prior accepted receipt; reconcile no duplicate or excessive reversals.
+Receipts,pilot_id,Pilot ID,text,yes,Identity,"Links to this buyer-approved pilot; pseudonym, not a legal name."
+Receipts,data_kind,Data kind,text,yes,Separation,Use real only for reviewed genuine records within approval; never mix synthetic records here.
+Receipts,source_ref,Protected source reference,text,yes,Provenance,Internal document/export and row reference. Do not paste document contents or public share links.
+Receipts,known_at,Buyer knew at,timestamp,yes,Availability gate,Earliest source-supported buyer availability; for a snapshot use latest availability of decision-time business facts; later project audit metadata is excluded.
+Receipts,captured_at,Project captured at,timestamp,yes,Provenance,Actual extraction/entry time. Never substitute for buyer availability or backdate it.
+Receipts,reviewer_id,Reviewer ID,text,yes,Provenance,Internal reviewer identifier; keep names/contact details in the restricted identity key.
+Signals,signal_id,Signal ID,text,yes,Identity,Unique immutable fact/change event ID.
+Signals,order_line_id,Order-line ID,text,yes,Join key,Scope each signal to a line; do not apply a general claim to every order.
+Signals,signal_type,Signal type,text,yes,Predictor or outcome context,Cancellation and material quantity/specification changes require a Signal row when they occur. Other enrichment is optional. Only facts known at decision time can be predictors.
+Signals,event_at,Signal event happened at,timestamp,yes,Event timing,"Actual event time, including cancellation/material change; not review or posting time. Missing timing remains unresolved in quarantine."
+Signals,value_number,Numeric value,number,if numeric fact,Candidate predictor,"Sourced measurement; genuine zero allowed. Populate numeric or text, not both."
+Signals,value_text,Text value,text,if nonnumeric fact,Candidate predictor,"Concise documented fact, not an inferred score or an after-the-fact explanation."
+Signals,value_unit,Value unit,text,for numeric quantities,Predictor context,Exact measurement unit or pack definition; do not assume conversion.
+Signals,valid_until,Evidence valid until,timestamp,if documented,Applicability gate,"Documented expiry only. Blank means applicability needs review, not indefinite validity."
+Signals,verification,Evidence verification,text,yes,Evidence strength,Preserve supplier assertion separately from buyer/independent verification; later verification is a new event.
+Signals,supersedes_id,Supersedes signal ID,text,for corrections,Revision link,Link earlier signal; never overwrite its prior value or known time.
+Signals,pilot_id,Pilot ID,text,yes,Identity,"Links to this buyer-approved pilot; pseudonym, not a legal name."
+Signals,data_kind,Data kind,text,yes,Separation,Use real only for reviewed genuine records within approval; never mix synthetic records here.
+Signals,source_ref,Protected source reference,text,yes,Provenance,Internal document/export and row reference. Do not paste document contents or public share links.
+Signals,known_at,Buyer knew at,timestamp,yes,Availability gate,Earliest source-supported buyer availability; for a snapshot use latest availability of decision-time business facts; later project audit metadata is excluded.
+Signals,captured_at,Project captured at,timestamp,yes,Provenance,Actual extraction/entry time. Never substitute for buyer availability or backdate it.
+Signals,reviewer_id,Reviewer ID,text,yes,Provenance,Internal reviewer identifier; keep names/contact details in the restricted identity key.
+Outcomes,review_id,Outcome review ID,text,yes,Identity,Unique append-only review ID.
+Outcomes,order_line_id,Order-line ID,text,yes,Join key,Reviewed original order line.
+Outcomes,target_version,Approved target version,text,yes,Label definition,Reference the target approved in Pilot setup; do not silently change definitions.
+Outcomes,delivery_status,Delivery status,text,yes,Outcome only,"Status at review, including open and partial deliveries."
+Outcomes,label,Reviewed delay label,text,yes,Outcome only,"on_time/late only with reconciled evidence; keep unknown, pending and excluded distinct."
+Outcomes,complete_accepted_at,Full acceptance happened at,timestamp,if completed,Outcome only,"Time accepted cumulative original quantity reached the target, after applying reviewed reversals."
+Outcomes,register_coverage_through,Receipt register complete through,timestamp,to label absence as late,Outcome evidence,Buyer-confirmed coverage through this time. Without it absence is not proof of late delivery.
+Outcomes,coverage_confirmed,Coverage confirmed,text,yes,Label eligibility,"Reviewer confirmation of completeness, not a default assumption."
+Outcomes,reviewed_at,Review happened at,timestamp,yes,Outcome availability,Actual review time. known_at cannot precede all evidence used; never backdate.
+Outcomes,exclusion_or_dispute,Exclusion or dispute reason,text,if relevant,Outcome context,Document the reason and relevant Signal IDs for cancellation/material change. Apply approved before/after-deadline rules; preserve evidenced delays and report exclusions.
+Outcomes,supersedes_id,Supersedes review ID,text,for corrections,Revision link,Preserve previous review and link this correction.
+Outcomes,pilot_id,Pilot ID,text,yes,Identity,"Links to this buyer-approved pilot; pseudonym, not a legal name."
+Outcomes,data_kind,Data kind,text,yes,Separation,Use real only for reviewed genuine records within approval; never mix synthetic records here.
+Outcomes,source_ref,Protected source reference,text,yes,Provenance,Internal document/export and row reference. Do not paste document contents or public share links.
+Outcomes,known_at,Buyer knew at,timestamp,yes,Availability gate,Earliest source-supported buyer availability; for a snapshot use latest availability of decision-time business facts; later project audit metadata is excluded.
+Outcomes,captured_at,Project captured at,timestamp,yes,Provenance,Actual extraction/entry time. Never substitute for buyer availability or backdate it.
+Outcomes,reviewer_id,Reviewer ID,text,yes,Provenance,Internal reviewer identifier; keep names/contact details in the restricted identity key.
+Order snapshots,supersedes_id,Supersedes snapshot ID,text,for corrections,Revision link,Required for a transcription correction: prior snapshot_id for the same pilot and line. Blank on the original. Resolve one active chain; quarantine broken or competing links. Later supplier changes use event tables.

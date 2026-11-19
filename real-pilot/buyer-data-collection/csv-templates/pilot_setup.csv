@@ -1,0 +1,24 @@
+field,buyer_value,instruction
+pilot_id,,Stable pseudonymous key used on every record.
+buyer_id,,Keep the legal-name mapping in protected identity-key storage.
+data_kind,unverified,Declare real only after genuine sources and authorized use are reviewed.
+permission_status,pending,Do not collect/use business records until buyer approval is evidenced.
+approval_ref,,"Protected reference to authorized sponsor approval, including approved scope."
+sponsor_role,,Internal role/ID; do not enter personal contact details here.
+data_owner,,Internal role/ID responsible for source export and access.
+receipt_reviewer,,Internal role/ID who reconciles receipts and coverage.
+permitted_use,,"Record pilot purpose, field scope and whether model development is authorized."
+site_and_products,,Start with one traceable site/family; include all order statuses in scope.
+history_window,,"Record available history period, source systems and omissions."
+decision_rule,,Proposed: at PO-line release/placement; decision_at equals order_placed_at. Buyer must approve.
+target_version,,Proposed: full original quantity accepted by original supplier-committed date at agreed destination.
+timezone,,IANA name; do not infer a timezone from currency.
+grace_and_scope_rules,,"Agree cancellation before/after deadline; preserve evidenced late outcomes. Also define grace, returns and scope changes."
+review_capacity,,Buyer-approved count and acceptable false-alert/missed-delay trade-off. No model threshold is selected here.
+approved_storage,,"Protected location outside Git; reference, not credentials or public share link."
+access_roles,,"Who may view raw records, identities, reviewed data and exports."
+valid_from,,Record source-supported approval start with offset.
+valid_until,,Record expiry/review time; do not assume indefinite permission.
+retention_delete,,"Buyer-approved retention, backups and deletion scope."
+withdrawal_procedure,,Who can stop collection and how working copies/exports/backups are handled.
+backup_restore,,Approved backup location/role and restore-check schedule.

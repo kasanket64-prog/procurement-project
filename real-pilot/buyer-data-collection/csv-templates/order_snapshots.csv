@@ -1,0 +1,1 @@
+snapshot_id,order_line_id,supplier_id,product_id,destination_id,decision_at,order_placed_at,original_promise_date,promise_basis,needed_by_date,decision_timezone,quantity,unit,unit_price,currency,business_unit,payment_terms,on_contract,snapshot_status,pilot_id,data_kind,source_ref,known_at,captured_at,reviewer_id,supersedes_id

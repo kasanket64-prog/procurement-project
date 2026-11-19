@@ -10,6 +10,8 @@ __pycache__/
 /temp-data/
 /real-pilot/backups/
 /real-pilot/sessions/
+/real-pilot/buyer-records/
+/buyer-private/
 /supplier-request-drafts/
 /supplier-shortlists/
 /ml/catalog-rfq-drafts/
