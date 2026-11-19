@@ -11,18 +11,41 @@ from urllib.parse import parse_qs, urlsplit
 from catalog_search import search
 from quotation_demo import build_demo
 from real_procurement import amount, evaluate, no_duplicate_keys
+from simulated_suppliers import load_simulated_catalog, load_simulated_suppliers
+
+PUBLIC_SUPPLIER_META = {
+    "source_type": "public",
+    "source_label": "Public source",
+    "data_kind": "public",
+    "source_reference": "UK Contracts Finder, Cabinet Office (Open Government Licence v3.0)",
+}
+
+PUBLIC_CATALOG_META = {
+    "source_type": "public",
+    "source_label": "Public source",
+    "data_kind": "public",
+    "source_reference": "CATMAT Public Catalog (Brazil procurement reference)",
+}
 
 
 @lru_cache(maxsize=1)
 def suppliers():
     path = Path(__file__).with_name("public_supplier_leads.json")
-    return json.loads(path.read_text(encoding="utf-8"))["suppliers"]
+    public_rows = [
+        {**PUBLIC_SUPPLIER_META, **row}
+        for row in json.loads(path.read_text(encoding="utf-8"))["suppliers"]
+    ]
+    return public_rows + load_simulated_suppliers()
 
 
 @lru_cache(maxsize=1)
 def catalog():
     path = Path(__file__).with_name("catmat_research_catalog.json")
-    return json.loads(path.read_text(encoding="utf-8"))["records"]
+    public_records = [
+        {**PUBLIC_CATALOG_META, **row}
+        for row in json.loads(path.read_text(encoding="utf-8"))["records"]
+    ]
+    return public_records + load_simulated_catalog()
 
 
 def quote_total(data):
@@ -38,6 +61,65 @@ def quote_total(data):
         subtotal = quantity * price
         total = None if missing else str(subtotal + sum(costs.values()))
     return {"subtotal": str(subtotal), "total": total, "missing": missing}
+
+
+def grade_confirmed(row, product, grade):
+    """Return True only when one evidence entry mentions both product and grade."""
+    if not (product and grade):
+        return False
+    p = product[:-1] if product.endswith("s") and len(product) > 3 else product
+    for entry in row.get("evidence", []):
+        title = str(entry.get("title") or "")
+        desc = str(entry.get("description") or "")
+        text = f"{title} {desc}".casefold()
+        if f"no {p}" in text or f"without {p}" in text:
+            continue
+        if p in text and grade in text:
+            return True
+    return False
+
+
+def filter_suppliers(rows, query="", product="", grade="", match="", source="", country=""):
+    """Filter the full supplier dataset before pagination."""
+    query = query.strip().casefold()
+    product = product.strip().casefold()
+    grade = grade.strip().casefold()
+    source = source.strip().casefold()
+    country = country.strip().casefold()
+    matches = []
+    for row in rows:
+        if source and str(row.get("source_type") or "").casefold() != source:
+            continue
+        if country and str(row.get("country") or "").casefold() != country:
+            continue
+        if query:
+            parts = [str(row.get("name") or ""), str(row.get("country") or ""), str(row.get("category") or "")]
+            for item in row.get("evidence", []):
+                parts.append(str(item.get("title") or ""))
+                parts.append(str(item.get("description") or ""))
+            if query not in " ".join(parts).casefold():
+                continue
+        if match == "confirmed" and not grade_confirmed(row, product, grade):
+            continue
+        if match == "unconfirmed" and grade_confirmed(row, product, grade):
+            continue
+        matches.append(row)
+
+    if product:
+        p = product[:-1] if product.endswith("s") and len(product) > 3 else product
+
+        def relevance(row):
+            confirmed = bool(grade and grade_confirmed(row, product, grade))
+            has_prod = any(
+                p in f"{e.get('title') or ''} {e.get('description') or ''}".casefold()
+                for e in row.get("evidence", [])
+            )
+            is_sim = row.get("source_type") == "simulated"
+            return (0 if confirmed else 1 if has_prod else 2, 0 if is_sim else 1)
+
+        matches.sort(key=relevance)
+
+    return matches
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -62,12 +144,19 @@ class Handler(BaseHTTPRequestHandler):
         url = urlsplit(self.path)
         params = parse_qs(url.query)
         if url.path == "/api/suppliers":
-            query = params.get("q", [""])[0].strip().casefold()
-            matches = []
-            for row in suppliers():
-                titles = [item["title"] for item in row["evidence"]]
-                if query in " ".join([row["name"], *titles]).casefold():
-                    matches.append(row)
+            query = params.get("q", [""])[0]
+            product = params.get("product", [""])[0]
+            grade = params.get("grade", [""])[0]
+            match = params.get("match", [""])[0].strip()
+            source = params.get("source", [""])[0].strip()
+            country = params.get("country", [""])[0].strip()
+            if match not in ("", "confirmed", "unconfirmed"):
+                return self.reply(400, {"error": "match must be confirmed or unconfirmed"})
+            if match and not (product.strip() and grade.strip()):
+                return self.reply(400, {"error": "match requires product and grade"})
+            if source not in ("", "public", "simulated"):
+                return self.reply(400, {"error": "source must be public or simulated"})
+            matches = filter_suppliers(suppliers(), query, product, grade, match, source, country)
             try:
                 offset = int(params.get("offset", ["0"])[0])
                 limit = int(params.get("limit", ["50"])[0])
@@ -75,7 +164,7 @@ class Handler(BaseHTTPRequestHandler):
                     raise ValueError
             except ValueError:
                 return self.reply(400, {"error": "Expected offset >= 0 and limit 1 to 100"})
-            self.reply(200, {"total": len(matches), "suppliers": matches[offset:offset+limit]})
+            self.reply(200, {"total": len(matches), "suppliers": matches[offset:offset + limit]})
         elif url.path == "/api/catalog":
             hits = search(catalog(), params.get("q", [""])[0], limit=50)
             self.reply(200, {"items": [dict(score=score, code=code, record=record)
@@ -113,5 +202,3 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     ThreadingHTTPServer((os.environ.get("HOST", "127.0.0.1"), int(os.environ.get("PORT", "8765"))), Handler).serve_forever()
-
-
