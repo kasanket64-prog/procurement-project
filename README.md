@@ -37,10 +37,10 @@ Historical project notes reported an experimental model with 89.90% accuracy, 93
 
 ## Next steps
 
-1. Clone this private repository and review the current main branch before continuing.
+1. Clone this public repository and review the current main branch before continuing.
 2. Run the browser demo and record setup or output issues.
 3. Verify whether the planned What-If simulation is complete and connected end to end; an earlier project checkpoint listed it as upcoming.
 4. Reproduce model results with a chronological, leakage-safe evaluation and document recall/calibration limitations.
 5. Define a small, permissioned buyer pilot; reconcile each quote and eligibility result against original documents before considering any risk prediction.
 
-For another GitHub account, the private repository must be shared with that account or cloned through an account that already has access. This commit does not change repository visibility or access.
+For another GitHub account, this public repository can be viewed and cloned without an invitation. Pushing changes still requires write access. This commit does not change repository visibility or access.
