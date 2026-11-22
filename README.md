@@ -1,5 +1,21 @@
 # AI Supply Chain Prediction & Procurement Platform
 
+## Engineering overview
+
+ProcureAI explores procurement requirements, supplier discovery, quotation comparison and experimental risk analysis. It is a **prototype**, not a production procurement service or an autonomous purchasing agent.
+
+| Component | Source | What it establishes |
+| --- | --- | --- |
+| Offline browser demo | [Workspace](ml/procurement_platform.html) and [Python launcher](ml/procurement_platform.py) | A local demonstration without accounts or a hosted backend |
+| Supplier exploration | [Python modules](ml/) and [datasets](dataset/) | Example/researched supplier records, not independently validated live offers |
+| Quotation review | [Real quotation pilot](real-pilot/README.md) | A local, human-reviewed evidence workflow, not automatic purchasing |
+| Machine learning | [Training experiments](ml/) | Experimental models; no validated deployment accuracy is claimed |
+| Experience design | [Frontend wireframe brief](docs/frontend-wireframes.md) | A design reference rather than proof of implemented features |
+
+**Evaluation boundary:** simulated procurement examples, documented buyer quotations and predictive performance must be assessed separately. Human review remains necessary for eligibility, evidence quality and final purchasing decisions.
+
+---
+
 Public source repository for ProcureAI, a procurement workspace for supplier discovery, comparison and quotation review.
 
 Download [the self-contained website](ml/procurement_platform.html) and open it in a browser. See the [frontend and wireframe brief](docs/frontend-wireframes.md) for the planned design and buyer journey.
